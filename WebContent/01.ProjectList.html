@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Production List</title>
+<link rel="stylesheet" type="text/css" href="css/homepage_new.css" />
+<script src="js/autoheight.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+
+</head>
+<body>
+  <div id="toolbar">
+  <!-- Here is name of the list -->
+    <div class="lable">
+      <a href="#" target="_self">Projects List</a>
+    </div>
+  </div>
+
+  <div class="tb_icon">
+  <!-- Here is position of tool icons -->
+    <table>
+      <tr>
+      <td><a href="#">New Project</a></td>
+      </tr>
+    </table>
+    <div align="right"></div>
+  </div>
+  <div id="right_main">
+  <!-- Here is the list -->
+    <table class="list_table" id="tbl" >
+      <thead>
+        <tr>
+          <th width="2%">Item</th>
+          <th width="14%">Project Name</th>
+          <th width="14%">Client</th>
+          <th width="10%">Start Date</th>
+          <th width="10%">End Date</th>
+          <th width="10%">Assigned To</th>
+          <th width="10%">Estimated Hours</th>
+          <th width="10%">Submited</th>
+          <th width="10%">Validated</th>
+          <th width="10%">Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="list_slected">
+          <td>1</td>
+          <td>Project 1</td>
+          <td>Client 2</td>
+          <td>May 15, 2018</td>
+          <td>Dec 15, 2018</td>
+          <td>Lancer</td>
+          <td>200</td>
+          <td>34</td>
+          <td>30</td>
+          <td>15%</td>
+        </tr>
+        <tr class="list_slected">
+          <td>2</td>
+          <td>Project 2</td>
+          <td>Client 1</td>
+          <td>May 15, 2018</td>
+          <td>Dec 15, 2018</td>
+          <td>Lancer</td>
+          <td>200</td>
+          <td>34</td>
+          <td>30</td>
+          <td>15%</td>
+        </tr>
+        <tr class="list_slected">
+          <td>3</td>
+          <td>Project 3</td>
+          <td>Client 1</td>
+          <td>May 15, 2018</td>
+          <td>Dec 15, 2018</td>
+          <td>Lancer, Winner</td>
+          <td>200</td>
+          <td>34</td>
+          <td>30</td>
+          <td>15%</td>
+        </tr>
+        <tr class="list_slected">
+          <td>4</td>
+          <td>Project 4</td>
+          <td>Client 3</td>
+          <td>May 15, 2017</td>
+          <td>Dec 15, 2018</td>
+          <td>Lancer</td>
+          <td>200</td>
+          <td>34</td>
+          <td>30</td>
+          <td>15%</td>
+        </tr>
+      <tbody>
+    </table>
+  </div>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$("#tbl tbody tr").mouseenter(function () {
+        //When the element is being hovered add this class
+        $(this).children().css("background-color", "yellow");
+    });
+	$("#tbl tbody tr").mouseleave(function () {
+        //Otherwise remove it
+        $(this).children().css("background-color", "");
+    });
+
+	$("#tbl tbody tr").click(function() {
+		$("#mainframe", window.parent.document).attr("src", "02.ProjectDetail.html");
+	});
+});
+</script>
+</body>
+</html>

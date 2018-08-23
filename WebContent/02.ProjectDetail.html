@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Project</title>
+<link rel="stylesheet" type="text/css" href="css/homepage_new.css" />
+<script type="text/javascript" src="js/autoheight.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>  
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+</head>
+<body onload="main_height()" style="background-color: transparent">
+  <div id="toolbar">
+    <div class="lable">Project Detail</div>
+  </div>
+  <div class="tb_icon">
+    <table>
+      <tr>
+        <td width="4px"><img src="images/col_line.gif" width="2"
+          height="16" /></td>
+        <td width="16px" class="click"><img src="images/hotgif.gif"
+          width="16" height="16" /></td>
+        <td width="10%" class="click" id="newProject" onclick="newProject()">New Project</td>
+        
+        <td width="4px"><img src="images/col_line.gif" width="2"
+          height="16" /></td>
+        <td width="16px" class="click"><img src="images/edit.gif"
+          width="16" height="16" /></td>
+        <td width="10%" class="click" id="editProject" onclick="editSave()">Edit</td>
+
+        <td width="4px"><img src="images/col_line.gif" width="2"
+          height="16" /></td>
+        <td width="16px" class="click"><img src="images/del.gif"
+          width="16" height="16" /></td>
+        <td width="10%" class="click" id="deleteProject" onclick="#">Delete</td>
+
+        <td width="4px"><img src="images/col_line.gif" width="2"
+          height="16" /></td>
+        <!-- 
+        <td width="16px" class="click"><img src="images/del.gif"
+          width="16" height="16" /></td> 
+          -->
+        <td width="10%" class="click" id="closeProject" onclick="#">Close</td>
+
+        <td width="4px"><img src="images/col_line.gif" width="2"
+          height="16" /></td>
+        <!-- 
+        <td width="16px" class="click"><img src="images/del.gif"
+          width="16" height="16" /></td>
+          -->
+        <td width="200px" class="click" id="post" onclick="showPopWindow()">Post New Comment</td>
+
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <!-- 
+        <td width="16px" class="click"><img src="images/del.gif"
+          width="16" height="16" /></td>
+          -->
+        <td width="100px" class="click" id="loadTable" onclick="loadDetailTable()">Hours Detail</td>
+        <td width="10%">&nbsp;</td>
+        <td width="10%">&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="right_main">
+    <div>
+      <form method="post" id="form1">
+        <table class="autoheight_tab" border="0" cellpadding="0"
+          cellspacing="0">
+          <tr>
+            <td bgcolor="#FFFFFF"><br />
+              <table width="97%" border="0" align="center"
+                cellpadding="0" cellspacing="0" class="main_table">
+                <tr>
+                  <th colspan="6">Project Information:</th>
+                </tr>
+                <tr>
+                  <td width="17%" class="td_bg01"><font color="red">*</font>Name</td>
+                  <td width="16%" class="td_bg02"><input id="name"
+                    type="text" class="tf_120" value="BHS104" readonly/> </td>
+                  <td width="17%" class="td_bg01">Client Name</td>
+                  <td width="16%" class="td_bg02"><input
+                    name="FullName" type="text" class="tf_120"
+                    value="Berends Hendricks Stuit" readonly/></td>
+                  <td width="17%" class="td_bg01">Contract</td>
+                  <td width="17%" class="td_bg02"><input
+                    name="PhoneNumber" type="text" class="tf_120" value="Arya" readonly/></td>
+                </tr>
+                <tr>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_bg01">Start Date</td>
+                  <td class="td_bg02"><input name="StartDate" id="startdate"
+                    type="text" class="tf_120" value="2018.01.01" readonly/></td>
+                  <td class="td_bg01">End Date</td>
+                  <td class="td_bg02"><input name="EndDate" id="enddate"
+                    type="text" class="tf_120" value="2018.11.21" readonly/></td>
+                  <td class="td_bg01">Estinate Hours</td>
+                  <td class="td_bg02"><input name="EstinateHours"
+                    type="text" class="tf_120" value="100" readonly/></td>
+                </tr>
+
+                <tr>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td class="td_bg01">Assigned To</td>
+                  <td class="td_bg02"><input name="Assigned To"
+                    type="text" class="tf_120" value="Lancer, Winner, Daniel" readonly/></td>
+                  <td class="td_bg01">Submited Hours</td>
+                  <td class="td_bg02"><input name="SubmitedHours"
+                    type="text" class="tf_120" value="50" readonly/></td>
+                  <td class="td_bg01">Validated Hours</td>
+                  <td class="td_bg02"><input name="ValidatedHours"
+                    type="text" class="tf_120" value="45" readonly/></td>
+                </tr>
+                <tr>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                  <td class="td_bg01">&nbsp;</td>
+                  <td class="td_bg02">&nbsp;</td>
+                </tr>
+              </table> <br /></td>
+          </tr>
+        </table>
+      </form>
+      <!-- 记录显示 -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0"
+        height="25">
+        <tr>
+          <td width="15" height="25" background="images/tab_21.gif">&nbsp;</td>
+          <td background="images/tab_21.gif" align="center" valign="top"></td>
+          <td width="14" background="images/tab_21.gif">&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+    <div class="scrolltable">
+      <table class="list_table" id="detailList"  width="100%" border="1" cellpadding="1" cellspacing="1">
+      </table>
+    </div>
+  </div>
+
+  <div id="newCommentWindow" class="popwindow" title="Add a Comment" >
+      <form method="post" id="form2">
+      <table align="center" style="width: 380px" >
+        <tr>
+        <td width="100%"><textarea  name="comment" style="width:400px; height:200px; resize:none;"></textarea></td>
+        </tr>
+        <tr>
+          <td align="center"><input class="botton999" type="button"
+            value="Save" onclick="saveComment()" /></td>
+        </tr>
+      </table>
+      </form>
+  </div>
+  
+  <div id="newRegisterWindow" class="popwindow" title="Register Hours" >
+      <form method="post" id="form3">
+      <table align="center" style="width: 380px" >
+        <tr><td>Hours/Comments for Project BHS104 in 2018.08.20 </td></tr>
+        <tr>
+        <td width="100%"><input  name="hours" class="tf_120" value="4"/></input></td>
+        </tr>
+        <tr>
+        <td width="100%"><textarea  name="comment" style="width:400px; height:150px; resize:none;">She told herself, light as a feather</textarea></td>
+        </tr>
+        <tr>
+          <td align="center"><input class="botton999" type="button"
+            value="Register" onclick="saveRegister()" /></td>
+        </tr>
+      </table>
+      </form>
+  </div>
+  
+  <div id="newConfirmWindow" class="popwindow" title="Confirm Hours" >
+      <form method="post" id="form4">
+      <table align="center" style="width: 380px" >
+        <tr><td id="message">Lancer's Hours/Comments for Project BHS104 in 2018.08.20 </td></tr>
+        <tr>
+        <td width="100%"><input id="whours" class="tf_120" value="4" readonly/></td>
+        </tr>
+        <tr>
+        <td width="100%"><textarea  id="wcomments" style="width:400px; height:100px; resize:none;" readonly>She told herself, light as a feather</textarea></td>
+        </tr>
+	      <tr><td>Please to comfirm Lancer's hours above</td></tr>
+        <tr>
+        <td width="100%"><input  name="hours" class="tf_120" value="4"/></td>
+        </tr>
+        <tr>
+        <td width="100%"><textarea  name="comments" style="width:400px; height:100px; resize:none;"/></textarea></td>
+        </tr>
+        <tr>
+          <td align="center"><input class="botton999" type="button"
+            value="Confirm" onclick="saveConfirm()" /></td>
+        </tr>
+      </table>
+      </form>
+  </div>
+
+
+</body>
+<script id="commentTmpl" type="text/x-jsrender">  
+        <thead>
+          <tr>
+            <th width="10%">Author</th>
+            <th width="10%">Date</th>
+            <th width="70%">Comments</th>
+            <th width="10%">Operation</th>
+          </tr>
+        </thead>
+        <tbody>
+{{for p}} 
+          <tr>
+            <td>{{:author}}</td>
+						<td>{{:date}}   </td>
+            <td class="leftalign">{{:comment}} </td>
+            <td><input class="botton999" id="add"
+              type="button" value="delete" name="Delete" onclick="" /></td>
+          </tr>
+{{/for}} 
+        </tbody> 
+</script>
+
+<script id="HoursTmpl" type="text/x-jsrender">  
+        <thead>
+          <tr>
+            <th width="10%">Date</th>
+            <th width="10%">Worker Name</th>
+            <th width="5%">Submitted</th>
+            <th width="30%">Submitted Notes</th>
+            <th width="5%">Confirmed</th>
+            <th width="30%">Confirmed Notes</th>
+						<th width="10%">Operation</th>
+          </tr>
+        </thead>
+        <tbody>
+{{for p}} 
+          <tr>
+            <td>{{:date}}</td>
+            <td>{{:worker}}   </td>
+            <td>{{:submitted}} </td>
+						<td class="leftalign">{{:workerNotes}} </td>
+						<td>{{:confirmed}} </td>
+						<td class="leftalign">{{:confirmedNotes}} </td>
+            <td><input class="botton999" id="comfirmHours"
+              type="button" value="Comfirm" name="Comfirm" onclick="comfirmHours(this)" /></td>
+          </tr>
+{{/for}} 
+        </tbody> 
+</script> 
+ 
+
+<script type="text/javascript">
+function loadDetailTable() {
+  var t = $("#loadTable").html();
+  if (t == "Hours Detail") {
+    $("#loadTable").html("Comment Detail");
+   	$("#post").html("Register Hours");
+   	
+    showHours();
+  }
+  if (t == "Comment Detail") {
+    $("#loadTable").html("Hours Detail");
+    $("#post").html("Post New Comment");
+    
+    showComments();
+  }
+}
+
+function showComments() {
+  var myTemplate = $.templates("#commentTmpl");  
+  $.getJSON( "json/comments.json", function( data ) {
+    var app = {p: data };  
+    myTemplate.link("#detailList", app);
+  	});
+}
+
+function showHours(){
+  var myTemplate = $.templates("#HoursTmpl");  
+  $.getJSON( "json/hours.json", function( data ) {
+    var app = {p: data };  
+    myTemplate.link("#detailList", app);
+  	});
+}
+
+function newProject() {
+	$("#form1 .tf_120").each(function(){
+		console.log(this.value);
+		this.value = "";
+	});
+	var t = $("#editProject").html();
+	if (t == "Edit") {
+		$("#editProject").html("Save");
+		$("#form1").find('input').prop("readonly",false);
+	}
+	$("#detailList").empty();
+}
+
+function editSave() {
+	var t = $("#editProject").html();
+	if (t == "Edit") {
+		$("#editProject").html("Save");
+		$("#form1").find('input').prop("readonly",false);
+	}
+	if (t == "Save") {
+		$("#editProject").html("Edit");
+		$("#form1").find('input').prop("readonly",true);
+	}
+}
+
+function showPopWindow(){
+	var t = $("#post").html();
+	if(t == "Post New Comment"){
+		$( "#newCommentWindow" ).find("textarea").val("");
+		$( "#newCommentWindow" ).dialog({
+		      height: 300,
+		      width: 500,
+		      modal: true,
+		      resizable:false
+		    });
+	}
+	if(t == "Register Hours"){
+		$( "#newRegisterWindow" ).find("textarea").val("");
+		$( "#newRegisterWindow" ).dialog({
+		      height: 300,
+		      width: 500,
+		      modal: true,
+		      resizable:false
+		    });
+	}
+}
+
+function comfirmHours(self){
+	var kids = self.closest("tr").children;
+	console.log(kids.length);
+	console.log(kids[1].tagName);
+	console.log($(kids[1]).html());
+	var d = $(kids[0]).html();
+	var worker = $(kids[1]).html();
+	var workerHours = $(kids[2]).html();
+	console.log(workerHours);
+	var workerComments = $(kids[3]).html();
+	console.log(workerComments);
+	var message = worker + "'s Hours/Comments for Project BHS104 in " + d;
+	$( "#newConfirmWindow" ).find("#message").html(message);
+	$( "#newConfirmWindow" ).find("#whours" ).val(workerHours);
+	$( "#newConfirmWindow" ).find("#wcomments" ).html(workerComments);
+
+	$( "#newConfirmWindow" ).dialog({
+	      height: 400,
+	      width: 500,
+	      modal: true,
+	      resizable:false
+	    });
+}
+
+function saveComment(){
+	$( "#newCommentWindow" ).dialog("close");
+}
+
+function saveRegister(){
+	$( "#newRegisterWindow" ).dialog("close");
+}
+
+function saveConfirm(){
+	$( "#newConfirmWindow" ).dialog("close");
+}
+
+$(document).ready(function() {
+	$("#startdate").datepicker();
+	$("#enddate").datepicker();
+	showComments();
+});
+</script>
+</html>

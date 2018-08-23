@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JMS Report Management System</title>
+<link rel="stylesheet" type="text/css" href="css/layout_new.css" />
+<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+</head>
+<body>
+  <div id="header">
+    <div class="jmslogo">
+      Hi, Lancer<br> <a href="login/logout.jsp">Sign out</a>
+    </div>
+  </div>
+  <div id="main">
+
+    <div id="leftpart">
+      <div class="searchbar">
+        <table>
+          <tr>
+            <td width="28" height="35" valign="bottom"><img
+              src="images/new.gif" align="right" alt="" /></td>
+            <td width="97"><font size="2px">Console</font></td>
+            <td width="39">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="27" colspan="2" align="right" valign="top"><input
+              name="querystr" type="text" class="search_input" /></td>
+            <td height="27" align="left" valign="top"><input
+              name="button" type="button" class="search_button"
+              id="button" onclick="quert();" /></td>
+          </tr>
+        </table>
+      </div>
+      <div id="sidebar">
+        <table>
+          <tr>
+            <td><a href="01.ProjectList.html" target="mainframe">Project List</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Register Work Hours</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Employee Payment</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Client Invoice</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Client Profile</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="midpart">
+      <iframe name="mainframe" id="mainframe" 
+        height="100%"         
+        src="01.ProjectList.html"> </iframe>
+    </div>
+  </div>
+</body>
+</html>
