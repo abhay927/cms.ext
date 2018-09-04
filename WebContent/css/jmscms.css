@@ -149,7 +149,11 @@ table {
 }
 
 .tab .tablinks {
-  border-bottom: 1px solid #99aabd;
+/*   border-bottom: 1px solid #99aabd; */
+}
+
+.tab .selecttab {
+   border-bottom: 1px solid #99aabd; 
 }
 
 .nemubar {
@@ -181,6 +185,7 @@ table {
     font-weight: bold;
     font-size: 12px;
 }
+
 .nemubar li a:hover {
     background-color: #DFECFC;
 }
@@ -199,7 +204,7 @@ table {
   width: 100%;
 }
 .list_table th {
-  background: url(../images/list_tab_th.gif) repeat-x;
+  background: url(../images/list_tab_th.gif) repeat-x left center;
   text-align: center;
   font-size: 11px;
   text-align: center;
@@ -278,4 +283,3 @@ table {
 .modalwindow {
   display: none; /* Hidden by default */
 }
-

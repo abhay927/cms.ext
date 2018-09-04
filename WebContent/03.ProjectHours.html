@@ -2,12 +2,13 @@
 <html>
 <head>
 <title>Production List</title>
-<link rel="stylesheet" type="text/css" href="css/homepage_new.css" />
-<script src="js/autoheight.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-
 </head>
 <body>
+  <div id="common">
+  include common.html here
+  </div>
   <div id="toolbar">
   <!-- Here is name of the list -->
     <div class="lable">
@@ -15,16 +16,21 @@
     </div>
   </div>
 
-  <div class="tb_icon">
-  <!-- Here is position of tool icons -->
-    <table>
-      <tr>
-      <td><a href="#">New Project</a></td>
-      </tr>
-    </table>
-    <div align="right"></div>
-  </div>
-  <div id="right_main">
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">My Work Hours</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <ul>
+        <li><a class="active" href="#home">Register</a></li>
+        <li><a href="#filter">Filter</a></li>
+      </ul>
+    </div>
+  <div id="list_section">
   <!-- Here is the list -->
     <table class="list_table" id="tbl" >
       <thead>
@@ -93,18 +99,11 @@
       <tbody>
     </table>
   </div>
+  </div>
 <script type="text/javascript">
-
 $(document).ready(function() {
-	$("#tbl tbody tr").mouseenter(function () {
-        //When the element is being hovered add this class
-        $(this).children().css("background-color", "yellow");
-    });
-	$("#tbl tbody tr").mouseleave(function () {
-        //Otherwise remove it
-        $(this).children().css("background-color", "");
-    });
-});
+    $("#common").load("00.common.html");
+  });
 </script>
 </body>
 </html>

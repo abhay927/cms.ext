@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>  
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jms_cms_2018.js"></script>
+<title>JMS Report Management System</title>
+<script >
+$(document).ready(function() {
+	  $("#common").load("00.common.html");
+  });
+</script>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Team Consultant</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <ul>
+        <li><a class="active" href="#home" onclick="showRegisterWindow()">New Consultant</a></li>
+        <li><a href="#filter">Filter</a></li>
+      </ul>
+    </div>
+    <div class="list_section">
+      <!-- Here is the list -->
+      <table class="list_table" id="tbl">
+        <thead>
+          <tr>
+            <th width="10%">First Name</th>
+            <th width="10%">Second Name</th>
+            <th width="10%">Joined JMS</th>
+            <th width="10%">Speciality</th>
+            <th width="6%">Rate</th>
+            <th width="20%">Assigned Project</th>
+            <th width="6%">1 week AWH</th>
+            <th width="6%">2 week AWH</th>
+            <th width="6%">4 week AWH</th>
+            <th width="10%">Last Payment</th>
+            <th width="10%">Unpaid Hours</th>
+            <th width="10%">Operation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="list_slected">
+            <td>Dawn</td>
+            <td>Reynolds</td>
+            <td>01/01/2017</td>
+            <td>Plan Build</td>
+            <td>100.00</td>
+            <td>Project1, Project2</td>
+            <td>4.50</td>
+            <td>5.00</td>
+            <td>3.25</td>
+            <td>05/01/2018</td>
+            <td>3.25</td>
+            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
+          </tr>
+          <tr class="list_slected">
+            <td>Donna </td>
+            <td>Anderson</td>
+            <td>01/01/2017</td>
+            <td>Plan Build</td>
+            <td>100.00</td>
+            <td>Project1, Project2</td>
+            <td>4.50</td>
+            <td>5.00</td>
+            <td>3.25</td>
+            <td>05/01/2018</td>
+            <td>3.25</td>
+            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
+          </tr>
+          <tr class="list_slected">
+            <td>Shelley </td>
+            <td>Rice</td>
+            <td>01/01/2017</td>
+            <td>Plan Build</td>
+            <td>100.00</td>
+            <td>Project1, Project2</td>
+            <td>4.50</td>
+            <td>5.00</td>
+            <td>3.25</td>
+            <td>05/01/2018</td>
+            <td>3.25</td>
+            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
+          </tr>
+            <tr class="list_slected">
+            <td>Lancer</td>
+            <td>Zhang</td>
+            <td>01/01/2017</td>
+            <td>Plan Build</td>
+            <td>100.00</td>
+            <td>Project1, Project2</td>
+            <td>4.50</td>
+            <td>5.00</td>
+            <td>3.25</td>
+            <td>05/01/2018</td>
+            <td>3.25</td>
+            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
+          </tr>
+            <tr class="list_slected">
+            <td>Winner</td>
+            <td>Wang</td>
+            <td>01/01/2017</td>
+            <td>Plan Build</td>
+            <td>100.00</td>
+            <td>Project1, Project2</td>
+            <td>4.50</td>
+            <td>5.00</td>
+            <td>3.25</td>
+            <td>05/01/2018</td>
+            <td>3.25</td>
+            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
+          </tr>
+            <tr class="list_slected">
+            <td>Daniel</td>
+            <td>Feng</td>
+            <td>01/01/2017</td>
+            <td>Plan Build</td>
+            <td>100.00</td>
+            <td>Project1, Project2</td>
+            <td>4.50</td>
+            <td>5.00</td>
+            <td>3.25</td>
+            <td>05/01/2018</td>
+            <td>3.25</td>
+            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
+          </tr>
+        <tbody>
+      </table>
+    </div>
+  </div>
+  <div id="assignToWindow" class="modalwindow" title="Assign to">
+      <form method="post" id="form2">
+      <ul>
+        <li><input type="checkbox" id="myself" value="1" /> Project 1 </li>
+        <li><input type="checkbox" id="myself" value="2" /> Project 2 </li>
+        <li><input type="checkbox" id="myself" value="3" />  Project 3 </li>
+        <li><input type="checkbox" id="myself" value="4" checked/>  Project 4 </li>
+        <li><input type="checkbox" id="myself" value="5" checked/>  Project 5 </li>
+        <li><input type="checkbox" id="myself" value="6" checked/>  Project 6 </li>
+      </ul>
+        <p align="center"><input class="botton999" type="button"
+            value="Save" onclick="assignToWindowSave()" /></p>
+      </form>
+  </div>
+</body>
+<script type="text/javascript">
+function assignToWindow(){
+  console.log($( "#assigned" ).is('[readonly]'));
+  if($( "#assigned" ).is('[readonly]')) {
+    return;
+  }
+  $( "#assignToWindow" ).dialog({
+        height: 300,
+        width: 200,
+        modal: true,
+        resizable:false
+   });
+}
+
+function assignToWindowSave(){
+  $( "#assignToWindow" ).dialog("close");
+}
+</script>
+</html>

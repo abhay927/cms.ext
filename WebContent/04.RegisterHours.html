@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>  
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jms_cms_2018.js"></script>
+<title>JMS Report Management System</title>
+<script >
+$(document).ready(function() {
+	  $("#common").load("00.common.html");
+  });
+</script>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" >My Work Hours</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <form>
+      <ul>
+        <li><a href="#home" onclick="showRegisterWindow()">Register</a></li>
+        <li><a href="#filter">Filter</a></li>
+        <li><a href="#filter"><input type="radio" name="period" value="Myself only" checked style="float:left" />Today</a></li>
+        <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />1 Week</a></li>
+        <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />2 week</a></li>
+        <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />4 week</a></li>
+        <li><a href="#filter">Export to CSV</a></li>
+        <li style="float:right"><a href="#"><input type="checkbox" id="myself" value="Myself only" checked style="float:left" /> Myself only</a></li>
+      </ul>
+      </form>
+    </div>
+    <div class="list_section">
+      <!-- Here is the list -->
+      <table class="list_table" id="tbl">
+        <thead>
+          <tr>
+            <th width="10%">Work Date</th>
+            <th width="10%">Client Name</th>
+            <th width="10%">Project Name</th>
+            <th width="10%">Category</th>
+            <th width="10%"># of Records</th>
+            <th width="10%">Work Description</th>
+            <th width="10%">Registered Hours</th>
+            <th width="10%">Confirmed Hours</th>
+            <th width="10%">Confirmed Notes</th>
+            <th width="10%">Confirmed Date</th>
+            <th width="10%">Payed Date</th>
+            <th width="10%">Invoice Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="list_slected">
+            <td>05/01/2018</td>
+            <td>ABS001</td>
+            <td>Client 2</td>
+            <td>Plan Build - Standard</td>
+            <td>-</td>
+            <td>Updated Payment Rules</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td>-</td>
+            <td>05/01/2018</td>
+            <td>05/01/2018</td>
+            <td>19947</td>
+          </tr>
+          <tr class="list_slected">
+            <td>05/01/2018</td>
+            <td>ABS001</td>
+            <td>Client 2</td>
+            <td>Plan Build - Standard</td>
+            <td>-</td>
+            <td>Updated Payment Rules</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td>-</td>
+            <td>05/01/2018</td>
+            <td>05/01/2018</td>
+            <td>19947</td>
+          </tr>
+            <tr class="list_slected">
+            <td>05/01/2018</td>
+            <td>ABS001</td>
+            <td>Client 2</td>
+            <td>Plan Build - Standard</td>
+            <td>-</td>
+            <td>Updated Payment Rules</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td>-</td>
+            <td>05/01/2018</td>
+            <td>05/01/2018</td>
+            <td>19947</td>
+          </tr>
+            <tr class="list_slected">
+            <td>05/01/2018</td>
+            <td>ABS001</td>
+            <td>Client 2</td>
+            <td>Plan Build - Standard</td>
+            <td>-</td>
+            <td>Updated Payment Rules</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td>-</td>
+            <td>05/01/2018</td>
+            <td>05/01/2018</td>
+            <td>19947</td>
+          </tr>
+            <tr class="list_slected">
+            <td>05/01/2018</td>
+            <td>ABS001</td>
+            <td>Client 2</td>
+            <td>Plan Build - Standard</td>
+            <td>-</td>
+            <td>Updated Payment Rules</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td>-</td>
+            <td>05/01/2018</td>
+            <td>05/01/2018</td>
+            <td>19947</td>
+          </tr>
+            <tr class="list_slected">
+            <td>05/01/2018</td>
+            <td>ABS001</td>
+            <td>Client 2</td>
+            <td>Plan Build - Standard</td>
+            <td>-</td>
+            <td>Updated Payment Rules</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td>-</td>
+            <td>05/01/2018</td>
+            <td>05/01/2018</td>
+            <td>19947</td>
+          </tr>
+        <tbody>
+      </table>
+    </div>
+  </div>
+  
+</body>
+  
+  <div id="registerwindow" class="modalwindow" title="Register worked hours" >
+      <form method="post" id="form4">
+        <table class="list_table" id="tbl">
+        <thead>
+        <tr>
+        <th>Project Name</th>
+        <th>Client</th>
+        <th>Category Criteria</th>
+        <th>Platform / Group Name / Plan Id</th>
+        <th>Comments</th>
+        <th  width="6%">Total Hours</th>
+        <th width="6%"># of records</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Project 1</td>
+        <td>Client 1</td>
+        <td>
+        <div class="custom-select" style="width:200px;">
+        <select>
+              <option value="0"></option>
+              <option value="Adjudication/Examining">Adjudication/Examining</option>
+              <option value="Client training meeting">Client training meeting</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Claim Audit">Claim Audit</option>
+              <option value="Client support meeting">Client support meeting</option>
+              <option value="Plan Audit">Plan Audit</option>
+              <option value="Plan Build - Standard">Plan Build - Standard</option>
+              <option value="Group/Plan Mapping or Logic">Group/Plan Mapping or Logic</option>
+              <option value="Platform Global Mapping or Logic">Platform Global Mapping or Logic</option>
+              <option value="Plan Build - Support Tasks">Plan Build - Support Tasks</option>
+              <option value="Plan Test">Plan Test</option>
+              <option value="Plan Test Results Review">Plan Test Results Review</option>
+              <option value="Programming">Programming</option>
+              <option value="Corrective Action - Plan Build">Corrective Action - Plan Build</option>
+              <option value="Corrective Action - Plan Audit">Corrective Action - Plan Audit</option>
+              <option value="Project Management">Project Management</option>
+              <option value="Technical Development Support">Technical Development Support</option>
+              <option value="Other">Other</option>
+          </select></div></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        </tr>
+        <tr>
+        <td>Project 2</td>
+        <td>Client 2</td>
+        <td>        <div class="custom-select" style="width:200px;">
+        <select>
+              <option value="0"></option>
+              <option value="Adjudication/Examining">Adjudication/Examining</option>
+              <option value="Client training meeting">Client training meeting</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Claim Audit">Claim Audit</option>
+              <option value="Client support meeting">Client support meeting</option>
+              <option value="Plan Audit">Plan Audit</option>
+              <option value="Plan Build - Standard">Plan Build - Standard</option>
+              <option value="Group/Plan Mapping or Logic">Group/Plan Mapping or Logic</option>
+              <option value="Platform Global Mapping or Logic">Platform Global Mapping or Logic</option>
+              <option value="Plan Build - Support Tasks">Plan Build - Support Tasks</option>
+              <option value="Plan Test">Plan Test</option>
+              <option value="Plan Test Results Review">Plan Test Results Review</option>
+              <option value="Programming">Programming</option>
+              <option value="Corrective Action - Plan Build">Corrective Action - Plan Build</option>
+              <option value="Corrective Action - Plan Audit">Corrective Action - Plan Audit</option>
+              <option value="Project Management">Project Management</option>
+              <option value="Technical Development Support">Technical Development Support</option>
+              <option value="Other">Other</option>
+          </select></div></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        </tr>
+        <tr>
+        <td>Project 3</td>
+        <td>Client 3</td>
+        <td>        <div class="custom-select" style="width:200px;">
+        <select>
+              <option value="0"></option>
+              <option value="Adjudication/Examining">Adjudication/Examining</option>
+              <option value="Client training meeting">Client training meeting</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Claim Audit">Claim Audit</option>
+              <option value="Client support meeting">Client support meeting</option>
+              <option value="Plan Audit">Plan Audit</option>
+              <option value="Plan Build - Standard">Plan Build - Standard</option>
+              <option value="Group/Plan Mapping or Logic">Group/Plan Mapping or Logic</option>
+              <option value="Platform Global Mapping or Logic">Platform Global Mapping or Logic</option>
+              <option value="Plan Build - Support Tasks">Plan Build - Support Tasks</option>
+              <option value="Plan Test">Plan Test</option>
+              <option value="Plan Test Results Review">Plan Test Results Review</option>
+              <option value="Programming">Programming</option>
+              <option value="Corrective Action - Plan Build">Corrective Action - Plan Build</option>
+              <option value="Corrective Action - Plan Audit">Corrective Action - Plan Audit</option>
+              <option value="Project Management">Project Management</option>
+              <option value="Technical Development Support">Technical Development Support</option>
+              <option value="Other">Other</option>
+          </select></div></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        </tr>
+        <tr>
+        <td>Project 4</td>
+        <td>Client 4</td>
+        <td>        <div class="custom-select" style="width:200px;">
+        <select>
+              <option value="0"></option>
+              <option value="Adjudication/Examining">Adjudication/Examining</option>
+              <option value="Client training meeting">Client training meeting</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Claim Audit">Claim Audit</option>
+              <option value="Client support meeting">Client support meeting</option>
+              <option value="Plan Audit">Plan Audit</option>
+              <option value="Plan Build - Standard">Plan Build - Standard</option>
+              <option value="Group/Plan Mapping or Logic">Group/Plan Mapping or Logic</option>
+              <option value="Platform Global Mapping or Logic">Platform Global Mapping or Logic</option>
+              <option value="Plan Build - Support Tasks">Plan Build - Support Tasks</option>
+              <option value="Plan Test">Plan Test</option>
+              <option value="Plan Test Results Review">Plan Test Results Review</option>
+              <option value="Programming">Programming</option>
+              <option value="Corrective Action - Plan Build">Corrective Action - Plan Build</option>
+              <option value="Corrective Action - Plan Audit">Corrective Action - Plan Audit</option>
+              <option value="Project Management">Project Management</option>
+              <option value="Technical Development Support">Technical Development Support</option>
+              <option value="Other">Other</option>
+          </select></div></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        <td><input name="PhoneNumber" type="text" class="tf_120 editable" value=""/></td>
+        </tr>
+        </tbody>
+        </table>
+        <br/>
+        <p align="center">
+          <input class="botton999" type="button"
+            value="Confirm" onclick="registerWindowSave()" />
+        </p>
+      </form>
+  </div>
+</body>
+
+<script type="text/javascript">
+function showRegisterWindow(){
+  $( "#registerwindow" ).dialog({
+        height: 300,
+        width: 750,
+        modal: true,
+        resizable:false
+   });
+}
+
+function registerWindowSave(){
+  $( "#registerwindow" ).dialog("close");
+}
+</script>
+</html>
