@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Production List</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script >
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+  });
+</script>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Team Consultant</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <ul>
+        <li><a class="active" href="#home" onclick="showRegisterWindow()">New Consultant</a></li>
+        <li><a href="#filter">Filter</a></li>
+      </ul>
+    </div>
+    <div class="list_section">
+    <!-- Here is the list -->
+    <table class="list_table" id="tbl" >
+       <thead>
+          <tr>
+            <th width="4%">Item</th>
+            <th width="6%">Invoice No.</th>
+            <th width="10%">Name</th>
+            <th width="15%">Invoice Period</th>
+            <th width="6%">Invoice Date</th>
+            <th width="6%">Hours</th>
+            <th width="6%">Invoice Amount</th>
+            <th>Notes</th>
+            <th width="10%">Operation</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr class="list_slected">
+          <td>1</td>
+          <td><a href="#">234567</a></td>
+          <td>Lancer Zhang</td>
+          <td>01/01/2018 - 01/31/2018</td>
+          <td>15/02/2018</td>
+          <td>100</td>
+          <td>5000</td>
+          <td> </td>
+          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
+        </tr>
+        <tr class="list_slected">
+          <td>1</td>
+          <td><a href="#">234567</a></td>
+          <td>Winner Wang</td>
+          <td>01/01/2018 - 01/31/2018</td>
+          <td>15/02/2018</td>
+          <td>100</td>
+          <td>5000</td>
+          <td> </td>
+          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
+        </tr>
+        <tr class="list_slected">
+          <td>1</td>
+          <td><a href="#">234567</a></td>
+          <td>Daniel Feng</td>
+          <td>01/01/2018 - 01/31/2018</td>
+          <td>15/02/2018</td>
+          <td>100</td>
+          <td>5000</td>
+          <td> </td>
+          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
+        </tr>
+        <tr class="list_slected">
+          <td>1</td>
+          <td><a href="#">234567</a></td>
+          <td>Dawn Reynolds</td>
+          <td>01/01/2018 - 01/31/2018</td>
+          <td>15/02/2018</td>
+          <td>100</td>
+          <td>5000</td>
+          <td> </td>
+          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
+        </tr>
+        <tr class="list_slected">
+          <td>1</td>
+          <td><a href="#">234567</a></td>
+          <td>Donna Anderson</td>
+          <td>01/01/2018 - 01/31/2018</td>
+          <td>15/02/2018</td>
+          <td>100</td>
+          <td>5000</td>
+          <td> </td>
+          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
+        </tr>
+        <tr class="list_slected">
+          <td>1</td>
+          <td><a href="#">234567</a></td>
+          <td>Shelley Rice</td>
+          <td>01/01/2018 - 01/31/2018</td>
+          <td>15/02/2018</td>
+          <td>100</td>
+          <td>5000</td>
+          <td> </td>
+          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
+        </tr>
+      <tbody>
+    </table>
+  </div>
+  </div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+  });
+</script>
+</body>
+</html>
