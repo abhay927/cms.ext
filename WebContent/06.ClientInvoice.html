@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>  
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jms_cms_2018.js"></script>
+<title>JMS Report Management System</title>
+<script >
+$(document).ready(function() {
+	  $("#common").load("00.common.html");
+  });
+</script>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Client Invoice List</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <form>
+      <ul>
+        <li><a href="#filter">Filter</a></li>
+        <li style="float:right"><a href="#filter"><input type="checkbox" name="period" value="Myself only" checked style="float:left"/>Uninvoiced</a></li>
+        <li style="float:right"><a href="#filter"><input type="checkbox" name="period" value="Myself only" checked style="float:left" />Unbalanced</a></li>
+        <li style="float:right"><a href="#filter"><input type="checkbox" name="period" value="Myself only" checked style="float:left" />Balanced</a></li>
+        <li style="float:right"><a href="#filter"><input type="checkbox" name="period" value="Myself only" checked style="float:left" />All</a></li>
+      </ul>
+      </form>
+    </div>
+    <div class="list_section">
+      <!-- Here is the list -->
+      <table class="list_table" id="tbl">
+        <thead>
+          <tr>
+            <th width="4%"><input type="checkbox" id="myself" value="1" /> All</th>
+            <th width="10%">Client</th>
+            <th width="15%">Invoice Period</th>
+            <th width="6%">Invoice Date</th>
+            <th width="6%">Invoice No.</th>
+            <th width="6%">Invoice Amount</th>
+            <th width="6%">Received Date</th>
+            <th width="10%">Check No.</th>
+            <th width="6%">Received Amount</th>
+            <th width="6%">Balance</th>
+            <th>Notes</th>
+            <th width="10%">Operation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="list_slected">
+            <td><input type="checkbox" id="myself" value="1" /></td>
+            <td>Client 1</td>
+            <td>06/01/2017 -</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Invoice" name="Comfirm" onclick="" /></td>
+          </tr>
+          <tr class="list_slected">
+            <td><input type="checkbox" id="myself" value="1" /></td>
+            <td>Client 2</td>
+            <td>06/01/2017 -</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Invoice" name="Comfirm" onclick="" /></td>
+          </tr>
+          <tr class="list_slected">
+            <td><input type="checkbox" id="myself" value="1" /></td>
+            <td>Client 3</td>
+            <td>06/01/2017 -</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Invoice" name="Comfirm" onclick="" /></td>
+          <tr class="list_slected">
+            <td><input type="checkbox" id="myself" value="1" /></td>
+            <td>Client 1</td>
+            <td>04/01/2017 to 05/01/2017</td>
+            <td>06/01/2017</td>
+            <td>123456</td>
+            <td>10000.00</td>
+            <td> </td>
+            <td> </td>
+            <td>0.00</td>
+            <td>10000.00</td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Recept" name="Comfirm" onclick="" /></td>
+          </tr>
+          <tr class="list_slected">
+            <td><input type="checkbox" id="myself" value="1" /></td>
+            <td>Client 2</td>
+            <td>04/01/2017 to 05/01/2017</td>
+            <td>06/01/2017</td>
+            <td>123456</td>
+            <td>10000.00</td>
+            <td> </td>
+            <td> </td>
+            <td>0.00</td>
+            <td>10000.00</td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Recept" name="Comfirm" onclick="" /></td>
+          </tr>
+          <tr class="list_slected">
+            <td><input type="checkbox" id="myself" value="1" /></td>
+            <td>Client 3</td>
+            <td>04/01/2017 to 05/01/2017</td>
+            <td>06/01/2017</td>
+            <td>123456</td>
+            <td>10000.00</td>
+            <td> </td>
+            <td> </td>
+            <td>0.00</td>
+            <td>10000.00</td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Recept" name="Comfirm" onclick="" /></td>
+          </tr>
+            <tr class="list_slected">
+            <td></td>
+            <td>Client 1</td>
+            <td>01/01/2017 to 02/01/2017</td>
+            <td>03/01/2017</td>
+            <td>123456</td>
+            <td>10000.00</td>
+            <td>04/01/2017</td>
+            <td>789456</td>
+            <td>8000.00</td>
+            <td>2000.00</td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Recept" name="Comfirm" onclick="" /></td>
+          </tr>
+            <tr class="list_slected">
+            <td></td>
+            <td>Client 2</td>
+            <td>01/01/2017 to 02/01/2017</td>
+            <td>03/01/2017</td>
+            <td>123456</td>
+            <td>10000.00</td>
+            <td>04/01/2017</td>
+            <td>789456</td>
+            <td>10000.00</td>
+            <td>0.00</td>
+            <td>Notes</td>
+            <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
+          </tr>
+            <tr class="list_slected">
+            <td></td>
+            <td>Client 3</td>
+            <td>01/01/2017 to 02/01/2017</td>
+            <td>03/01/2017</td>
+            <td>123456</td>
+            <td>10000.00</td>
+            <td>04/01/2017<br/>04/15/2017<br/>04/15/2017<br/>04/15/2017</td>
+            <td>789456<br/>765876<br/>765876<br/>765876</td>
+            <td>10000.00</td>
+            <td>0.00</td>
+            <td>Notes</td>
+            <td> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="assignToWindow" class="modalwindow" title="Assign to">
+      <form method="post" id="form2">
+      <ul>
+        <li><input type="checkbox" id="myself" value="1" /> Project 1 </li>
+        <li><input type="checkbox" id="myself" value="2" /> Project 2 </li>
+        <li><input type="checkbox" id="myself" value="3" />  Project 3 </li>
+        <li><input type="checkbox" id="myself" value="4" checked/>  Project 4 </li>
+        <li><input type="checkbox" id="myself" value="5" checked/>  Project 5 </li>
+        <li><input type="checkbox" id="myself" value="6" checked/>  Project 6 </li>
+      </ul>
+        <p align="center"><input class="botton999" type="button"
+            value="Save" onclick="assignToWindowSave()" /></p>
+      </form>
+  </div>
+</body>
+<script type="text/javascript">
+function assignToWindow(){
+  console.log($( "#assigned" ).is('[readonly]'));
+  if($( "#assigned" ).is('[readonly]')) {
+    return;
+  }
+  $( "#assignToWindow" ).dialog({
+        height: 300,
+        width: 200,
+        modal: true,
+        resizable:false
+   });
+}
+
+function assignToWindowSave(){
+  $( "#assignToWindow" ).dialog("close");
+}
+</script>
+</html>

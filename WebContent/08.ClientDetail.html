@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Client Detail</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>  
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jms_cms_2018.js"></script>
+</head>
+<body>
+  <div id="common">include common.html here</div>
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Client Detail</button>
+      </div>
+    </div>
+    <div class=nemubar>
+      <!-- Here is position of nemu bar -->
+      <ul>
+        <li><a href="#" onclick="newProject()">New Client</a></li>
+        <li><a href="#" id="editProject" onclick="editSave()">Edit</a></li>
+        <li><a href="#">Delete</a></li>
+        <li><a href="#">Close</a></li>
+        <li><a href="#" onclick="loadComments()">Comments</a></li>
+        <li><a href="#" onclick="showCommentWindow()">New Comment</a></li>
+      </ul>
+    </div>
+    <div class="list_section">
+      <form method="post" id="form1">
+        <div style="padding: 10px;">
+          <table class="detail_table"
+            style="border-collapse: separate; border-spacing: 0px 10px;">
+            <tr>
+              <td width="17%" class="td_bg01"><font color="red">*</font>Client</td>
+              <td width="16%" class="td_bg02"><input name="Client"
+                id="Client" type="bd" class="tf_120" value="BHS104" />
+                <input name="ClientTmp" type="hidden" value="BHS104" />
+              </td>
+              <td width="17%" class="td_bg01">Full Name</td>
+              <td width="16%" class="td_bg02"><input
+                name="FullName" type="bd" class="tf_120"
+                value="Berends Hendricks Stuit" /></td>
+              <td width="17%" class="td_bg01">Phone Number</td>
+              <td width="17%" class="td_bg02"><input
+                name="PhoneNumber" type="bd" class="tf_120" value="" /></td>
+            </tr>
+            <tr>
+              <td class="td_bg01">Fax</td>
+              <td class="td_bg02"><input name="Fax" type="bd"
+                class="tf_120" value="" /></td>
+              <td class="td_bg01">Email</td>
+              <td class="td_bg02"><input name="Email" type="bd"
+                class="tf_120" value="" /></td>
+              <td class="td_bg01">&nbsp;</td>
+              <td class="td_bg02">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="td_bg01">Address</td>
+              <td colspan="3" class="td_bg02"><input name="Address"
+                type="bd" class="tf_120" value="" style="width: 98%" /></td>
+              <td class="td_bg01">&nbsp;</td>
+              <td class="td_bg02">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="td_bg01">Web</td>
+              <td colspan="3" class="td_bg02"><input name="Website"
+                type="bd" class="tf_120" value="" style="width: 98%" /></td>
+              <td class="td_bg01">&nbsp;</td>
+              <td class="td_bg02">&nbsp;</td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+});
+
+</script>
+</html>

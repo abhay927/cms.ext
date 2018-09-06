@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jms_cms_2018.js"></script>
+<title>JMS Report Management System</title>
+</head>
+<body>
+  <div id="common">include common.html here</div>
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Client Invoice List</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <form>
+        <ul>
+          <li><a href="#filter">Filter</a></li>
+        </ul>
+      </form>
+    </div>
+    <div class="list_section">
+      <!-- Here is the list -->
+      <table width="100%" border="0" cellpadding="0" cellspacing="0"
+        class="list_table" id="tbl">
+        <tr>
+          <!-- <th width="2%"><input type=checkbox name=check onclick='Checkall(document.ChaiQianBuChang.check.checked)' class1="msgnew_checkbox"></th>-->
+          <th width="2%">No.</th>
+          <th width="10%">Client</th>
+          <th width="10%">FullName</th>
+          <th width="10%">PhoneNumber</th>
+          <th width="10%">Fax</th>
+          <th width="10%">Email</th>
+          <th width="10%">Address</th>
+          <th width="10%">Website</th>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="1">1</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=43823D61-4DF8-493A-944C-C5D9EC87E053">TTT000</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">TEST</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="2">2</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=D71029D8-CAE4-4326-8615-6086D3E8FAA0">CON086</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">
+            Consociate</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="3">3</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=6F1301AC-1A08-4610-8319-8C56D4F88870">EBM125</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Employee
+            Benefit Management Services Inc</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="4">4</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=3FCEC676-4FE9-4544-A097-3BABDF23D80C">ARC128</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Archbold
+            Medical Center</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="5">5</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=0B648021-E9F1-4C3E-8F86-3E0079340185">CAP122</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Caprock
+            Health Group</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="6">6</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=2EBB215C-E6C9-4885-A333-DA2E3DFDA2FD">IBA127</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">
+            International Benefits Administrators, LLC</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="7">7</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=70CBD5BC-EF66-4A1B-954E-6B6337B1231F">ONC124</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">On Call
+            International</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="8">8</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=442B9E01-D347-4C91-9AB3-82C096F1A66F">WEL017</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">
+            WellRithms</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="9">9</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=FDC8A427-045E-4607-B219-6FD17F8D7FDC">HDP121</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Health
+            Design Plus</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="10">10</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=1FE5A1E4-903A-4B60-8B15-417CC12B7F0C">CTP114</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Coastal
+            TPA, Inc.</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="11">11</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=DAB59173-497C-407E-B0CE-7B77AECD4BE5">BBI119</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Brown &
+            Brown of New York Inc.</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="12">12</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=A4DD3712-4BD1-4447-B129-6311DB8C5A60">CFR118</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Conifer
+            Health Solutions</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="13">13</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=9d349986-bf0e-4303-a58e-26240556a514">BHS104</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Berends
+            Hendricks Stuit</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="14">14</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=5f716b23-152f-4942-b78b-3ae245f22c40">EBS110</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Employee
+            Benefit Systems</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="15">15</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=4bcda8dc-6c6f-4329-bf7f-a49ad548deb5">CAS109</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Coastal
+            Administrative Services</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="16">16</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=a139d1f1-2b83-4e63-aa64-dc16233fdf9d">NPM048</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">National
+            Petition Management</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="17">17</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=a5b1ac71-2a32-45bf-9313-a7b901cd6311">BPV106</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Benefit
+            Plan Admin</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="18">18</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=c2fc736d-bc8e-49b7-913b-bdf1ef8f7551">RVR107</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Raven
+            Resources</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="19">19</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=608cf83a-0b0c-4a08-80bf-7c6c7447f3e1">ABE100</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Assured
+            Benefits</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+        <tr>
+          <!-- 复选框 -->
+          <td width="3%" num="20">20</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"><a
+            href="08.ClientDetail.html?role=&flag=edt&ClientID=9d62dd31-4c0c-4f9b-b847-d90967a7ac76">RHP090</a>
+          </td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;">Reliant</td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-left: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-right: 6px;"></td>
+          <td id="allshort" width="0%"
+            style="text-align: left; padding-center: 6px;"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="assignToWindow" class="modalwindow" title="Assign to">
+    <form method="post" id="form2">
+      <ul>
+        <li><input type="checkbox" id="myself" value="1" />
+          Project 1</li>
+        <li><input type="checkbox" id="myself" value="2" />
+          Project 2</li>
+        <li><input type="checkbox" id="myself" value="3" />
+          Project 3</li>
+        <li><input type="checkbox" id="myself" value="4" checked />
+          Project 4</li>
+        <li><input type="checkbox" id="myself" value="5" checked />
+          Project 5</li>
+        <li><input type="checkbox" id="myself" value="6" checked />
+          Project 6</li>
+      </ul>
+      <p align="center">
+        <input class="botton999" type="button" value="Save"
+          onclick="assignToWindowSave()" />
+      </p>
+    </form>
+  </div>
+</body>
+<script type="text/javascript">
+	function assignToWindow() {
+		console.log($("#assigned").is('[readonly]'));
+		if ($("#assigned").is('[readonly]')) {
+			return;
+		}
+		$("#assignToWindow").dialog({
+			height : 300,
+			width : 200,
+			modal : true,
+			resizable : false
+		});
+	}
+	function assignToWindowSave() {
+		$("#assignToWindow").dialog("close");
+	}
+	$(document).ready(function() {
+		$("#common").load("00.common.html");
+	});
+</script>
+</html>

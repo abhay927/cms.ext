@@ -204,7 +204,8 @@ table {
   width: 100%;
 }
 .list_table th {
-  background: url(../images/list_tab_th.gif) repeat-x left center;
+  background: url(../images/list_tab_th_h28.jpg) repeat-x left center;
+  height: 28px;
   text-align: center;
   font-size: 11px;
   text-align: center;
@@ -216,9 +217,13 @@ table {
 }
 
 .list_table td {
+  height: 20px;
   border: 1px dotted black;
   text-align: center;
   font-size: 10px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  white-space: wrap;
 }
 
 .list_table tr:hover {
@@ -261,14 +266,14 @@ table {
   font-family:Arial, Helvetica, sans-serif; 
   font-size:12px;
   border:1px solid #b5b8c8;
-  border-bottom:0 none;
+/*   border-bottom:0 none; */
   background:url(../images/p_input.gif) repeat-x;
   height:17px;
   line-height:17px;
 }
 
 /*按钮样式20090418*/
-.botton999{
+.botton999 {
   height:17px; 
   background:#9FC8E2; 
   margin-top:1px;
