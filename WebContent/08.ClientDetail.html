@@ -27,35 +27,34 @@
         <li><a href="#" id="editProject" onclick="editSave()">Edit</a></li>
         <li><a href="#">Delete</a></li>
         <li><a href="#">Close</a></li>
-        <li><a href="#" onclick="loadComments()">Comments</a></li>
         <li><a href="#" onclick="showCommentWindow()">New Comment</a></li>
       </ul>
     </div>
-    <div class="list_section">
-      <form method="post" id="form1">
+    <form method="post" id="form1">
+      <div id="list_section">
         <div style="padding: 10px;">
           <table class="detail_table"
             style="border-collapse: separate; border-spacing: 0px 10px;">
             <tr>
               <td width="17%" class="td_bg01"><font color="red">*</font>Client</td>
               <td width="16%" class="td_bg02"><input name="Client"
-                id="Client" type="bd" class="tf_120" value="BHS104" />
+                id="Client" type="text" class="tf_120" value="BHS104" />
                 <input name="ClientTmp" type="hidden" value="BHS104" />
               </td>
               <td width="17%" class="td_bg01">Full Name</td>
               <td width="16%" class="td_bg02"><input
-                name="FullName" type="bd" class="tf_120"
+                name="FullName" type="text" class="tf_120"
                 value="Berends Hendricks Stuit" /></td>
               <td width="17%" class="td_bg01">Phone Number</td>
               <td width="17%" class="td_bg02"><input
-                name="PhoneNumber" type="bd" class="tf_120" value="" /></td>
+                name="PhoneNumber" type="text" class="tf_120" value="" /></td>
             </tr>
             <tr>
               <td class="td_bg01">Fax</td>
-              <td class="td_bg02"><input name="Fax" type="bd"
+              <td class="td_bg02"><input name="Fax" type="text"
                 class="tf_120" value="" /></td>
               <td class="td_bg01">Email</td>
-              <td class="td_bg02"><input name="Email" type="bd"
+              <td class="td_bg02"><input name="Email" type="text"
                 class="tf_120" value="" /></td>
               <td class="td_bg01">&nbsp;</td>
               <td class="td_bg02">&nbsp;</td>
@@ -63,26 +62,34 @@
             <tr>
               <td class="td_bg01">Address</td>
               <td colspan="3" class="td_bg02"><input name="Address"
-                type="bd" class="tf_120" value="" style="width: 98%" /></td>
+                type="text" class="tf_120" value="" style="width: 98%" /></td>
               <td class="td_bg01">&nbsp;</td>
               <td class="td_bg02">&nbsp;</td>
             </tr>
             <tr>
               <td class="td_bg01">Web</td>
               <td colspan="3" class="td_bg02"><input name="Website"
-                type="bd" class="tf_120" value="" style="width: 98%" /></td>
+                type="text" class="tf_120" value="" style="width: 98%" /></td>
               <td class="td_bg01">&nbsp;</td>
               <td class="td_bg02">&nbsp;</td>
             </tr>
           </table>
         </div>
-      </form>
-    </div>
+
+      </div>
+    </form>
   </div>
+  <div id="comments_div"></div>
 </body>
+
 <script>
 $(document).ready(function() {
     $("#common").load("00.common.html");
+    $( "#comments_div" ).load("A0.CommentWindow.html", function() {
+      $("#comment_list").appendTo("#list_section");
+      $("#commentTmpl").appendTo("body");
+      loadComments();
+    });
 });
 
 </script>

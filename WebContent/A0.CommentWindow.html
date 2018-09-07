@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Comment Dialog</title>
+</head>
+<body>
+  <div id="newCommentWindow" class="modalwindow" title="Add a Comment">
+    <form method="post" id="form2">
+      <p>
+        <textarea name="comment"
+          style="width: 100%; height: 230px; resize: none;"></textarea>
+      </p>
+      <p align="center">
+        <input class="botton999" type="button" value="Save"
+          onclick="commentWindowSave()" />
+      </p>
+    </form>
+  </div>
+  <div class="attached" id="comment_list"></div>
+</body>
+<script id="commentTmpl" type="text/x-jsrender">  
+    <table id="detailList" class="list_table" style="border: 0px;">
+        <thead>
+          <tr>
+            <th width="10%">Author</th>
+            <th width="10%">Date</th>
+            <th width="70%">Comments</th>
+            <th width="10%">Operation</th>
+          </tr>
+        </thead>
+        <tbody>
+{{for p}} 
+          <tr>
+            <td>{{:author}}</td>
+            <td>{{:date}}   </td>
+            <td class="leftalign">{{:comment}} </td>
+            <td><input class="botton999" id="add"
+              type="button" value="delete" name="Delete" onclick="" /></td>
+          </tr>
+{{/for}} 
+        </tbody> 
+    </table>
+</script>
+<script>
+//
+function showCommentWindow() {
+  $("#newCommentWindow").find("textarea").val("");
+  $("#newCommentWindow").dialog({
+    height : 300,
+    width : 500,
+    modal : true,
+    resizable : false,
+    show : {
+      effect : "blind",
+      duration : 500
+    },
+    hide : {
+      effect : "blind",
+      duration : 500
+    }
+  });
+}
+
+//
+function commentWindowSave() {
+  $("#newCommentWindow").dialog("close");
+}
+
+function loadComments() {
+  console.log("loadComments");
+  var myTemplate = $.templates("#commentTmpl");
+  $.getJSON("json/comments.json", function(data) {
+    var app = {
+      p : data
+    };
+    myTemplate.link("#comment_list", app);
+  });
+}
+</script>
+</html>

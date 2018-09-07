@@ -41,10 +41,10 @@
         <li><a href="#" onclick="showCommentWindow()">New Comment</a></li>
       </ul>
   </div>
-
-  <div class="list_section">
-      <form method="post" id="form1">
-        <div style="padding: 10px;">
+  
+  <form method="post" id="form1">
+    <div id="list_section">
+      <div style="padding: 10px;">
         <table class="detail_table" style="border-collapse:separate; border-spacing:0px 10px;">
           <tr>
             <td class="td_bg01">*Name</td>
@@ -73,23 +73,13 @@
             <td class="td_bg02"><input id="validatedHours"              type="text" class="tf_120 editable" value="45" readonly/></td>
           </tr>
         </table>
-        </div>
-        <div>
-        <table id="detailList" class="list_table" style="border: 0px;">
-        </table>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
+    <div class="attached"></div>
+  </form>
 
-  <div id="newCommentWindow" class="modalwindow" title="Add a Comment">
-      <form method="post" id="form2">
-        <p>
-        <textarea  name="comment" style="width:100%; height:230px; resize:none;"></textarea></p>
-        <p align="center"><input class="botton999" type="button"
-            value="Save" onclick="commentWindowSave()" /></p>
-      </form>
   </div>
+  <div id="comments_div"></div>
   
   <div id="assignToWindow" class="modalwindow" title="Assign to">
       <form method="post" id="form2">
@@ -127,6 +117,7 @@
 </body>
 
 <script id="rateTmpl" type="text/x-jsrender">  
+    <table id="detailList" class="list_table" style="border: 0px;">
         <thead>
           <tr>
             <th width="25%">Rate Type</th>
@@ -147,31 +138,12 @@
           </tr>
 {{/for}} 
         </tbody> 
+    </table>
 </script>
 
-<script id="commentTmpl" type="text/x-jsrender">  
-        <thead>
-          <tr>
-            <th width="10%">Author</th>
-            <th width="10%">Date</th>
-            <th width="70%">Comments</th>
-            <th width="10%">Operation</th>
-          </tr>
-        </thead>
-        <tbody>
-{{for p}} 
-          <tr>
-            <td>{{:author}}</td>
-						<td>{{:date}}   </td>
-            <td class="leftalign">{{:comment}} </td>
-            <td><input class="botton999" id="add"
-              type="button" value="delete" name="Delete" onclick="" /></td>
-          </tr>
-{{/for}} 
-        </tbody> 
-</script>
 
-<script id="HoursTmpl" type="text/x-jsrender">  
+<script id="HoursTmpl" type="text/x-jsrender">
+    <table id="detailList" class="list_table" style="border: 0px;">
         <thead>
           <tr>
             <th width="10%">Date</th>
@@ -197,11 +169,14 @@
           </tr>
 {{/for}} 
         </tbody> 
+    </table>
 </script> 
  
 
 <script type="text/javascript">
 function loadDetailRates(isNew = false) {
+    $(".attached").remove();
+    $("<div class='attached' id='rates_div'></div>").appendTo("#list_section");
 	  var myTemplate = $.templates("#rateTmpl");  
 	  $.getJSON( "json/projectRate.json", function( data ) {
 		  if(isNew){
@@ -213,23 +188,25 @@ function loadDetailRates(isNew = false) {
 			  });
 		  }
 	    var app = {p: data };
-	    myTemplate.link("#detailList", app);
+	    myTemplate.link("#rates_div", app);
 	    });
 	}
 
-function loadComments() {
-  var myTemplate = $.templates("#commentTmpl");  
-  $.getJSON( "json/comments.json", function( data ) {
-    var app = {p: data };  
-    myTemplate.link("#detailList", app);
-  	});
-}
+// function loadComments() {
+//   var myTemplate = $.templates("#commentTmpl");  
+//   $.getJSON( "json/comments.json", function( data ) {
+//     var app = {p: data };  
+//     myTemplate.link("#detailList", app);
+//   	});
+// }
 
 function loadHoursDetail(){
+  $(".attached").remove();
+  $("<div class='attached' id='hours_div'></div>").appendTo("#list_section");
   var myTemplate = $.templates("#HoursTmpl");  
   $.getJSON( "json/hours.json", function( data ) {
     var app = {p: data };  
-    myTemplate.link("#detailList", app);
+    myTemplate.link("#hours_div", app);
   	});
 }
 
@@ -277,19 +254,6 @@ function assignToWindowSave(){
   $( "#assignToWindow" ).dialog("close");
 }
 
-function showCommentWindow(){
-	  $( "#newCommentWindow" ).find("textarea").val("");
-	  $( "#newCommentWindow" ).dialog({
-	        height: 300,
-	        width: 500,
-	        modal: true,
-	        resizable:false
-	   });
-	}
-
-	function commentWindowSave(){
-	  $( "#newCommentWindow" ).dialog("close");
-	}
 
 function showComfirmWindow(self){
 	var kids = self.closest("tr").children;
@@ -330,6 +294,10 @@ $(document).ready(function() {
 	    $( "#tabName" ).html("New Project Detail");
 	    newProject();
 	  }
+	  $( "#comments_div" ).load("A0.CommentWindow.html", function() {
+      //$("#comment_list").appendTo("#list_section");
+      $("#commentTmpl").appendTo("body");
+    });
 });
 
 </script>

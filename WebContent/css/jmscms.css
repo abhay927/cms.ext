@@ -158,7 +158,7 @@ table {
 
 .nemubar {
   background: url(../images/tbicon_bg.gif) repeat-x;
-  height: 61px;
+  height: 35px;
   border: 1px solid #99aabd;
   border-bottom:0 none;
   border-top:0 none;
@@ -190,7 +190,7 @@ table {
     background-color: #DFECFC;
 }
 
-.list_section {
+#list_section {
   overflow: scroll;
   overflow-x: hidden;
   position: absolute;
