@@ -1,128 +1,128 @@
 [
   {
-    "Service Type": "Adjudication/Examining",
-    "Billable/Non": "Billable",
-    "Definition:": "Review of unprocessed claims to determine eligibility, payment, and patient liability.",
-    "Examples:": "",
+    "ServiceType": "Adjudication/Examining",
+    "Billable": "true",
+    "Definition": "Review of unprocessed claims to determine eligibility, payment, and patient liability.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Client training meeting",
-    "Billable/Non": "Billable",
-    "Definition:": "Client is providing training to JMS, or vice versa.",
-    "Examples:": "As determined by contract with client.",
+    "ServiceType": "Client training meeting",
+    "Billable": "true",
+    "Definition": "Client is providing training to JMS, or vice versa.",
+    "Examples": "As determined by contract with client.",
     "": ""
   },
   {
-    "Service Type": "Consulting",
-    "Billable/Non": "Billable",
-    "Definition:": "JMS is providing consulting services to the client.",
-    "Examples:": "",
+    "ServiceType": "Consulting",
+    "Billable": "true",
+    "Definition": "JMS is providing consulting services to the client.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Claim Audit",
-    "Billable/Non": "Billable",
-    "Definition:": "Review of processed claims to see if benefit determination was made in accordance to plan guidelines.",
-    "Examples:": "",
+    "ServiceType": "Claim Audit",
+    "Billable": "true",
+    "Definition": "Review of processed claims to see if benefit determination was made in accordance to plan guidelines.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Client support meeting",
-    "Billable/Non": "Non-Billable to client",
-    "Definition:": "Courtesy meeting with client for support on specific project.",
-    "Examples:": "Discussion about workflow, exploration of services, expectations, turn around time, interpretation. Pre-kick off meeting, Kick-off meetings. Bi-weekly domestic meeting.",
+    "ServiceType": "Client support meeting",
+    "Billable": "false",
+    "Definition": "Courtesy meeting with client for support on specific project.",
+    "Examples": "Discussion about workflow, exploration of services, expectations, turn around time, interpretation. Pre-kick off meeting, Kick-off meetings. Bi-weekly domestic meeting.",
     "": ""
   },
   {
-    "Service Type": "Plan Audit",
-    "Billable/Non": "Billable",
-    "Definition:": "Visual review of plan build.",
-    "Examples:": "",
+    "ServiceType": "Plan Audit",
+    "Billable": "true",
+    "Definition": "Visual review of plan build.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Plan Build - Standard",
-    "Billable/Non": "Billable",
-    "Definition:": "Any plan building activity.  Includes creating codes, adding benefits, and plan changes, when billable.",
-    "Examples:": "Client requests new plan.  Client requests a new benefit to be added to an existing plan.  Client requests a new version of a plan with a change in benefits (higher deductible for example).  Corrections made due to plan interpretation are billable.",
+    "ServiceType": "Plan Build - Standard",
+    "Billable": "true",
+    "Definition": "Any plan building activity.  Includes creating codes, adding benefits, and plan changes, when billable.",
+    "Examples": "Client requests new plan.  Client requests a new benefit to be added to an existing plan.  Client requests a new version of a plan with a change in benefits (higher deductible for example).  Corrections made due to plan interpretation are billable.",
     "": ""
   },
   {
-    "Service Type": "Group/Plan Mapping or Logic",
-    "Billable/Non": "Billable",
-    "Definition:": "Mapping logic specific to a group or plan.",
-    "Examples:": "",
+    "ServiceType": "Group/Plan Mapping or Logic",
+    "Billable": "true",
+    "Definition": "Mapping logic specific to a group or plan.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Platform Global Mapping or Logic",
-    "Billable/Non": "Billable",
-    "Definition:": "Mapping logic that is universal to the platform.",
-    "Examples:": "",
+    "ServiceType": "Platform Global Mapping or Logic",
+    "Billable": "true",
+    "Definition": "Mapping logic that is universal to the platform.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Plan Build - Support Tasks",
-    "Billable/Non": "Billable",
-    "Definition:": "Activities which are generally considered to be outside of the scope of standard plan building such as PPO and fee schedules, eligibility, banking/accounting, auto-adjudication",
-    "Examples:": "",
+    "ServiceType": "Plan Build - Support Tasks",
+    "Billable": "true",
+    "Definition": "Activities which are generally considered to be outside of the scope of standard plan building such as PPO and fee schedules, eligibility, banking/accounting, auto-adjudication",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Plan Test",
-    "Billable/Non": "Billable",
-    "Definition:": "Creating and adjudicating test claims under a specific plan.",
-    "Examples:": "",
+    "ServiceType": "Plan Test",
+    "Billable": "true",
+    "Definition": "Creating and adjudicating test claims under a specific plan.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Plan Test Results Review",
-    "Billable/Non": "Billable",
-    "Definition:": "Review of Plan Test results, comparision with plan documents to see if benefits are paying correctly.",
-    "Examples:": "",
+    "ServiceType": "Plan Test Results Review",
+    "Billable": "true",
+    "Definition": "Review of Plan Test results, comparision with plan documents to see if benefits are paying correctly.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Programming",
-    "Billable/Non": "Billable",
-    "Definition:": "Services typically outside plan building.  May apply system wide.",
-    "Examples:": "Example: Dan's work, Team 3 work to set up system.  Proof of concept work.",
+    "ServiceType": "Programming",
+    "Billable": "true",
+    "Definition": "Services typically outside plan building.  May apply system wide.",
+    "Examples": "Example: Dan's work, Team 3 work to set up system.  Proof of concept work.",
     "": ""
   },
   {
-    "Service Type": "Corrective Action - Plan Build",
-    "Billable/Non": "Non-Billable to client",
-    "Definition:": "Plan building activity to correct or adjust blantant error(s) on a plan built by JMS within the follow-up time period specified by the client contract.",
-    "Examples:": "",
+    "ServiceType": "Corrective Action - Plan Build",
+    "Billable": "false",
+    "Definition": "Plan building activity to correct or adjust blantant error(s) on a plan built by JMS within the follow-up time period specified by the client contract.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Corrective Action - Plan Audit",
-    "Billable/Non": "Non-Billable to client",
-    "Definition:": "",
-    "Examples:": "",
+    "ServiceType": "Corrective Action - Plan Audit",
+    "Billable": "false",
+    "Definition": "",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Project Management",
-    "Billable/Non": "Billable",
-    "Definition:": "Project management activities.",
-    "Examples:": "",
+    "ServiceType": "Project Management",
+    "Billable": "true",
+    "Definition": "Project management activities.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Technical Development Support",
-    "Billable/Non": "Billable",
-    "Definition:": "Reporting and data conversion.",
-    "Examples:": "",
+    "ServiceType": "Technical Development Support",
+    "Billable": "true",
+    "Definition": "Reporting and data conversion.",
+    "Examples": "",
     "": ""
   },
   {
-    "Service Type": "Other",
-    "Billable/Non": "Billable",
-    "Definition:": "Make note in comments",
-    "Examples:": "Must have contract or rate.  Must be approved and evaluated by operations and sales",
+    "ServiceType": "Other",
+    "Billable": "true",
+    "Definition": "Make note in comments",
+    "Examples": "Must have contract or rate.  Must be approved and evaluated by operations and sales",
     "": ""
   }
 ]

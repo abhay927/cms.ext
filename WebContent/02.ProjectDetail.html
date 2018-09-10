@@ -37,7 +37,7 @@
         <li><a href="#">Close</a></li>
         <li><a href="#" onclick="loadDetailRates()">Detail Rates</a></li>
         <li><a href="#" onclick="loadHoursDetail()">Hours Detail</a></li>
-        <li><a href="#" onclick="loadComments()">Comments</a></li>
+        <li><a href="#" onclick="myloadComments()">Comments</a></li>
         <li><a href="#" onclick="showCommentWindow()">New Comment</a></li>
       </ul>
   </div>
@@ -120,8 +120,8 @@
     <table id="detailList" class="list_table" style="border: 0px;">
         <thead>
           <tr>
-            <th width="25%">Rate Type</th>
-            <th>Description</th>
+            <th width="25%">Service Type</th>
+            <th>Definition</th>
             <th width="10%">Rate</th>
             <th width="10%">Estimate Hours</th>
             <th width="10%">Completed Hours</th>
@@ -130,11 +130,11 @@
         <tbody>
 {{for p}} 
           <tr>
-          <td style="text-align: left;">{{:#data[0]}}</td>
-          <td><input width="100%" type="text" style="text-align: left;" class="tf_120 editable" value="{{:#data[2]}}" readonly/></td>
-          <td><input width="100%" type="text" class="tf_120 editable" value="{{:#data[3]}}" readonly /></td>
-          <td><input width="100%" type="text" class="tf_120 editable" value="{{:#data[4]}}" readonly /></td>
-          <td class="recalc">{{:#data[5]}}</td>
+          <td style="text-align: left;">{{:ServiceType}}</td>
+          <td><input width="100%" type="text" style="text-align: left;" class="tf_120 editable" value="{{:Definition}}" readonly/></td>
+          <td><input width="100%" type="text" class="tf_120 editable" value="{{:"100.00"}}" readonly /></td>
+          <td><input width="100%" type="text" class="tf_120 editable" value="{{:"70"}}" readonly /></td>
+          <td class="recalc">{{:"30.25"}}</td>
           </tr>
 {{/for}} 
         </tbody> 
@@ -159,7 +159,7 @@
 {{for p}} 
           <tr>
             <td>{{:date}}</td>
-            <td>{{:worker}}   </td>
+            <td>{{:worker}}</td>
             <td>{{:submitted}} </td>
 						<td class="leftalign">{{:workerNotes}} </td>
 						<td>{{:confirmed}} </td>
@@ -178,11 +178,11 @@ function loadDetailRates(isNew = false) {
     $(".attached").remove();
     $("<div class='attached' id='rates_div'></div>").appendTo("#list_section");
 	  var myTemplate = $.templates("#rateTmpl");  
-	  $.getJSON( "json/projectRate.json", function( data ) {
+	  $.getJSON( "json/servicetype.json", function( data ) {
 		  if(isNew){
 			  $.each(data, function(index, value){
-				  value[2] = "";
-				  value[3] = "";
+				  value["ServiceType"] = "ssss";
+				  value["Definition"] = "";
 				  value[4] = "";
 				  value[5] = 0;
 			  });
@@ -192,14 +192,6 @@ function loadDetailRates(isNew = false) {
 	    });
 	}
 
-// function loadComments() {
-//   var myTemplate = $.templates("#commentTmpl");  
-//   $.getJSON( "json/comments.json", function( data ) {
-//     var app = {p: data };  
-//     myTemplate.link("#detailList", app);
-//   	});
-// }
-
 function loadHoursDetail(){
   $(".attached").remove();
   $("<div class='attached' id='hours_div'></div>").appendTo("#list_section");
@@ -208,6 +200,14 @@ function loadHoursDetail(){
     var app = {p: data };  
     myTemplate.link("#hours_div", app);
   	});
+}
+
+function myloadComments(){
+  $(".attached").remove();
+  $( "#comments_div" ).load("A0.CommentWindow.html", function() {
+    $("#comment_list").appendTo("#list_section");
+    loadComments();
+  });
 }
 
 function newProject() {
@@ -294,10 +294,6 @@ $(document).ready(function() {
 	    $( "#tabName" ).html("New Project Detail");
 	    newProject();
 	  }
-	  $( "#comments_div" ).load("A0.CommentWindow.html", function() {
-      //$("#comment_list").appendTo("#list_section");
-      $("#commentTmpl").appendTo("body");
-    });
 });
 
 </script>
