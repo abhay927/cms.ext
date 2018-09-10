@@ -288,3 +288,7 @@ table {
 .modalwindow {
   display: none; /* Hidden by default */
 }
+
+td.leftalign {
+  text-align: left;
+}
