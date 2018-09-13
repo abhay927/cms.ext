@@ -203,8 +203,10 @@ table {
   position: relative;
   width: 100%;
 }
-.list_table th {
-  background: url(../images/list_tab_th_h28.jpg) repeat-x left center;
+.list_table thead th.header {
+  background-image: url(../images/sort_bg.gif), url(../images/list_tab_th_h28.jpg);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center right, left center;
   height: 28px;
   text-align: center;
   font-size: 11px;
@@ -214,6 +216,16 @@ table {
   border-bottom: 1px solid #7a8180;
   border-collapse: collapse;
   white-space: wrap;
+}
+.list_table thead th.headerSortUp {
+  background-image: url(../images/sort_asc.gif), url(../images/list_tab_th_h28.jpg);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center right, left center;
+}
+.list_table thead th.headerSortDown {
+  background-image: url(../images/sort_desc.gif), url(../images/list_tab_th_h28.jpg);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center right, left center;
 }
 
 .list_table td {

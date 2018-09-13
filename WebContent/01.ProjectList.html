@@ -3,7 +3,10 @@
 <head>
 <title>Production List</title>
 <link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="css/tbsort_style.css" />
+
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 <script >
 $(document).ready(function() {
     $("#common").load("00.common.html");
@@ -11,6 +14,8 @@ $(document).ready(function() {
     $(".list_table tbody tr").click(function() {
     	  window.location.href='02.ProjectDetail.html';
     });
+    $(".list_table th").addClass("header");
+    $(".list_table").tablesorter();
   });
 </script>
 </head>
