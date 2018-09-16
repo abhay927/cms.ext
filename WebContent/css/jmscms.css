@@ -210,12 +210,12 @@ table {
   height: 28px;
   text-align: center;
   font-size: 11px;
-  text-align: center;
   border-right: 1px solid #ccc;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #7a8180;
   border-collapse: collapse;
   white-space: wrap;
+  cursor: pointer;
 }
 .list_table thead th.headerSortUp {
   background-image: url(../images/sort_asc.gif), url(../images/list_tab_th_h28.jpg);

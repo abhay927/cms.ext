@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Client List</title>
+<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script >
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+    
+    $(".list_table tbody tr").click(function() {
+        window.location.href='02.ProjectDetail.html';
+    });
+    $(".list_table").tablesorter();
+  });
+</script>
+
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  
+  <div class="right_section">
+  <div id="toolbar">
+    <div class="lable">Client Management</div>
+  </div>
+  <div class="nemubar">
+    <table width="99%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+
+        <td width="4px"><img src="images/col_line.gif" width="2"
+          height="16" /></td>
+        <td width="16px" class="click"><img src="images/hotgif.gif"
+          width="16" height="16" /></td>
+        <td width="10%" class="click"
+          onclick="window.location.href='ClientUpdate.jsp';">Add
+          Client</td>
+
+        <!--<td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/del.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="setStateTo('del');">Delete</td>-->
+
+        <td width="4px"><img src="images/col_line.gif" width="2"
+          height="16" /></td>
+        <td width="16px" class="click"><img src="images/ref.gif"
+          width="16" height="16" /></td>
+        <td width="10%" class="click"
+          onclick="window.location.href=window.location.href">Refresh</td>
+
+        <td width="90%">&nbsp;</td>
+        <td width="90%">&nbsp;</td>
+
+      </tr>
+    </table>
+  </div>
+
+  <form name="ChaiQianBuChang" method="post" action="">
+    <input type=hidden name="key" value="nouserid" /> <input
+      type=hidden value="" name=submitState id=submitState />
+    <div id="list_section">
+      <table class="autoheight_tab" border="0" cellpadding="0"
+        cellspacing="0">
+        <tr>
+          <td><table width="100%" border="0" cellpadding="0"
+              cellspacing="0" class="list_table" id="tbl">
+              <tr>
+                <!-- <th width="2%"><input type=checkbox name=check onclick='Checkall(document.ChaiQianBuChang.check.checked)' class1="msgnew_checkbox"></th>-->
+                <th width="2%">No.</th>
+                <th width="10%"><a
+                  href="ClientList.jsp?desc=false&orderColumn=Cleint&flag2=&Page_Number=20">
+                    Client</a></th>
+
+                <th width="10%"><a
+                  href="ClientList.jsp?desc=false&orderColumn=FullName&flag2=&Page_Number=20">
+                    FullName</a></th>
+
+                <th width="10%"><a
+                  href="ClientList.jsp?desc=false&orderColumn=PhoneNumber&flag2=&Page_Number=20">
+                    PhoneNumber</a></th>
+
+                <th width="10%"><a
+                  href="ClientList.jsp?desc=false&orderColumn=Fax&flag2=&Page_Number=20">
+                    Fax</a></th>
+
+                <th width="10%"><a
+                  href="ClientList.jsp?desc=false&orderColumn=Email&flag2=&Page_Number=20">
+                    Email</a></th>
+
+                <th width="10%"><a
+                  href="ClientList.jsp?desc=false&orderColumn=Address&flag2=&Page_Number=20">
+                    Address</a></th>
+
+                <th width="10%"><a
+                  href="ClientList.jsp?desc=false&orderColumn=Website&flag2=&Page_Number=20">
+                    Website</a></th>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="1">1</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=43823D61-4DF8-493A-944C-C5D9EC87E053">TTT000</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  TEST</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="2">2</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=D71029D8-CAE4-4326-8615-6086D3E8FAA0">CON086</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Consociate</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="3">3</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=6F1301AC-1A08-4610-8319-8C56D4F88870">EBM125</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Employee Benefit Management Services Inc</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="4">4</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=3FCEC676-4FE9-4544-A097-3BABDF23D80C">ARC128</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Archbold Medical Center</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="5">5</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=0B648021-E9F1-4C3E-8F86-3E0079340185">CAP122</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Caprock Health Group</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="6">6</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=2EBB215C-E6C9-4885-A333-DA2E3DFDA2FD">IBA127</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  International Benefits Administrators, LLC</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="7">7</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=70CBD5BC-EF66-4A1B-954E-6B6337B1231F">ONC124</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">On
+                  Call International</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="8">8</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=442B9E01-D347-4C91-9AB3-82C096F1A66F">WEL017</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  WellRithms</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="9">9</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=FDC8A427-045E-4607-B219-6FD17F8D7FDC">HDP121</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Health Design Plus</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="10">10</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=1FE5A1E4-903A-4B60-8B15-417CC12B7F0C">CTP114</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Coastal TPA, Inc.</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="11">11</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=DAB59173-497C-407E-B0CE-7B77AECD4BE5">BBI119</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Brown & Brown of New York Inc.</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="12">12</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=A4DD3712-4BD1-4447-B129-6311DB8C5A60">CFR118</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Conifer Health Solutions</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="13">13</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=9d349986-bf0e-4303-a58e-26240556a514">BHS104</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Berends Hendricks Stuit</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="14">14</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=5f716b23-152f-4942-b78b-3ae245f22c40">EBS110</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Employee Benefit Systems</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="15">15</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=4bcda8dc-6c6f-4329-bf7f-a49ad548deb5">CAS109</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Coastal Administrative Services</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="16">16</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=a139d1f1-2b83-4e63-aa64-dc16233fdf9d">NPM048</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  National Petition Management</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="17">17</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=a5b1ac71-2a32-45bf-9313-a7b901cd6311">BPV106</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Benefit Plan Admin</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="18">18</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=c2fc736d-bc8e-49b7-913b-bdf1ef8f7551">RVR107</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Raven Resources</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="19">19</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=608cf83a-0b0c-4a08-80bf-7c6c7447f3e1">ABE100</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Assured Benefits</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+              <tr class="" onmouseout1="this.className=''"
+                onmouseover1="this.className='mouseOver'">
+
+                <!-- 复选框 -->
+
+                <td width="3%" num="20">20</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"><a
+                  href="ClientUpdate.jsp?role=&flag=edt&ClientID=9d62dd31-4c0c-4f9b-b847-d90967a7ac76">RHP090</a>
+                </td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;">
+                  Reliant</td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-left: 6px;"></td>
+
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-right: 6px;"></td>
+                <td id="allshort" width="0%"
+                  style="text-align: left; padding-center: 6px;"></td>
+
+              </tr>
+
+
+
+
+            </table></td>
+        </tr>
+      </table>
+
+
+
+
+
+      <!-- 记录显示 -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="15" height="20" background="images/tab_21.gif">&nbsp;</td>
+          <td background="images/tab_21.gif">
+            <table width="100%" border="0" cellspacing="0"
+              cellpadding="0">
+              <tr>
+                <td width="25%" height="20" nowrap="nowrap"
+                  style="font-size: 11px;"><span class="STYLE1">Pagesize:
+                    <font class='f_d'>20</font> <font class='f_b'><a
+                      href="ClientList.jsp?desc=true&Page_Number=50&orderColumn=createdate">50</a></font>
+
+                    <font class='f_b'><a
+                      href="ClientList.jsp?desc=true&Page_Number=100&orderColumn=createdate">100</a></font>
+
+                    <font class='f_b'><a
+                      href="ClientList.jsp?desc=true&Page_Number=104&orderColumn=createdate">ALL</a></font>
+
+                </span></td>
+                <td width="30%" valign="middle" class="STYLE1">
+                  <div align="right" style="font-size: 11px;">
+                    display 104 of 1—20 &nbsp; <span class="accent">1</span>
+                    /&nbsp; 6&nbsp;
+                  </div>
+                </td>
+                <td width="45%" valign="top" class="STYLE1"><div
+                    align="right">
+                    <table width="342" height="20" border="0"
+                      cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="50" height="22" valign="middle"><div
+                            align="right">
+                            <a
+                              href="ClientList.jsp?desc=true&Page_Number=20&orderColumn=createdate"><img
+                              src="images/first.gif" width="37"
+                              height="15" border="0" />
+                          </div>
+                          </a></td>
+                        <td width="62" height="22" valign="middle"><div
+                            align="right">
+                            <a
+                              href="ClientList.jsp?desc=true&Page_Number=20&orderColumn=createdate&Page_No=1&Action=2"><img
+                              src="images/back.gif" width="50"
+                              height="15" border="0" /></a>
+                          </div></td>
+                        <td width="54" height="22" valign="middle"><div
+                            align="right">
+                            <a
+                              href="ClientList.jsp?desc=true&Page_Number=20&orderColumn=createdate&Page_No=1&Action=3"><img
+                              src="images/next.gif" width="43"
+                              height="15" border="0" /></a>
+                          </div></td>
+                        <td width="49" height="22" valign="middle"><div
+                            align="right">
+                            <a
+                              href="ClientList.jsp?desc=true&Page_Number=20&orderColumn=createdate&Page_No=1&Action=4"><img
+                              src="images/last.gif" width="37"
+                              height="15" border="0" /></a>
+                          </div></td>
+
+                        <td width="59" height="22" valign="middle"><div
+                            align="right">To&nbsp;</div></td>
+                        <td width="25" height="22" valign="middle"><span
+                          class="STYLE7"> <input name="pageNo222"
+                            id="pageNo222" type="text" class="STYLE1"
+                            style="height: 10px; width: 25px;" size="5"
+                            onkeyup="PageTrun(this)" />
+                        </span></td>
+                        <td width="23" height="22" valign="middle">&nbsp;Page&nbsp;</td>
+                        <td width="30" height="22" valign="middle"
+                          onclick="PageTrun2(document.getElementById('pageNo222'))"
+                          style="cursor: pointer;"><img
+                          src="images/go2.gif" width="37" height="15" />&nbsp;</td>
+                      </tr>
+                    </table>
+                  </div></td>
+              </tr>
+            </table>
+          </td>
+          <td width="14" background="images/tab_21.gif">&nbsp;</td>
+        </tr>
+      </table>
+
+
+
+      <script>
+							function PageTrun(obj) {
+								if (event.keyCode == 13) {
+									window.location.href = "ClientList.jsp?desc=true&Page_Number=20&orderColumn=createdate&Page_No="
+											+ obj.value;
+								}
+							}
+							function PageTrun2(obj) {
+								window.location.href = "ClientList.jsp?desc=true&Page_Number=20&orderColumn=createdate&Page_No="
+										+ obj.value;
+							}
+						</script>
+
+    </div>
+
+    <div id="light" class="white_content">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0"
+        class="PAYMENT_table">
+        <tr>
+          <th colspan="2">Search</th>
+        </tr>
+
+        <tr>
+          <td width="30%" class="td_bg04">Sarts</td>
+          <td class="td_bg02"><input name="SEARCH_BeginDate"
+            type="text" id="SEARCH_BeginDate" class="tf_120"
+            onfocus="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',errDealMode:0,isShowWeek:true})"
+            value="" /></td>
+        </tr>
+        <tr>
+          <td class="td_bg04">Ends</td>
+          <td class="td_bg02"><input name="SEARCH_EndDate"
+            type="text" id="SEARCH_EndDate" class="tf_120"
+            onfocus="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',errDealMode:0,isShowWeek:true})"
+            value="" /></td>
+        </tr>
+        <tr>
+          <td class="td_bg04">Client</td>
+          <td class="td_bg02"><input name="SEARCH_Customer"
+            type="text" id="SEARCH_Customer" class="tf_120" value="" /></td>
+        </tr>
+        <tr>
+          <td class="td_bg04">Vendor</td>
+          <td class="td_bg02"><input name="SEARCH_Vendor"
+            type="text" id="SEARCH_Vendor" class="tf_120" value="" /></td>
+        </tr>
+        <tr>
+          <td class="td_bg04">Project</td>
+          <td class="td_bg02"><input name="SEARCH_ProjectName"
+            type="text" id="SEARCH_ProjectName" class="tf_120" value="" /></td>
+        </tr>
+
+
+        <tr>
+          <td colspan="2" align="center"><input class="btn"
+            type="button" value="Search" name="B1"
+            onclick="search_sub();" /> <input class="btn"
+            id="btnSubmit4" type="button" value="Cancel" name="B2"
+            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" ;/>
+          </td>
+        </tr>
+      </table>
+      <!-- <div>
+      
+      <input name="vendors" type="checkbox" id="vendors" class="tf_120" value="ALL"  />ALL
+      <input name="vendors" type="checkbox" id="vendors1" class="tf_120" value="HUIC" />HUIC
+      <input name="vendors" type="checkbox" id="vendors2" class="tf_120" value="BJT" />BJT
+      <input name="vendors" type="checkbox" id="vendors3" class="tf_120" value="IBSI" />IBSI
+      <input class="btn" type="button" value="vendors" name="B1" onclick="vendors_sub();"  />
+    </div> -->
+    </div>
+    <div id="fade" class="black_overlay"></div>
+    <input name="subflag" type="hidden" value="" />
+
+  </form>
+  </div>
+</body>
+
+<script>
+	function fntDelListItem() {
+		if (checkItem('item')) {
+			if (confirm("Delete the Item?")) {
+				for (var i = document.getElementsByName('item').length - 1; i >= 0; i--) {
+					if (document.getElementsByName('item')[i].checked) {
+						document
+								.getElementById('tbl')
+								.deleteRow(
+										document.getElementsByName('item')[i].parentElement.parentElement.rowIndex);
+					}
+				}
+
+			}
+		} else {
+			alert("Choose the Item at first.");
+		}
+	}
+
+	function checkItem(itemName) {
+		var re = false;
+		for (var i = 0; i < document.getElementsByName(itemName).length; i++) {
+			if (document.getElementsByName(itemName)[i].checked) {
+				re = true;
+				break;
+			}
+		}
+		return re;
+	}
+
+	function Checkall(CheckFlag) {
+		if (CheckFlag == true)
+			doSelectAll()
+		else
+			doDeSelectAll()
+	}
+
+	function doSelectAll() {
+		var checkFlag;
+		checkFlag = true;
+		for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i) {
+			if (document.ChaiQianBuChang.elements[i].name == 'key')
+				document.ChaiQianBuChang.elements[i].checked = checkFlag;
+		}
+	}
+
+	function doDeSelectAll() {
+		var checkFlag;
+		for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i) {
+			if (document.ChaiQianBuChang.elements[i].name == 'key') {
+				checkFlag = !document.ChaiQianBuChang.elements[i].checked;
+				document.ChaiQianBuChang.elements[i].checked = checkFlag;
+			}
+		}
+	}
+
+	//*********************
+	function setStateTo(aType) {
+		var vMsg = "";
+		document.ChaiQianBuChang.submitState.value = aType;
+
+		switch (aType) {
+		case "del":
+			vMsg += "Do you want to delete it?";
+			break;
+		case "yes":
+			vMsg += "设为原籍村民吗？";
+			break;
+		case "excel":
+			vMsg += "Do you want to download it?";
+			break;
+		default:
+			alert('无效的操作！');
+			return false;
+		}
+		if (selectCheck()) {
+			if (aType == 'excel') {
+				this.ChaiQianBuChang.action = "printexcel.jsp";
+				this.ChaiQianBuChang.target = "about:blank";
+				this.ChaiQianBuChang.submit();
+				this.ChaiQianBuChang.action = "";
+				this.ChaiQianBuChang.target = "";
+			} else {
+				if (confirm(vMsg)) {
+					this.ChaiQianBuChang.submit();
+				}
+			}
+		} else {
+			alert('No records have been selected, please check.');
+		}
+	}
+	function selectCheck() {
+		var aflag = false;
+		var i = 0;
+		var aobj;
+		oper = ""; //用于控制相同状态
+		document.ChaiQianBuChang.key.value = "";
+
+		for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i) {
+			if (document.ChaiQianBuChang.elements[i].name == 'key') {
+				aobj = document.ChaiQianBuChang.elements[i]
+				if (aobj.checked == true) {
+					aflag = true;
+				}
+			}
+		}
+
+		return aflag
+	}
+
+	function search_sub() {
+		if (document.forms[0].SEARCH_BeginDate.value == "") {
+			alert("Plasea input Sarts!")
+			document.forms[0].SEARCH_BeginDate.focus();
+			return false;
+		}
+		if (document.forms[0].SEARCH_EndDate.value == "") {
+			alert("Plasea input Ends!")
+			document.forms[0].SEARCH_EndDate.focus();
+			return false;
+		}
+		if (confirm("Do you want to submit?")) {
+			document.forms[0].subflag.value = "search";
+			document.forms[0].action = "ClientList.jsp?status=";
+			document.forms[0].submit();
+		}
+	}
+
+	function vendors_sub() {
+		var likestr = "";
+		for (var i = 0; i < document.forms[0].vendors.length; i++) {
+			//alert(document.forms[0].vendors.length + " == " +document.forms[0].vendors[i].value)
+			if (document.forms[0].vendors[i].checked == true) {
+				if (likestr != "")
+					likestr += ",";
+				likestr += document.forms[0].vendors[i].value;
+			}
+		}
+		//alert(likestr );
+		if (likestr == "") {
+			alert("Plasea select!")
+			return false;
+		}
+		if (confirm("Do you want to submit?")) {
+			document.forms[0].subflag.value = "vendors";
+			//document.forms[0].action = "ClientList.jsp?status=;
+			window.location.href = "ClientList.jsp?status=&SEARCH_Vendor="
+					+ likestr;
+			//document.forms[0].submit();
+		}
+	}
+</script>
+</html>

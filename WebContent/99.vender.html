@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Vendor Cntnt</title>
+<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+<script language="javascript" src="js/autoheight.js"></script>
+</head>
+<body onload="main_height()" STYLE="background-color: transparent">
+  <form id="form1" name="form1" method="post">
+    <div id="toolbar">
+      <div class="lable">Vendor Management</div>
+    </div>
+    <div class="tb_icon">
+      <table width="99%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+
+          <td width="16px" class="click"><img
+            src="images/hotgif.gif" width="16" height="16" /></td>
+          <td width="6%" class="click"
+            onclick="if(isComit){isComit=false;window.location.href='addVendor.jsp';}">Add
+            Vendor</td>
+          <td width="4px"><img src="images/col_line.gif" width="2"
+            height="16" /></td>
+          <td width="16px" class="click"><img src="images/edit.gif"
+            width="16" height="16" /></td>
+          <td width="4%" class="click"
+            onclick="if(isComit){editVendor(this);}">Edit</td>
+          <td width="4px"><img src="images/col_line.gif" width="2"
+            height="16" /></td>
+          <td width="16px" class="click"><img src="images/del.gif"
+            width="16" height="16" /></td>
+          <td width="5%" class="click" onclick="delVendor();">Delete</td>
+          <td width="4px"><img src="images/col_line.gif" width="2"
+            height="16" /></td>
+
+          <td width="16px" class="click"><img src="images/ref.gif"
+            width="16" height="16" /></td>
+          <td width="5%" class="click"
+            onclick="if(isComit){isComit=false;window.location.reload();}">Refresh</td>
+          <td width="4px"><img src="images/col_line.gif" width="2"
+            height="16" /></td>
+          <td width="16px" class="click"><img
+            src="images/Back1.gif" width="16" height="16" /></td>
+          <td width="40px" class="click"
+            onclick="window.history.back();">Back</td>
+          <td width="90%" align="right">
+            <!--<select style="width:100px;"  name="xjlx">
+          <option value="A" >A</option>
+          <option value="B" >B</option>
+          <option value="C" >C</option>
+          <option value="D" >D</option>
+          <option value="" selected="selected"></option>
+      </select>-->
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div id="right_main">
+      <table class="autoheight_tab" border="0" cellpadding="0"
+        cellspacing="0">
+        <tr>
+          <td bgcolor="#FFFFFF" style="margin-bottom: 15px">
+            <table width="97%" border="0" align="center" cellpadding="0"
+              cellspacing="0" class="main_table" style="top: 63px;">
+              <tr>
+                <th colspan="6" id="thTitle">Vendor Information:</th>
+              </tr>
+              <tr>
+                <td width="17%" class="td_bg01">Vendor</td>
+                <td width="16%" class="td_bg02"><input
+                  name="Vendor" type="text" class="tf_120" id="Vendor"
+                  value="PEK" disabled
+                  onblur="checkOnlyOne(this.value, '7d88f94b-23c6-4b36-a7ef-f2537dd88214');" />
+                  <input name="VendorTmp" type="hidden" value="PEK" />
+                </td>
+                <td width="17%" class="td_bg01">Alias</td>
+                <td width="16%" class="td_bg02"><input name="Alias"
+                  type="text" class="tf_150" id="Alias"
+                  value="JMS Team 4" disabled /></td>
+                <td width="17%" class="td_bg01">Full Name</td>
+                <td width="16%" class="td_bg02"><input
+                  name="FullName" type="text" class="tf_150"
+                  id="FullName" value="Beijing Team" disabled /></td>
+
+              </tr>
+              <tr>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="17%" class="td_bg01">Phone Number</td>
+                <td width="17%" class="td_bg02"><input
+                  name="PhoneNumber" type="text" class="tf_120"
+                  id="PhoneNumber" value="0100000345" disabled /></td>
+                <td class="td_bg01">Fax</td>
+                <td class="td_bg02"><input name="Fax" type="text"
+                  class="tf_120" id="Fax" value="0103434955" disabled />
+                </td>
+
+                <td class="td_bg01">Email</td>
+                <td class="td_bg02"><input name="Email" type="text"
+                  class="tf_120" id="Email" value="bjt@jmsassoc.com"
+                  disabled /></td>
+              </tr>
+
+              <tr>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+              </tr>
+              <tr>
+
+                <td class="td_bg01">Address</td>
+                <td class="td_bg02" colspan="3"><input
+                  name="Address" type="text" class="tf_120" id="Address"
+                  value="No 12 beijing road" style="width: 98%" disabled />
+                </td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="td_bg01">Web</td>
+                <td colspan="3" class="td_bg02"><input
+                  name="Website" type="text" class="tf_120" id="Website"
+                  value="www.bjt.com" style="width: 98%" disabled /></td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+                <td class="td_bg01">&nbsp;</td>
+                <td class="td_bg02">&nbsp;</td>
+              </tr>
+            </table>
+            <br />
+          </td>
+        </tr>
+      </table>
+      <!-- ï¿½ï¿½Â¼ï¿½ï¿½Ê¾ -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="25" background="images/tab_21.gif"
+            style="text-align: center" valign="top">&nbsp; <input
+            class="botton999" type="button" value="Save"
+            onclick="saveEdit();" disabled />&nbsp; <input
+            class="botton999" type="button" value="Back"
+            onclick="goback();" disabled />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <input type="hidden" name="vid"
+      value="7d88f94b-23c6-4b36-a7ef-f2537dd88214" /> <input
+      type="hidden" name="flag" value="" />
+    <!-- æä½æ å¿ -->
+  </form>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Vendors List</title>
+<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script >
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+    
+    $(".list_table tbody tr").click(function() {
+        window.location.href='02.ProjectDetail.html';
+    });
+    $(".list_table").tablesorter();
+  });
+</script>
+</head>
+
+
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <div class="right_section">
+<!-- 标签 -->
+<div id="toolbar">  
+  <div class="lable">
+    <a href="vendorslist.jsp?status=OFFLINE" target="_self">Vendor Management</a> 
+  </div>  
+</div>
+<!-- 标签 -->
+
+<!-- 工具栏 -->
+<div class="tb_icon">
+    <table width="99%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+      
+        <td width="16px" class="click"><img src="images/hotgif.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="window.location.href='addVendor.jsp';">Add Vendor</td>
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+      
+        <td width="16px" class="click"><img src="images/del.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="setStateTo('del');">Delete</td>
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+      
+        <td width="16px" class="click"><img src="images/ref.gif" width="16" height="16" /></td>
+        <td width="8%" class="click" onclick="window.location.reload();">Refresh</td>
+        <td width="90%">&nbsp;</td>
+      </tr>
+    </table>
+    <div align="right"></div>
+</div>
+<!-- 工具栏 -->
+<form name="ChaiQianBuChang" method="post" action="">
+<div id="right_section">
+
+    <table class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+      <tr><td>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table" id="tbl">
+        <tr>
+          <th width="2%"><input type=checkbox name=check onclick='Checkall(document.ChaiQianBuChang.check.checked)' class1="msgnew_checkbox"></th>
+          <th width="2%">No.</th>
+          <th width="10%"
+            >
+          <a
+            href="vendorslist.jsp?desc=true&orderColumn=Vendor&Page_Number=20">
+          Vendor
+        </th>
+        
+        <th width="10%"
+            >
+          <a
+            href="vendorslist.jsp?desc=true&orderColumn=Alias&Page_Number=20">
+          Alias
+        </th>
+        
+          <th width="18%"
+            >
+          <a
+            href="vendorslist.jsp?desc=true&orderColumn=FullName&Page_Number=20">
+           Full Name
+        </th>
+          <th width="10%"
+          >
+      <a
+        href="vendorslist.jsp?desc=true&orderColumn=PhoneNumber&Page_Number=20">
+      
+        Phone Number
+      </th>
+      <th width="18%"
+          >
+        <a
+          href="vendorslist.jsp?desc=true&orderColumn=Fax&Page_Number=20">
+        Fax
+      </th>
+      <th width="10%"
+          >
+        <a
+          href="vendorslist.jsp?desc=true&orderColumn=Email&Page_Number=20">
+        Email
+      </th>
+      <th width="10%" 
+          >
+        <a
+          href="vendorslist.jsp?desc=true&orderColumn=Address&Page_Number=20">
+        
+          Address
+      </th>
+      <th width="10%"
+          >
+        <a
+          href="vendorslist.jsp?desc=true&orderColumn=Website&Page_Number=20">
+        Website
+      </th>
+        </tr>
+        
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="4b42ea03-3160-4b51-ab2c-5dfc0b7a8cbb"/></td>
+            <td align="center">1</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=4b42ea03-3160-4b51-ab2c-5dfc0b7a8cbb">JMS(NS) Beijing</a></td>
+          <td style="text-align:left">JMS Team 5</td>
+            <td style="text-align:left">JMS China NS(Beijing)</td>
+            <td style="text-align:left">0086-10-58858600</td>
+            <td style="text-align:left">0086-10-58851985</td>
+            <td style="text-align:left">selinax@jmsassoc.com</td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+         </tr>
+         
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="ec51649a-c003-4228-9ac6-4676031e77d0"/></td>
+            <td align="center">2</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=ec51649a-c003-4228-9ac6-4676031e77d0">JMSOperation</a></td>
+          <td style="text-align:left">JMS Team 0</td>
+            <td style="text-align:left">JMSOperation</td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+         </tr>
+         
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="aa533a14-9b56-4c92-ac19-cda54bf016ba"/></td>
+            <td align="center">3</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=aa533a14-9b56-4c92-ac19-cda54bf016ba">TELA</a></td>
+          <td style="text-align:left">JMS Team 1</td>
+            <td style="text-align:left">TELA team</td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+         </tr>
+         
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="c7e30fb4-da48-42e5-8bb5-efc6ea8f9715"/></td>
+            <td align="center">4</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=c7e30fb4-da48-42e5-8bb5-efc6ea8f9715">JMS Pacific Inc</a></td>
+          <td style="text-align:left">JPI</td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+         </tr>
+         
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="783fc377-4d5e-49b7-80a3-64ed757235f9"/></td>
+            <td align="center">5</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=783fc377-4d5e-49b7-80a3-64ed757235f9">HUIC</a></td>
+          <td style="text-align:left">JMS Team 3</td>
+            <td style="text-align:left">HUIC</td>
+            <td style="text-align:left">0898-66295826</td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left">No 15 Haida road, haikou, hainan</td>
+            <td style="text-align:left">www.huic.cn</td>
+         </tr>
+         
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="7d88f94b-23c6-4b36-a7ef-f2537dd88214"/></td>
+            <td align="center">6</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=7d88f94b-23c6-4b36-a7ef-f2537dd88214">PEK</a></td>
+          <td style="text-align:left">JMS Team 4</td>
+            <td style="text-align:left">Beijing Team</td>
+            <td style="text-align:left">0100000345</td>
+            <td style="text-align:left">0103434955</td>
+            <td style="text-align:left">bjt@jmsassoc.com</td>
+            <td style="text-align:left">No 12 beijing road</td>
+            <td style="text-align:left">www.bjt.com</td>
+         </tr>
+         
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="f26e1d78-d33b-43f4-9c86-09dd95ac651f"/></td>
+            <td align="center">7</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=f26e1d78-d33b-43f4-9c86-09dd95ac651f">Datum</a></td>
+          <td style="text-align:left">JMS Team 6</td>
+            <td style="text-align:left">Datum Data Co., Ltd</td>
+            <td style="text-align:left">0755- 83103208</td>
+            <td style="text-align:left">0755-83104770</td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left">302A, 3/F South Wing ,  East Building Meilinge,Meilin Street Futian District, Shenzhen, Guangdong</td>
+            <td style="text-align:left"></td>
+         </tr>
+         
+        <tr class="list_slected">
+          <td><input type=checkbox name="key" value="23b1c2ad-3f2b-4f68-b289-8bb4e0f2e8fd"/></td>
+            <td align="center">8</td>
+          <td style="text-align:left"><a href="vendor_cntnt.jsp?role=&vid=23b1c2ad-3f2b-4f68-b289-8bb4e0f2e8fd">DMI</a></td>
+          <td style="text-align:left">JMS Team 7</td>
+            <td style="text-align:left">DMI Call Center</td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+            <td style="text-align:left"></td>
+         </tr>
+                  
+    </table>
+  </td></tr>
+    </table>
+    <!-- 记录显示 -->
+    
+    <!-- 翻页 -->
+    
+  
+
+  
+<!-- 记录显示 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="15" height="20" background="images/tab_21.gif">&nbsp;</td>
+    <td background="images/tab_21.gif">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="25%" height="20" nowrap="nowrap"  style="font-size:11px;">
+            <span class="STYLE1">Pagesize: 
+            <font class='f_d' >20</font>
+ 
+            <font class='f_b'><a href="vendorslist.jsp?desc=false&Page_Number=50&orderColumn=">50</a></font>
+ 
+            <font class='f_b'><a href="vendorslist.jsp?desc=false&Page_Number=100&orderColumn=">100</a></font>
+ 
+            <font class='f_b'><a href="vendorslist.jsp?desc=false&Page_Number=8&orderColumn=">ALL</a></font>
+
+            </span>
+          </td>
+          <td width="30%" valign="middle" class="STYLE1">
+            <div align="right"  style="font-size:11px;">
+              display 8 of 
+              
+                  1-8
+              
+              &nbsp; 
+              <span class="accent">1</span> /&nbsp; 
+                
+              1&nbsp;
+            </div>
+          </td>
+          <td width="45%" valign="top" class="STYLE1"><div align="right">
+            <table width="342" height="20" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="50" height="22" valign="middle"><div align="right"><a href="vendorslist.jsp?desc=false&Page_Number=20&orderColumn="><img src="images/first.gif" width="37" height="15" border="0" /></div></a></td>
+<td width="62" height="22" valign="middle"><div align="right"><a href="vendorslist.jsp?desc=false&Page_Number=20&orderColumn=&Page_No=1&Action=2"><img src="images/back.gif" width="50" height="15" border="0" /></a></div></td>
+<td width="54" height="22" valign="middle"><div align="right"><a href="vendorslist.jsp?desc=false&Page_Number=20&orderColumn=&Page_No=1&Action=3"><img src="images/next.gif" width="43" height="15" border="0" /></a></div></td>
+<td width="49" height="22" valign="middle"><div align="right"><a href="vendorslist.jsp?desc=false&Page_Number=20&orderColumn=&Page_No=1&Action=4"><img src="images/last.gif" width="37" height="15" border="0" /></a></div></td>
+              
+              <td width="59" height="22" valign="middle"><div align="right">To&nbsp;</div></td>
+              <td width="25" height="22" valign="middle"><span class="STYLE7">
+                <input name="pageNo222" id="pageNo222" type="text" class="STYLE1" style="height:10px; width:25px;" size="5" onkeyup="PageTrun(this)"/>
+              </span></td>
+              <td width="23" height="22" valign="middle">&nbsp;Page&nbsp;</td>
+              <td width="30" height="22" valign="middle" onclick="PageTrun2(document.getElementById('pageNo222'))" style="cursor:pointer;"><img src="images/go2.gif" width="37" height="15" />&nbsp;</td>
+            </tr>
+            </table>
+          </div></td>
+        </tr>
+      </table>
+    </td>
+    <td width="14" background="images/tab_21.gif">&nbsp;</td>
+  </tr>
+</table>    
+    
+
+
+<script>
+  function PageTrun(obj){
+    if(event.keyCode == 13){
+      window.location.href = "vendorslist.jsp?desc=false&Page_Number=20&orderColumn=&Page_No=" + obj.value;
+    }
+  }
+  function PageTrun2(obj){
+    window.location.href = "vendorslist.jsp?desc=false&Page_Number=20&orderColumn=&Page_No=" + obj.value;
+  }
+
+</script>
+</div>
+
+
+  <div id="light" class="white_content">
+     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="PAYMENT_table">
+      <tr>
+        <th colspan="2">Search</th>
+      </tr>
+      
+      <tr>
+        <td width="30%" class="td_bg04">Sarts</td>
+        <td class="td_bg02"><input name="SEARCH_BeginDate" type="text" id="SEARCH_BeginDate" class="tf_120" onfocus="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',errDealMode:0,isShowWeek:true})" value="" /></td>
+      </tr>
+      <tr>
+        <td class="td_bg04">Ends</td>
+        <td class="td_bg02"><input name="SEARCH_EndDate" type="text" id="SEARCH_EndDate" class="tf_120" onfocus="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',errDealMode:0,isShowWeek:true})" value="" /></td>
+      </tr>
+      <tr>
+        <td class="td_bg04">Client</td>
+        <td class="td_bg02"><input name="SEARCH_Customer" type="text" id="SEARCH_Customer" class="tf_120" value="" /></td>
+      </tr>
+      <tr>
+        <td class="td_bg04">Vendor</td>
+        <td class="td_bg02"><input name="SEARCH_Vendor" type="text" id="SEARCH_Vendor" class="tf_120" value="" /></td>
+      </tr>
+      <tr>
+        <td class="td_bg04">Project</td>
+        <td class="td_bg02"><input name="SEARCH_ProjectName" type="text" id="SEARCH_ProjectName" class="tf_120"value="" /></td>
+      </tr>
+      
+      
+      <tr>
+        <td colspan="2" align="center"><input class="btn" type="button" value="Search" name="B1" onclick="search_sub();"  />
+          <input class="btn" id="btnSubmit4" type="button" value="Cancel" name="B2" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'";/>
+        </td>
+      </tr>
+    </table>
+    <!-- <div>
+      
+      <input name="vendors" type="checkbox" id="vendors" class="tf_120" value="ALL"  />ALL
+      <input name="vendors" type="checkbox" id="vendors1" class="tf_120" value="HUIC" />HUIC
+      <input name="vendors" type="checkbox" id="vendors2" class="tf_120" value="BJT" />BJT
+      <input name="vendors" type="checkbox" id="vendors3" class="tf_120" value="IBSI" />IBSI
+      <input class="btn" type="button" value="vendors" name="B1" onclick="vendors_sub();"  />
+    </div> -->
+  </div>
+  <div id="fade" class="black_overlay">
+  </div>
+  <input name="subflag" type="hidden" value="" />
+  <input type=hidden name="key" value="" />
+  <input type=hidden value="" name=submitState id=submitState/>
+</form>
+</div>
+<script>
+  function fntDelListItem(){
+    if(checkItem('item')){
+      if(confirm("Delete the Item?")){
+        for(var i=document.getElementsByName('item').length-1;i>=0;i--){
+          if(document.getElementsByName('item')[i].checked){
+            document.getElementById('tbl').deleteRow(document.getElementsByName('item')[i].parentElement.parentElement.rowIndex);
+          }
+        }
+
+      }
+    }else{
+      alert("Choose the Item at first.");
+    }
+  }
+  
+  function checkItem(itemName){
+    var re = false;
+    for(var i=0;i<document.getElementsByName(itemName).length;i++){
+      if(document.getElementsByName(itemName)[i].checked){
+        re = true;
+        break;
+      }
+    }
+    return re;
+  }
+
+  function Checkall(CheckFlag) {
+    if (CheckFlag==true) 
+      doSelectAll()
+    else
+      doDeSelectAll()
+  }
+
+  function doSelectAll() {
+     var checkFlag;
+     checkFlag = true;
+     for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i) {
+         if (document.ChaiQianBuChang.elements[i].name == 'key')  
+              document.ChaiQianBuChang.elements[i].checked = checkFlag;
+     }
+  }
+  
+  function doDeSelectAll() {
+    var checkFlag;
+     for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i) {
+        if (document.ChaiQianBuChang.elements[i].name == 'key') {
+            checkFlag = !document.ChaiQianBuChang.elements[i].checked;
+             document.ChaiQianBuChang.elements[i].checked = checkFlag;
+         }
+       }
+  }
+  
+  //*********************
+  function setStateTo(aType){
+    var vMsg=""; 
+    document.ChaiQianBuChang.submitState.value=aType;
+    switch  (aType){
+      case "del" :vMsg+="Do you want to delete it?";break;
+      case "excel" :vMsg+="Do you want to download it?";break;
+      default:alert('Wrong Operation！');return false;
+    }
+    if(selectCheck()){  
+      if(confirm(vMsg)){
+        document.ChaiQianBuChang.submit();
+      }
+    }else{
+      alert('No records have been selected, please check.');
+        } 
+  }
+  function selectCheck() {
+    var aflag=false;
+    var i=0;
+    var aobj;
+    oper=""; //用于控制相同状态
+    document.ChaiQianBuChang.key.value="";
+    
+     for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i){
+         if (document.ChaiQianBuChang.elements[i].name == 'key'){ 
+          aobj=document.ChaiQianBuChang.elements[i]
+        if (aobj.checked == true){
+          aflag=true; 
+        }
+         }
+     }
+     
+     return aflag
+  }
+  
+  function search_sub(){
+    if(document.forms[0].SEARCH_BeginDate.value == ""){
+      alert("Plasea input Sarts!")
+      document.forms[0].SEARCH_BeginDate.focus();
+      return false;
+    }
+    if(document.forms[0].SEARCH_EndDate.value == ""){
+      alert("Plasea input Ends!")
+      document.forms[0].SEARCH_EndDate.focus();
+      return false;
+    }
+    if(confirm("Do you want to submit?")){
+      document.forms[0].subflag.value = "search";
+      document.forms[0].action = "vendorslist.jsp?status=";
+      document.forms[0].submit();
+    }
+  }
+  
+  function vendors_sub(){
+    var likestr = "";
+    for (var i = 0; i < document.forms[0].vendors.length; i++){
+      //alert(document.forms[0].vendors.length + " == " +document.forms[0].vendors[i].value)
+         if (document.forms[0].vendors[i].checked == true){ 
+          if(likestr != "") likestr += ",";
+          likestr += document.forms[0].vendors[i].value;
+         }
+     }
+     //alert(likestr );
+    if(likestr == ""){
+      alert("Plasea select!")
+      return false;
+    }
+    if(confirm("Do you want to submit?")){
+      document.forms[0].subflag.value = "vendors";
+      //document.forms[0].action = "vendorslist.jsp?status=;
+      window.location.href = "vendorslist.jsp?status=&SEARCH_Vendor=" + likestr;
+      //document.forms[0].submit();
+    }
+  }
+  
+</script>
+
+</body>
+</html>

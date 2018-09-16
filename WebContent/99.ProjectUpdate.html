@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Project Update</title>
+<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script >
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+
+    $(".list_table").tablesorter();
+  });
+</script>
+<style type="text/css">
+<!--
+.right_main11{
+  background:#fff;
+  word-break:keep-all;
+  OVERFLOW: scroll;
+  OVERFLOW-X:hidden;
+  position:absolute;
+  top:61px;
+  right:0;
+  left:3px;
+  bottom:0;
+  border:1px solid #a3bae9;
+  border-top:0 none;
+  margin-bottom:5px;
+  background:#fff url(../images/grd-bg.gif);
+  scrollbar-face-color:#EBF4F5;
+  scrollbar-track-color:#EBF4F5;
+  scrollbar-Shadow-color:#a3bae9;
+  scrollbar-3dlight-color:#a3bae9;
+  width:auto;
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="common">
+  include common.html here
+  </div>
+  
+  <div class="right_section">
+<div id="toolbar">  
+  <div class="lable">Project Management
+  </div>
+  </div>
+<div class="tb_icon">
+  <table width="99%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <!--<td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/hotgif.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="window.location.href='ProjectUpdate.jsp';">Add Project</td>-->
+
+  
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/edit.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="setdisabled(false);">Edit</td>
+  
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/del.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="fntDel('919A90C1-D2B8-4C08-B2F9-4F915FFCF3DD');">Delete</td>
+  
+
+  
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/ref.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="window.location.href=window.location.href">Refresh</td>
+       <!-- <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+         <td width="16px" class="click"><img src="images/Back1.gif" width="16" height="16" /></td>
+        <td width="40px" class="click" onclick="window.history.back();">Back</td> -->
+      <td width="90%">&nbsp;</td>
+      <td width="90%">&nbsp;</td>
+
+    </tr>
+  </table>
+</div>
+<form action="ProjectUpdate.jsp" method="post" name="form1">
+<input type="hidden" name="ProjectID" value="919A90C1-D2B8-4C08-B2F9-4F915FFCF3DD" />
+<input type="hidden" name="flag" value="" />
+<input type="hidden" name="addStatus" value="" />
+<input type="hidden" name="index" value="0" />
+<input type="hidden" name="ConfirmVendors" value="" />
+<input type="hidden" name="ConfirmVendorsCB" value="" />
+
+<div id="list_section" style="OVERFLOW: hidden;width:97%;height:1500" >
+    <table class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#FFFFFF">
+        <br>
+        <table width="97%" border="0" align="center" cellpadding="0" cellspacing="0" class="main_table">
+          <tr>
+            <th colspan="6">Basic Information:</th>
+          </tr>
+          <tr>
+            <td width="17%" class="td_bg01">Project No <font color="red">*</font></td>
+            <td width="16%" class="td_bg02">
+              <input  name="ProjectNo" type="text" class="tf_120" id="ProjectNo" value="JMSCBA019-A01-033-V3" onblur="checkOnlyOne(value)"/>
+              <input  name="ProjectNoTmp" type="hidden" id="ProjectNoTmp" value="JMSCBA019-A01-033-V3" />
+            </td>
+            <!--<td width="17%" class="td_bg01">Project Name <font color="red">*</font></td>
+            <td width="16%" class="td_bg02"><input  name="ProjectName" type="text" class="tf_150" id="ProjectName" value="EBPA VT & NH ELIGIBILITY CORRESPONDENCE INDEXING IN JAVELINA" /></td>
+            -->
+            
+       <td class="td_bg01">Vendor Name <font color="red">*</font></td>
+             <td class="td_bg02">
+              
+                <select name="VendorName" id="VendorName" class="select_150" onchange="ConfirmVendorsV(this);" >
+            <option value=''></option>
+             
+           
+            <option value="Datum">Datum</option>
+           
+            <option value="DMI">DMI</option>
+           
+            <option value="HUIC">HUIC</option>
+           
+            <option value="JMS Pacific Inc">JMS Pacific Inc</option>
+           
+            <option value="JMS(NS) Beijing">JMS(NS) Beijing</option>
+           
+            <option value="JMSOperation">JMSOperation</option>
+           
+            <option value="PEK">PEK</option>
+           
+            <option value="TELA">TELA</option>
+                    
+          </select>
+        
+             </td>
+             <td width="17%" class="td_bg01">&nbsp;</td>
+             <td width="16%" class="td_bg02">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="17%" class="td_bg01">Project Name <font color="red">*</font></td>
+            <td width="16%" class="td_bg02" colspan="5"><input  name="ProjectName" type="text" class="tf_150" style="font-size:9px;" id="ProjectName" value="EBPA VT & NH ELIGIBILITY CORRESPONDENCE INDEXING IN JAVELINA" /></td>
+            
+          </tr>
+          <tr>
+           
+            <td class="td_bg01">Claim Type</td>
+            <td class="td_bg02">
+                        <div style="position:relative;">
+              <span style="margin-left:47px; width:20px;overflow:hidden;">   
+     <select name="ClaimType_" style="width:152px; margin-left:-45px"  onChange="document.getElementById('ClaimType').focus();document.getElementById('ClaimType').value=this.value;" onclick="this.selectedIndex=-1;"> 
+          <option value=''></option>
+              <option value="HCFA">HCFA</option>
+              <option value="UB" >UB</option>
+              <option value="Dental" >Dental</option>
+              <option value="Nonstandard" >Nonstandard</option>
+            </select> 
+     </span> <div style="position:absolute; top:0px; left:0px; width:0px;height:0px;">
+<iframe src="" style="width:136px; height:20px;" frameborder="0" ></iframe>
+<div style=" position:absolute; top:0px; left:0px; width:0; height:0; background-color:#ccc;"><input name="ClaimType" type=text id="ClaimType" style="width:135px; position:absolute;left:-3; border:1px solid #7f9db9; border-right:0 none; height:18px" value="" /> 
+</div>
+</div> 
+</div>            </td>
+            <td class="td_bg01">Average Volume</td>
+            <td class="td_bg02"><input  name="AverageVolume" type="text" class="tf_150" id="AverageVolume" value="0.000" onblur="toFloat(this);" /></td>
+            
+            <td class="td_bg01">Processing Type</td>
+            <td class="td_bg02">
+                                    <div style="position:relative;">
+              <span style="margin-left:47px; width:20px;overflow:hidden;">   
+     <select name="ProjectType_" style="width:152px; margin-left:-45px"  onChange="document.getElementById('ProjectType').focus();document.getElementById('ProjectType').value=this.value;" onclick="this.selectedIndex=-1;"> 
+              <option value=''></option>
+              <option value="ADJ">ADJ</option>
+              <option value="Online" >Online</option>
+              <option value="Offline" >Offline</option>
+            </select> 
+     </span> <div style="position:absolute; top:0px; left:0px; width:0px;height:0px;">
+<iframe src="" style="width:136px; height:20px;" frameborder="0" ></iframe>
+<div style=" position:absolute; top:0px; left:0px; width:0; height:0; background-color:#ccc;"><input name="ProjectType" type=text id="ProjectType" style="width:135px; position:absolute;left:-3; border:1px solid #7f9db9; border-right:0 none; height:18px" value="Online" /> 
+</div>
+</div> 
+</div> </td>
+
+          </tr>
+          <tr>
+            
+            <td class="td_bg01">Submission Time</td>
+            <td class="td_bg02"><select name="SubmissionTime" id="SubmissionTime" class="select_150">
+              <option value=''></option>
+              <option value="24 hours returned">24 hours returned</option>
+              <option value="48 hours returned">48 hours returned</option>
+              <option value="72 hours returned">72 hours returned</option>
+            </select></td>
+            <td class="td_bg01">Frequency</td>
+            <td class="td_bg02">
+                                    <div style="position:relative;">
+              <span style="margin-left:47px; width:20px;overflow:hidden;">   
+     <select name="Frequency_" style="width:152px; margin-left:-45px"  onChange="document.getElementById('Frequency').focus();document.getElementById('Frequency').value=this.value;" onclick="this.selectedIndex=-1;"> 
+              <option value=''></option>
+              <option value="longterm">longterm</option>
+              <option value="onetime" >onetime</option>
+              <option value="backlog" >backlog</option>
+            </select> 
+     </span> <div style="position:absolute; top:0px; left:0px; width:0px;height:0px;">
+<iframe src="" style="width:136px; height:20px;" frameborder="0" ></iframe>
+<div style=" position:absolute; top:0px; left:0px; width:0; height:0; background-color:#ccc;"><input name="Frequency" type=text id="Frequency" style="width:135px; position:absolute;left:-3; border:1px solid #7f9db9; border-right:0 none; height:18px" value="" /> 
+</div>
+</div> 
+</div>            </td>
+
+      <td class="td_bg01">Charge Unit</td>
+            <td class="td_bg02"><input  name="PricingUnit" type="text" class="tf_120" id="PricingUnit" value="" /></td>
+            
+          </tr>
+       
+         
+       
+     
+       
+          <tr>
+            <td class="td_bg01">Client Price</td>
+            <td class="td_bg02"><input  name="ClientPrice" type="text" class="tf_120" id="ClientPrice" value="0.190" onblur="toFloat(this);" />
+              <input  name="ClientPriceTmp" type="hidden" value="0.190" />
+            </td>
+            <td class="td_bg01">Effective Date</td>
+            <td class="td_bg02">
+              <input  name="ClientEffectiveDate" type="text" class="tf_80" id="ClientEffectiveDate" value="10-01-2016" onclick="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',isShowWeek:true,alwaysUseStartDate:true})" />
+            </td>
+            <td class="td_bg01"><a href="ClientPriceHistoryList.jsp?ProjectNo=JMSCBA019-A01-033-V3" ><img src="images/payment.gif" width="15" height="13" border="0" /></a></td>
+            <td class="td_bg02"></td>
+          </tr>
+       
+       
+          <tr>
+            <td class="td_bg01">Vendor Price</td>
+            <td class="td_bg02"><input  name="VendorPrice" type="text" class="tf_120" id="VendorPrice" value="0.120" onblur="toFloat(this);" />
+              <input  name="VendorPriceTmp" type="hidden" value="0.120" />
+            </td>
+            
+      <td class="td_bg01">Effective Date</td>
+            <td class="td_bg02">
+              <input  name="VendorEffectiveDate" type="text" class="tf_80" id="VendorEffectiveDate" value="10-01-2016" onclick="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',isShowWeek:true,alwaysUseStartDate:true})" />
+            </td>
+            
+            <td class="td_bg01" align="center"><a href="VendorPriceHistoryList.jsp?ProjectNo=JMSCBA019-A01-033-V3" ><img src="images/payment.gif" width="15" height="13" border="0" /></a></td>
+            <td class="td_bg02"></td>
+          </tr>
+       
+          <tr>
+            <td class="td_bg01">Status</td>
+            <td class="td_bg02"><select name="Status" id="Status" class="select_150">
+              <option value=''></option>
+              <option value="Proposal">Proposal</option>
+              <option value="Testing" >Testing</option>
+              <option value="Pre-production" >Pre-production</option>
+              <option value="Production" >Production</option>
+              <option value="Termination" >Termination</option>
+            </select></td>
+            <td class="td_bg01">&nbsp;</td>
+            <td class="td_bg02">&nbsp;</td>
+            <td class="td_bg01">&nbsp;</td>
+            <td class="td_bg02">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td class="td_bg01">&nbsp;</td>
+            <td class="td_bg02">&nbsp;</td>
+            <td class="td_bg01">&nbsp;</td>
+            <td class="td_bg02">&nbsp;</td>
+            <td class="td_bg01">&nbsp;</td>
+            <td class="td_bg02">&nbsp;</td>
+          </tr>
+        </table>
+        <br/>
+        <table width="97%" border="0" cellspacing="0" cellpadding="0" class="main_table" align="center">
+          <tr>
+            <th colspan="8">Confirm Vendors:</th>
+          </tr>
+          <tr>
+            <td width="10%" class="td_bg02" colspan="8" >
+              <table border="0" cellpadding="0" cellspacing="0">
+        
+        
+        <tr>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="Datum" />Datum</td>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="DMI" />DMI</td>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="HUIC" />HUIC</td>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="JMS Pacific Inc" />JMS Pacific Inc</td>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="JMS(NS) Beijing" />JMS(NS) Beijing</td>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="JMSOperation" />JMSOperation</td>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="PEK" />PEK</td>
+            <td class="td_bg02" style="width:20%" >
+              <input name="ConfirmVendorsCB" type="checkbox" value="TELA" />TELA</td></tr>
+    
+        </table>
+            </td>
+          </tr>          
+        </table>
+        <br/>
+        <table width="97%" border="0" cellspacing="0" cellpadding="0" class="main_table" align="center">
+          <tr>
+            <th colspan="8">Additional Information:</th>
+          </tr>
+          <tr>
+            <td width="10%" class="td_bg01">Testing Date </td>
+            <td width="15%" class="td_bg02"><input  name="TestingDate" type="text" class="tf_80" id="TestingDate" value="" onclick="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',isShowWeek:true,alwaysUseStartDate:true})" /></td>
+            <td width="10%" class="td_bg01">Pre-production Date</td>
+            <td width="15%" class="td_bg02"><input  name="PreproductionDate" type="text" class="tf_80" id="PreproductionDate" value="" onclick="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',isShowWeek:true,alwaysUseStartDate:true})" /></td>
+            <td width="10%" class="td_bg01">Production Date</td>
+            <td width="15%" class="td_bg02"><input  name="ProductionDate" type="text" class="tf_80" id="ProductionDate" value="" onclick="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',isShowWeek:true,alwaysUseStartDate:true})" /></td>
+            <td width="10%" class="td_bg01">Termination Date</td>
+            <td width="15%" class="td_bg02"><input  name="TerminationDate" type="text" class="tf_80" id="TerminationDate" value="" onclick="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',isShowWeek:true,alwaysUseStartDate:true})" /></td>
+          </tr>
+          <tr>
+            <td class="td_bg01">Pricing History</td>
+            <td class="td_bg02" colspan="3"><textarea name="PricingHistory" class="tf_300" style="height:50px; background:#ffffff;" ></textarea></td>
+            <td class="td_bg01">Client Contacts </td>
+            <td class="td_bg02" colspan="3"><textarea name="ClientContacts" class="tf_300" style="height:50px; background:#ffffff;" ></textarea></td>
+          </tr>
+          <tr>
+            <td class="td_bg01">Vendor Contacts</td>
+            <td class="td_bg02" colspan="3"><textarea name="VendorContacts" class="tf_300" style="height:50px; background:#ffffff;" ></textarea></td>
+            <td class="td_bg01">JMS Contacts</td>
+            <td class="td_bg02" colspan="3"><textarea name="JMSContacts" class="tf_300" style="height:50px; background:#ffffff;" ></textarea></td>
+          </tr>
+          
+          <tr>
+            <td class="td_bg01">FTP Information</td>
+            <td class="td_bg02" colspan="3"><textarea name="FTPInformation" class="tf_300" style="height:50px; background:#ffffff;" ></textarea></td>
+            <td class="td_bg01">Remark</td>
+            <td class="td_bg02" colspan="3"><textarea name="Remark" class="tf_300" style="height:50px; background:#ffffff;" ></textarea></td>
+          </tr>
+          
+          <tr>
+            <td class="td_bg01">&nbsp;</td>
+            <td colspan="3" class="td_bg02">&nbsp;</td>
+            <td class="td_bg01">&nbsp;</td>
+            <td colspan="3" class="td_bg02">&nbsp;</td>
+          </tr>
+        </table>
+        <br/>
+        </td>
+      </tr>
+    </table>
+    
+    <!-- 记录显示 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="25">
+      
+      <tr>
+        <td width="15" height="25" background="images/tab_21.gif">&nbsp;</td>
+        <td background="images/tab_21.gif" align="center" valign="top">
+          <input class="botton999" id="add" type="button" value="Save" name="Save" onclick="fntSave('');" />
+          
+          <input class="botton999" id="btnSubmit2" type="button" value="Close" name="Back" onclick="window.close();//history.back();" />
+        </td>
+        <td width="14" background="images/tab_21.gif">&nbsp;</td>
+      </tr>
+    </table>
+</div>
+
+</form>
+</div>
+<script>
+  
+  //var checkProjNo = true;
+  function fntSave(str){
+    var projNo;   
+    if(document.forms[0].ProjectNo.value == ""){
+      alert("Plasea input ProjectNo!")
+      document.forms[0].ProjectNo.focus();
+      return false;
+    }/*else{
+      checkProjNo = true;
+      projNo = document.forms[0].ProjectNo.value;
+      checkOnlyOne(projNo);
+    }*/
+    
+    if(document.forms[0].ProjectName.value == ""){
+      alert("Plasea input ProjectName!")
+      document.forms[0].ProjectName.focus();
+      return false;
+    }
+    
+    /*if(document.forms[0].ClientName.value == ""){
+      alert("Plasea input ClientName!")
+      document.forms[0].ClientName.focus();
+      return false;
+    }*/
+    if(document.forms[0].VendorName.value == ""){
+      alert("Plasea input VendorName!")
+      document.forms[0].VendorName.focus();
+      return false;
+    }
+    
+    var ConfirmVendorsStr = "";
+    var funs = document.forms[0]["ConfirmVendorsCB"];
+    for(var funi=1;funi<funs.length;funi++){
+      if(funs[funi].checked){
+        if(ConfirmVendorsStr != ""){
+          ConfirmVendorsStr += ";"
+        }
+        ConfirmVendorsStr += funs[funi].value;
+      }
+    }
+    
+    /*if('edt'!='edt' && !checkProjNo){
+      return false;
+    }*/
+    if(confirm("Do you want to save it?")){
+      if(str == 'goon'){
+        document.forms[0].addStatus.value = "goon";
+      }
+      if('edt' == 'edt'){
+        document.forms[0].flag.value = "chg";
+      }else{
+        document.forms[0].flag.value = "add";
+      }
+      document.forms[0].ConfirmVendors.value = ConfirmVendorsStr;
+      document.forms[0].submit();
+    }
+  }
+  
+  function setdisabled(status){
+      
+    document.forms[0].ProjectNo.disabled = status;
+    document.forms[0].ProjectName.disabled = status;
+    //document.forms[0].ClientName.disabled = status;
+    
+    document.forms[0].VendorName.disabled = status;
+    
+    document.forms[0].ProjectType.disabled = status;
+    document.forms[0].ProjectType_.disabled = status;
+    document.forms[0].ClaimType.disabled = status;
+    document.forms[0].ClaimType_.disabled = status;
+    document.forms[0].AverageVolume.disabled = status;
+    document.forms[0].SubmissionTime.disabled = status;
+    document.forms[0].Frequency.disabled = status;    
+    document.forms[0].Frequency_.disabled = status;
+    document.forms[0].PricingUnit.disabled = status;
+    
+    document.forms[0].ClientPrice.disabled = status;
+    document.forms[0].ClientEffectiveDate.disabled = status;    
+    
+    
+    document.forms[0].VendorPrice.disabled = status;
+    document.forms[0].VendorEffectiveDate.disabled = status;
+    
+    document.forms[0].Status.disabled = status;
+    document.forms[0].TestingDate.disabled = status;
+    document.forms[0].PreproductionDate.disabled = status;
+    document.forms[0].ProductionDate.disabled = status;
+    document.forms[0].TerminationDate.disabled = status;
+    document.forms[0].PricingHistory.disabled = status;
+    document.forms[0].ClientContacts.disabled = status;   
+    document.forms[0].VendorContacts.disabled = status;
+    document.forms[0].JMSContacts.disabled = status;
+    document.forms[0].FTPInformation.disabled = status;
+    document.forms[0].Remark.disabled = status;
+    document.forms[0].Save.disabled = status;
+    document.forms[0].Back.disabled = status;
+    
+    setdisableds(status);
+    ConfirmVendors2(document.forms[0].VendorName);
+  }
+  
+  
+    setdisabled(true);
+  
+  function fntDelListItem(){
+    if(checkItem('item')){
+      if(confirm("Delete the Item?")){
+        for(var i=document.getElementsByName('item').length-1;i>=0;i--){
+          if(document.getElementsByName('item')[i].checked){
+            document.getElementById('tbl').deleteRow(document.getElementsByName('item')[i].parentElement.parentElement.rowIndex);
+          }
+        }
+      }
+    }else{
+      alert("Choose the Item at first.");
+    }
+  }
+  
+  function checkItem(itemName){
+    var re = false;
+    for(var i=0;i<document.getElementsByName(itemName).length;i++){
+      if(document.getElementsByName(itemName)[i].checked){
+        re = true;
+        break;
+      }
+    }
+    return re;
+  }
+  
+  function toFloat(obj){
+    if(obj.value != ""){
+      obj.value = parseFloat(obj.value).toFixed(3);
+    }
+  }
+  
+  //document.forms[0].ClientName.value = "CBA";
+  
+  
+    document.forms[0].VendorName.value = "HUIC";
+  
+  document.forms[0].SubmissionTime.value = "";
+  document.forms[0].Status.value = "Production";
+  //-------------- ajax begin -->
+  var xmlHttp;
+  function createXMLHttpRequest() {
+    if (window.ActiveXObject) {
+      xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } else if (window.XMLHttpRequest) {
+      xmlHttp = new XMLHttpRequest();                 
+    }
+  }
+
+  function checkOnlyOne(strProj) {
+    if(strProj.Trim()!="" /*&& 'edt'!='edt'*/){   
+      createXMLHttpRequest();
+      var url = "ProjectUpdate_ajax.jsp?projectno="+strProj+"&projectID=919A90C1-D2B8-4C08-B2F9-4F915FFCF3DD";
+      xmlHttp.onreadystatechange = function(){
+        if (xmlHttp.readyState == 4) {
+          if (xmlHttp.status == 200) {
+            var tmp = xmlHttp.responseText.replace(/\r\n/g,"").replace(/\s/g,"");
+            //alert(tmp);
+            if(tmp=='0'){
+              checkProjNo = false;
+              alert("The ProjectNo has been used.");
+              document.getElementById("ProjectNo").select();
+              //document.getElementById("ProjectNo").value = 'ABS001BH010P';
+              return false;
+            }
+          } else if (xmlHttp.status == 204 || xmlHttp.status == 1223){
+            checkProjNo = false;
+            alert(xmlHttp.status+"错误!");
+            return false ;
+          }
+        }
+      };
+      xmlHttp.open("GET", url, true);
+      xmlHttp.send(null);   
+    }
+  }
+
+  function back() {
+    if (xmlHttp.readyState == 4) {
+      if (xmlHttp.status == 200) {
+        document.Apply.noApply.value = xmlHttp.responseText.replace(/\r\n/g,"").replace(/\s/g,"");
+      } else if (xmlHttp.status == 204 || xmlHttp.status == 1223){
+        alert(xmlHttp.status+"错误!");
+      }
+    }
+  }
+  
+  function fntDel(strProj) {//删除记录
+    if(strProj.Trim()!=""){   
+      createXMLHttpRequest();
+      var url = "Project_update_del_ajax.jsp?ProjectID="+strProj;
+      xmlHttp.onreadystatechange = function(){
+        if (xmlHttp.readyState == 4) {
+          if (xmlHttp.status == 200) {
+            var tmp = xmlHttp.responseText.replace(/\r\n/g,"").replace(/\s/g,"");
+            //alert(tmp);
+            if(tmp=='0'){//存在记录
+              alert("Only the project without production data can be deleted, please check!");
+            }else{
+              if(window.confirm("Do you want to delete this project?")){
+                document.forms[0].flag.value = "del";
+                document.forms[0].submit();
+              }
+            }
+        
+          } else if (xmlHttp.status == 204 || xmlHttp.status == 1223){
+            alert(xmlHttp.status+"Error!");
+          }
+        }
+      };
+      xmlHttp.open("GET", url, true);
+      xmlHttp.send(null);   
+    }
+  }
+  //-------------- ajax end -->
+  function setdisableds(status){
+    var funs = document.forms[0]["ConfirmVendorsCB"];
+    for(var funi=1;funi<funs.length;funi++){
+      funs[funi].disabled = status;
+    }
+  }
+  var funs = document.forms[0]["ConfirmVendorsCB"];
+  for(var funi=1;funi<funs.length;funi++){
+    if(';;'.indexOf(";" + funs[funi].value + ";") != -1){
+       funs[funi].checked = true;
+    }
+  }
+  
+  String.prototype.Trim = function() { 
+    return this.replace(/(^\s*)|(\s*$)/g, ""); 
+  }
+  
+  function ConfirmVendors2(obj){
+    var funs = document.forms[0]["ConfirmVendorsCB"];
+    for(var funi=1;funi<funs.length;funi++){
+      if(obj.value == funs[funi].value){
+        funs[funi].disabled = true;
+        break;
+      }
+    }
+  }
+  
+  function ConfirmVendorsV(obj){
+    var funs = document.forms[0]["ConfirmVendorsCB"];
+    for(var funi=1; funi<funs.length; funi++){
+      //funs[funi].checked = false;
+      funs[funi].disabled = false;
+      if(obj.value == funs[funi].value){
+        funs[funi].checked = false;
+        funs[funi].disabled = true;
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

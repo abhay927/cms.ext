@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contracts Update</title>
+<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script >
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+
+    $(".list_table").tablesorter();
+  });
+</script>
+<style type="text/css">
+body,span,div,td{/*font-size:12px;line-height:1.5em;color:#849BCA;*/}
+#bodyL{
+ float:left;
+ width:84px;
+ margin-right:2px;
+}
+a.od{
+ width:80px;
+ height:25px;
+ line-height:25px;
+ /*text-align:center;*/
+ /*font-weight:bold;*/
+ border: 2px solid #849BCA; 
+ display:block;
+ color:#547BC9;
+ float:left;
+ text-decoration:none;
+ margin-top:2px;
+}
+a.od:link{
+ background:#EEF1F8;
+}
+a.od:visited{
+ background:#EEF1F8;
+}
+a.od:hover{
+ background:#EEE;
+}
+a.od:active{
+ background:#EEE;
+}
+#fd{ 
+ width:500px;
+ height:200px;
+ background:#EDF1F8; 
+ border: 2px solid #849BCA;
+ margin-top:2px;
+ margin-left:2px;
+ float:left; 
+ overflow:hidden; 
+ position:absolute;
+ left:0px;
+ top:0px;
+ /*cursor:move;*/
+ float:left;
+ /*filter:alpha(opacity=50);*/
+ 
+}
+.content{
+ padding:2px;
+overflow:auto;
+width:496px; 
+height:180px;
+position:relative;
+float:left;
+}
+
+.title{
+ width:500px;
+ height:20px;
+ cursor:move;
+ position:relative;
+ float:left;
+ text-align:left;
+}
+</style>
+
+</head>
+
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  
+  <div class="right_section">
+<div id="toolbar">  
+  <div class="lable">Contract Management
+  </div>
+  </div>
+<div class="nemubar">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+
+      <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/hotgif.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="window.location.href='Contracts_update.jsp';">Add Contract</td>
+  
+  
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/edit.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="setdisabled(false);">Edit</td>
+  
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/del.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="fntDel('CBA019033');">Delete</td>
+  
+  
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+        <td width="16px" class="click"><img src="images/ref.gif" width="16" height="16" /></td>
+        <td width="10%" class="click" onclick="window.location.href=window.location.href">Refresh</td>
+        <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+         <td width="16px" class="click"><img src="images/Back1.gif" width="16" height="16" /></td>
+        <td width="40px" class="click" onclick="window.history.back();">Back</td>
+      <td width="90%">&nbsp;</td>
+      <td width="90%">&nbsp;</td>
+
+    </tr>
+  </table>
+</div>
+<form action="Contracts_update.jsp" method="post" name="form1">
+<input type="hidden" name="ContractID" value="3CA7F064-A29F-43E9-93B5-A3F4EE4AA8DF" />
+<input type="hidden" name="flag" value="" />
+<input type="hidden" name="addStatus" value="" />
+<input type="hidden" name="ProjectNo" value="" />
+<input type="hidden" name="project" value="" />
+<input type="hidden" name="IsProcreative" value="" />
+
+<div id="right_main">
+    <table class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#FFFFFF">
+        <br/>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="main_table">
+          <tr>
+            <th colspan="6">Basic Information:</th>
+          </tr>
+          <tr>
+            <td width="17%" class="td_bg01">Contract NO<font color="red">*</font></td>
+            <td width="17%" class="td_bg02" colspan1="2"><input  name="ContractNO" type="bd" class="tf_120" id="ContractNO" value="CBA019033" onblur="checkOnlyOne(this.value)" disabled="disabled" /></td>
+
+            <td width="17%" class="td_bg01">Contract Name</td>
+            <td width="17%" class="td_bg02" colspan1="2">
+         <input  name="ContractName" type="bd" class="tf_120" id="ContractName" value="WEBCOBRA, INDEXING CORRESPONDENCE, ETC." />
+      </td>
+      <td class="td_bg01" width="17%">Client Name</td>
+            <td class="td_bg02" width="17%">
+              <select name="Client" id="Client" class="select_150" onchange1="loadProjectList(this.value);document.getElementById('addProject').style.display='inline';clearNames();" disabled="disabled">
+          <option value=''></option>
+           
+         
+          <option value="065HCP">065HCP</option>
+         
+          <option value="066STT">066STT</option>
+         
+          <option value="067MBM">067MBM</option>
+         
+          <option value="068PSW">068PSW</option>
+         
+          <option value="071MAX">071MAX</option>
+         
+          <option value="ABE100">ABE100</option>
+         
+          <option value="ABS">ABS</option>
+         
+          <option value="ACI">ACI</option>
+         
+          <option value="ACS">ACS</option>
+         
+          <option value="ACT">ACT</option>
+         
+          <option value="AIR">AIR</option>
+         
+          <option value="ALL">ALL</option>
+         
+          <option value="AMP">AMP</option>
+         
+          <option value="ANG">ANG</option>
+         
+          <option value="APL085">APL085</option>
+         
+          <option value="ARC128">ARC128</option>
+         
+          <option value="ASC">ASC</option>
+         
+          <option value="ASI">ASI</option>
+         
+          <option value="BBB999">BBB999</option>
+         
+          <option value="BBI119">BBI119</option>
+         
+          <option value="BCC">BCC</option>
+         
+          <option value="BCI">BCI</option>
+         
+          <option value="BEN">BEN</option>
+         
+          <option value="BHS104">BHS104</option>
+         
+          <option value="BMI">BMI</option>
+         
+          <option value="BOL092">BOL092</option>
+         
+          <option value="BPV106">BPV106</option>
+         
+          <option value="BRH">BRH</option>
+         
+          <option value="BUT">BUT</option>
+         
+          <option value="BVT">BVT</option>
+         
+          <option value="CAP122">CAP122</option>
+         
+          <option value="CAS - OLD">CAS - OLD</option>
+         
+          <option value="CAS109">CAS109</option>
+         
+          <option value="CAT">CAT</option>
+         
+          <option value="CBA">CBA</option>
+         
+          <option value="CDB">CDB</option>
+         
+          <option value="CFA">CFA</option>
+         
+          <option value="CFR118">CFR118</option>
+         
+          <option value="CHM">CHM</option>
+         
+          <option value="CHP">CHP</option>
+         
+          <option value="CLF">CLF</option>
+         
+          <option value="CON086">CON086</option>
+         
+          <option value="CTP114">CTP114</option>
+         
+          <option value="CYP">CYP</option>
+         
+          <option value="DCC">DCC</option>
+         
+          <option value="DCM">DCM</option>
+         
+          <option value="DES">DES</option>
+         
+          <option value="DMA">DMA</option>
+         
+          <option value="EBC">EBC</option>
+         
+          <option value="EBM125">EBM125</option>
+         
+          <option value="EBS - OLD">EBS - OLD</option>
+         
+          <option value="EBS110">EBS110</option>
+         
+          <option value="EHP">EHP</option>
+         
+          <option value="EHT">EHT</option>
+         
+          <option value="ELS">ELS</option>
+         
+          <option value="ENT">ENT</option>
+         
+          <option value="FES061">FES061</option>
+         
+          <option value="GBA ">GBA </option>
+         
+          <option value="GEM">GEM</option>
+         
+          <option value="GLC">GLC</option>
+         
+          <option value="HCC">HCC</option>
+         
+          <option value="HDN">HDN</option>
+         
+          <option value="HDP121">HDP121</option>
+         
+          <option value="HEI">HEI</option>
+         
+          <option value="HFB">HFB</option>
+         
+          <option value="IBA - OLD">IBA - OLD</option>
+         
+          <option value="IBA127">IBA127</option>
+         
+          <option value="IDA">IDA</option>
+         
+          <option value="JFP091">JFP091</option>
+         
+          <option value="KAA">KAA</option>
+         
+          <option value="LAV">LAV</option>
+         
+          <option value="LBS028">LBS028</option>
+         
+          <option value="MBA">MBA</option>
+         
+          <option value="MHS">MHS</option>
+         
+          <option value="MID">MID</option>
+         
+          <option value="MSI">MSI</option>
+         
+          <option value="NHB">NHB</option>
+         
+          <option value="NOL">NOL</option>
+         
+          <option value="NPM - OLD">NPM - OLD</option>
+         
+          <option value="NPM048">NPM048</option>
+         
+          <option value="NTO">NTO</option>
+         
+          <option value="OAK">OAK</option>
+         
+          <option value="OMN">OMN</option>
+         
+          <option value="ONC124">ONC124</option>
+         
+          <option value="PRS">PRS</option>
+         
+          <option value="PSD099">PSD099</option>
+         
+          <option value="PTB">PTB</option>
+         
+          <option value="RHP090">RHP090</option>
+         
+          <option value="RVR107">RVR107</option>
+         
+          <option value="SIS">SIS</option>
+         
+          <option value="SPE">SPE</option>
+         
+          <option value="STA">STA</option>
+         
+          <option value="TBR">TBR</option>
+         
+          <option value="TCG">TCG</option>
+         
+          <option value="TPM">TPM</option>
+         
+          <option value="TTT000">TTT000</option>
+         
+          <option value="UMR">UMR</option>
+         
+          <option value="VAN998">VAN998</option>
+         
+          <option value="VRT">VRT</option>
+         
+          <option value="WEL017">WEL017</option>
+         
+          <option value="WLT">WLT</option>
+         
+          <option value="WMM">WMM</option>
+         
+          <option value="WPA">WPA</option>
+                  
+        </select>
+        <input  name="Client1" type="hidden" value="CBA" />
+           </td>
+          </tr>
+          <tr>
+            <td class="td_bg01" width="17%">JMS Manager</td>
+            <td class="td_bg02" width="17%">
+              <input  name="JMSManager" type="bd" class="tf_120" id="JMSManager" value="" />
+            </td>
+            <td class="td_bg01" width="17%">Client Manager</td>
+            <td class="td_bg02" width="17%">
+              <input  name="ClientManager" type="bd" class="tf_120" id="ClientManager" value="" />
+           </td>
+            <td class="td_bg01" width="17%">Sign Date</td>
+            <td class="td_bg02" width="17%">
+      <input  name="SingDate" type="bd" class="tf_80" id="SingDate" value="" onclick="WdatePicker({dateFmt:'MM-dd-yyyy',lang:'en',isShowWeek:true,alwaysUseStartDate:true})" /></td>
+          </tr>
+          
+          <tr>
+            <td class="td_bg01">Note</td>
+            <td class="td_bg02" colspan="5"><textarea name="Note" class="tf_300" style="height:50px; background:#ffffff;" >Javelina System in Use</textarea></td>
+          </tr>
+        </table>
+        <br/>
+        
+        <table class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#FFFFFF">
+        <br>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="main_table">
+          <tr>
+            <th colspan="6">Covered Projects:
+              <span id="addProject" style="text-align:right;display1:;"><img src="images/add.gif"  onclick="openProject();" onClick1="show('fd');doselectTalbe();return false;" style="cursor:pointer;" width="12" height="12"/></span>
+            </th>
+          </tr>
+          
+        </table>
+       <table align="center" class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table" id="tbl">
+          <tr>
+            <th width="2%">No.</th>
+      <th width="10%">
+        Project NO
+      </th>
+      <th width="10%">
+        Project Name
+      </th>
+      
+        
+        
+          <th width="10%">
+            Vendor Name
+          </th>
+        
+      
+      
+    
+      <th width="10%">
+        Client Price
+      </th>
+    
+    
+      <th width="10%">
+        Vendor Price
+      </th>
+    
+        
+      <th width="5%">&nbsp;</th>
+          </tr>
+    <tbody id="yitis">
+    
+    
+    
+    
+    
+      <tr id="del0">
+        <td width="3%">
+          <span id="sort">1</span><input type="hidden" name="ProjectNo" value="919A90C1-D2B8-4C08-B2F9-4F915FFCF3DD" />
+        </td>           
+        <td width="0%" 
+        style=" text-align:left; padding-left:6px;">                    
+          <a id="ProjectNo0" href='99.ProjectUpdate.html?role=&flag=edt&ProjectID=919A90C1-D2B8-4C08-B2F9-4F915FFCF3DD&index=0'>JMSCBA019-A01-033-V3</a>
+        </td>
+        <td width="0%" id="ProjectName0" 
+        style=" text-align:left; padding-left:6px;">          
+          EBPA VT & NH ELIGIBILITY CORRESPONDENCE INDEXING IN JAVELINA
+        </td>
+
+        <td width="0%" id="VendorName0" 
+          style=" text-align:left; padding-left:6px;">          
+          
+            
+            
+              HUIC
+            
+                    
+        </td>
+      
+        <td width="0%" id="ClientPrice0" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.190
+        </td>
+      
+      
+        <td  width="0%" id="VendorPrice0" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.120
+        </td>
+      
+        <td  width="0%" 
+          style=" text-align:center; padding-left:6px;">
+            
+        </td>
+          </tr>
+    
+    
+      <tr id="del1">
+        <td width="3%">
+          <span id="sort">2</span><input type="hidden" name="ProjectNo" value="D28BB4C0-684E-44B2-827F-DD3CCF8AF05E" />
+        </td>           
+        <td width="0%" 
+        style=" text-align:left; padding-left:6px;">                    
+          <a id="ProjectNo1" href='99.ProjectUpdate.html?role=&flag=edt&ProjectID=D28BB4C0-684E-44B2-827F-DD3CCF8AF05E&index=1'>JMSCBA019-A06-033-V3</a>
+        </td>
+        <td width="0%" id="ProjectName1" 
+        style=" text-align:left; padding-left:6px;">          
+          EBPA VT & NH ELIGIBILITY CHANGES IN JAVELINA
+        </td>
+
+        <td width="0%" id="VendorName1" 
+          style=" text-align:left; padding-left:6px;">          
+          
+            
+            
+              HUIC
+            
+                    
+        </td>
+      
+        <td width="0%" id="ClientPrice1" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.750
+        </td>
+      
+      
+        <td  width="0%" id="VendorPrice1" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.500
+        </td>
+      
+        <td  width="0%" 
+          style=" text-align:center; padding-left:6px;">
+            
+        </td>
+          </tr>
+    
+    
+      <tr id="del2">
+        <td width="3%">
+          <span id="sort">3</span><input type="hidden" name="ProjectNo" value="37D04361-1855-48EA-8F21-1F01CB73578D" />
+        </td>           
+        <td width="0%" 
+        style=" text-align:left; padding-left:6px;">                    
+          <a id="ProjectNo2" href='99.ProjectUpdate.html?role=&flag=edt&ProjectID=37D04361-1855-48EA-8F21-1F01CB73578D&index=2'>JMSCBA019-A01-033-V3-001</a>
+        </td>
+        <td width="0%" id="ProjectName2" 
+        style=" text-align:left; padding-left:6px;">          
+          BLUE ELIGIBILITY CORRESPONDENCE INDEXING IN JAVELINA
+        </td>
+
+        <td width="0%" id="VendorName2" 
+          style=" text-align:left; padding-left:6px;">          
+          
+            
+            
+              HUIC
+            
+                    
+        </td>
+      
+        <td width="0%" id="ClientPrice2" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.190
+        </td>
+      
+      
+        <td  width="0%" id="VendorPrice2" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.120
+        </td>
+      
+        <td  width="0%" 
+          style=" text-align:center; padding-left:6px;">
+            
+        </td>
+          </tr>
+    
+    
+      <tr id="del3">
+        <td width="3%">
+          <span id="sort">4</span><input type="hidden" name="ProjectNo" value="9AAA33ED-56F2-42F3-B816-15A638AE9517" />
+        </td>           
+        <td width="0%" 
+        style=" text-align:left; padding-left:6px;">                    
+          <a id="ProjectNo3" href='99.ProjectUpdate.html?role=&flag=edt&ProjectID=9AAA33ED-56F2-42F3-B816-15A638AE9517&index=3'>JMSCBA019-A06-033-V3-001</a>
+        </td>
+        <td width="0%" id="ProjectName3" 
+        style=" text-align:left; padding-left:6px;">          
+          BLUE ELIGIBILITY CHANGES IN JAVELINA
+        </td>
+
+        <td width="0%" id="VendorName3" 
+          style=" text-align:left; padding-left:6px;">          
+          
+            
+            
+              HUIC
+            
+                    
+        </td>
+      
+        <td width="0%" id="ClientPrice3" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.750
+        </td>
+      
+      
+        <td  width="0%" id="VendorPrice3" 
+          style=" text-align:right; padding-left:6px;">         
+          $0.500
+        </td>
+      
+        <td  width="0%" 
+          style=" text-align:center; padding-left:6px;">
+            
+        </td>
+          </tr>
+    
+    
+        </tbody>  
+        </table></td>
+      </tr>
+    </table>
+    
+    <!-- 记录显示 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="25">
+      
+      <tr>
+        <td width="15" height="25" background="images/tab_21.gif">&nbsp;</td>
+        <td background="images/tab_21.gif" align="center" valign="top">
+          <input class="botton999" id="add" type="button" value="Save" name="Save" onclick="fntSave('','Modify');" />
+          
+          
+            <input class="botton999" id="Audit" type="button" value="Audit" name="Audit" onclick="fntSave('','Production');" />
+          
+          <input class="botton999" id="btnSubmit2" type="button" value="Back" name="Back" onclick="window.history.back();" />
+        </td>
+        <td width="14" background="images/tab_21.gif">&nbsp;</td>
+      </tr>
+    </table>
+    
+    <div id="fd" style="display:none;filter:alpha(opacity=100);opacity:1;">
+      <div class="title" onmouseout="ismove =false" onmouseover="ismove =true" >
+      <table  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td id="clienttitle" align="left" style=" text-align:left; padding-left:6px; font-weight:bold;">
+                <!-- <input class="botton999" type="button" value="OK" name="Back1" onclick="subproject();" />
+                <input class="botton999" type="button" value="Close" name="Back1" onclick="closeed('fd');return false;" /> -->
+              </td>
+          </tr>
+        </table>      
+    </div>
+    <div class="content">
+      <table align="center" style="width:480px" class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td id="content" align="center">
+                <img src="images/loading.gif" />
+              </td>
+          </tr>
+        </table>
+        <table align="center" style="width:480px" class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                <input class="botton999" type="button" value="OK" name="Back1" onclick="subproject();" />
+                <input class="botton999" type="button" value="Close" name="Back1" onclick="closeed('fd');return false;" />  
+              </td>
+          </tr>
+        </table>      
+    </div> 
+  </div>
+</div>
+
+</form>
+</div>
+<script>
+
+  function openProject(){
+    if(document.forms[0].Client.value!=""){
+      window.open('99.ProjectUpdate.html','','scrollbars=yes,resizable=no,width=800,height=550');
+    }else{
+      alert("Plasea select Client Name!");
+    }
+  }
+  /*function fntDel(){
+    if(confirm("Do you want to delete it?")){
+      document.forms[0].flag.value = "del";
+      document.forms[0].submit();
+    }
+  }*/
+  
+  function fntSave(str, status){
+  
+    if(document.forms[0].ContractNO.value == ""){
+      alert("Plasea input ContractNO!")
+      document.forms[0].ContractNO.focus();
+      return false;
+    }
+    //if(checkOnlyOne(document.forms[0].ContractNO.value)){
+    //  return false;
+    //}
+    if(confirm("Do you want to save it?")){
+      if(str == 'goon'){
+        document.forms[0].addStatus.value = "goon";
+      }
+      if('edt' == 'edt'){
+        document.forms[0].flag.value = "chg";
+        document.forms[0].IsProcreative.value = status;
+      }else{
+        document.forms[0].flag.value = "add";
+        document.forms[0].IsProcreative.value = "New";
+      }
+
+      document.forms[0].submit();
+    }
+  }
+  
+  function setdisabled(status){
+
+    //document.forms[0].ContractNO.disabled = status;
+    //document.forms[0].Client.disabled = status;
+    document.forms[0].ContractName.disabled = status;
+    document.forms[0].JMSManager.disabled = status;
+    document.forms[0].ClientManager.disabled = status;
+    document.forms[0].Note.disabled = status;
+    document.forms[0].SingDate.disabled = status;
+    document.forms[0].Save.disabled = status;
+    document.forms[0].Back.disabled = status;
+    
+    document.forms[0].Audit.disabled = status;
+    
+    
+    if(status == true){
+      document.getElementById('addProject').style.display='none';
+    }else{
+      document.getElementById('addProject').style.display='inline';
+    }
+    
+  }
+  
+  
+    setdisabled(true);
+  
+  function fntDelListItem(){
+    if(checkItem('item')){
+      if(confirm("Delete the Item?")){
+        for(var i=document.getElementsByName('item').length-1;i>=0;i--){
+          if(document.getElementsByName('item')[i].checked){
+            document.getElementById('tbl').deleteRow(document.getElementsByName('item')[i].parentElement.parentElement.rowIndex);
+          }
+        }
+      }
+    }else{
+      alert("Choose the Item at first.");
+    }
+  }
+  
+  function checkItem(itemName){
+    var re = false;
+    for(var i=0;i<document.getElementsByName(itemName).length;i++){
+      if(document.getElementsByName(itemName)[i].checked){
+        re = true;
+        break;
+      }
+    }
+    return re;
+  }
+  
+  function toFloat(obj){
+    if(obj.value != ""){
+      obj.value = parseFloat(obj.value).toFixed(2);
+    }
+  }
+  
+  document.forms[0].Client.value = "CBA";
+  //document.forms[0].IsProcreative.value = "Modify";
+  
+  //-------------- ajax begin -->
+  var xmlHttp;
+  function createXMLHttpRequest() {
+    if (window.ActiveXObject) {
+      xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } else if (window.XMLHttpRequest) {
+      xmlHttp = new XMLHttpRequest();                 
+    }
+  }
+
+  function checkOnlyOne(strProj) {
+    if(strProj.Trim()!="" && 'edt'!='edt'){   
+      createXMLHttpRequest();
+      var url = "Contracts_update_ajax.jsp?ContractNO="+strProj;
+      xmlHttp.onreadystatechange = function(){
+        if (xmlHttp.readyState == 4) {
+          if (xmlHttp.status == 200) {
+            var tmp = xmlHttp.responseText.replace(/\r\n/g,"").replace(/\s/g,"");
+            //alert(tmp);
+            if(tmp=='0'){
+              checkProjNo = false;
+              alert("The ContractNo has been used.");
+              document.getElementById("ContractNO").select();
+              //document.getElementById("ProjectNo").value = 'ABS001BH010P';
+              return false;
+            }
+            return true;            
+          } else if (xmlHttp.status == 204 || xmlHttp.status == 1223){
+            checkProjNo = false;
+            alert(xmlHttp.status+"错误!");
+            return false ;
+          }
+        }
+      };
+      xmlHttp.open("GET", url, true);
+      xmlHttp.send(null);   
+    }
+  }
+
+  function loadProjectList(projectValue) {
+    if(projectValue.Trim()!=""/* && 'edt'!='edt'*/){    
+      createXMLHttpRequest();
+      document.getElementById("content").innerHTML = '<img src="images/loading.gif"/>';
+      var url = "Contracts_update_project_ajax.jsp?ClientName="+projectValue + "&ContractID=3CA7F064-A29F-43E9-93B5-A3F4EE4AA8DF";
+      xmlHttp.onreadystatechange = function(){
+        if (xmlHttp.readyState == 4) {
+          if (xmlHttp.status == 200) {
+            var tmp = xmlHttp.responseText;           
+            document.getElementById("content").innerHTML = tmp;
+            document.getElementById("clienttitle").innerText = document.forms[0].Client.value + " Projects";
+          } else if (xmlHttp.status == 204 || xmlHttp.status == 1223){
+            alert(xmlHttp.status+"错误!");
+          }
+        }
+      };
+      xmlHttp.open("GET", url, true);
+      xmlHttp.send(null);   
+    }
+  }
+  //-------------- ajax end -->
+  String.prototype.Trim = function() { 
+    return this.replace(/(^\s*)|(\s*$)/g, ""); 
+  }
+  
+  function fntDel(strProj) {//删除记录
+    if(strProj.Trim()!=""){   
+      createXMLHttpRequest();
+      var url = "Contract_update_del_ajax.jsp?ContractNO="+strProj;
+      xmlHttp.onreadystatechange = function(){
+        if (xmlHttp.readyState == 4) {
+          if (xmlHttp.status == 200) {
+            var tmp = xmlHttp.responseText.replace(/\r\n/g,"").replace(/\s/g,"");
+            //alert(tmp);
+            if(tmp=='0'){//存在记录
+              alert("Only the contract without production data can be deleted, please check!");
+            }else{
+              if(window.confirm("Do you want to delete this contract?")){
+                document.forms[0].flag.value = "del";
+                document.forms[0].submit();
+              }
+            }
+        
+          } else if (xmlHttp.status == 204 || xmlHttp.status == 1223){
+            alert(xmlHttp.status+"Error!");
+          }
+        }
+      };
+      xmlHttp.open("GET", url, true);
+      xmlHttp.send(null);   
+    }
+  }
+  
+  //-----新增删除列表的代码
+  
+  function yitiClass(){}
+
+  yitiClass.prototype.index = 1;
+  yitiClass.prototype.indexstr = 1;
+
+  yitiClass.prototype.add = function(ProjectData){
+    var _table=document.getElementById("yitis");
+          
+    var index = this.index;
+    var tr = document.createElement('TR');
+    tr.setAttribute("id","del" + index);
+    var td = document.createElement('TD');
+    td.className="td_bg02";
+    td.width="2%";
+    td.setAttribute("style","text-align:center;");  
+    td.style.cssText="text-align:center";
+    td.setAttribute("align",'center');
+    td.innerHTML='<span id="sort">' + this.indexstr + '</span><input type="hidden" name="ProjectNo" value="'+ProjectData.ProjectID+'" />';
+  
+    tr.appendChild(td);   
+    
+    td = document.createElement('TD');
+    //td.setAttribute("id","ProjectNo" + index);
+    td.style.cssText="text-align:left; padding-left:6px;";
+    td.innerHTML='<a id="ProjectNo' + index +'" href="javascript:void(0);" onclick="window.open(\'99.ProjectUpdate.html?flag=edt&ProjectID='+ProjectData.ProjectID+'&index='+index+'\',\'\',\'scrollbars=yes,resizable=no,width=800,height=550\');">' + ProjectData.ProjectNo + '</a>'; 
+    tr.appendChild(td);
+    
+    td = document.createElement('TD');
+    td.setAttribute("id","ProjectName" + index);
+    td.style.cssText="text-align:left; padding-left:6px;";
+    td.innerHTML=ProjectData.ProjectName; 
+    tr.appendChild(td);
+    
+    td = document.createElement('TD');
+    td.setAttribute("id","VendorName" + index);
+    td.style.cssText="text-align:left; padding-left:6px;";
+    td.innerHTML=ProjectData.VendorName;  
+    tr.appendChild(td);
+    
+    td = document.createElement('TD');
+    td.setAttribute("id","ClientPrice" + index);
+    td.style.cssText="text-align:right; padding-left:6px;";
+    td.innerHTML=ProjectData.ClientPrice; 
+    tr.appendChild(td);
+    
+    td = document.createElement('TD');
+    td.setAttribute("id","VendorPrice" + index);
+    td.style.cssText="text-align:right; padding-left:6px;";
+    td.innerHTML=ProjectData.VendorPrice; 
+    tr.appendChild(td);
+    
+    td = document.createElement('TD');
+    td.style.cssText="text-align:center; padding-left:6px;";  
+    td.innerHTML='<img src="images/del2.gif" onClick=" yitiobj.del('+index+');" style="cursor:pointer;" width="12" height="12"/>'
+    tr.appendChild(td);
+    
+    _table.appendChild(tr);
+    this.index++;
+    this.indexstr++;
+
+  }
+  
+  yitiClass.prototype.chg = function (ind, ProjectData){
+    
+    var ProjectNo = document.getElementById("ProjectNo" + ind);
+    ProjectNo.innerHTML= ProjectData.ProjectNo ;  
+
+    var ProjectName= document.getElementById("ProjectName" + ind);
+    ProjectName.innerHTML=ProjectData.ProjectName;
+    
+    var VendorName= document.getElementById("VendorName" + ind);
+    VendorName.innerHTML=ProjectData.VendorName;
+    
+    var ClientPrice= document.getElementById("ClientPrice" + ind);
+    ClientPrice.innerHTML=ProjectData.ClientPrice;
+    
+    var VendorPrice= document.getElementById("VendorPrice" + ind);
+    VendorPrice.innerHTML=ProjectData.VendorPrice;  
+    
+  }
+      
+  yitiClass.prototype.del = function(index){
+    if(arguments[1] && arguments[1]=="yes"){
+      var _table=document.getElementById("yitis");
+      _table.removeChild(document.getElementById("del" + index));
+      //alert(this.index)
+      this.indexstr--;
+      this.sort();
+      return false;
+    }
+    if(window.confirm("Delete item?")){
+      //document.getElementById("del" + index).removeNode(true);
+      var _table=document.getElementById("yitis");
+      _table.removeChild(document.getElementById("del" + index));
+      //alert(this.index)
+      this.indexstr--;
+      this.sort();
+    }
+  }
+
+  yitiClass.prototype.sort = function(){
+
+    var s = document.getElementsByTagName("SPAN");
+    //alert(s.length)
+    var index = 1
+    for(var i=0;i<s.length;i++){
+      if(s[i].id == "sort" && s[i].innerText != "#"+"{index}"){           
+        s[i].innerText = index++;//utilClass.ArabicToCN(index++);
+        
+      }
+    }
+    this.indexstr = index;
+    
+    //adjust();
+  }
+  var yitiobj = new yitiClass();
+  if('4' != ''){
+    yitiobj.index = '5';//这个是表格的下标,它只递增不减少
+    yitiobj.indexstr = '5';//用于显示议题几
+  }
+
+    function clearNames() {
+      var nameTableBody=document.getElementById("yitis");
+            var ind = nameTableBody.childNodes.length;
+            for (var i = ind - 1; i >= 0 ; i--) {
+                 nameTableBody.removeChild(nameTableBody.childNodes[i]);
+            }
+        }
+  //-----新增删除列表的代码 end
+  
+  function doSelectAll(aflag) {
+     for (var i = 0; i < document.form1.project.length; ++i) {
+        if(document.form1.project[i].value != "") {
+            document.form1.project[i].checked = aflag;
+        }
+     }
+  }
+  
+  function doselectTalbe(){
+    var s = document.getElementsByTagName("SPAN");
+    var a = ",";
+    for(var i=0;i<s.length;i++){
+      if(s[i].id == "sort" && s[i].innerText != "#"+"{index}"){           
+        a += s[i].nextSibling.value + ","
+      }
+    }
+    var projects = document.form1.project;
+
+    for (var i = 0; i < projects.length; i++) {     
+          if(a.indexOf(projects[i].value) != -1){
+            projects[i].checked=true;           
+          }else{
+            projects[i].checked=false;
+          }
+      }
+  }
+  
+  function subproject_old(){
+    
+    var projects = document.form1.project;
+    var aflag=false;
+    for (var i = 0; i < projects.length; i++) {     
+         if(projects[i].checked && projects[i].value != ""){
+            aflag=true;           
+         }
+     }
+     
+     if(!aflag){
+        alert("Please select it!");
+        return false;
+     }else{
+        clearNames();
+        for (var i = 0; i < projects.length; i++) {     
+           if(projects[i].checked && projects[i].value != ""){
+              aflag=true;
+              var obj = {ProjectID : projects[i].value,
+                    ProjectNo : projects[i].ProjectNo,
+                    ProjectName : projects[i].ProjectName,
+                    ClientName : projects[i].ClientName,
+                    VendorName : projects[i].VendorName
+                  }
+              yitiobj.add(obj);
+           }
+       }
+       yitiobj.sort();
+     }
+  } 
+  
+  function getListProjectIDs (){
+    var s = document.getElementsByTagName("SPAN");
+    var a = ",";
+    for(var i=0;i<s.length;i++){
+      if(s[i].id == "sort" && s[i].innerText != "#"+"{index}"){           
+        a += s[i].nextSibling.value + ","
+      }
+    }
+    return a;
+  }
+  
+  function subproject(){
+    
+    var projects = document.form1.project;
+    var aflag=false;
+    for (var i = 0; i < projects.length; i++) {     
+         if(projects[i].checked && projects[i].value != ""){
+            aflag=true;           
+         }
+     }
+     
+     if(!aflag){
+        alert("Please select it!");
+        return false;
+     }else{
+        //clearNames();
+        var s1 = getListProjectIDs();
+        for (var i = 0; i < projects.length; i++) {     
+           if(projects[i].checked && projects[i].value != "" && s1.indexOf(projects[i].value) == -1){
+              var obj = {ProjectID : projects[i].value,
+                    ProjectNo : projects[i].ProjectNo,
+                    ProjectName : projects[i].ProjectName,
+                    ClientName : projects[i].ClientName,
+                    VendorName : projects[i].VendorName
+                  }
+              yitiobj.add(obj);
+           }else{
+              var s = document.getElementsByTagName("SPAN");
+          for(var j=0;j<s.length;j++){
+            if(s[j].id == "sort" && s[j].innerText != "#"+"{index}"){           
+              if(s[j].nextSibling.value == projects[i].value && projects[i].checked ==false){
+                var _table=document.getElementById("yitis");
+                _table.removeChild(s[j].parentNode.parentNode);
+              }
+            }
+          }
+           }
+        }
+       yitiobj.sort();
+     }
+  }
+
+  loadProjectList(document.forms[0].Client.value);
+
+</script>
+
+
+<script type="text/javascript">
+ var prox;
+ var proy;
+ var proxc;
+ var proyc;
+ function show(id){/*--打开--*/
+  clearInterval(prox);
+  clearInterval(proy);
+  clearInterval(proxc);
+  clearInterval(proyc);
+  var o = document.getElementById(id);
+  o.style.display = "block";
+  
+  if(o.style.top == "" && o.style.left==""){
+    o.style.top = "200px";
+    o.style.left = "120px"; 
+  }
+  o.style.width = "1px";
+  o.style.height = "1px"; 
+  prox = setInterval(function(){openx(o,500)},10);
+ } 
+ function openx(o,x){/*--打开x--*/
+  var cx = parseInt(o.style.width);
+  if(cx < x)
+  {
+   o.style.width = (cx + Math.ceil((x-cx)/5)) +"px";
+  }
+  else
+  {
+   clearInterval(prox);
+   proy = setInterval(function(){openy(o,200)},10);
+  }
+ } 
+ function openy(o,y){/*--打开y--*/ 
+  var cy = parseInt(o.style.height);
+  if(cy < y)
+  {
+   o.style.height = (cy + Math.ceil((y-cy)/5)) +"px";
+  }
+  else
+  {
+   clearInterval(proy);   
+  }
+ } 
+ function closeed(id){/*--关闭--*/
+  clearInterval(prox);
+  clearInterval(proy);
+  clearInterval(proxc);
+  clearInterval(proyc);  
+  var o = document.getElementById(id);
+  if(o.style.display == "block")
+  {
+   proyc = setInterval(function(){closey(o)},10);   
+  }  
+ } 
+ function closey(o){/*--打开y--*/ 
+  var cy = parseInt(o.style.height);
+  if(cy > 0)
+  {
+   o.style.height = (cy - Math.ceil(cy/5)) +"px";
+  }
+  else
+  {
+   clearInterval(proyc);    
+   proxc = setInterval(function(){closex(o)},10);
+  }
+ } 
+ function closex(o){/*--打开x--*/
+  var cx = parseInt(o.style.width);
+  if(cx > 0)
+  {
+   o.style.width = (cx - Math.ceil(cx/5)) +"px";
+  }
+  else
+  {
+   clearInterval(proxc);
+   o.style.display = "none";
+  }
+ } 
+ 
+ 
+ /*鼠标拖动*/ 
+ var od = document.getElementById("fd"); 
+ var dx,dy,mx,my,mouseD;
+ var odrag;
+ var isIE = document.all ? true : false;
+ var ismove = false;//用于控制移入某个区域才能动
+ document.onmousedown = function(e){
+  var e = e ? e : event;
+  if(e.button == (document.all ? 1 : 0) && ismove)
+  {
+   mouseD = true;   
+  }
+ }
+ document.onmouseup = function(){
+  mouseD = false;
+  odrag = "";
+  if(isIE)
+  {
+   od.releaseCapture();
+   od.filters.alpha.opacity = 100;
+  }
+  else
+  {
+   window.releaseEvents(od.MOUSEMOVE);
+   od.style.opacity = 1;
+  }  
+ }
+ od.onmousedown = function(e){
+  if(ismove){
+    odrag = this;
+    var e = e ? e : event;
+    if(e.button == (document.all ? 1 : 0))
+    {
+      mx = e.clientX;
+      my = e.clientY;
+      od.style.left = od.offsetLeft + "px";
+      od.style.top = od.offsetTop + "px";
+      if(isIE)
+      {
+      od.setCapture();    
+      od.filters.alpha.opacity = 50;
+      }
+      else
+      {
+      window.captureEvents(Event.MOUSEMOVE);
+      od.style.opacity = 0.5;
+      }
+  
+    } 
+  }
+}
+ document.onmousemove = function(e){
+  var e = e ? e : event;
+
+  if(mouseD==true  &&  odrag)
+  {  
+   var mrx = e.clientX - mx;
+   var mry = e.clientY - my; 
+   od.style.left = parseInt(od.style.left) +mrx + "px";
+   od.style.top = parseInt(od.style.top) + mry + "px";   
+   mx = e.clientX;
+   my = e.clientY;
+   
+  }
+ }
+</script>
+</body>
+</html>

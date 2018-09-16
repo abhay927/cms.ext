@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contract List</title>
+<link rel="stylesheet" type="text/css" href="css/homepage.css" />
+
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script >
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+    
+    $(".list_table").tablesorter();
+  });
+</script>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+    <div class="right_section">
+<div id="toolbar">  
+  <div class="lable">
+    <a href="#" target="_self">Contract List</a> 
+  </div>   
+</div>
+  <div class="nemubar">
+    <table width="99%" border="0" cellspacing="0" cellpadding="0">
+         <tr>
+         
+          <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+          <td width="16px" class="click"><img src="images/hotgif.gif" width="16" height="16" /></td>
+          <td width="10%" class="click" onclick="window.location.href='99.Contracts_update.html';">Add Contract</td>
+            
+      <!--<td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+          <td width="16px" class="click"><img src="images/del.gif" width="16" height="16" /></td>
+          <td width="10%" class="click" onclick="setStateTo('del');">Delete</td>-->
+    
+          <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+          <td width="16px" class="click"><img src="images/ref.gif" width="16" height="16" /></td>
+          <td width="10%" class="click" onclick="window.location.href=window.location.href">Refresh</td>
+      <td width="4px"><img src="images/col_line.gif" width="2" height="16" /></td>
+         <td width="16px" class="click"><img src="images/Back1.gif" width="16" height="16" /></td>
+        <td width="40px" class="click" onclick="window.history.back();">Back</td>
+          <td width="90%" align="right">
+            <!-- <select style="width:100px;" name=xjlx onchange="getSearchVendor(this);">
+                <option value="" >ALL</option>
+                <option value="Datum" >Datum</option><option value="DMI" >DMI</option><option value="HUIC" >HUIC</option><option value="JMS Pacific Inc" >JMS Pacific Inc</option><option value="JMS(NS) Beijing" >JMS(NS) Beijing</option><option value="JMSOperation" >JMSOperation</option><option value="PEK" >PEK</option><option value="TELA" >TELA</option>
+              </select> -->
+          </td>
+
+        </tr>
+    </table>
+</div>
+
+<form name="ChaiQianBuChang" method="post" action="">
+<input type=hidden name="key" value="nouserid" />
+<input type=hidden value="" name=submitState id=submitState/>
+<div id="list_section">
+    <table class="autoheight_tab" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table" id="tbl">
+          <tr>
+            <!-- <th width="2%"><input type=checkbox name=check onclick='Checkall(document.ChaiQianBuChang.check.checked)' class1="msgnew_checkbox"></th> -->
+            <th width="2%">No.</th>
+
+      <th width="10%"
+        >
+      <a
+        href="ContractList.jsp?SEARCH_Client=CBA&desc=false&orderColumn=ContractNO&flag2=&Page_Number=40">
+       Contract NO</a>
+      </th>
+      <th width="10%"
+        >
+      <a
+        href="ContractList.jsp?SEARCH_Client=CBA&desc=false&orderColumn=ContractName&flag2=&Page_Number=40">
+       Contract Name</a>
+      </th>
+      
+      <th width="10%"
+        >
+      <a
+        href="ContractList.jsp?SEARCH_Client=CBA&desc=false&orderColumn=Client&flag2=&Page_Number=40">
+       Client</a>
+      </th>
+            <th width="10%"
+        >
+      <a
+        href="ContractList.jsp?SEARCH_Client=CBA&desc=false&orderColumn=JMSManager&flag2=&Page_Number=40">
+       JMS Manager</a>
+      </th>
+
+            <th width="10%"
+        >
+      <a
+        href="ContractList.jsp?SEARCH_Client=CBA&desc=false&orderColumn=ClientManager&flag2=&Page_Number=40">
+       Client Manager</a>
+      </th>
+
+            <th width="10%"
+        >
+      <a
+        href="ContractList.jsp?SEARCH_Client=CBA&desc=false&orderColumn=SingDate&flag2=&Page_Number=40">
+       Sign Date</a>
+      </th>
+
+            <th width="10%"
+        >
+      <a
+        href="ContractList.jsp?SEARCH_Client=CBA&desc=false&orderColumn=Note&flag2=&Page_Number=40">
+       Note</a>
+      </th>
+
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="1">1</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=24F2ABF4-315F-4DBD-A3F7-36E8A31D9EF5">CBA019005</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            ADJUDICATION
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            Javelina System in Use
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="2">2</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=C1418EB4-3CBE-4669-B058-60AA6A29E535">CBA019041</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            ELIGIBILITY CORRESPONDENCE INDEXING
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            Javelina System in Use
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="3">3</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=3CA7F064-A29F-43E9-93B5-A3F4EE4AA8DF">CBA019033</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            WEBCOBRA, INDEXING CORRESPONDENCE, ETC.
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            Javelina System in Use
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="4">4</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=D1E4474A-20E5-4245-98D5-D9434FEB5D93">CBA019040</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            1X PROJECTS - MISC.
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            Misc. - Can include: creating 837 files, performing Eligibility file Maintenance or Provider Maintenance..and etc.
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="5">5</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=6ed61c8a-0ae2-4e78-9728-f086f8e55598">CBA019051</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            VISION PLAN ELIGIBILITY MAINTENANCE
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            Javelina System in Use
+The CMS ID of "JAV - VISION PLAN MAINTENANCE -ELIGIBILITY/ENROLLMENT/ADDS/CHANGES/TERMS", pertains to the "Blue 2020 group".
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="6">6</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=7c7a3394-57b2-4270-8abf-30252df629e7">JMSCBA049</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            BLUE 2 SF AND DF DATA ENTRY
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            11-01-2014
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="7">7</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=b5cc349a-e006-4b67-a237-5fb29ca0790f">JMSCBA047</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            INPATIENT STOP LOSS
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            07-01-2014
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="8">8</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=a0d00565-d2e5-4971-9535-08b7bbecb9b2">JMSCBA045</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            MAX VAULT MISC CLAIMS
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            05-01-2014
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="9">9</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=2eb4c861-8430-487e-9983-68ef4d12890c">JMSCBA043</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            STOPLOSS PDF
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="10">10</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=9e425a75-c71c-4a20-aac5-7c0e6eda9a9d">JMSCBA041</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            MAX VAULT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="11">11</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=a10cc861-9a87-46fc-bd7d-32fe9f0e6f07">JMSCBA038</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CLAIM CONVERSION
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            02-01-2012
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="12">12</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=4d794832-d9d5-4a2c-b54f-0222b19428e4">JMSCBA037</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            COMPENT FEE TESTING
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="13">13</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=c67ed72e-b054-44b2-b6af-9668b50ac443">JMSCBA036</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi Bean
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="14">14</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=6436c470-e597-45b5-abc9-f1eca961400b">JMSCBA035</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            35TH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi Bean
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            01-01-2012
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="15">15</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=1d7058a4-f9bc-47cc-9c00-81f3fbd24569">JMSCBA034</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            DISCRIMINATION TESTING - 1X PROJECT (SEASONAL)
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi Bean
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            07-01-2011
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="16">16</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=1f97a623-6226-4470-b319-631d56eef9be">JMSCBA033</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            AMENDMENT THIRTY THREE
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Frank Gigliotti
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            05-11-2011
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="17">17</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=cd8db40d-8a61-4cf4-860f-b1fecb0b5073">JMSCBA032</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            BA
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            W9  maintenance 
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="18">18</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=e0a3acb9-5f67-4eea-b11a-ad812be7b970">JMSCBA031</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            BA
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Brenda Hawley
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            COB Conversion
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="19">19</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=34ff0d51-e22a-4592-b60e-2a7a5bf0f9fc">JMSCBA030</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            BA
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi Bean
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Daivd Steady
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            Restat Reversals
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="20">20</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=5bf43117-2b57-49be-b4f5-5eb784c3674a">JMSCBA025</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            BA
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Jidi
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            webcobra eligibility maintain
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="21">21</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=903d5800-496d-47a0-9190-1c9e77bf6246">JMSCBA024</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            BA
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            BBA
+
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="22">22</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=6f0cd93e-5239-4b7c-bf97-2ed466b12aa0">JMSCBA023</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA DENTAL
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi Bean
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            11-01-2009
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            Dental Data Entry and Dental Fee Schedule test
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="23">23</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=5a7cae45-fcc1-4b5f-b79e-b9eeba6efcb2">JMSCBA022
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            FLEX ROLLOVER
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Judi Bean
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            Robin Bell or Chris Curran
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="24">24</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=a41b6983-4e54-4f9d-ba4c-092966a96c09">JMSCBA020</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            TWENTIETH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="25">25</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=2995560b-e53f-4612-90b0-1bb2fa85c57e">JMSCBA021</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            TWENTY-FIRST AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="26">26</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=8d62873b-6966-4fe3-9897-8a59cfe51916">JMSCBA019</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            NINTEENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="27">27</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=1e24fb75-a723-4033-b55f-fde565da7f34">JMSCBA016</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            SIXTEENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="28">28</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=d83c577b-b3d8-432a-b3aa-ec9fd3675e89">JMSCBA017
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            SEVENTEENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="29">29</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=1f6bd095-f8a8-4286-b23f-b83cbefe812e">JMSCBA018
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            EIGHTEENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="30">30</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=1e49ad11-a58b-4087-a666-4e6e3e78f503">JMSCBA012</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            TWELFTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="31">31</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=3a1d70bd-b606-4d49-888f-b5c4a57d1fcd">JMSCBA013</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            THIRTEENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="32">32</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=68a8175c-dd93-4e60-97c5-582bef1e3a45">JMSCBA014
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            FOURTEENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="33">33</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=1201a34c-af9b-4223-a2e3-a08f66b6d58d">JMSCBA015</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            FIFTEENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="34">34</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=0742fbbb-51b4-4be4-8a24-3d5b69b6ec90">JMSCBA008</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            EIGHTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            OVERPAYMENT/REFUND,  BPS & AS400 FLEX ENROLLMENT & PPNR
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="35">35</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=f4384fa4-f178-420b-b732-8032b5b14324">JMSCBA010</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            TENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="36">36</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=802d20ce-91fa-4246-99f4-7db5bfffe915">JMSCBA011</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            ELEVENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="37">37</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=8d739a3e-5b70-4eab-9ce5-26a062561c91">JMSCBA006</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            SIXTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="38">38</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=3245ff4d-dbc9-4cf1-927c-12d9a3758a8d">JMSCBA007</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            SEVENTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="39">39</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=568f0fb8-1e98-4c60-a6a9-5238346afe12">JMSCBA003</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            THIRD AMENDMENT 
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+                      
+        <tr class="" onmouseout1="this.className=''" onmouseover1="this.className='mouseOver'">
+ 
+            <!-- 复选框 -->
+
+          
+          <td width="3%"  
+            num="40">40</td>
+
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            <a href="99.Contracts_update.html?role=&flag=edt&ContractID=9097ba8f-44b3-4fa1-b45c-3d26cac1581d">JMSCBA005</a>
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            FIFTH AMENDMENT
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            CBA
+          </td>
+          
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+          style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-left:6px;">          
+            
+          </td>
+
+          <td id="allshort" width="0%" 
+            style=" text-align:left; padding-right:6px;">         
+            
+          </td>
+          </tr>
+          
+          
+          
+         
+        </table></td>
+      </tr>
+    </table>
+   
+
+  
+
+  
+<!-- 记录显示 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="15" height="20" background="images/tab_21.gif">&nbsp;</td>
+    <td background="images/tab_21.gif">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="25%" height="20" nowrap="nowrap"  style="font-size:11px;">
+            <span class="STYLE1">Pagesize: 
+            <font class='f_b'><a href="ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=20&orderColumn=CreateTime">20</a></font>
+ 
+            <font class='f_b'><a href="ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=50&orderColumn=CreateTime">50</a></font>
+ 
+            <font class='f_b'><a href="ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=100&orderColumn=CreateTime">100</a></font>
+ 
+            <font class='f_d' >ALL</font>
+
+            </span>
+          </td>
+          <td width="30%" valign="middle" class="STYLE1">
+            <div align="right"  style="font-size:11px;">
+              display 40 of 
+              
+                  1-40
+              
+              &nbsp; 
+              <span class="accent">1</span> /&nbsp; 
+                
+              1&nbsp;
+            </div>
+          </td>
+          <td width="45%" valign="top" class="STYLE1"><div align="right">
+            <table width="342" height="20" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="50" height="22" valign="middle"><div align="right"><a href="ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=40&orderColumn=CreateTime"><img src="images/first.gif" width="37" height="15" border="0" /></div></a></td>
+<td width="62" height="22" valign="middle"><div align="right"><a href="ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=40&orderColumn=CreateTime&Page_No=1&Action=2"><img src="images/back.gif" width="50" height="15" border="0" /></a></div></td>
+<td width="54" height="22" valign="middle"><div align="right"><a href="ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=40&orderColumn=CreateTime&Page_No=1&Action=3"><img src="images/next.gif" width="43" height="15" border="0" /></a></div></td>
+<td width="49" height="22" valign="middle"><div align="right"><a href="ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=40&orderColumn=CreateTime&Page_No=1&Action=4"><img src="images/last.gif" width="37" height="15" border="0" /></a></div></td>
+              
+              <td width="59" height="22" valign="middle"><div align="right">To&nbsp;</div></td>
+              <td width="25" height="22" valign="middle"><span class="STYLE7">
+                <input name="pageNo222" id="pageNo222" type="text" class="STYLE1" style="height:10px; width:25px;" size="5" onkeyup="PageTrun(this)"/>
+              </span></td>
+              <td width="23" height="22" valign="middle">&nbsp;Page&nbsp;</td>
+              <td width="30" height="22" valign="middle" onclick="PageTrun2(document.getElementById('pageNo222'))" style="cursor:pointer;"><img src="images/go2.gif" width="37" height="15" />&nbsp;</td>
+            </tr>
+            </table>
+          </div></td>
+        </tr>
+      </table>
+    </td>
+    <td width="14" background="images/tab_21.gif">&nbsp;</td>
+  </tr>
+</table>    
+    
+
+
+<script>
+  function PageTrun(obj){
+    if(event.keyCode == 13){
+      window.location.href = "ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=40&orderColumn=CreateTime&Page_No=" + obj.value;
+    }
+  }
+  function PageTrun2(obj){
+    window.location.href = "ContractList.jsp?SEARCH_Client=CBA&desc=true&Page_Number=40&orderColumn=CreateTime&Page_No=" + obj.value;
+  }
+
+</script>
+  
+</div>
+
+  
+  <div id="fade" class="black_overlay">
+  </div>
+  <input name="subflag" type="hidden" value="" />
+  <input name="status" type="hidden" value="" />
+</form>
+</div>
+<script>
+  function fntDelListItem(){
+    if(checkItem('item')){
+      if(confirm("Delete the Item?")){
+        for(var i=document.getElementsByName('item').length-1;i>=0;i--){
+          if(document.getElementsByName('item')[i].checked){
+            document.getElementById('tbl').deleteRow(document.getElementsByName('item')[i].parentElement.parentElement.rowIndex);
+          }
+        }
+
+      }
+    }else{
+      alert("Choose the Item at first.");
+    }
+  }
+  
+  function checkItem(itemName){
+    var re = false;
+    for(var i=0;i<document.getElementsByName(itemName).length;i++){
+      if(document.getElementsByName(itemName)[i].checked){
+        re = true;
+        break;
+      }
+    }
+    return re;
+  }
+
+  function Checkall(CheckFlag) {
+    if (CheckFlag==true) 
+      doSelectAll()
+    else
+      doDeSelectAll()
+  }
+
+  function doSelectAll() {
+     var checkFlag;
+     checkFlag = true;
+     for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i) {
+         if (document.ChaiQianBuChang.elements[i].name == 'key')  
+              document.ChaiQianBuChang.elements[i].checked = checkFlag;
+     }
+  }
+  
+  function doDeSelectAll() {
+    var checkFlag;
+     for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i) {
+        if (document.ChaiQianBuChang.elements[i].name == 'key') {
+            checkFlag = !document.ChaiQianBuChang.elements[i].checked;
+             document.ChaiQianBuChang.elements[i].checked = checkFlag;
+         }
+       }
+  }
+  
+  //*********************
+  function setStateTo(aType){
+    var vMsg=""; 
+    document.ChaiQianBuChang.submitState.value=aType;
+    switch  (aType){
+      case "del" :vMsg+="Do you want to delete it?";break;
+      case "yes" :vMsg+="设为原籍村民吗？";break;
+      case "excel" :vMsg+="Do you want to download it?";break;
+      default:alert('无效的操作！');return false;
+    }
+    if(selectCheck()){  
+        if(aType == 'excel'){
+            this.ChaiQianBuChang.action = "printexcel.jsp";
+            this.ChaiQianBuChang.target = "about:blank";
+            this.ChaiQianBuChang.submit();
+            this.ChaiQianBuChang.action = "";
+            this.ChaiQianBuChang.target = "";
+          }else{
+            if(confirm(vMsg)){
+              this.ChaiQianBuChang.submit();
+            }
+          }
+                       }
+    else{
+      alert('No records have been selected, please check.');
+        } 
+  }
+  function selectCheck() {
+    var aflag=false;
+    var i=0;
+    var aobj;
+    oper=""; //用于控制相同状态
+    document.ChaiQianBuChang.key.value="";
+    
+     for (i = 0; i < document.ChaiQianBuChang.elements.length; ++i){
+         if (document.ChaiQianBuChang.elements[i].name == 'key'){ 
+          aobj=document.ChaiQianBuChang.elements[i]
+        if (aobj.checked == true){
+          aflag=true; 
+        }
+         }
+     }
+     
+     return aflag
+  }
+  
+  function search_sub(){
+    if(document.forms[0].SEARCH_BeginDate.value == ""){
+      alert("Plasea input Sarts!")
+      document.forms[0].SEARCH_BeginDate.focus();
+      return false;
+    }
+    if(document.forms[0].SEARCH_EndDate.value == ""){
+      alert("Plasea input Ends!")
+      document.forms[0].SEARCH_EndDate.focus();
+      return false;
+    }
+    if(confirm("Do you want to submit?")){
+      document.forms[0].subflag.value = "search";
+      document.forms[0].action = "ContractList.jsp?status=";
+      document.forms[0].submit();
+    }
+  }
+  
+  function vendors_sub(){
+    var likestr = "";
+    for (var i = 0; i < document.forms[0].vendors.length; i++){
+      //alert(document.forms[0].vendors.length + " == " +document.forms[0].vendors[i].value)
+         if (document.forms[0].vendors[i].checked == true){ 
+          if(likestr != "") likestr += ",";
+          likestr += document.forms[0].vendors[i].value;
+         }
+     }
+     //alert(likestr );
+    if(likestr == ""){
+      alert("Plasea select!")
+      return false;
+    }
+    if(confirm("Do you want to submit?")){
+      document.forms[0].subflag.value = "vendors";
+      //document.forms[0].action = "ContractList.jsp?status=;
+      window.location.href = "ContractList.jsp?status=&SEARCH_Vendor=" + likestr;
+      //document.forms[0].submit();
+    }
+  }
+  function getSearchVendor(obj){
+    //form ChaiQianBuChang
+    document.ChaiQianBuChang.SEARCH_VendorName.value = obj.value;
+    window.location.href = "ContractList.jsp?status=&datelike=&SEARCH_Vendor="+obj.value;
+    //document.ChaiQianBuChang.action = "ProjectList.jsp";
+    //document.ChaiQianBuChang.submit();
+  }
+  //回显数据
+  function initInput(){
+    //document.getElementById("xjlx").value = "";
+  }
+</script>
+</body>
+</html>
