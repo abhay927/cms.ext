@@ -1,0 +1,570 @@
+[
+  {
+    "Client": "ABS001",
+    "CategoryCriteria": "Adjudication/Examining",
+    "TotalWorkedHours": 3.25,
+    "AssignedTo": "Elizabeth Buckner",
+    "StartDate": "04/06/18",
+    "LastUpdate": "04/10/18"
+  },
+  {
+    "Client": "ABS001",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 1.5,
+    "AssignedTo": "Elizabeth Buckner",
+    "StartDate": "03/15/18",
+    "LastUpdate": "03/15/18"
+  },
+  {
+    "Client": "ABS001",
+    "CategoryCriteria": "Client training meeting",
+    "TotalWorkedHours": 10,
+    "AssignedTo": "Elizabeth Buckner",
+    "StartDate": "01/22/18",
+    "LastUpdate": "04/25/18"
+  },
+  {
+    "Client": "ABS001",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalWorkedHours": 7.5,
+    "AssignedTo": "Donna Anderson",
+    "StartDate": "12/19/17",
+    "LastUpdate": "02/14/18"
+  },
+  {
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 892.5,
+    "AssignedTo": ["Donna Anderson", "Elizabeth Buckner", "Karen McWilliams", "Mary Beth Donalson", "Tracey Palmer", "Tracie Salazar", "Valeria Smith"],
+    "StartDate": "10/02/17",
+    "LastUpdate": "04/24/18"
+  },
+  {
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 249.5,
+    "AssignedTo": ["Donna Anderson","Elizabeth Buckner","Mary Beth Donalson","Tracie Salazar"],
+    "StartDate": "04/10/18",
+    "LastUpdate": "06/29/18"
+  },
+  {
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Test",
+    "TotalWorkedHours": 15.5,
+    "AssignedTo": ["Donna Anderson"],
+    "StartDate": "06/25/18",
+    "LastUpdate": "06/26/18"
+  },
+  {
+    "Client": "ADV126",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 8.75,
+    "AssignedTo": ["Elizabeth Buckner","Shelley Rice"],
+    "StartDate": "10/27/17",
+    "LastUpdate": "04/11/18"
+  },
+  {
+    "Client": "ADV126",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 201.75,
+    "AssignedTo": ["Shelley Rice"],
+    "StartDate": "10/13/17",
+    "LastUpdate": "04/21/18"
+  },
+  {
+    "Client": "ADV126",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 22.25,
+    "AssignedTo": ["Shelley Rice"],
+    "StartDate": "04/25/18",
+    "LastUpdate": "06/30/18"
+  },
+  {
+    "Client": "ADV126",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalWorkedHours": 0.75,
+    "AssignedTo": ["Shelley Rice"],
+    "StartDate": "06/18/18",
+    "LastUpdate": "06/27/18"
+  },
+  {
+    "Client": "BEN012",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 0.5,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "10/16/17",
+    "LastUpdate": "11/09/17"
+  },
+  {
+    "Client": "BEN012",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalWorkedHours": 3.25,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "11/09/17",
+    "LastUpdate": "12/06/17"
+  },
+  {
+    "Client": "BEN012",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 10.5,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "10/03/17",
+    "LastUpdate": "10/17/17"
+  },
+  {
+    "Client": "BPV106",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 4.5,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "04/24/18",
+    "LastUpdate": "05/09/18"
+  },
+  {
+    "Client": "BPV106",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 4.5,
+    "AssignedTo": ["Tracey Palmer"],
+    "StartDate": "03/29/18",
+    "LastUpdate": "03/29/18"
+  },
+  {
+    "Client": "BPV106",
+    "CategoryCriteria": "Plan Audit",
+    "TotalWorkedHours": 52,
+    "AssignedTo": ["Tracey Palmer"],
+    "StartDate": "03/30/18",
+    "LastUpdate": "04/09/18"
+  },
+  {
+    "Client": "BPV106",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 7,
+    "AssignedTo": ["Shelley Rice","Tracey Palmer"],
+    "StartDate": "05/31/18",
+    "LastUpdate": "06/27/18"
+  },
+  {
+    "Client": "BPV106",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalWorkedHours": 0.5,
+    "AssignedTo": ["Tracey Palmer"],
+    "StartDate": "06/12/18",
+    "LastUpdate": "06/12/18"
+  },
+  {
+    "Client": "BPV106",
+    "CategoryCriteria": "Platform Global Mapping or Logic",
+    "TotalWorkedHours": 1,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "06/26/18",
+    "LastUpdate": "06/26/18"
+  },
+  {
+    "Client": "CHC131",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 10.5,
+    "AssignedTo": ["Barbara Mora","Nancy Rikala"],
+    "StartDate": "10/04/17",
+    "LastUpdate": "10/26/17"
+  },
+  {
+    "Client": "CHC131",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 4.5,
+    "AssignedTo": ["Barbara Mora","Nancy Rikala"],
+    "StartDate": "10/01/17",
+    "LastUpdate": "10/01/17"
+  },
+  {
+    "Client": "CHC131",
+    "CategoryCriteria": "Plan Audit",
+    "TotalWorkedHours": 3.5,
+    "AssignedTo": ["Barbara Mora"],
+    "StartDate": "10/01/17",
+    "LastUpdate": "10/01/17"
+  },
+  {
+    "Client": "CHC131",
+    "CategoryCriteria": "Plan Test",
+    "TotalWorkedHours": 0.75,
+    "AssignedTo": ["Barbara Mora"],
+    "StartDate": "10/30/17",
+    "LastUpdate": "10/30/17"
+  },
+  {
+    "Client": "CLF022",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 0.25,
+    "AssignedTo": ["Mary Beth Donalson"],
+    "StartDate": "10/26/17",
+    "LastUpdate": "10/26/17"
+  },
+  {
+    "Client": "CLF022",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 3.25,
+    "AssignedTo": ["Mary Beth Donalson"],
+    "StartDate": "10/26/17",
+    "LastUpdate": "11/09/17"
+  },
+  {
+    "Client": "CTP114",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 2,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "10/02/17",
+    "LastUpdate": "10/26/17"
+  },
+  {
+    "Client": "CTP114",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 68,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "10/02/17",
+    "LastUpdate": "03/18/18"
+  },
+  {
+    "Client": "CTP114",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 0.75,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "05/23/18",
+    "LastUpdate": "06/13/18"
+  },
+  {
+    "Client": "CYP024",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalWorkedHours": 1,
+    "AssignedTo": ["Angie Berg"],
+    "StartDate": "11/09/17",
+    "LastUpdate": "11/09/17"
+  },
+  {
+    "Client": "CYP024",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 1.5,
+    "AssignedTo": ["Tracie Salazar"],
+    "StartDate": "12/01/17",
+    "LastUpdate": "12/01/17"
+  },
+  {
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 833.5,
+    "AssignedTo": ["Angie Berg","Barbara Mora","Donna Anderson","Elizabeth Buckner","Joe Castiglia","Mary Beth Donalson","Tracey Palmer","Tracie Salazar"],
+    "StartDate": "10/02/17",
+    "LastUpdate": "04/19/18"
+  },
+  {
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 68.25,
+    "AssignedTo": ["Tracie Salazar"],
+    "StartDate": "05/09/18",
+    "LastUpdate": "06/28/18"
+  },
+  {
+    "Client": "EBM125",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 9,
+    "AssignedTo": ["Barbara Mora","Nancy Rikala"],
+    "StartDate": "10/05/17",
+    "LastUpdate": "10/25/17"
+  },
+  {
+    "Client": "EBM125",
+    "CategoryCriteria": "Corrective Action - Plan Audit",
+    "TotalWorkedHours": 16,
+    "AssignedTo": ["Barbara Mora","Nancy Rikala"],
+    "StartDate": "10/10/17",
+    "LastUpdate": "11/28/17"
+  },
+  {
+    "Client": "EBM125",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalWorkedHours": 21,
+    "AssignedTo": ["Barbara Mora","Elizabeth Buckner","Nancy Rikala"],
+    "StartDate": "10/14/17",
+    "LastUpdate": "12/04/17"
+  },
+  {
+    "Client": "EBM125",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 5.5,
+    "AssignedTo": ["Barbara Mora","Nancy Rikala"],
+    "StartDate": "10/05/17",
+    "LastUpdate": "11/06/17"
+  },
+  {
+    "Client": "EBM125",
+    "CategoryCriteria": "Plan Audit",
+    "TotalWorkedHours": 26.5,
+    "AssignedTo": ["Barbara Mora","Nancy Rikala"],
+    "StartDate": "11/08/17",
+    "LastUpdate": "12/02/17"
+  },
+  {
+    "Client": "EBM125",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 175.25,
+    "AssignedTo": ["Barbara Mora","Nancy Rikala","Team 3"],
+    "StartDate": "09/18/17",
+    "LastUpdate": "11/17/17"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 2,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "09/27/17",
+    "LastUpdate": "09/27/17"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalWorkedHours": 30,
+    "AssignedTo": ["Dawn Reynolds","Terri Pierno","Tracey Palmer"],
+    "StartDate": "11/30/17",
+    "LastUpdate": "12/25/17"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Group/Plan Mapping or Logic",
+    "TotalWorkedHours": 61.5,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "05/14/18",
+    "LastUpdate": "05/31/18"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 14,
+    "AssignedTo": ["Tracey Palmer"],
+    "StartDate": "10/17/17",
+    "LastUpdate": "05/08/18"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 353.5,
+    "AssignedTo": ["Dawn Reynolds","Terri Pierno","Tracey Palmer"],
+    "StartDate": "08/25/17",
+    "LastUpdate": "11/08/17"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 20,
+    "AssignedTo": ["Tracey Palmer"],
+    "StartDate": "05/29/18",
+    "LastUpdate": "06/01/18"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalWorkedHours": 1.25,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "05/30/18",
+    "LastUpdate": "05/30/18"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Plan Test",
+    "TotalWorkedHours": 60,
+    "AssignedTo": ["Team 3"],
+    "StartDate": "11/02/17",
+    "LastUpdate": "11/03/17"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Platform Global Mapping or Logic",
+    "TotalWorkedHours": 6.25,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "05/16/18",
+    "LastUpdate": "05/17/18"
+  },
+  {
+    "Client": "FNH129",
+    "CategoryCriteria": "Project Management",
+    "TotalWorkedHours": 13,
+    "AssignedTo": ["Tracey Palmer"],
+    "StartDate": "04/04/18",
+    "LastUpdate": "05/23/18"
+  },
+  {
+    "Client": "HPI081",
+    "CategoryCriteria": "Claim Audit",
+    "TotalWorkedHours": 1450.75,
+    "AssignedTo": ["Barbara Mora","Karen McWilliams","Nancy Rikala","Patty Raudenbush","Peggy Goff"],
+    "StartDate": "09/25/17",
+    "LastUpdate": "01/31/18"
+  },
+  {
+    "Client": "HPI081",
+    "CategoryCriteria": "Client training meeting",
+    "TotalWorkedHours": 8.5,
+    "AssignedTo": ["Patty Raudenbush"],
+    "StartDate": "02/13/18",
+    "LastUpdate": "02/22/18"
+  },
+  {
+    "Client": "HPI081",
+    "CategoryCriteria": "Plan Audit",
+    "TotalWorkedHours": 5,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "10/27/17",
+    "LastUpdate": "10/27/17"
+  },
+  {
+    "Client": "IDA039",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 28,
+    "AssignedTo": ["Karen McWilliams"],
+    "StartDate": "12/02/17",
+    "LastUpdate": "12/29/17"
+  },
+  {
+    "Client": "IND136",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 16,
+    "AssignedTo": ["Elizabeth Buckner","Tracey Palmer"],
+    "StartDate": "03/05/18",
+    "LastUpdate": "03/06/18"
+  },
+  {
+    "Client": "IND136",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 55.5,
+    "AssignedTo": ["Tracey Palmer"],
+    "StartDate": "03/08/18",
+    "LastUpdate": "03/16/18"
+  },
+  {
+    "Client": "JMS000",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 5,
+    "AssignedTo": ["Dawn Reynolds","Donna Anderson","Nancy Rikala"],
+    "StartDate": "10/03/17",
+    "LastUpdate": "06/22/18"
+  },
+  {
+    "Client": "JMS000",
+    "CategoryCriteria": "Client training meeting",
+    "TotalWorkedHours": 3,
+    "AssignedTo": ["Barbara Mora","Mary Beth Donalson","Nancy Rikala"],
+    "StartDate": "10/01/17",
+    "LastUpdate": "11/15/17"
+  },
+  {
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 537.25,
+    "AssignedTo": ["Angie Berg","Barbara Mora","Christina Potter","Dawn Reynolds","Donna Anderson","Jasmine Mason","Karen McWilliams","Nancy Rikala","Nicole DePaul","Shelley Rice","Terri Pierno","Tracie Salazar","Valeria Smith"],
+    "StartDate": "10/03/17",
+    "LastUpdate": "06/29/18"
+  },
+  {
+    "Client": "JMS000",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 2.25,
+    "AssignedTo": ["Terri Pierno"],
+    "StartDate": "11/15/17",
+    "LastUpdate": "11/15/17"
+  },
+  {
+    "Client": "JMS000",
+    "CategoryCriteria": "(empty)",
+    "TotalWorkedHours": 3,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "12/30/17",
+    "LastUpdate": "12/30/17"
+  },
+  {
+    "Client": "NAA112",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 1,
+    "AssignedTo": ["Mary Beth Donalson"],
+    "StartDate": "12/29/17",
+    "LastUpdate": "03/13/18"
+  },
+  {
+    "Client": "NAA112",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 101,
+    "AssignedTo": ["Elizabeth Buckner","Mary Beth Donalson"],
+    "StartDate": "12/23/17",
+    "LastUpdate": "03/19/18"
+  },
+  {
+    "Client": "NAA112",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 1.5,
+    "AssignedTo": ["Shelley Rice"],
+    "StartDate": "04/06/18",
+    "LastUpdate": "05/11/18"
+  },
+  {
+    "Client": "TBR068",
+    "CategoryCriteria": "Client support meeting",
+    "TotalWorkedHours": 0.25,
+    "AssignedTo": ["Shelley Rice"],
+    "StartDate": "06/07/18",
+    "LastUpdate": "06/07/18"
+  },
+  {
+    "Client": "TBR068",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 94.5,
+    "AssignedTo": ["Joe Castiglia","Shelley Rice"],
+    "StartDate": "10/11/17",
+    "LastUpdate": "04/23/18"
+  },
+  {
+    "Client": "TBR068",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 32,
+    "AssignedTo": ["Shelley Rice"],
+    "StartDate": "04/25/18",
+    "LastUpdate": "06/22/18"
+  },
+  {
+    "Client": "UAG137",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalWorkedHours": 24.25,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "06/18/18",
+    "LastUpdate": "06/30/18"
+  },
+  {
+    "Client": "UAG137",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalWorkedHours": 5.5,
+    "AssignedTo": ["Dawn Reynolds"],
+    "StartDate": "06/15/18",
+    "LastUpdate": "06/21/18"
+  },
+  {
+    "Client": "UHA133",
+    "CategoryCriteria": "Other",
+    "TotalWorkedHours": 2.5,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "01/23/18",
+    "LastUpdate": "05/14/18"
+  },
+  {
+    "Client": "UHA133",
+    "CategoryCriteria": "Plan Build",
+    "TotalWorkedHours": 10,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "01/26/18",
+    "LastUpdate": "01/26/18"
+  },
+  {
+    "Client": "UHA133",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalWorkedHours": 11.5,
+    "AssignedTo": ["Nancy Rikala"],
+    "StartDate": "06/01/18",
+    "LastUpdate": "06/04/18"
+  }
+]

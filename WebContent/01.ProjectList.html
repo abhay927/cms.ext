@@ -3,16 +3,13 @@
 <head>
 <title>Production List</title>
 <link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
 
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>  
+<script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
-<script >
-$(document).ready(function() {
-    $("#common").load("00.common.html");
-    
-    $(".list_table").tablesorter();
-  });
-</script>
+
 </head>
 <body>
   <div id="common">
@@ -29,79 +26,63 @@ $(document).ready(function() {
     <div class="nemubar">
       <!-- Here is position of nemu bar -->
       <ul>
+      <!-- 
         <li><a class="selecttab" href="02.ProjectDetail.html?NewProject=true">New Project</a></li>
+      -->
+        <li><a class="selecttab" href="99.ProjectUpdate.html?NewProject=true">New Project</a></li>
         <li><a href="#Filter">Filter</a></li>
       </ul>
     </div>
     <div id="list_section">
       <!-- Here is the list -->
-      <table class="list_table">
+      <div id="projects_div"></div>
+    </div>
+  </div>
+</body>
+<script id="myHoursTmpl" type="text/x-jsrender">  
+      <table class="list_table" id="tbl">
         <thead>
           <tr>
-            <th width="2%">Item</th>
-            <th width="14%">Project Name</th>
-            <th width="14%">Client</th>
-            <th width="15%">Start Date</th>
-            <th width="15%">End Date</th>
-            <th width="20%">Assigned To</th>
+            <th width="8%">Client</th>
+            <th width="20%">Project Name</th>
+            <th width="10%">Start Date</th>
+            <th width="10%">Last Update Date</th>
+            <th width="30%">Assigned To</th>
             <th width="10%">Estimated Hours</th>
-            <th width="8%">Submited</th>
-            <th width="6%">Validated</th>
+            <th width="12%">Total Worked Hours</th>
             <th width="6%">Progress</th>
           </tr>
         </thead>
         <tbody>
+{{for p}} 
           <tr>
-            <td>1</td>
-            <td>Project 1</td>
-            <td>Client 2</td>
-            <td>May 15, 2018</td>
-            <td>Dec 15, 2018</td>
-            <td>Lancer</td>
+            <td>{{:Client}}</td>
+            <td style="text-align: left;"><a href="99.ProjectUpdate.html">{{:CategoryCriteria}}</a></td>
+            <td>{{:StartDate}}</td>
+            <td>{{:LastUpdate}}</td>
+            <td style="text-align: left;"><a href="#">{{:AssignedTo}}</a></td>
             <td>200</td>
-            <td>34</td>
-            <td>30</td>
+            <td>{{:TotalWorkedHours}}</td>
             <td>15%</td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>Project 2</td>
-            <td>Client 1</td>
-            <td>May 15, 2018</td>
-            <td>Dec 15, 2018</td>
-            <td>Lancer</td>
-            <td>200</td>
-            <td>34</td>
-            <td>30</td>
-            <td>15%</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Project 3</td>
-            <td>Client 1</td>
-            <td>May 15, 2018</td>
-            <td>Dec 15, 2018</td>
-            <td>Lancer, Winner</td>
-            <td>200</td>
-            <td>34</td>
-            <td>30</td>
-            <td>15%</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Project 4</td>
-            <td>Client 3</td>
-            <td>May 15, 2017</td>
-            <td>Dec 15, 2018</td>
-            <td>Lancer</td>
-            <td>200</td>
-            <td>34</td>
-            <td>30</td>
-            <td>15%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</body>
+{{/for}} 
+        </tbody> 
+    </table>
+</script>
+<script >
+function loadProjects(){
+  var myTemplate = $.templates("#myHoursTmpl");  
+  $.getJSON( "json/Projects.json", function( data ) {
+    var app = {p: data };  
+    myTemplate.link("#projects_div", app);
+    $(".list_table").tablesorter();
+    });
+}
+
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+    
+    loadProjects();
+  });
+</script>
 </html>
