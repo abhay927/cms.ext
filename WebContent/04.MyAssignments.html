@@ -12,9 +12,6 @@
 <script type="text/javascript" src="js/jms_cms_2018.js"></script>
 <title>JMS Report Management System</title>
 <style>
-.show {
-  display: block;
-}
 .noshow {
   display: none;
 }
@@ -81,13 +78,13 @@
           <td class="info">200</td>
           <td class="info">135</td>
           <td class="info">{{:TotalHours}}</td>
-          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
-          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="dp tf_120 editable" value="" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="" /></td>
           <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
-          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
-          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
           <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
-          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
           </tr>
 {{/for}} 
         </tbody> 
@@ -100,6 +97,7 @@ function loadAssignments(){
 	  $.getJSON( "json/AssignmentOfDawnReynolds.json", function( data ) {
 	    var app = {p: data };  
 	    myTemplate.link("#assignments_div", app);
+	    $(".list_table").tablesorter();
 	  	});
 }
 
@@ -109,6 +107,9 @@ function switchshowreg(){
     $("#register").html("Save");
     $(".info").addClass("noshow");
     $(".reg").removeClass("noshow");
+    var date = new Date();
+    var dateStr = '' + (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();
+    $(".dp" ).val(dateStr);
   }
   if (t == "Save"){
     $("#register").html("Register");

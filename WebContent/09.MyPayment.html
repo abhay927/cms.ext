@@ -3,12 +3,12 @@
 <head>
 <title>Production List</title>
 <link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
+
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-<script >
-$(document).ready(function() {
-    $("#common").load("00.common.html");
-  });
-</script>
+<script type="text/javascript" src="js/jsviews.js"></script>  
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 </head>
 <body>
   <div id="common">
@@ -41,7 +41,6 @@ $(document).ready(function() {
             <th width="6%">Hours</th>
             <th width="6%">Invoice Amount</th>
             <th>Notes</th>
-            <th width="10%">Operation</th>
           </tr>
         </thead>
       <tbody>
@@ -52,9 +51,8 @@ $(document).ready(function() {
           <td>08/02/18 - 08/28/18</td>
           <td>08/31/18</td>
           <td>45.50</td>
-          <td>4500</td>
+          <td>4500.00</td>
           <td> </td>
-          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
         </tr>
         <tr class="list_slected">
           <td>2</td>
@@ -63,9 +61,8 @@ $(document).ready(function() {
           <td>07/02/18 - 07/13/18</td>
           <td>07/20/18  </td>
           <td>27.50</td>
-          <td>2750</td>
+          <td>2750.00</td>
           <td> </td>
-          <td><input class="botton999" type="button" value="Modify" name="Comfirm" onclick="" /></td>
         </tr>
       <tbody>
     </table>
@@ -74,6 +71,7 @@ $(document).ready(function() {
 <script type="text/javascript">
 $(document).ready(function() {
     $("#common").load("00.common.html");
+    $(".list_table").tablesorter();
   });
 </script>
 </body>

@@ -131,7 +131,7 @@ function loadConcultants(){
       if(value['Client'] != ""){
         lastClient = value['Client'];
       }
-      var project = lastClient + "/" + value['CategoryCriteria'] + "/" + value['TotalHours'];
+      var project = lastClient + " / " + value['CategoryCriteria'] + " / " + value['TotalHours'];
       console.log(project);
       projects.push(project);
     });
