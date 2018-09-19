@@ -8,13 +8,10 @@
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/jsviews.js"></script>  
 <script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 <script type="text/javascript" src="js/jms_cms_2018.js"></script>
 <title>JMS Report Management System</title>
-<script >
-$(document).ready(function() {
-	  $("#common").load("00.common.html");
-  });
-</script>
+
 </head>
 <body>
   <div id="common">
@@ -37,110 +34,7 @@ $(document).ready(function() {
     </div>
     <div id="list_section">
       <!-- Here is the list -->
-      <table class="list_table" id="tbl">
-        <thead>
-          <tr>
-            <th width="10%">First Name</th>
-            <th width="10%">Second Name</th>
-            <th width="10%">Joined JMS</th>
-            <th width="10%">Speciality</th>
-            <th width="6%">Rate</th>
-            <th width="20%">Assigned Project</th>
-            <th width="6%">1 week AWH</th>
-            <th width="6%">2 week AWH</th>
-            <th width="6%">4 week AWH</th>
-            <th width="10%">Last Payment</th>
-            <th width="10%">Unpaid Hours</th>
-            <th width="10%">Operation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="list_slected">
-            <td>Dawn</td>
-            <td>Reynolds</td>
-            <td>01/01/2017</td>
-            <td>Plan Build</td>
-            <td>100.00</td>
-            <td>Project1, Project2</td>
-            <td>4.50</td>
-            <td>5.00</td>
-            <td>3.25</td>
-            <td>05/01/2018</td>
-            <td>3.25</td>
-            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
-          </tr>
-          <tr class="list_slected">
-            <td>Donna </td>
-            <td>Anderson</td>
-            <td>01/01/2017</td>
-            <td>Plan Build</td>
-            <td>100.00</td>
-            <td>Project1, Project2</td>
-            <td>4.50</td>
-            <td>5.00</td>
-            <td>3.25</td>
-            <td>05/01/2018</td>
-            <td>3.25</td>
-            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
-          </tr>
-          <tr class="list_slected">
-            <td>Shelley </td>
-            <td>Rice</td>
-            <td>01/01/2017</td>
-            <td>Plan Build</td>
-            <td>100.00</td>
-            <td>Project1, Project2</td>
-            <td>4.50</td>
-            <td>5.00</td>
-            <td>3.25</td>
-            <td>05/01/2018</td>
-            <td>3.25</td>
-            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
-          </tr>
-            <tr class="list_slected">
-            <td>Lancer</td>
-            <td>Zhang</td>
-            <td>01/01/2017</td>
-            <td>Plan Build</td>
-            <td>100.00</td>
-            <td>Project1, Project2</td>
-            <td>4.50</td>
-            <td>5.00</td>
-            <td>3.25</td>
-            <td>05/01/2018</td>
-            <td>3.25</td>
-            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
-          </tr>
-            <tr class="list_slected">
-            <td>Winner</td>
-            <td>Wang</td>
-            <td>01/01/2017</td>
-            <td>Plan Build</td>
-            <td>100.00</td>
-            <td>Project1, Project2</td>
-            <td>4.50</td>
-            <td>5.00</td>
-            <td>3.25</td>
-            <td>05/01/2018</td>
-            <td>3.25</td>
-            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
-          </tr>
-            <tr class="list_slected">
-            <td>Daniel</td>
-            <td>Feng</td>
-            <td>01/01/2017</td>
-            <td>Plan Build</td>
-            <td>100.00</td>
-            <td>Project1, Project2</td>
-            <td>4.50</td>
-            <td>5.00</td>
-            <td>3.25</td>
-            <td>05/01/2018</td>
-            <td>3.25</td>
-            <td><input class="botton999" type="button" value="Assign To" name="Comfirm" onclick="assignToWindow()" /></td>
-          </tr>
-        <tbody>
-      </table>
+      <div id="consultants_div"></div>
     </div>
   </div>
   <div id="assignToWindow" class="modalwindow" title="Assign to">
@@ -158,6 +52,44 @@ $(document).ready(function() {
       </form>
   </div>
 </body>
+<script id="consultantsTmpl" type="text/x-jsrender">  
+      <table class="list_table" id="tbl">
+        <thead>
+          <tr>
+            <th width="10%">Name</th>
+            <th width="6%">Joined JMS</th>
+            <th width="8%">Speciality</th>
+            <th width="6%">Rate</th>
+            <th width="25%">Assigned Project</th>
+            <th width="6%">1 week AWH</th>
+            <th width="6%">2 week AWH</th>
+            <th width="6%">4 week AWH</th>
+            <th width="10%">Last Payment</th>
+            <th width="10%">Unpaid Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+{{for p}} 
+          <tr>
+            <td>{{:WorkedBy}}</td>
+            <td>01/01/2017</td>
+            <td>Plan Build</td>
+            <td>100.00</td>
+            <td style="text-align: left;">
+{{for Projects}}
+{{:#data}}<br/>
+{{/for}} 
+</td>
+            <td>4.50</td>
+            <td>5.00</td>
+            <td>3.25</td>
+            <td>05/01/2018</td>
+            <td>3.25</td>
+          </tr>
+{{/for}} 
+        </tbody> 
+    </table>
+</script>
 <script type="text/javascript">
 function assignToWindow(){
   console.log($( "#assigned" ).is('[readonly]'));
@@ -175,5 +107,43 @@ function assignToWindow(){
 function assignToWindowSave(){
   $( "#assignToWindow" ).dialog("close");
 }
+
+function loadConcultants(){
+  var myTemplate = $.templates("#consultantsTmpl");  
+  $.getJSON( "json/Consultants.json", function( data ) {
+    var filterDate = [];
+    var c = {};
+    var projects = [];
+    var lastConsultant = "";
+    var lastClient = "";
+    $.each(data, function(index, value){
+      if(value['WorkedBy'] != ""){
+        if (lastConsultant != ""){
+          c["Projects"] = projects;
+          filterDate.push(c);
+          c = {};
+          projects = [];
+        }
+        lastConsultant = value['WorkedBy'];
+        c['WorkedBy'] = lastConsultant;
+        projects = [];
+      }
+      if(value['Client'] != ""){
+        lastClient = value['Client'];
+      }
+      var project = lastClient + "/" + value['CategoryCriteria'] + "/" + value['TotalHours'];
+      console.log(project);
+      projects.push(project);
+    });
+    var app = {p: filterDate };  
+    myTemplate.link("#consultants_div", app);
+    $(".list_table").tablesorter();
+    });
+}
+
+$(document).ready(function() {
+    $("#common").load("00.common.html");
+    loadConcultants();
+  });
 </script>
 </html>

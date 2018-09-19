@@ -1,0 +1,776 @@
+[
+  {
+    "WorkedBy": "Angie Berg",
+    "Client": "CYP024",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 65
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 3
+  },
+  {
+    "WorkedBy": "Barbara Mora",
+    "Client": "CHC131",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 9.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 3.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Audit",
+    "TotalHours": 3.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Test",
+    "TotalHours": 0.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 147.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "EBM125",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 7
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Corrective Action - Plan Audit",
+    "TotalHours": 4
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 6.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 1.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Audit",
+    "TotalHours": 7
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 48
+  },
+  {
+    "WorkedBy": "",
+    "Client": "HPI081",
+    "CategoryCriteria": "Claim Audit",
+    "TotalHours": 165.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Client training meeting",
+    "TotalHours": 1.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 3
+  },
+  {
+    "WorkedBy": "Christina Potter",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 112
+  },
+  {
+    "WorkedBy": "Dawn Reynolds",
+    "Client": "BPV106",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 4.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Platform Global Mapping or Logic",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "FNH129",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 2
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 20
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Group/Plan Mapping or Logic",
+    "TotalHours": 61.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 77.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalHours": 1.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Platform Global Mapping or Logic",
+    "TotalHours": 6.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 2.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 218.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "(empty)",
+    "TotalHours": 3
+  },
+  {
+    "WorkedBy": "",
+    "Client": "UAG137",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 24.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalHours": 5.5
+  },
+  {
+    "WorkedBy": "Donna Anderson",
+    "Client": "ABS001",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 7.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 589.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 203
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Test",
+    "TotalHours": 15.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 64.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 45.5
+  },
+  {
+    "WorkedBy": "Elizabeth Buckner",
+    "Client": "ABS001",
+    "CategoryCriteria": "Adjudication/Examining",
+    "TotalHours": 3.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 1.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Client training meeting",
+    "TotalHours": 10
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 63.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 18.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "ADV126",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 1.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 2.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "EBM125",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 8
+  },
+  {
+    "WorkedBy": "",
+    "Client": "IND136",
+    "CategoryCriteria": "Other",
+    "TotalHours": 2
+  },
+  {
+    "WorkedBy": "",
+    "Client": "NAA112",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 3
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 0.75
+  },
+  {
+    "WorkedBy": "Jasmine Mason",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 39.25
+  },
+  {
+    "WorkedBy": "Joe Castiglia",
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 80.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "TBR068",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 62.5
+  },
+  {
+    "WorkedBy": "Karen McWilliams",
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 12.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "HPI081",
+    "CategoryCriteria": "Claim Audit",
+    "TotalHours": 322.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "IDA039",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 28
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 0.75
+  },
+  {
+    "WorkedBy": "Mary Beth Donalson",
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 92.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 10.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CLF022",
+    "CategoryCriteria": "Other",
+    "TotalHours": 0.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 3.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 87
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Client training meeting",
+    "TotalHours": 0.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "NAA112",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 98
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 0.75
+  },
+  {
+    "WorkedBy": "Nancy Rikala",
+    "Client": "BEN012",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 0.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 3.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 10.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CHC131",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CTP114",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 2
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 68
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 0.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "EBM125",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 2
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Corrective Action - Plan Audit",
+    "TotalHours": 12
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 6.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 4
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Audit",
+    "TotalHours": 19.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 41.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "HPI081",
+    "CategoryCriteria": "Claim Audit",
+    "TotalHours": 413.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Audit",
+    "TotalHours": 5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 1.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Client training meeting",
+    "TotalHours": 1
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "UHA133",
+    "CategoryCriteria": "Other",
+    "TotalHours": 2.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 10
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalHours": 11.5
+  },
+  {
+    "WorkedBy": "Nicole DePaul",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 42
+  },
+  {
+    "WorkedBy": "Patty Raudenbush",
+    "Client": "HPI081",
+    "CategoryCriteria": "Claim Audit",
+    "TotalHours": 70
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Client training meeting",
+    "TotalHours": 8.5
+  },
+  {
+    "WorkedBy": "Peggy Goff",
+    "Client": "HPI081",
+    "CategoryCriteria": "Claim Audit",
+    "TotalHours": 479
+  },
+  {
+    "WorkedBy": "Shelley Rice",
+    "Client": "ADV126",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 7.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 200.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 22.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalHours": 0.75
+  },
+  {
+    "WorkedBy": "",
+    "Client": "BPV106",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 1.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 1.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "TBR068",
+    "CategoryCriteria": "Client support meeting",
+    "TotalHours": 0.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 32
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 32
+  },
+  {
+    "WorkedBy": "Team 3",
+    "Client": "EBM125",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 85.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "FNH129",
+    "CategoryCriteria": "Plan Test",
+    "TotalHours": 60
+  },
+  {
+    "WorkedBy": "Terri Pierno",
+    "Client": "FNH129",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 256.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 13.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 2.25
+  },
+  {
+    "WorkedBy": "Tracey Palmer",
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 18.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "BPV106",
+    "CategoryCriteria": "Other",
+    "TotalHours": 4.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Audit",
+    "TotalHours": 52
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 5.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Support Tasks",
+    "TotalHours": 0.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CYP024",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 110
+  },
+  {
+    "WorkedBy": "",
+    "Client": "FNH129",
+    "CategoryCriteria": "Corrective Action - Plan Build",
+    "TotalHours": 5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Other",
+    "TotalHours": 14
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 20
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 20
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Project Management",
+    "TotalHours": 13
+  },
+  {
+    "WorkedBy": "",
+    "Client": "IND136",
+    "CategoryCriteria": "Other",
+    "TotalHours": 14
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 55.5
+  },
+  {
+    "WorkedBy": "Tracie Salazar",
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 59.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 17.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "CYP024",
+    "CategoryCriteria": "Other",
+    "TotalHours": 1.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 277
+  },
+  {
+    "WorkedBy": "",
+    "Client": "",
+    "CategoryCriteria": "Plan Build - Standard",
+    "TotalHours": 68.25
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 19.5
+  },
+  {
+    "WorkedBy": "Valeria Smith",
+    "Client": "ABS001",
+    "CategoryCriteria": "Plan Build",
+    "TotalHours": 56.5
+  },
+  {
+    "WorkedBy": "",
+    "Client": "JMS000",
+    "CategoryCriteria": "Other",
+    "TotalHours": 13.75
+  },
+  {
+    "WorkedBy": "Total Result",
+    "Client": "",
+    "CategoryCriteria": "",
+    "TotalHours": "5,707.75"
+  }
+]
