@@ -35,14 +35,13 @@ $(document).ready(function() {
       <!-- Here is position of nemu bar -->
       <form>
       <ul>
-        <li><a href="#home" onclick="showRegisterWindow()">Register</a></li>
         <li><a href="#filter">Filter</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only" checked style="float:left" />Today</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />1 Week</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />2 week</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />4 week</a></li>
         <li><a href="#filter">Export to CSV</a></li>
-        <li style="float:right"><a href="#"><input type="checkbox" id="myself" value="Myself only(Dawn Reynolds)" checked style="float:left" /> Myself only</a></li>
+        <li style="float:right"><a href="#"><input type="checkbox" id="myself" value="Myself only" checked style="float:left" />Myself only (Dawn Reynolds)</a></li>
       </ul>
       </form>
     </div>
@@ -58,9 +57,13 @@ $(document).ready(function() {
           <tr>
             <th width="10%">Work Date</th>
             <th width="10%">Worked By</th>
-            <th width="10%">Client Name</th>
-            <th width="10%">Category Criteria</th>
-            <th width="10%"># of Records</th>
+            <th width="6%">Client Name</th>
+            <th width="15%">Category Criteria</th>
+            <th width="5%">Plan Type</th>
+            <th width="5%">Platform</th>
+            <th width="10%">Group Name</th>
+            <th width="10%">Single Plan Identifiers</th>
+            <th width="5%"># of Records</th>
             <th width="30%">Work Description</th>
             <th width="10%">Registered Hours</th>
             <th width="10%">Payed Date</th>
@@ -74,6 +77,10 @@ $(document).ready(function() {
             <td>{{:WorkedBy}}</td>
             <td>{{:Client}}</td>
             <td>{{:CategoryCriteria}}</td>
+            <td>{{:PlanType}}</td>
+            <td>{{:Platform}}</td>
+            <td>{{:GroupName}}</td>
+            <td>{{:SinglePlanIdentifiers}}</td>
             <td>{{:ofRecords}}</td>
             <td>{{:CommentsDetails}}</td>
             <td>{{:TotalHours}}</td>
@@ -86,32 +93,23 @@ $(document).ready(function() {
 </script>
 <script type="text/javascript">
 function loadWorkhours(){
+    var invoiceno = getParameterByName('invoiceno');
+    console.log(invoiceno);
 	  var myTemplate = $.templates("#myHoursTmpl");  
 	  $.getJSON( "json/AssignmentData.json", function( data ) {
 		  var filterDate = [];
 		  $.each(data, function(index, value){
-			  console.log(index);
 			  if(value['WorkedBy'] == 'Dawn Reynolds'){
-				  console.log(value);
-				  filterDate.push(value);
+			    if(invoiceno == null || value['InvoiceNumber'] == invoiceno) {
+			      filterDate.push(value);
+				  }
 			  }
 		  });
-		    var app = {p: filterDate };  
-		    myTemplate.link("#myHours_div", app);
-		  	});
+	    var app = {p: filterDate };  
+	    myTemplate.link("#myHours_div", app);
+	    $(".list_table").tablesorter();
+	  	});
 	}
 
-function showRegisterWindow(){
-  $( "#registerwindow" ).dialog({
-        height: 300,
-        width: 750,
-        modal: true,
-        resizable:false
-   });
-}
-
-function registerWindowSave(){
-  $( "#registerwindow" ).dialog("close");
-}
 </script>
 </html>

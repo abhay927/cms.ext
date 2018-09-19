@@ -8,17 +8,17 @@
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/jsviews.js"></script>  
 <script type="text/javascript" src="js/jquery-ui.js"></script>
-<!-- 
 <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
- -->
 <script type="text/javascript" src="js/jms_cms_2018.js"></script>
 <title>JMS Report Management System</title>
-<script >
-$(document).ready(function() {
-	  $("#common").load("00.common.html");
-	  loadAssignments();
-  });
-</script>
+<style>
+.show {
+  display: block;
+}
+.noshow {
+  display: none;
+}
+</style>
 </head>
 <body>
   <div id="common">
@@ -36,8 +36,8 @@ $(document).ready(function() {
       <!-- Here is position of nemu bar -->
       <form>
       <ul>
-        <li><a href="#home" onclick="loadAssignments()">Register</a></li>
-        <li style="float:right"><a href="#"><input type="checkbox" id="myself" value="Myself only" checked style="float:left" /> Myself only</a></li>
+        <li><a id="register" href="#home" onclick="switchshowreg()">Register</a></li>
+        <li style="float:right"><a href="#"><input type="checkbox" id="myself" value="Myself only" checked style="float:left" />Myself only (Dawn Reynolds)</a></li>
       </ul>
       </form>
     </div>
@@ -54,14 +54,21 @@ $(document).ready(function() {
 <script id="assignmentTmpl" type="text/x-jsrender">  
     <table id="detailList" class="list_table" style="border: 0px;">
         <thead>
-        <tr>
-        <th>Project Name</th>
-        <th>Client</th>
-        <th>Category Criteria</th>
-        <th>Platform / Group Name / Plan Id</th>
-        <th>Comments</th>
-        <th  width="6%">Total Hours</th>
-        <th width="6%"># of records</th>
+        <tr height="28px">
+        <th width="50px">Client</th>
+        <th width="80px">Worked By</th>
+        <th width="180px">Category Criteria</th>
+        <th class="info">Start Date</th>
+        <th class="info">Estimated Hours</th>
+        <th class="info">Accomplished Hours</th>
+        <th class="info">My Total Hours</th>
+        <th class="reg noshow" width="8%">Worked Date</th>
+        <th class="reg noshow" width="5%">Plan Type</th>
+        <th class="reg noshow" width="5%">Platform</th>
+        <th class="reg noshow" width="10%">Group Name</th>
+        <th class="reg noshow" width="10%">Single Plan Identifiers</th>
+        <th class="reg noshow">Comments</th>
+        <th class="reg noshow" width="6%"># of records</th>
         </tr>
         </thead>
         <tbody>
@@ -69,23 +76,51 @@ $(document).ready(function() {
           <tr>
           <td style="text-align: left;">{{:Client}}</td>
           <td style="text-align: left;">{{:WorkedBy}}</td>
-          <td><input width="100%" type="text" class="tf_120 editable" value="{{:TotalHours}}" readonly /></td>
-          <td><input width="100%" type="text" class="tf_120 editable" value="{{:"70"}}" readonly /></td>
-          <td class="recalc">{{:"30.25"}}</td>
+          <td style="text-align: left;">{{:CategoryCriteria}}</td>
+          <td class="info">01/01/2018</td>
+          <td class="info">200</td>
+          <td class="info">135</td>
+          <td class="info">{{:TotalHours}}</td>
+          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg  noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
           </tr>
 {{/for}} 
         </tbody> 
     </table>
 </script>
-</body>
 
 <script type="text/javascript">
 function loadAssignments(){
 	  var myTemplate = $.templates("#assignmentTmpl");  
-	  $.getJSON( "json/AssignmentData.json", function( data ) {
-		    var app = {p: data };  
-		    myTemplate.link("#assignments_div", app);
-		  	});
-	}
+	  $.getJSON( "json/AssignmentOfDawnReynolds.json", function( data ) {
+	    var app = {p: data };  
+	    myTemplate.link("#assignments_div", app);
+	  	});
+}
+
+function switchshowreg(){
+  var t = $("#register").html();
+  if (t == "Register"){
+    $("#register").html("Save");
+    $(".info").addClass("noshow");
+    $(".reg").removeClass("noshow");
+  }
+  if (t == "Save"){
+    $("#register").html("Register");
+    $(".info").removeClass("noshow");
+    $(".reg").addClass("noshow");
+  }
+
+}
+
+$(document).ready(function() {
+  $("#common").load("00.common.html");
+  loadAssignments();
+});
 </script>
 </html>
