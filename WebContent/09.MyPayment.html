@@ -25,7 +25,6 @@
       <!-- Here is position of nemu bar -->
       <ul>
         <li><a href="#filter">Filter</a></li>
-        <li style="float:right"><a href="#"><input type="checkbox" id="myself" value="Myself only" checked style="float:left" />Myself only (Dawn Reynolds)</a></li>
       </ul>
     </div>
     <div id="list_section">
@@ -35,7 +34,7 @@
           <tr>
             <th width="4%">Item</th>
             <th width="6%">Invoice No.</th>
-            <th width="10%">Name</th>
+            <th width="10%">Worked By</th>
             <th width="15%">Invoice Period</th>
             <th width="6%">Invoice Date</th>
             <th width="6%">Hours</th>
@@ -73,7 +72,9 @@
   </div>
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#common").load("00.common.html");
+    $("#common").load("00.common.html", function(){
+  	  $("#hiname").html("Hi, Dawn Reynolds");
+    });
     $(".list_table").tablesorter();
   });
 </script>

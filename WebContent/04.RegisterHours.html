@@ -12,12 +12,7 @@
 
 <script type="text/javascript" src="js/jms_cms_2018.js"></script>
 <title>JMS Report Management System</title>
-<script >
-$(document).ready(function() {
-	$("#common").load("00.common.html");
-    loadWorkhours();
-  });
-</script>
+
 </head>
 <body>
   <div id="common">
@@ -41,7 +36,6 @@ $(document).ready(function() {
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />2 week</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />4 week</a></li>
         <li><a href="#filter">Export to CSV</a></li>
-        <li style="float:right"><a href="#"><input type="checkbox" id="myself" value="Myself only" checked style="float:left" />Myself only (Dawn Reynolds)</a></li>
       </ul>
       </form>
     </div>
@@ -55,9 +49,9 @@ $(document).ready(function() {
       <table class="list_table" id="tbl">
         <thead>
           <tr>
-            <th width="10%">Work Date</th>
             <th width="10%">Worked By</th>
-            <th width="6%">Client Name</th>
+            <th width="10%">Work Date</th>
+            <th width="6%">Client</th>
             <th width="15%">Category Criteria</th>
             <th width="5%">Plan Type</th>
             <th width="5%">Platform</th>
@@ -73,8 +67,8 @@ $(document).ready(function() {
         <tbody>
 {{for p}} 
           <tr>
-            <td>{{:WorkedDate}}</td>
             <td>{{:WorkedBy}}</td>
+            <td>{{:WorkedDate}}</td>
             <td>{{:Client}}</td>
             <td>{{:CategoryCriteria}}</td>
             <td>{{:PlanType}}</td>
@@ -85,7 +79,7 @@ $(document).ready(function() {
             <td>{{:CommentsDetails}}</td>
             <td>{{:TotalHours}}</td>
             <td>{{:ResourcePaidDate}}</td>
-            <td>{{:InvoiceNumber}}</td>
+            <td class="operation">{{:InvoiceNumber}}</td>
           </tr>
 {{/for}} 
         </tbody> 
@@ -107,9 +101,27 @@ function loadWorkhours(){
 		  });
 	    var app = {p: filterDate };  
 	    myTemplate.link("#myHours_div", app);
+	    
+	    $(".operation").each(function() {
+	    	if ($( this ).html() == "" && $( this ).prev().html() == ""){
+	    	  $( this ).append('<img src="images/edit.gif" alt="edit op" onclick="op()"/> ');
+	    	  $( this ).append('<img src="images/del.gif" alt="del op"  onclick="op()"/>');
+	    	}
+	    });
 	    $(".list_table").tablesorter();
+	    
 	  	});
 	}
 
+function op(){
+	console.log("onclick op");
+}
+
+$(document).ready(function() {
+	$("#common").load("00.common.html", function(){
+		  $("#hiname").html("Hi, Dawn Reynolds");
+	  });
+    loadWorkhours();
+  });
 </script>
 </html>
