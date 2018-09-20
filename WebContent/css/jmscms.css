@@ -209,7 +209,7 @@ table {
   background-position: center right, left center;
   height: 28px;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   border-right: 1px solid #ccc;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #7a8180;
@@ -232,7 +232,7 @@ table {
   height: 20px;
   border: 1px dotted black;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   padding-top: 2px;
   padding-bottom: 1px;
   white-space: wrap;
