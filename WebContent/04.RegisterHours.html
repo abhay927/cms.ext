@@ -88,7 +88,6 @@
 <script type="text/javascript">
 function loadWorkhours(){
     var invoiceno = getParameterByName('invoiceno');
-    console.log(invoiceno);
 	  var myTemplate = $.templates("#myHoursTmpl");  
 	  $.getJSON( "json/AssignmentData.json", function( data ) {
 		  var filterDate = [];
@@ -108,7 +107,9 @@ function loadWorkhours(){
 	    	  $( this ).append('<img src="images/del.gif" alt="del op"  onclick="op()"/>');
 	    	}
 	    });
-	    $(".list_table").tablesorter();
+	    $(".list_table").tablesorter({
+	    	sortList:[[1,1]]
+	    });
 	    
 	  	});
 	}
