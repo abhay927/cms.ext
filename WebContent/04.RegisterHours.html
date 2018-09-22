@@ -87,16 +87,15 @@
 </script>
 <script type="text/javascript">
 function loadWorkhours(){
-    var invoiceno = getParameterByName('invoiceno');
+    var paras = getParameters(window.location.href);
+    
 	  var myTemplate = $.templates("#myHoursTmpl");  
 	  $.getJSON( "json/AssignmentData.json", function( data ) {
 		  var filterDate = [];
-		  $.each(data, function(index, value){
-			  if(value['WorkedBy'] == 'Dawn Reynolds'){
-			    if(invoiceno == null || value['InvoiceNumber'] == invoiceno) {
-			      filterDate.push(value);
-				  }
-			  }
+		  data.forEach(function(d){
+		    if (isMatch(d, paras)){
+		      filterDate.push(d);
+		    }
 		  });
 	    var app = {p: filterDate };  
 	    myTemplate.link("#myHours_div", app);
@@ -110,8 +109,7 @@ function loadWorkhours(){
 	    $(".list_table").tablesorter({
 	    	sortList:[[1,1]]
 	    });
-	    
-	  	});
+	  });
 	}
 
 function op(){
