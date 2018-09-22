@@ -13,6 +13,10 @@
 .warning{
   color: red;
 }
+.focus {
+  color: black;
+  font-style: normal;
+}
 </style>
 </head>
 <body>
@@ -45,14 +49,13 @@
   
   <div id="assignToWindow" class="modalwindow" title="Assign to" style="overflow: hidden;">
     <form method="post" id="form2">
-    <input name="filter"
-          style="width: 100%; height: 20px; resize: none;"></input><br/><br/>
+    <input id="filter" style="width: 100%; height: 20px; resize: none; color: gray; font-style: italic;" value="input filter"></input><br/><br/>
     <div style="overflow: scroll; overflow-x: hidden; height:203px; border: 1px solid #99aabd;">
     <ul>
     </ul>
     </div>
       <br/>
-      <p align="center"><input class="botton999" type="button"
+      <p align="center"><input class="botton999" id="submit" type="button"
           value="Save" onclick="assignToWindowSave()" /></p>
     </form>
   </div>
@@ -118,37 +121,39 @@ function loadProjects(){
     });
 }
 
+var all = [
+  "Barbara Mora",
+  "Christina Potter",
+  "Dawn Reynolds",
+  "Donna Anderson",
+  "Elizabeth Buckner",
+  "Jasmine Mason",
+  "Joe Castiglia",
+  "Karen McWilliams",
+  "Mary Beth Donalson",
+  "Nancy Rikala",
+  "Nicole DePaul",
+  "Patty Raudenbush",
+  "Peggy Goff",
+  "Shelley Rice",
+  "Team 3",
+  "Terri Pierno",
+  "Tracey Palmer",
+  "Tracie Salazar",
+  "Valeria Smith"
+];
+var names = [];
+
 function showAssignWindow(elmnt){
-  var all = [
-      "Barbara Mora",
-      "Christina Potter",
-      "Dawn Reynolds",
-      "Donna Anderson",
-      "Elizabeth Buckner",
-      "Jasmine Mason",
-      "Joe Castiglia",
-      "Karen McWilliams",
-      "Mary Beth Donalson",
-      "Nancy Rikala",
-      "Nicole DePaul",
-      "Patty Raudenbush",
-      "Peggy Goff",
-      "Shelley Rice",
-      "Team 3",
-      "Terri Pierno",
-      "Tracey Palmer",
-      "Tracie Salazar",
-      "Valeria Smith"
-  ]
-  var names = $(elmnt).attr("data-names").split(',');
-  console.log(names);
+  names = $(elmnt).attr("data-names").split(',');
+  //console.log(names);
   $("#assignToWindow ul").empty();
   all.forEach(function(n){
     if (jQuery.inArray(n, names) >= 0){
-      console.log("n in names", n);
+      //console.log("n in names", n);
       $("#assignToWindow ul").append('<li><input type="checkbox" checked="true" value="' + n +'" />'+ n +'</li>');
     } else {
-      console.log(n);
+      //console.log(n);
       $("#assignToWindow ul").append('<li><input type="checkbox" value="' + n +'" />'+ n +'</li>');
     }
   });
@@ -166,16 +171,63 @@ function showAssignWindow(elmnt){
       duration : 800
     }
   });
+  $( "#assignToWindow #submit" ).focus();
+  $("#filter").focus(function(){
+    $(this).val("");
+    $(this).css("color", "black");
+    $(this).css("font-style", "normal");
+  });
 }
 
 function assignToWindowSave(){
   $( "#assignToWindow" ).dialog("close");
 }
 
+
+
+$( function() {
+
+  $( "#filter" )
+    // don't navigate away from the field on tab when selecting an item
+    .on( "keydown", function( event ) {
+      //console.log("onkeydown");
+      if ( event.keyCode === $.ui.keyCode.TAB &&
+          $( this ).autocomplete( "instance" ).menu.active ) {
+        event.preventDefault();
+      }
+    })
+    .autocomplete({
+      minLength: 0,
+      source: function( request, response ) {
+        //console.log("source", request.term);
+        //console.log("source1", $.ui.autocomplete.filter(all, request.term  ));
+        var fr = $.ui.autocomplete.filter(all, request.term  );
+        $("#assignToWindow ul").empty();
+        fr.forEach(function(n){
+          if (jQuery.inArray(n, names) >= 0){
+            //console.log("n in names", n);
+            $("#assignToWindow ul").append('<li><input type="checkbox" checked="true" value="' + n +'" />'+ n +'</li>');
+          } else {
+            //console.log(n);
+            $("#assignToWindow ul").append('<li><input type="checkbox" value="' + n +'" />'+ n +'</li>');
+          }
+        });
+      },
+      focus: function() {
+        // prevent value inserted on focus
+        return false;
+      },
+      select: function( event, ui ) {
+        return false;
+      }
+    });
+} );
+
 $(document).ready(function() {
-    $("#common").load("00.common.html");
-    
-    loadProjects();
+ 
+  $("#common").load("00.common.html");
+  
+  loadProjects();
   });
 </script>
 </html>
