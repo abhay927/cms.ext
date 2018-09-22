@@ -301,6 +301,11 @@ table {
   display: none; /* Hidden by default */
 }
 
+.modalwindow ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 td.leftalign {
   text-align: left;
 }
