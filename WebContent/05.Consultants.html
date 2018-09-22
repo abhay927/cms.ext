@@ -10,6 +10,7 @@
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 <script type="text/javascript" src="js/jms_cms_2018.js"></script>
+<script type="text/javascript" src="js/loadTestData.js"></script>
 <title>JMS Report Management System</title>
 
 </head>
@@ -61,10 +62,10 @@
             <th width="8%">Speciality</th>
             <th width="6%">Rate</th>
             <th width="25%">Assigned Project</th>
-  			<th width="8%">Acceptable Work Hours/W</th>
-            <th width="6%">1 week AWH</th>
-            <th width="6%">2 week AWH</th>
-            <th width="6%">4 week AWH</th>
+  			    <th width="8%">Acceptable WH /w</th>
+            <th width="6%">Avg WH /Last1w</th>
+            <th width="6%">Avg WH /Last2w</th>
+            <th width="6%">Avg WH /Last4w</th>
             <th width="10%">Projects Remain Hours</th>
             <th width="10%">Last Payment</th>
             <th width="10%">Unpaid Hours</th>
@@ -115,34 +116,25 @@ function assignToWindowSave(){
 function loadConcultants(){
   var myTemplate = $.templates("#consultantsTmpl");  
   $.getJSON( "json/Consultants.json", function( data ) {
-    var filterDate = [];
-    var c = {};
-    var projects = [];
+    var nDate = normalizePivotTable(data, ["WorkedBy", "Client", "CategoryCriteria", "TotalHours"]);
+    var pDate = [];
+    var c, projects;
     var lastConsultant = "";
-    var lastClient = "";
-    $.each(data, function(index, value){
-      if(value['WorkedBy'] != ""){
-        if (lastConsultant != ""){
-          c["Projects"] = projects;
-          filterDate.push(c);
-          c = {};
-          projects = [];
-        }
+    $.each(nDate, function(index, value){
+      if(value['WorkedBy'] != lastConsultant){
         lastConsultant = value['WorkedBy'];
-        c['WorkedBy'] = lastConsultant;
+        c = {};
         projects = [];
-      }
-      if(value['Client'] != ""){
-        lastClient = value['Client'];
-      }
-      var project = lastClient + " / " + value['CategoryCriteria'] + " / " + value['TotalHours'];
-      console.log(project);
-      projects.push(project);
+        c["WorkedBy"] = value['WorkedBy'];
+        c["Projects"] = projects;
+        pDate.push(c);
+      } 
+      projects.push(value['Client'] + " / " + value['CategoryCriteria'] + " / " + value['TotalHours']);
     });
-    var app = {p: filterDate };  
+    var app = {p: pDate };  
     myTemplate.link("#consultants_div", app);
     $(".list_table").tablesorter();
-    });
+  });
 }
 
 $(document).ready(function() {
