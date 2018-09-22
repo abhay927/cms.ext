@@ -1,12 +1,62 @@
 [
-{"item":1, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"Arya’s stitches were crooked again."},
-{"item":2, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"She frowned down at them with dismay and glanced over to where her sister Sansasat among the other girls. Sansa’s needlework was exquisite. Everyone said so. “Sansa’s work is as pretty as she is,” Septa Mordane told their lady mother once. “She has such fine, delicate hands.” When Lady Catelyn had asked about Arya, the septa had sniffed. “Arya has the hands of a blacksmith.”"},
-{"item":3, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"Arya glanced furtively across the room, worried that Septa Mordane might have read her thoughts, but the septa was paying her no attention today. She was sitting with the Princess Myrcella, all smiles and admiration. It was not often that the septa was privileged to instruct a royal princess in the womanly arts, as she had said when the queen brought Myrcella to join them. Arya thought that Myrcella’sstitches looked a little crooked too, but you would never know it from the way Septa Mordane was cooing."},
-{"item":4, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"She studied her own work again, looking for some way to salvage it, then sighed and put down the needle. She looked glumly at her sister. Sansa was chatting away happily as she worked. Beth Cassel, Ser Rodrik’s little girl, was sitting by her feet, listening to every word she said, and Jeyne Poole was leaning over to whisper something in her ear."},
-{"item":5, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"“What are you talking about?” Arya asked suddenly."},
-{"item":6, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"Jeyne gave her a startled look, then giggled. Sansa looked abashed. Beth blushed. Noone answered."},
-{"item":7, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"“Tell me,” Arya said."},
-{"item":8, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"Jeyne glanced over to make certain that Septa Mordane was not listening. Myrcella said something then, and the septa laughed along with the rest of the ladies."},
-{"item":9, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"“ We were talking about the prince,” Sansa said, her voice soft as a kiss."},
-{"item":10, "author":"Lancer", "date":"2018.08.20 15:00:30", "comment":"Arya knew which prince she meant: Joffrey, of course. The tall, handsome one. Sansa got to sit with him at the feast. Arya had to sit with the little fat one. Naturally."}
+	{
+		"item": 1,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "Arya’s stitches were crooked again."
+	},
+	{
+		"item": 2,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "She frowned down at them with dismay and glanced over to where her sister Sansasat among the other girls. Sansa’s needlework was exquisite. Everyone said so. “Sansa’s work is as pretty as she is,” Septa Mordane told their lady mother once. “She has such fine, delicate hands.” When Lady Catelyn had asked about Arya, the septa had sniffed. “Arya has the hands of a blacksmith.”"
+	},
+	{
+		"item": 3,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "Arya glanced furtively across the room, worried that Septa Mordane might have read her thoughts, but the septa was paying her no attention today. She was sitting with the Princess Myrcella, all smiles and admiration. It was not often that the septa was privileged to instruct a royal princess in the womanly arts, as she had said when the queen brought Myrcella to join them. Arya thought that Myrcella’sstitches looked a little crooked too, but you would never know it from the way Septa Mordane was cooing."
+	},
+	{
+		"item": 4,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "She studied her own work again, looking for some way to salvage it, then sighed and put down the needle. She looked glumly at her sister. Sansa was chatting away happily as she worked. Beth Cassel, Ser Rodrik’s little girl, was sitting by her feet, listening to every word she said, and Jeyne Poole was leaning over to whisper something in her ear."
+	},
+	{
+		"item": 5,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "“What are you talking about?” Arya asked suddenly."
+	},
+	{
+		"item": 6,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "Jeyne gave her a startled look, then giggled. Sansa looked abashed. Beth blushed. Noone answered."
+	},
+	{
+		"item": 7,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "“Tell me,” Arya said."
+	},
+	{
+		"item": 8,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "Jeyne glanced over to make certain that Septa Mordane was not listening. Myrcella said something then, and the septa laughed along with the rest of the ladies."
+	},
+	{
+		"item": 9,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "“ We were talking about the prince,” Sansa said, her voice soft as a kiss."
+	},
+	{
+		"item": 10,
+		"author": "Lancer",
+		"date": "2018.08.20 15:00:30",
+		"comment": "Arya knew which prince she meant: Joffrey, of course. The tall, handsome one. Sansa got to sit with him at the feast. Arya had to sit with the little fat one. Naturally."
+	}
 ]

@@ -1,19 +1,138 @@
 [
-{"date":"2018.08.01", "worker":"Lancer", "submitted":4, "workerNotes":"The one-eared black tom arched his back and hissed at her.", "confirmed":4, "confirmedNotes":"Arya padded down the alley"},
-{"date":"2018.08.01", "worker":"Winner", "submitted":5, "workerNotes":"balanced lightly on the balls of her bare feet", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.02", "worker":"Lancer", "submitted":6, "workerNotes":"breathing slow deep breaths.", "confirmed":4, "confirmedNotes":"listening to the flutter of her heart"},
-{"date":"2018.08.03", "worker":"Lancer", "submitted":7, "workerNotes":"she told herself, light as a feather", "confirmed":4, "confirmedNotes":"Quiet as a shadow"},
-{"date":"2018.08.03", "worker":"Winner", "submitted":8, "workerNotes":"The tomcat watched her come, his eyes wary.", "confirmed":4, "confirmedNotes":"Catching cats was hard."},
-{"date":"2018.08.04", "worker":"Lancer", "submitted":1, "workerNotes":"Her hands werecovered with half-healed scratches", "confirmed":4, "confirmedNotes":"and both knees were scabbed over where she had scraped them raw in tumbles."},
-{"date":"2018.08.04", "worker":"Winner", "submitted":2, "workerNotes":"At first even the cook’s huge fat kitchen cat had been able to elude her", "confirmed":4, "confirmedNotes":"but Syrio had kept her at it day and night"},
-{"date":"2018.08.05", "worker":"Lancer", "submitted":3, "workerNotes":"When she’d run to him with her hands bleeding", "confirmed":4, "confirmedNotes":"he had said"},
-{"date":"2018.08.06", "worker":"Lancer", "submitted":4, "workerNotes":"So slow? Be quicker, girl. Your enemies will give you more than scratches.", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.07", "worker":"Lancer", "submitted":5, "workerNotes":"He had dabbed her wounds with Myrish fire", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.07", "worker":"Winner", "submitted":6, "workerNotes":"which burned so bad she had had to bite her lip to keep from screaming", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.07", "worker":"Daniel", "submitted":7, "workerNotes":"Then he sent her out after more cats.", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.08", "worker":"Lancer", "submitted":8, "workerNotes":"The Red Keep was full of cats: lazy old catdozing in the sun", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.08", "worker":"Winner", "submitted":1, "workerNotes":"coldeyed mousers twitching their tails", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.09", "worker":"Lancer", "submitted":2, "workerNotes":"quick little kittens with claws like needles", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.09", "worker":"Winner", "submitted":3, "workerNotes":"ladies’ cats all combed and trusting", "confirmed":4, "confirmedNotes":""},
-{"date":"2018.08.10", "worker":"Lancer", "submitted":4, "workerNotes":"ragged shadows prowling themidden heaps", "confirmed":4, "confirmedNotes":""}
+	{
+		"date": "2018.08.01",
+		"worker": "Lancer",
+		"submitted": 4,
+		"workerNotes": "The one-eared black tom arched his back and hissed at her.",
+		"confirmed": 4,
+		"confirmedNotes": "Arya padded down the alley"
+	},
+	{
+		"date": "2018.08.01",
+		"worker": "Winner",
+		"submitted": 5,
+		"workerNotes": "balanced lightly on the balls of her bare feet",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.02",
+		"worker": "Lancer",
+		"submitted": 6,
+		"workerNotes": "breathing slow deep breaths.",
+		"confirmed": 4,
+		"confirmedNotes": "listening to the flutter of her heart"
+	},
+	{
+		"date": "2018.08.03",
+		"worker": "Lancer",
+		"submitted": 7,
+		"workerNotes": "she told herself, light as a feather",
+		"confirmed": 4,
+		"confirmedNotes": "Quiet as a shadow"
+	},
+	{
+		"date": "2018.08.03",
+		"worker": "Winner",
+		"submitted": 8,
+		"workerNotes": "The tomcat watched her come, his eyes wary.",
+		"confirmed": 4,
+		"confirmedNotes": "Catching cats was hard."
+	},
+	{
+		"date": "2018.08.04",
+		"worker": "Lancer",
+		"submitted": 1,
+		"workerNotes": "Her hands werecovered with half-healed scratches",
+		"confirmed": 4,
+		"confirmedNotes": "and both knees were scabbed over where she had scraped them raw in tumbles."
+	},
+	{
+		"date": "2018.08.04",
+		"worker": "Winner",
+		"submitted": 2,
+		"workerNotes": "At first even the cook’s huge fat kitchen cat had been able to elude her",
+		"confirmed": 4,
+		"confirmedNotes": "but Syrio had kept her at it day and night"
+	},
+	{
+		"date": "2018.08.05",
+		"worker": "Lancer",
+		"submitted": 3,
+		"workerNotes": "When she’d run to him with her hands bleeding",
+		"confirmed": 4,
+		"confirmedNotes": "he had said"
+	},
+	{
+		"date": "2018.08.06",
+		"worker": "Lancer",
+		"submitted": 4,
+		"workerNotes": "So slow? Be quicker, girl. Your enemies will give you more than scratches.",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.07",
+		"worker": "Lancer",
+		"submitted": 5,
+		"workerNotes": "He had dabbed her wounds with Myrish fire",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.07",
+		"worker": "Winner",
+		"submitted": 6,
+		"workerNotes": "which burned so bad she had had to bite her lip to keep from screaming",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.07",
+		"worker": "Daniel",
+		"submitted": 7,
+		"workerNotes": "Then he sent her out after more cats.",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.08",
+		"worker": "Lancer",
+		"submitted": 8,
+		"workerNotes": "The Red Keep was full of cats: lazy old catdozing in the sun",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.08",
+		"worker": "Winner",
+		"submitted": 1,
+		"workerNotes": "coldeyed mousers twitching their tails",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.09",
+		"worker": "Lancer",
+		"submitted": 2,
+		"workerNotes": "quick little kittens with claws like needles",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.09",
+		"worker": "Winner",
+		"submitted": 3,
+		"workerNotes": "ladies’ cats all combed and trusting",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	},
+	{
+		"date": "2018.08.10",
+		"worker": "Lancer",
+		"submitted": 4,
+		"workerNotes": "ragged shadows prowling themidden heaps",
+		"confirmed": 4,
+		"confirmedNotes": ""
+	}
 ]
