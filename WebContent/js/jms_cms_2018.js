@@ -40,11 +40,43 @@ function verifyQuarter(sender){
 
 //get parameter from url
 function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+//get parameter from url
+function getParameters(url) {
+  var result = {};
+  if (!url) url = window.location.href;
+  var a = document.createElement('a');
+  a.href = url;
+  console.log(a.search);
+  console.log(decodeURIComponent(a.search));
+  var search = decodeURIComponent(a.search);
+  var r = search.substring(1).split('&');
+
+  r.forEach(function(p){
+    var kv = p.split('=');
+    console.log(kv[0], ":", kv[1]);
+    result[kv[0]] = kv[1];
+  });
+  return result;
+}
+
+// return true if obj exactly has all same attributes in filter and value must equals.
+function isMatch(obj, filter){
+  for(k in filter){
+    if (! k in obj || filter[k] != obj[k]){
+      return false;
+    }
+  }
+  return true;
+}
+function filter(data, filter){
+  return [];
 }

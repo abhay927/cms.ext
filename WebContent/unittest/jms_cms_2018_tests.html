@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jms_cms_2018.js tests</title>
+  <link rel="stylesheet" href="lib/qunit-2.6.2.css">
+  <script src="lib/qunit-2.6.2.js"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="../js/jms_cms_2018.js"></script>
+  <script>
+    QUnit.test( "test isMatch Function", function( assert ) {
+      var aobj =   {
+          "WorkedDate": "07/02/18",
+          "Client": "UAG137",
+          "CategoryCriteria": "Plan Build - Standard",
+          "PlanType": "MED",
+          "Platform": "WLT",
+          "GroupName": "PPACA Bridge Plan",
+          "SinglePlanIdentifiers": "2012",
+          "CommentsDetails": "Build PPACA Bridge Plan PBS",
+          "WorkedBy": "Dawn Reynolds",
+          "TotalHours": "2.00",
+          "ofRecords": "7",
+          "ResourcePaidDate": "07/20/18",
+          "InvoiceNumber": "20289"
+        };
+      assert.equal( true, isMatch(aobj, {"WorkedBy": "Dawn Reynolds"}));
+      assert.equal( false, isMatch(aobj, {"WorkedBy": "Other"}));
+      assert.equal( false, isMatch(aobj, {"Other": "Other"}));
+      
+      assert.equal( true, isMatch(aobj, {"WorkedBy": "Dawn Reynolds", "InvoiceNumber": "20289"}));
+      assert.equal( false, isMatch(aobj, {"WorkedBy": "Dawn Reynolds", "InvoiceNumber": "99999"}));
+      assert.equal( false, isMatch(aobj, {"WorkedBy": "Other", "InvoiceNumber": "20289"}));
+    });
+
+    QUnit.test( "test parse url Function", function( assert ) {
+      assert.deepEqual( {"WorkedBy": "Dawn Reynolds"}, 
+          getParameters("?WorkedBy=Dawn Reynolds"));
+      assert.deepEqual( {"WorkedBy": "Dawn Reynolds", "Client": "BPV106","CategoryCriteria": "Group/Plan Mapping or Logic",}, 
+          getParameters("http://localhost/cms/04.RegisterHours.html?WorkedBy=Dawn%20Reynolds&Client=BPV106&CategoryCriteria=Group/Plan%20Mapping%20or%20Logic"));
+      assert.deepEqual( {"WorkedBy": "Dawn Reynolds", "InvoiceNumber":"20289"}, 
+          getParameters("http://localhost/cms/04.RegisterHours.html?WorkedBy=Dawn Reynolds&InvoiceNumber=20289"));
+    });
+  </script>
+</body>
+</html>
