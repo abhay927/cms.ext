@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jms_cms_2018.js tests</title>
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="lib/qunit-2.6.2.css">
+  <script src="lib/qunit-2.6.2.js"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <script src="../js/loadTestData.js"></script>
+  <script>
+    QUnit.test( "test loadTestData Function", function( assert ) {
+      var jsonFiles =   [
+          "../json/servicetype.json",
+          "../json/workhours.json"
+        ];
+      assert.equal( 2, $.ajaxs(jsonFiles, function(datas){
+      }, false).length);
+    });
+
+
+    var tdata = [
+      {
+        "WorkedBy": "Angie Berg",
+        "Client": "CYP024",
+        "CategoryCriteria": "Corrective Action - Plan Build",
+        "TotalHours": 1
+      },
+      {
+        "WorkedBy": "",
+        "Client": "",
+        "CategoryCriteria": "Plan Build",
+        "TotalHours": 65
+      },
+      {
+        "WorkedBy": "",
+        "Client": "JMS000",
+        "CategoryCriteria": "Other",
+        "TotalHours": 3
+      },
+      {
+        "WorkedBy": "Barbara Mora",
+        "Client": "CHC131",
+        "CategoryCriteria": "Client support meeting",
+        "TotalHours": 9.5
+      },
+      {
+        "WorkedBy": "",
+        "Client": "",
+        "CategoryCriteria": "Other",
+        "TotalHours": 3.5
+      },
+      {
+        "WorkedBy": "",
+        "Client": "",
+        "CategoryCriteria": "Plan Audit",
+        "TotalHours": 3.5
+      },
+      {
+        "WorkedBy": "",
+        "Client": "",
+        "CategoryCriteria": "Plan Test",
+        "TotalHours": 0.75
+      },
+      {
+        "WorkedBy": "",
+        "Client": "CYP024",
+        "CategoryCriteria": "Plan Build",
+        "TotalHours": 147.5
+      },
+      {
+        "WorkedBy": "",
+        "Client": "EBM125",
+        "CategoryCriteria": "Client support meeting",
+        "TotalHours": 7
+      },
+      {
+        "WorkedBy": "",
+        "Client": "",
+        "CategoryCriteria": "Corrective Action - Plan Audit",
+        "TotalHours": 4
+      },
+      {
+        "WorkedBy": "",
+        "Client": "",
+        "CategoryCriteria": "Corrective Action - Plan Build",
+        "TotalHours": 6.5
+      },
+      {
+        "WorkedBy": "",
+        "Client": "",
+        "CategoryCriteria": "Other",
+        "TotalHours": 1.5
+      }
+    ];
+    QUnit.test( "test normalize Pivot Table Function", function( assert ) {
+      var result = normalizePivotTable(tdata, ["WorkedBy", "Client", "CategoryCriteria", "TotalHours"]);
+      assert.equal("Angie Berg", result[1]["WorkedBy"]);
+      assert.equal("CYP024", result[1]["Client"]);
+      assert.equal("Barbara Mora", result[11]["WorkedBy"]);
+      assert.equal("EBM125", result[11]["Client"]);
+    });
+
+  </script>
+</body>
+</html>
