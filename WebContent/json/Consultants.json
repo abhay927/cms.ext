@@ -766,11 +766,5 @@
     "Client": "JMS000",
     "CategoryCriteria": "Other",
     "TotalHours": 13.75
-  },
-  {
-    "WorkedBy": "Total Result",
-    "Client": "",
-    "CategoryCriteria": "",
-    "TotalHours": "5,707.75"
   }
 ]
