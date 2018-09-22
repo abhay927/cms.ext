@@ -162,6 +162,7 @@ function showAssignWindow(elmnt){
     width: 200,
     modal: true,
     resizable:false,
+    close: assignToWindowSave,
     show : {
       effect : "blind",
       duration : 800
@@ -180,6 +181,7 @@ function showAssignWindow(elmnt){
 }
 
 function assignToWindowSave(){
+  $("#assignToWindow #filter").val("");
   $( "#assignToWindow" ).dialog("close");
 }
 
@@ -199,17 +201,12 @@ $( function() {
     .autocomplete({
       minLength: 0,
       source: function( request, response ) {
-        //console.log("source", request.term);
-        //console.log("source1", $.ui.autocomplete.filter(all, request.term  ));
-        var fr = $.ui.autocomplete.filter(all, request.term  );
-        $("#assignToWindow ul").empty();
-        fr.forEach(function(n){
-          if (jQuery.inArray(n, names) >= 0){
-            //console.log("n in names", n);
-            $("#assignToWindow ul").append('<li><input type="checkbox" checked="true" value="' + n +'" />'+ n +'</li>');
+        var fr = new Set($.ui.autocomplete.filter(all, request.term));
+        $("li input").each(function(i, obj){
+          if (fr.has($(obj).val())){
+            $(obj).parent().show();
           } else {
-            //console.log(n);
-            $("#assignToWindow ul").append('<li><input type="checkbox" value="' + n +'" />'+ n +'</li>');
+            $(obj).parent().hide();
           }
         });
       },
