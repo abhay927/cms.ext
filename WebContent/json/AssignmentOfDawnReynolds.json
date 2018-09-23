@@ -3,42 +3,49 @@
     "WorkedBy": "Dawn Reynolds",
     "Client": "BPV106",
     "CategoryCriteria": "Group/Plan Mapping or Logic",
+    "TodayHours": 0.5,
     "TotalHours": 33
   },
   {
     "WorkedBy": "Dawn Reynolds",
     "Client": "BPV106",
     "CategoryCriteria": "Plan Test Results Review",
+    "TodayHours": 0.0,
     "TotalHours": 1
   },
   {
     "WorkedBy": "Dawn Reynolds",
     "Client": "BPV106",
     "CategoryCriteria": "Platform Global Mapping or Logic",
+    "TodayHours": 0.0,
     "TotalHours": 18.5
   },
   {
     "WorkedBy": "Dawn Reynolds",
     "Client": "JMS000",
     "CategoryCriteria": "Other",
+    "TodayHours": 0.0,
     "TotalHours": 5.5
   },
   {
     "WorkedBy": "Dawn Reynolds",
     "Client": "UAG137",
     "CategoryCriteria": "Corrective Action - Plan Build",
+    "TodayHours": 0.5,
     "TotalHours": 7.5
   },
   {
     "WorkedBy": "Dawn Reynolds",
     "Client": "UAG137",
     "CategoryCriteria": "Plan Build - Standard",
+    "TodayHours": 1.5,
     "TotalHours": 61.25
   },
   {
     "WorkedBy": "Dawn Reynolds",
     "Client": "UAG137",
     "CategoryCriteria": "Plan Test Results Review",
+    "TodayHours": 0.0,
     "TotalHours": 3.25
   }
 ]
