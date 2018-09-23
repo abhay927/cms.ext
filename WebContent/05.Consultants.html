@@ -29,7 +29,7 @@
     <div class="nemubar">
       <!-- Here is position of nemu bar -->
       <ul>
-        <li><a class="active" href="#home" onclick="showRegisterWindow()">New Consultant</a></li>
+        <li><a class="active" href="#home" onclick="#showRegisterWindow()">New Consultant</a></li>
         <li><a href="#filter">Filter</a></li>
       </ul>
     </div>
@@ -38,20 +38,21 @@
       <div id="consultants_div"></div>
     </div>
   </div>
-  <div id="assignToWindow" class="modalwindow" title="Assign to">
-      <form method="post" id="form2">
-      <ul>
-        <li><input type="checkbox" id="myself" value="1" /> Project 1 </li>
-        <li><input type="checkbox" id="myself" value="2" /> Project 2 </li>
-        <li><input type="checkbox" id="myself" value="3" />  Project 3 </li>
-        <li><input type="checkbox" id="myself" value="4" checked/>  Project 4 </li>
-        <li><input type="checkbox" id="myself" value="5" checked/>  Project 5 </li>
-        <li><input type="checkbox" id="myself" value="6" checked/>  Project 6 </li>
-      </ul>
-        <p align="center"><input class="botton999" type="button"
-            value="Save" onclick="assignToWindowSave()" /></p>
-      </form>
+
+  
+  <div id="assignToWindow" class="modalwindow" title="Assign to" style="overflow: hidden;">
+    <form method="post" id="form2">
+    <input id="filter" style="width: 100%; height: 20px; resize: none; color: gray; font-style: italic;" value="input filter"></input><br/><br/>
+    <div style="overflow: scroll; overflow-x: hidden; height:503px; border: 1px solid #99aabd;">
+    <ul>
+    </ul>
+    </div>
+      <br/>
+      <p align="center"><input class="botton999" id="submit" type="button"
+          value="Save" /></p>
+    </form>
   </div>
+  
 </body>
 <script id="consultantsTmpl" type="text/x-jsrender">  
       <table class="list_table" id="tbl">
@@ -78,11 +79,11 @@
             <td>01/01/2017</td>
             <td>Plan Build</td>
             <td>100.00</td>
-            <td style="text-align: left;">
+            <td style="text-align: left;"><a class="assigned" href="#" data-names="{{:Projects}}">
 {{for Projects}}
-{{:#data}}<br/>
+              {{:#data}}<br/>
 {{/for}} 
-</td>
+            </a></td>
             <td>20.00</td>
 			<td>22.50</td>
             <td>25.00</td>
@@ -96,50 +97,121 @@
     </table>
 </script>
 <script type="text/javascript">
-function assignToWindow(){
-  console.log($( "#assigned" ).is('[readonly]'));
-  if($( "#assigned" ).is('[readonly]')) {
-    return;
-  }
-  $( "#assignToWindow" ).dialog({
-        height: 300,
-        width: 200,
-        modal: true,
-        resizable:false
-   });
-}
 
-function assignToWindowSave(){
-  $( "#assignToWindow" ).dialog("close");
-}
+var allProjects = [];
+var selectedProject;
 
-function loadConcultants(){
+
+function loadConcultants(data){
   var myTemplate = $.templates("#consultantsTmpl");  
-  $.getJSON( "json/Consultants.json", function( data ) {
-    var nDate = normalizePivotTable(data, ["WorkedBy", "Client", "CategoryCriteria", "TotalHours"]);
-    var pDate = [];
-    var c, projects;
-    var lastConsultant = "";
-    $.each(nDate, function(index, value){
-      if(value['WorkedBy'] != lastConsultant){
-        lastConsultant = value['WorkedBy'];
-        c = {};
-        projects = [];
-        c["WorkedBy"] = value['WorkedBy'];
-        c["Projects"] = projects;
-        pDate.push(c);
-      } 
-      projects.push(value['Client'] + " / " + value['CategoryCriteria'] + " / " + value['TotalHours']);
-    });
-    var app = {p: pDate };  
-    myTemplate.link("#consultants_div", app);
-    $(".list_table").tablesorter();
+  var nDate = normalizePivotTable(data, ["WorkedBy", "Client", "CategoryCriteria", "TotalHours"]);
+  var pDate = [];
+  var c, projects;
+  var lastConsultant = "";
+  $.each(nDate, function(index, value){
+    if(value['WorkedBy'] != lastConsultant){
+      lastConsultant = value['WorkedBy'];
+      c = {};
+      projects = [];
+      c["WorkedBy"] = value['WorkedBy'];
+      c["Projects"] = projects;
+      pDate.push(c);
+    } 
+    projects.push(value['Client'] + " / " + value['CategoryCriteria'] + " / " + value['TotalHours']);
   });
+  var app = {p: pDate };  
+  myTemplate.link("#consultants_div", app);
+  $(".list_table").tablesorter();
 }
+
 
 $(document).ready(function() {
     $("#common").load("00.common.html");
-    loadConcultants();
+    datafiles = [
+      "json/Consultants.json", 
+      "json/Clients.json", 
+      "json/servicetype.json"
+    ];
+    $.ajaxs(
+    datafiles, 
+    function(datas){
+      loadConcultants(datas[0]);
+      for (var i = 0; i < datas[1].length; i++){
+        for (var j = 0; j < datas[2].length; j++){
+          var n = datas[1][i]["Name"] + " / " + datas[2][j]["ServiceType"];
+          allProjects.push(n);
+        }
+      }
+      //console.log(allProjects);
+      $(".assigned").on("click", function (){
+        selectedNames = $(this).attr("data-names").replace(/ \/ [0-9.]+/g, "").split(',');
+        console.log('selectedNames:', selectedNames);
+        $("#assignToWindow ul").empty();
+        allProjects.forEach(function(n){
+          if ($.inArray(n, selectedNames) >= 0){
+            $("#assignToWindow ul").append('<li><input type="checkbox" checked="true" value="' + n +'" />'+ n +'</li>');
+          } else {
+            $("#assignToWindow ul").append('<li><input type="checkbox" value="' + n +'" />'+ n +'</li>');
+          }
+        });
+        
+        $("#filter").val("input filter")
+        .select()
+        .css("color", "gray")
+        .css("font-style", "italic");
+
+        $( "#assignToWindow" ).dialog({
+          height: 623,
+          width: 400,
+          modal: true,
+          resizable:false,
+          close: function(){
+            $( "#assignToWindow" ).dialog("close");
+          },
+          show : {
+            effect : "blind",
+            duration : 500
+          },
+          hide : {
+            effect : "blind",
+            duration : 500
+          }
+        });
+        $( "#assignToWindow #filter" ).focus();
+      });
+    }, 
+    false);
+    
+    $( "#filter" )
+    .on( "keydown mousedown", function( event ) {
+        if ( event.keyCode === $.ui.keyCode.TAB &&
+            $( this ).autocomplete( "instance" ).menu.active ) {
+          event.preventDefault();
+        }
+        if($(this).val() == "input filter"){
+          $(this)
+          .val("")
+          .css("color", "black")
+          .css("font-style", "normal");
+        }
+    })
+    .autocomplete({
+      minLength: 0,
+      source: function( request, response ) {
+        var fr = $.ui.autocomplete.filter(allProjects, request.term);
+        $("li input").each(function(i, obj){
+          if ($.inArray($(obj).val(), fr) >= 0){
+            $(obj).parent().show();
+          } else {
+            $(obj).parent().hide();
+          }
+        });
+      }
+    });
+    
+    $("#assignToWindow #submit").on("click", function(){
+      $( "#assignToWindow" ).dialog("close");
+    })
   });
 </script>
 </html>
