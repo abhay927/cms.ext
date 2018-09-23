@@ -56,7 +56,7 @@
     </div>
       <br/>
       <p align="center"><input class="botton999" id="submit" type="button"
-          value="Save" onclick="assignToWindowSave()" /></p>
+          value="Save" /></p>
     </form>
   </div>
 </body>
@@ -83,7 +83,7 @@
             <td style="text-align: left;"><a href="99.ProjectUpdate.html">{{:CategoryCriteria}}</a></td>
             <td>{{:StartDate}}</td>
             <td>{{:LastUpdate}}</td>
-            <td style="text-align: left;" ><a href="#" data-names="{{:AssignedTo}}" onclick="showAssignWindow(this)">
+            <td style="text-align: left;" ><a class="assigned" href="#" data-names="{{:AssignedTo}}">
 {{for AssignedTo}}
             {{:#data}}<br/>
 {{/for}} 
@@ -98,30 +98,7 @@
     </table>
 </script>
 <script >
-function loadProjects(){
-  var myTemplate = $.templates("#myHoursTmpl");  
-  $.getJSON( "json/Projects.json", function( data ) {
-	  var filterDate = [];
-	  $.each(data, function(index, value){
-		  value['estimate'] = 200;
-		  value['remain'] = 200 - value['TotalWorkedHours'];
-		  value['progress'] = Math.round(value['TotalWorkedHours'] / 200 * 100);
-		  filterDate.push(value);
-	  });
-    var app = {p: filterDate };  
-    myTemplate.link("#projects_div", app);
-    $(".remaintd").each(function() {
-    	var t = $( this ).html();
-    	if (t.startsWith("-")){
-    	  $( this ).addClass( "warning" );
-    	  $( this ).next().addClass( "warning" );
-    	}
-    });
-    $(".list_table").tablesorter();
-    });
-}
-
-var all = [
+var allNames = [
   "Barbara Mora",
   "Christina Potter",
   "Dawn Reynolds",
@@ -142,89 +119,104 @@ var all = [
   "Tracie Salazar",
   "Valeria Smith"
 ];
-var names = [];
+var selectedNames = [];
 
-function showAssignWindow(elmnt){
-  names = $(elmnt).attr("data-names").split(',');
-  //console.log(names);
-  $("#assignToWindow ul").empty();
-  all.forEach(function(n){
-    if (jQuery.inArray(n, names) >= 0){
-      //console.log("n in names", n);
-      $("#assignToWindow ul").append('<li><input type="checkbox" checked="true" value="' + n +'" />'+ n +'</li>');
-    } else {
-      //console.log(n);
-      $("#assignToWindow ul").append('<li><input type="checkbox" value="' + n +'" />'+ n +'</li>');
-    }
-  });
-  $( "#assignToWindow" ).dialog({
-    height: 323,
-    width: 200,
-    modal: true,
-    resizable:false,
-    close: assignToWindowSave,
-    show : {
-      effect : "blind",
-      duration : 800
-    },
-    hide : {
-      effect : "blind",
-      duration : 800
-    }
-  });
-  $( "#assignToWindow #submit" ).focus();
-  $("#filter").focus(function(){
-    $(this).val("");
-    $(this).css("color", "black");
-    $(this).css("font-style", "normal");
-  });
-}
-
-function assignToWindowSave(){
-  $("#assignToWindow #filter").val("");
-  $( "#assignToWindow" ).dialog("close");
-}
-
-
-
-$( function() {
-
-  $( "#filter" )
-    // don't navigate away from the field on tab when selecting an item
-    .on( "keydown", function( event ) {
-      //console.log("onkeydown");
-      if ( event.keyCode === $.ui.keyCode.TAB &&
-          $( this ).autocomplete( "instance" ).menu.active ) {
-        event.preventDefault();
-      }
-    })
-    .autocomplete({
-      minLength: 0,
-      source: function( request, response ) {
-        var fr = new Set($.ui.autocomplete.filter(all, request.term));
-        $("li input").each(function(i, obj){
-          if (fr.has($(obj).val())){
-            $(obj).parent().show();
-          } else {
-            $(obj).parent().hide();
-          }
-        });
-      },
-      focus: function() {
-        // prevent value inserted on focus
-        return false;
-      },
-      select: function( event, ui ) {
-        return false;
-      }
+function loadProjects(){
+  var myTemplate = $.templates("#myHoursTmpl");  
+  $.getJSON( "json/Projects.json", function( data ) {
+	  var filterDate = [];
+	  $.each(data, function(index, value){
+		  value['estimate'] = 200;
+		  value['remain'] = 200 - value['TotalWorkedHours'];
+		  value['progress'] = Math.round(value['TotalWorkedHours'] / 200 * 100);
+		  filterDate.push(value);
+	  });
+    var app = {p: filterDate };  
+    myTemplate.link("#projects_div", app);
+    $(".remaintd").each(function() {
+    	var t = $( this ).html();
+    	if (t.startsWith("-")){
+    	  $( this ).addClass( "warning" );
+    	  $( this ).next().addClass( "warning" );
+    	}
     });
-} );
+    
+    $(".assigned").on("click", function (){
+      selectedNames = $(this).attr("data-names").split(',');
+      $("#assignToWindow ul").empty();
+      allNames.forEach(function(n){
+        if ($.inArray(n, selectedNames) >= 0){
+          $("#assignToWindow ul").append('<li><input type="checkbox" checked="true" value="' + n +'" />'+ n +'</li>');
+        } else {
+          $("#assignToWindow ul").append('<li><input type="checkbox" value="' + n +'" />'+ n +'</li>');
+        }
+      });
+      
+      $("#filter").val("input filter")
+      .select()
+      .css("color", "gray")
+      .css("font-style", "italic");
+
+      $( "#assignToWindow" ).dialog({
+        height: 323,
+        width: 200,
+        modal: true,
+        resizable:false,
+        close: function(){
+          $( "#assignToWindow" ).dialog("close");
+        },
+        show : {
+          effect : "blind",
+          duration : 500
+        },
+        hide : {
+          effect : "blind",
+          duration : 500
+        }
+      });
+      $( "#assignToWindow #filter" ).focus();
+    });
+    
+    $(".list_table").tablesorter();
+  });
+}
 
 $(document).ready(function() {
  
   $("#common").load("00.common.html");
   
   loadProjects();
+  
+  $( "#filter" )
+  .on( "keydown mousedown", function( event ) {
+      if ( event.keyCode === $.ui.keyCode.TAB &&
+          $( this ).autocomplete( "instance" ).menu.active ) {
+        event.preventDefault();
+      }
+      if($(this).val() == "input filter"){
+        $(this)
+        .val("")
+        .css("color", "black")
+        .css("font-style", "normal");
+      }
+  })
+  .autocomplete({
+    minLength: 0,
+    source: function( request, response ) {
+      var fr = $.ui.autocomplete.filter(allNames, request.term);
+      $("li input").each(function(i, obj){
+        if ($.inArray($(obj).val(), fr) >= 0){
+          $(obj).parent().show();
+        } else {
+          $(obj).parent().hide();
+        }
+      });
+    }
   });
+  
+  $("#assignToWindow #submit").on("click", function(){
+    $( "#assignToWindow" ).dialog("close");
+  })
+});
 </script>
 </html>
