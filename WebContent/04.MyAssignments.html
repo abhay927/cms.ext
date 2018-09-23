@@ -15,8 +15,8 @@
 .noshow {
   display: none;
 }
-.nemubar li {
-  width: 120px;
+.nemubar li a {
+  width: 100px;
   text-align: left;
 }
 </style>
@@ -37,8 +37,8 @@
       <!-- Here is position of nemu bar -->
       <form>
       <ul>
-        <li><a id="register" href="#home" onclick="switchshowreg()">Register</a></li>
-        <li><a id="closed" href="#home" onclick="switchshowreg()">Closed Projects</a></li>
+        <li><a id="register" href="#" onclick="toEdit()">Register</a></li>
+        <li><a id="closed" href="#" onclick="#loadAssignments('json/assignmentHistory.json')">Closed Projects</a></li>
       </ul>
       </form>
     </div>
@@ -59,18 +59,20 @@
         <th width="80px">Worked By</th>
         <th width="50px">Client</th>
         <th width="180px">Category Criteria</th>
-        <th class="info">Start Date</th>
+        <th class="info" width="100px">Start Date</th>
         <th class="info">Estimated Hours</th>
         <th class="info">Accomplished Hours</th>
         <th class="info">Remain Hours</th>
-        <th class="info">My Total Hours</th>
-        <th class="reg noshow" width="8%">Worked Date</th>
+        <th class="info" width="80px">My Total Hours</th>
+        <th class="info" width="80px">Hours of Today</th>
+        <th class="reg noshow" width="100px">Worked Date</th>
         <th class="reg noshow" width="5%">Plan Type</th>
         <th class="reg noshow" width="5%">Platform</th>
         <th class="reg noshow" width="10%">Group Name</th>
         <th class="reg noshow" width="10%">Single Plan Identifiers</th>
         <th class="reg noshow">Comments</th>
-        <th class="reg noshow" width="6%"># of records</th>
+        <th class="reg noshow" width="80px"># of records</th>
+        <th class="reg noshow" width="80px">Hours of Today</th>
         </tr>
         </thead>
         <tbody>
@@ -84,6 +86,7 @@
           <td class="info">135.00</td>
           <td class="info">65.00</td>
           <td class="info"><a href="04.RegisterHours.html?WorkedBy={{:WorkedBy}}&Client={{:Client}}&CategoryCriteria={{:CategoryCriteria}}">{{:TotalHours}}</a></td>
+          <td class="info">{{:TodayHours}}</td>
           <td class="reg noshow"><input width="100%" type="text" class="dp tf_120 editable" value="" /></td>
           <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="" /></td>
           <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
@@ -91,6 +94,7 @@
           <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
           <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
           <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:""}}" /></td>
+          <td class="reg noshow"><input width="100%" type="text" class="tf_120 editable" value="{{:TodayHours}}" /></td>
           </tr>
 {{/for}} 
         </tbody> 
@@ -107,7 +111,7 @@ function loadAssignments(){
 	  	});
 }
 
-function switchshowreg(){
+function toEdit(){
   var t = $("#register").html();
   if (t == "Register"){
     $("#register").html("Save");

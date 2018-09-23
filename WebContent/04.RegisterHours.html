@@ -31,10 +31,11 @@
       <form>
       <ul>
         <li><a href="#filter">Filter</a></li>
-        <li><a href="#filter"><input type="radio" name="period" value="Myself only" checked style="float:left" />Today</a></li>
+        <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />Today</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />1 Week</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />2 week</a></li>
         <li><a href="#filter"><input type="radio" name="period" value="Myself only"  style="float:left" />4 week</a></li>
+        <li><a href="#filter"><input type="radio" name="period" value="Myself only" checked style="float:left" />All</a></li>
         <li><a href="#filter">Export to CSV</a></li>
       </ul>
       </form>
@@ -49,34 +50,38 @@
       <table class="list_table" id="tbl">
         <thead>
           <tr>
-            <th width="10%">Worked By</th>
-            <th width="10%">Work Date</th>
-            <th width="6%">Client</th>
+            <th width="58px">Register Time</th>
+            <th width="58px">Work Date</th>
+            <th width="50px">Client</th>
             <th width="15%">Category Criteria</th>
             <th width="5%">Plan Type</th>
             <th width="5%">Platform</th>
             <th width="10%">Group Name</th>
-            <th width="10%">Single Plan Identifiers</th>
-            <th width="5%"># of Records</th>
-            <th width="30%">Work Description</th>
-            <th width="10%">Registered Hours</th>
-            <th width="10%">Payed Date</th>
-            <th width="10%">Invoice Number</th>
+            <th width="100px">Single Plan Identifiers</th>
+<!--
+            <th width="30px"># of Records</th>
+-->
+            <th>Work Description</th>
+            <th width="58px">Registered Hours</th>
+            <th width="58px">Payed Date</th>
+            <th width="58px">Invoice Number</th>
           </tr>
         </thead>
         <tbody>
 {{for p}} 
           <tr>
-            <td>{{:WorkedBy}}</td>
+            <td>{{:WorkedDate}} 20:17:29</td>
             <td>{{:WorkedDate}}</td>
             <td>{{:Client}}</td>
-            <td>{{:CategoryCriteria}}</td>
+            <td style="text-align: left;">{{:CategoryCriteria}}</td>
             <td>{{:PlanType}}</td>
             <td>{{:Platform}}</td>
             <td>{{:GroupName}}</td>
             <td>{{:SinglePlanIdentifiers}}</td>
+<!--
             <td>{{:ofRecords}}</td>
-            <td>{{:CommentsDetails}}</td>
+-->
+            <td style="text-align: left;">{{:CommentsDetails}}</td>
             <td>{{:TotalHours}}</td>
             <td>{{:ResourcePaidDate}}</td>
             <td class="operation">{{:InvoiceNumber}}</td>
