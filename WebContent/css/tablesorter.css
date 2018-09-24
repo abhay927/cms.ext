@@ -5,7 +5,7 @@
 .tablesorter {
 	width: 100%;
 	background-color: #fff;
-	margin: 10px 0 15px;
+/*	margin: 10px 0 15px; */
 	text-align: left;
 	border-spacing: 0;
 	border: #cdcdcd 1px solid;
@@ -23,7 +23,7 @@
 	font: 12px/18px Arial, Sans-serif;
 	font-weight: bold;
 	color: #000;
-	background-color: #99bfe6;
+	background-color: #DFECFC;
 	border-collapse: collapse;
 	padding: 4px;
 	text-shadow: 0 1px 0 rgba(204, 204, 204, 0.7);
