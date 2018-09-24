@@ -3,12 +3,15 @@
 <head>
 <title>Production List</title>
 <link rel="stylesheet" type="text/css" href="css/jmscms.css" />
-<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
 
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="js/jsviews.js"></script>  
-<script type="text/javascript" src="js/jquery-ui.js"></script>
-<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
+<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
 <style>
 .warning{
   color: red;
@@ -62,7 +65,7 @@
 </body>
 
 <script id="myHoursTmpl" type="text/x-jsrender">  
-      <table class="list_table" id="tbl">
+      <table class="list_table tablesorter" id="tbl">
         <thead>
           <tr>
             <th width="8%">Client</th>

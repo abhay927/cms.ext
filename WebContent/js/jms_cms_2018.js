@@ -49,20 +49,18 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-//get parameter from url
+//get parameters from url
 function getParameters(url) {
   var result = {};
   if (!url) url = window.location.href;
   var a = document.createElement('a');
   a.href = url;
-  console.log(a.search);
-  console.log(decodeURIComponent(a.search));
+
   var search = decodeURIComponent(a.search);
   var r = search.substring(1).split('&');
 
   r.forEach(function(p){
     var kv = p.split('=');
-    console.log(kv[0], ":", kv[1]);
     result[kv[0]] = kv[1];
   });
   return result;
@@ -76,7 +74,4 @@ function isMatch(obj, filter){
     }
   }
   return true;
-}
-function filter(data, filter){
-  return [];
 }

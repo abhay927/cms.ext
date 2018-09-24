@@ -3,12 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/jmscms.css" />
-<link rel="stylesheet" type="text/css" href="js/jquery-ui.css" />
 
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="js/jsviews.js"></script>  
-<script type="text/javascript" src="js/jquery-ui.js"></script>
-<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
+<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
+
 <script type="text/javascript" src="js/jms_cms_2018.js"></script>
 <script type="text/javascript" src="js/loadTestData.js"></script>
 <title>JMS Report Management System</title>
@@ -55,7 +59,7 @@
   
 </body>
 <script id="consultantsTmpl" type="text/x-jsrender">  
-      <table class="list_table" id="tbl">
+      <table class="list_table tablesorter" id="tbl">
         <thead>
           <tr>
             <th width="10%">Name</th>
@@ -145,7 +149,7 @@ $(document).ready(function() {
       //console.log(allProjects);
       $(".assigned").on("click", function (){
         selectedNames = $(this).attr("data-names").replace(/ \/ [0-9.]+/g, "").split(',');
-        console.log('selectedNames:', selectedNames);
+
         $("#assignToWindow ul").empty();
         allProjects.forEach(function(n){
           if ($.inArray(n, selectedNames) >= 0){
