@@ -62,7 +62,7 @@
           value="Save" /></p>
     </form>
   </div>
-</body>
+
 
 <script id="myHoursTmpl" type="text/x-jsrender">  
       <table class="list_table tablesorter" id="tbl">
@@ -73,7 +73,7 @@
             <th width="10%">Start Date</th>
             <th width="10%">Last Update Date</th>
             <th width="15%">Assigned To</th>
-            <th width="8%">Estimated Hours</th>
+            <th width="8%" class="sorter-false">Estimated Hours</th>
             <th width="10%">Total Worked Hours</th>
             <th width="10%">Remain Hours</th>
             <th width="8%">Progress</th>
@@ -137,8 +137,9 @@ function loadProjects(){
     var app = {p: filterDate };  
     myTemplate.link("#projects_div", app);
     $(".remaintd").each(function() {
-    	var t = $( this ).html();
-    	if (t.startsWith("-")){
+    	var t = $( this ).html().trim();
+    	console.log('"' + t + '"');
+    	if (t.search("-") == 0 ){
     	  $( this ).addClass( "warning" );
     	  $( this ).next().addClass( "warning" );
     	}
@@ -222,4 +223,5 @@ $(document).ready(function() {
   })
 });
 </script>
+</body>
 </html>
