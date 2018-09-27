@@ -320,11 +320,77 @@ table {
 
 .modalwindow {
   display: none; /* Hidden by default */
+  overflow: hidden;
 }
 
-.modalwindow ul {
-  list-style-type: none;
-  padding: 0;
+.pw-menu {
+  width: 100%;
+  height: "28px";
+  border: 0px solid #99aabd;
+}
+
+.pw-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pw-menu li {
+    float: left;
+}
+
+.pw-menu .op-ico {
+    float: right;
+}
+
+.op-ico {
+  padding: 10, 0, 10, 0;
+}
+
+.pw-section {
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 35px;
+  bottom: 3px;
+  border: 1px solid #99aabd;
+  background: white;
+  width: 94%;
+}
+
+#assignments_div {
+  width: 100%;
+  height: 100%;
+}
+
+.pw-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pw-table td {
+  text-align: center;
+  border: 0px dotted black;
+}
+.pw-table input {
+  text-align: center;
+  border: 0px dotted black;
+}
+
+.pw-table tr:hover {
+    background-color: #DFECFC;
+}
+
+.filter-init {
+  width: 250px; 
+  height: 20px; 
+  resize: none; 
+  color: gray; 
+  font-style: italic;
+}
+.filter-active {
+  color: black;
+  font-style: normal;
 }
 
 td.leftalign {
