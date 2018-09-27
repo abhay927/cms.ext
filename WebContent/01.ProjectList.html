@@ -50,16 +50,21 @@
     </div>
   </div>
   
-  <div id="assignToWindow" class="modalwindow" title="Assign to" style="overflow: hidden;">
+  <div id="assignToWindow" class="modalwindow" title="Assign to">
     <form method="post" id="form2">
-    <input id="filter" style="width: 100%; height: 20px; resize: none; color: gray; font-style: italic;" value="input filter"></input><br/><br/>
-    <div style="overflow: scroll; overflow-x: hidden; height:203px; border: 1px solid #99aabd;">
-    <ul>
-    </ul>
+    <div class="pw-menu">
+      <ul>
+        <li><input id="filter" class="filter_init" value="input filter"></input></li>
+        <li class="op-ico ds" onclick="pwPlus(this)"><img src="images/plus_24px.png" align="middle" alt="plus" /></li>
+        <li class="op-ico" onclick="pwPlus(this)" style="display: none;"><img src="images/minus_24px.png" align="middle" alt="minus" /></li>
+        <li class="op-ico ds" onclick="pwEdit(this)"><img src="images/pencil_24px.png" align="middle" alt="edit" /></li>
+        <li class="op-ico" onclick="pwEdit(this)" style="display: none;"><img src="images/ok_24px.png" align="middle" alt="confirm" /></li>
+      </ul>
     </div>
-      <br/>
-      <p align="center"><input class="botton999" id="submit" type="button"
-          value="Save" /></p>
+    <div class="pw-section" >
+    <div id="assignments_div">
+    </div>
+    </div>
     </form>
   </div>
 
@@ -86,7 +91,7 @@
             <td style="text-align: left;"><a href="99.ProjectUpdate.html">{{:CategoryCriteria}}</a></td>
             <td>{{:StartDate}}</td>
             <td>{{:LastUpdate}}</td>
-            <td style="text-align: left;" ><a class="assigned" href="#" data-names="{{:AssignedTo}}">
+            <td style="text-align: left;" ><a class="assigned" href="#" data-names="{{:AssignedTo}}" data-project="{{:Client}} {{:CategoryCriteria}}">
 {{for AssignedTo}}
             {{:#data}}<br/>
 {{/for}} 
@@ -99,6 +104,30 @@
 {{/for}} 
         </tbody> 
     </table>
+</script>
+<script id="assignmentTmpl" type="text/x-jsrender">
+    <table class="pw-table" id="assignment-table" width="350px">
+    <thead>
+    <tr>
+    <th width="20px"> </th>
+    <th width="50%">Name</th>
+    <th width="15%">Assigned</th>
+    <th width="15%">Worked</th>
+    <th width="15%">AWH</th>
+    </tr>
+    </thead>
+    <tbody>
+{{for p}} 
+    <tr>
+    <td align="center"><input type="checkbox" value="{{:#data}}" /></td>
+    <td><a href="#">{{:#data}}</a></td>
+    <td><input width="100%" type="text" class="tf_120 editable" value="50" readonly/></td>
+    <td><input width="100%" type="text" class="tf_120 editable" value="32.75" readonly/></td>
+    <td><input width="100%" type="text" class="tf_120 editable" value="28" readonly/></td>
+    </tr>
+{{/for}} 
+    </tbody>
+    </table> 
 </script>
 <script >
 var allNames = [
@@ -123,8 +152,14 @@ var allNames = [
   "Valeria Smith"
 ];
 var selectedNames = [];
+var showNames = new Set();
 
 function loadProjects(){
+  // assigned table in popup window
+  var assignmengTlt = $.templates("#assignmentTmpl"); 
+  assignmengTlt.link("#assignments_div", {p: allNames });
+  
+  
   var myTemplate = $.templates("#myHoursTmpl");  
   $.getJSON( "json/Projects.json", function( data ) {
 	  var filterDate = [];
@@ -134,11 +169,12 @@ function loadProjects(){
 		  value['progress'] = Math.round(value['TotalWorkedHours'] / 200 * 100);
 		  filterDate.push(value);
 	  });
-    var app = {p: filterDate };  
-    myTemplate.link("#projects_div", app);
+	  
+    myTemplate.link("#projects_div", {p: filterDate });
+    $(".list_table").tablesorter();
+   
     $(".remaintd").each(function() {
     	var t = $( this ).html().trim();
-    	console.log('"' + t + '"');
     	if (t.search("-") == 0 ){
     	  $( this ).addClass( "warning" );
     	  $( this ).next().addClass( "warning" );
@@ -147,26 +183,34 @@ function loadProjects(){
     
     $(".assigned").on("click", function (){
       selectedNames = $(this).attr("data-names").split(',');
-      $("#assignToWindow ul").empty();
-      allNames.forEach(function(n){
-        if ($.inArray(n, selectedNames) >= 0){
-          $("#assignToWindow ul").append('<li><input type="checkbox" checked="true" value="' + n +'" />'+ n +'</li>');
+      showNames.clear();
+      showNames = new Set(selectedNames);
+      $("#assignments_div tbody tr").each(function(){
+        $(".pw-menu .op-ico").css("display", "none");
+        $(".pw-menu .ds").css("display", "block");
+        var n = $("input[type=checkbox]", this).val();
+        //console.log(n);
+        if (selectedNames.includes(n)){
+          $("input[type=checkbox]", this).prop( "checked", true );
+          $(this).show();
+          $("td:nth-child(3) input", this).val('50');
+          $("td:nth-child(4) input", this).val('37.50');
         } else {
-          $("#assignToWindow ul").append('<li><input type="checkbox" value="' + n +'" />'+ n +'</li>');
+          $(this).hide();
+          $("td:nth-child(3) input", this).val('0');
+          $("td:nth-child(4) input", this).val('0');
         }
       });
       
-      $("#filter").val("input filter")
-      .select()
-      .css("color", "gray")
-      .css("font-style", "italic");
-
+      // show popup windows
       $( "#assignToWindow" ).dialog({
-        height: 323,
-        width: 200,
+        title : "Assign '" + $(this).attr("data-project") + "' To:",
+        height: 260,
+        width: 400,
         modal: true,
         resizable:false,
         close: function(){
+          $( "#assignToWindow input[type=checkbox]").prop( "checked", false );
           $( "#assignToWindow" ).dialog("close");
         },
         show : {
@@ -178,11 +222,53 @@ function loadProjects(){
           duration : 500
         }
       });
-      $( "#assignToWindow #filter" ).focus();
+      
+      // init filter style
+      $("#filter").val("input filter")
+      .removeClass("filter-active")
+      .addClass("filter-init")
+      .select()
+      .focus();
+      
     });
-    
-    $(".list_table").tablesorter();
+
   });
+}
+
+function pwEdit(elm){
+  var l = $("img", elm).attr( "alt");
+  if(l === 'edit'){
+    $(elm).next().css("display", "block");
+    $(elm).css("display", "none");
+    $(".editable").prop("readonly", false);
+  }
+  if(l === 'confirm'){
+    $(elm).prev().css("display", "block");
+    $(elm).css("display", "none");
+    $(".editable").prop("readonly", true);
+  }
+}
+function pwPlus(elm){
+  $("#filter").val('');
+  var l = $("img", elm).attr( "alt");
+  if (l === 'plus') {
+    $(elm).next().css("display", "block");
+    $(elm).css("display", "none");
+    $("#assignment-table tbody tr").each(function(index, tr){
+      $(tr).show();
+      showNames.add($("input[type=checkbox]", tr).val());
+    });
+  }
+  if (l === 'minus') {
+    $(elm).prev().css("display", "block");
+    $(elm).css("display", "none");
+    $("#assignment-table tbody tr").each(function(index, tr){
+      if(!$("input[type=checkbox]", tr).prop("checked")){
+        showNames.delete($("input[type=checkbox]", tr).val());
+        $(tr).hide();
+      }
+    });
+  }
 }
 
 $(document).ready(function() {
@@ -200,19 +286,24 @@ $(document).ready(function() {
       if($(this).val() == "input filter"){
         $(this)
         .val("")
-        .css("color", "black")
-        .css("font-style", "normal");
+        .addClass("filter-active");
       }
   })
   .autocomplete({
     minLength: 0,
     source: function( request, response ) {
       var fr = $.ui.autocomplete.filter(allNames, request.term);
-      $("li input").each(function(i, obj){
-        if ($.inArray($(obj).val(), fr) >= 0){
-          $(obj).parent().show();
-        } else {
-          $(obj).parent().hide();
+      console.log("fns", fr);
+      console.log("showNames", showNames);
+      $("#assignment-table tbody tr").each(function(i, tr){
+        var n = $("input[type=checkbox]", tr).val();
+        console.log(n);
+        if(showNames.has(n)){
+          if ($.inArray(n, fr) >= 0){
+            $(tr).show();
+          } else {
+            $(tr).hide();
+          }
         }
       });
     }
