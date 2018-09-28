@@ -50,7 +50,7 @@
     <form method="post" id="form2">
     <div class="pw-menu">
       <ul>
-        <li><input id="filter" class="filter_init" value="" placeholder="filter"></input></li>
+        <li><input id="filter" class="filter_init" size="30" value="" placeholder="filter"></input></li>
         <li class="op-ico ds" onclick="pwShowMore(this)"><img src="images/plus_24px.png" align="middle" alt="plus" /></li>
         <li class="op-ico" onclick="pwShowLess(this)"><img src="images/minus_24px.png" align="middle" alt="minus" /></li>
         <li class="op-ico ds" onclick="pwEdit(this)"><img src="images/pencil_24px.png" align="middle" alt="edit" /></li>
@@ -107,7 +107,7 @@
     <tr>
     <th width="20px"> </th>
     <th width="50%">Name</th>
-    <th width="15%">Assigned</th>
+    <th width="50px">Assigned</th>
     <th width="15%">Worked</th>
     <th width="15%">AWH</th>
     </tr>
@@ -115,9 +115,9 @@
     <tbody>
 {{for p}} 
     <tr>
-    <td align="center"><input type="checkbox" value="{{:#data}}" /></td>
+    <td align="center"><input type="checkbox" value="{{:#data}}" disabled/></td>
     <td><a href="#">{{:#data}}</a></td>
-    <td><input width="100%" type="text" class="tf_120 editable" value="50" readonly/></td>
+    <td><input type="text" size="6" class="editable" value="50" readonly/></td>
     <td>32.75</td>
     <td>28</td>
     </tr>
@@ -181,7 +181,7 @@ function loadProjects(){
     
     // add event handler
     $(".assigned").on("click", function (){
-      assignToWindowInit($(this).attr("data-names").split(','));
+      assignToWindowInit( $(this).attr("data-names").split(',') );
       
       // show popup windows
       $( "#assignToWindow" ).dialog({
@@ -207,7 +207,7 @@ function loadProjects(){
   });
 }
 
-function assignToWindowInit(assignedNames){
+function assignToWindowInit( assignedNames ){
   showNames.clear();
   showNames = new Set(assignedNames);
   $("#assignments_div tbody tr").each(function(){
@@ -227,6 +227,15 @@ function assignToWindowInit(assignedNames){
     }
   });
   
+  $("#assignments_div input[type=checkbox]").on("change", function(){
+    if(this.checked) {
+      console.log($("input[type=text]", $(this).parent().parent()).val());
+      $(".editable", $(this).parent().parent()).addClass("enable");
+    } else {
+      $(".editable", $(this).parent().parent()).removeClass("enable");
+    }
+  });
+  
   filterInit();
 }
 
@@ -237,13 +246,20 @@ function filterInit(){
 function pwEdit(elm){
     $(elm).next().css("display", "block");
     $(elm).css("display", "none");
-    $(".editable").prop("readonly", false);
+    $("#assignments_div input[type=checkbox]").each(function(){
+      $(this).prop("disabled", false);
+      if (this.checked){
+        $(".editable", $(this).parent().parent()).addClass("enable").prop("readonly", false);
+      }
+    });
 }
 function pwSave(elm){
     $(elm).prev().css("display", "block");
     $(elm).css("display", "none");
-    $(".editable").prop("readonly", true);
+    $("#assignments_div input[type=checkbox]").prop("disabled", true);
+    $(".editable").prop("readonly", true).removeClass("enable").prop("readonly", true);
 }
+
 function pwShowMore(elm){
   filterInit();
   $(elm).next().css("display", "block");
