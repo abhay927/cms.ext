@@ -227,6 +227,7 @@ function assignToWindowInit( assignedNames ){
     }
   });
   
+  // checkbox onchange event handler
   $("#assignments_div input[type=checkbox]").on("change", function(){
     if(this.checked) {
       console.log($("input[type=text]", $(this).parent().parent()).val());
