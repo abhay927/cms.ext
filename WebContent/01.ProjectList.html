@@ -50,7 +50,7 @@
     <form method="post" id="form2">
     <div class="pw-menu">
       <ul>
-        <li><input id="filter" class="filter_init" value="input filter"></input></li>
+        <li><input id="filter" class="filter_init" value="" placeholder="filter"></input></li>
         <li class="op-ico ds" onclick="pwShowMore(this)"><img src="images/plus_24px.png" align="middle" alt="plus" /></li>
         <li class="op-ico" onclick="pwShowLess(this)"><img src="images/minus_24px.png" align="middle" alt="minus" /></li>
         <li class="op-ico ds" onclick="pwEdit(this)"><img src="images/pencil_24px.png" align="middle" alt="edit" /></li>
@@ -231,11 +231,7 @@ function assignToWindowInit(assignedNames){
 }
 
 function filterInit(){
-  $("#filter").val("input filter")
-  .removeClass("filter-active")
-  .addClass("filter-init")
-  .select()
-  .focus();
+  $("#filter").val("").focus();
 }
 
 function pwEdit(elm){
@@ -281,11 +277,6 @@ $(document).ready(function() {
       if ( event.keyCode === $.ui.keyCode.TAB &&
           $( this ).autocomplete( "instance" ).menu.active ) {
         event.preventDefault();
-      }
-      if($(this).val() == "input filter"){
-        $(this)
-        .val("")
-        .addClass("filter-active");
       }
   })
   .autocomplete({
