@@ -26,7 +26,7 @@
     <!-- Here is name of the list -->
     <div class="toolbar">
       <div class="tab">
-        <button class="tablinks" >My Work Hours</button>
+        <button id="tab_title" >My Hours</button>
       </div>
     </div>
     <div class="nemubar">
@@ -95,30 +95,38 @@
 </script>
 <script type="text/javascript">
 function loadWorkhours(){
-    var paras = getParameters(window.location.href);
-    
-	  var myTemplate = $.templates("#myHoursTmpl");  
-	  $.getJSON( "json/AssignmentData.json", function( data ) {
-		  var filterDate = [];
-		  data.forEach(function(d){
-		    if (isMatch(d, paras)){
-		      filterDate.push(d);
-		    }
-		  });
-	    var app = {p: filterDate };  
-	    myTemplate.link("#myHours_div", app);
-	    
-	    $(".operation").each(function() {
-	    	if ($( this ).html() == "" && $( this ).prev().html() == ""){
-	    	  $( this ).append('<img src="images/edit.gif" alt="edit op" onclick="op()"/> ');
-	    	  $( this ).append('<img src="images/del.gif" alt="del op"  onclick="op()"/>');
-	    	}
-	    });
-	    $(".list_table").tablesorter({
-	    	sortList:[[1,1]]
-	    });
+  var paras = getParameters(window.location.href);
+  console.log(paras);
+  var myTemplate = $.templates("#myHoursTmpl");  
+  // BilledClosedItems.json
+  // AssignmentData.json
+  $.getJSON( "json/BilledClosedItems.json", function( data ) {
+	  var filterDate = [];
+	  data.forEach(function(d){
+	    if (isMatch(d, paras)){
+	      filterDate.push(d);
+	    }
 	  });
-	}
+    var app = {p: filterDate };  
+    myTemplate.link("#myHours_div", app);
+    
+    $(".operation").each(function() {
+    	if ($( this ).html() == "" && $( this ).prev().html() == ""){
+    	  $( this ).append('<img src="images/edit.gif" alt="edit op" onclick="op()"/> ');
+    	  $( this ).append('<img src="images/del.gif" alt="del op"  onclick="op()"/>');
+    	}
+    });
+    $(".list_table").tablesorter({
+    	sortList:[[1,1]]
+    });
+  });
+  
+  if("WorkedBy" in paras){
+    var t = $("#tab_title").html().replace("My", paras["WorkedBy"]);
+    console.log(t);
+    $("#tab_title").html(t);
+  }
+}
 
 function op(){
 	console.log("onclick op");

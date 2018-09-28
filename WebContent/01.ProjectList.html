@@ -116,7 +116,7 @@
 {{for p}} 
     <tr>
     <td align="center"><input type="checkbox" value="{{:#data}}" disabled/></td>
-    <td><a href="#">{{:#data}}</a></td>
+    <td><a href="04.RegisterHours.html?WorkedBy={{:#data}}">{{:#data}}</a></td>
     <td><input type="text" size="6" class="editable" value="50" readonly/></td>
     <td>32.75</td>
     <td>28</td>
@@ -181,7 +181,7 @@ function loadProjects(){
     
     // add event handler
     $(".assigned").on("click", function (){
-      assignToWindowInit( $(this).attr("data-names").split(',') );
+      assignToWindowInit( $(this).attr("data-names").split(','), $(this).attr("data-project"));
       
       // show popup windows
       $( "#assignToWindow" ).dialog({
@@ -207,17 +207,32 @@ function loadProjects(){
   });
 }
 
-function assignToWindowInit( assignedNames ){
+function proj2CCC(proj){
+  var i = proj.indexOf(' ', 0);
+  return {"Client":proj.substring(0, i), "CategoryCriteria":proj.substring(i+1)};
+}
+
+function assignToWindowInit( assignedNames, project ){
   showNames.clear();
   showNames = new Set(assignedNames);
   $("#assignments_div tbody tr").each(function(){
     $(".pw-menu .op-ico").css("display", "none");
     $(".pw-menu .ds").css("display", "block");
+    
+    // add hours detail link
+    var h = $("td:nth-child(2) a", this).attr('href');
+    var ccc = proj2CCC(project);
+    console.log(ccc);
+    h = h + "&Client=" + ccc['Client'];
+    h = h + "&CategoryCriteria=" + ccc['CategoryCriteria'];
+    $("td:nth-child(2) a", this).attr('href', h);
+    
     var n = $("input[type=checkbox]", this).val();
     //console.log(n);
     if (assignedNames.includes(n)){
       $("input[type=checkbox]", this).prop( "checked", true );
       $(this).show();
+
       $("td:nth-child(3) input", this).val('50');
       $("td:nth-child(4)", this).html('37.50');
     } else {
