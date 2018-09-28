@@ -16,10 +16,6 @@
 .warning{
   color: red;
 }
-.focus {
-  color: black;
-  font-style: normal;
-}
 </style>
 </head>
 <body>
@@ -55,10 +51,10 @@
     <div class="pw-menu">
       <ul>
         <li><input id="filter" class="filter_init" value="input filter"></input></li>
-        <li class="op-ico ds" onclick="pwPlus(this)"><img src="images/plus_24px.png" align="middle" alt="plus" /></li>
-        <li class="op-ico" onclick="pwPlus(this)" style="display: none;"><img src="images/minus_24px.png" align="middle" alt="minus" /></li>
+        <li class="op-ico ds" onclick="pwShowMore(this)"><img src="images/plus_24px.png" align="middle" alt="plus" /></li>
+        <li class="op-ico" onclick="pwShowLess(this)"><img src="images/minus_24px.png" align="middle" alt="minus" /></li>
         <li class="op-ico ds" onclick="pwEdit(this)"><img src="images/pencil_24px.png" align="middle" alt="edit" /></li>
-        <li class="op-ico" onclick="pwEdit(this)" style="display: none;"><img src="images/ok_24px.png" align="middle" alt="confirm" /></li>
+        <li class="op-ico" onclick="pwSave(this)"><img src="images/ok_24px.png" align="middle" alt="confirm" /></li>
       </ul>
     </div>
     <div class="pw-section" >
@@ -122,8 +118,8 @@
     <td align="center"><input type="checkbox" value="{{:#data}}" /></td>
     <td><a href="#">{{:#data}}</a></td>
     <td><input width="100%" type="text" class="tf_120 editable" value="50" readonly/></td>
-    <td><input width="100%" type="text" class="tf_120 editable" value="32.75" readonly/></td>
-    <td><input width="100%" type="text" class="tf_120 editable" value="28" readonly/></td>
+    <td>32.75</td>
+    <td>28</td>
     </tr>
 {{/for}} 
     </tbody>
@@ -151,7 +147,7 @@ var allNames = [
   "Tracie Salazar",
   "Valeria Smith"
 ];
-var selectedNames = [];
+
 var showNames = new Set();
 
 function loadProjects(){
@@ -159,9 +155,8 @@ function loadProjects(){
   var assignmengTlt = $.templates("#assignmentTmpl"); 
   assignmengTlt.link("#assignments_div", {p: allNames });
   
-  
-  var myTemplate = $.templates("#myHoursTmpl");  
   $.getJSON( "json/Projects.json", function( data ) {
+    // create mock data
 	  var filterDate = [];
 	  $.each(data, function(index, value){
 		  value['estimate'] = 200;
@@ -170,9 +165,12 @@ function loadProjects(){
 		  filterDate.push(value);
 	  });
 	  
+	  // 
+	  var myTemplate = $.templates("#myHoursTmpl");  
     myTemplate.link("#projects_div", {p: filterDate });
     $(".list_table").tablesorter();
    
+    // show warning
     $(".remaintd").each(function() {
     	var t = $( this ).html().trim();
     	if (t.search("-") == 0 ){
@@ -181,26 +179,9 @@ function loadProjects(){
     	}
     });
     
+    // add event handler
     $(".assigned").on("click", function (){
-      selectedNames = $(this).attr("data-names").split(',');
-      showNames.clear();
-      showNames = new Set(selectedNames);
-      $("#assignments_div tbody tr").each(function(){
-        $(".pw-menu .op-ico").css("display", "none");
-        $(".pw-menu .ds").css("display", "block");
-        var n = $("input[type=checkbox]", this).val();
-        //console.log(n);
-        if (selectedNames.includes(n)){
-          $("input[type=checkbox]", this).prop( "checked", true );
-          $(this).show();
-          $("td:nth-child(3) input", this).val('50');
-          $("td:nth-child(4) input", this).val('37.50');
-        } else {
-          $(this).hide();
-          $("td:nth-child(3) input", this).val('0');
-          $("td:nth-child(4) input", this).val('0');
-        }
-      });
+      assignToWindowInit($(this).attr("data-names").split(','));
       
       // show popup windows
       $( "#assignToWindow" ).dialog({
@@ -222,53 +203,70 @@ function loadProjects(){
           duration : 500
         }
       });
-      
-      // init filter style
-      $("#filter").val("input filter")
-      .removeClass("filter-active")
-      .addClass("filter-init")
-      .select()
-      .focus();
-      
     });
-
   });
 }
 
+function assignToWindowInit(assignedNames){
+  showNames.clear();
+  showNames = new Set(assignedNames);
+  $("#assignments_div tbody tr").each(function(){
+    $(".pw-menu .op-ico").css("display", "none");
+    $(".pw-menu .ds").css("display", "block");
+    var n = $("input[type=checkbox]", this).val();
+    //console.log(n);
+    if (assignedNames.includes(n)){
+      $("input[type=checkbox]", this).prop( "checked", true );
+      $(this).show();
+      $("td:nth-child(3) input", this).val('50');
+      $("td:nth-child(4)", this).html('37.50');
+    } else {
+      $(this).hide();
+      $("td:nth-child(3) input", this).val('0');
+      $("td:nth-child(4)", this).html('0');
+    }
+  });
+  
+  filterInit();
+}
+
+function filterInit(){
+  $("#filter").val("input filter")
+  .removeClass("filter-active")
+  .addClass("filter-init")
+  .select()
+  .focus();
+}
+
 function pwEdit(elm){
-  var l = $("img", elm).attr( "alt");
-  if(l === 'edit'){
     $(elm).next().css("display", "block");
     $(elm).css("display", "none");
     $(".editable").prop("readonly", false);
-  }
-  if(l === 'confirm'){
+}
+function pwSave(elm){
     $(elm).prev().css("display", "block");
     $(elm).css("display", "none");
     $(".editable").prop("readonly", true);
-  }
 }
-function pwPlus(elm){
-  $("#filter").val('');
-  var l = $("img", elm).attr( "alt");
-  if (l === 'plus') {
-    $(elm).next().css("display", "block");
-    $(elm).css("display", "none");
-    $("#assignment-table tbody tr").each(function(index, tr){
-      $(tr).show();
-      showNames.add($("input[type=checkbox]", tr).val());
-    });
-  }
-  if (l === 'minus') {
-    $(elm).prev().css("display", "block");
-    $(elm).css("display", "none");
-    $("#assignment-table tbody tr").each(function(index, tr){
-      if(!$("input[type=checkbox]", tr).prop("checked")){
-        showNames.delete($("input[type=checkbox]", tr).val());
-        $(tr).hide();
-      }
-    });
-  }
+function pwShowMore(elm){
+  filterInit();
+  $(elm).next().css("display", "block");
+  $(elm).css("display", "none");
+  $("#assignment-table tbody tr").each(function(index, tr){
+    $(tr).show();
+    showNames.add($("input[type=checkbox]", tr).val());
+  });
+}
+function pwShowLess(elm){
+  filterInit();
+  $(elm).prev().css("display", "block");
+  $(elm).css("display", "none");
+  $("#assignment-table tbody tr").each(function(index, tr){
+    if(!$("input[type=checkbox]", tr).prop("checked")){
+      showNames.delete($("input[type=checkbox]", tr).val());
+      $(tr).hide();
+    }
+  });
 }
 
 $(document).ready(function() {
@@ -277,6 +275,7 @@ $(document).ready(function() {
   
   loadProjects();
   
+  // add event handler for filter
   $( "#filter" )
   .on( "keydown mousedown", function( event ) {
       if ( event.keyCode === $.ui.keyCode.TAB &&
@@ -293,11 +292,8 @@ $(document).ready(function() {
     minLength: 0,
     source: function( request, response ) {
       var fr = $.ui.autocomplete.filter(allNames, request.term);
-      console.log("fns", fr);
-      console.log("showNames", showNames);
       $("#assignment-table tbody tr").each(function(i, tr){
         var n = $("input[type=checkbox]", tr).val();
-        console.log(n);
         if(showNames.has(n)){
           if ($.inArray(n, fr) >= 0){
             $(tr).show();
@@ -308,10 +304,6 @@ $(document).ready(function() {
       });
     }
   });
-  
-  $("#assignToWindow #submit").on("click", function(){
-    $( "#assignToWindow" ).dialog("close");
-  })
 });
 </script>
 </body>
