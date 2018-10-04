@@ -75,10 +75,17 @@ body {
 	position: absolute;
 	top: calc(50% - 100px);
 	left: calc(50% + 120px);
-	height: 220px;
+	height: 240px;
 	width: 260px;
 	padding: 10px;
 	z-index: 2;
+}
+
+.login .message {
+	height: 25px;
+	width: 250px;
+	color: black;
+	visibility: hidden;
 }
 
 .login input[type=text], .login input[type=password] {

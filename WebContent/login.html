@@ -20,13 +20,14 @@
  </div>
  <br>
  <div class="login">
-  <input type="text" placeholder="username" id="user">
+  <span class="message">User </span>
+  <input type="text" placeholder="username" id="username">
   <input type="password" placeholder="password" id="password">
   <span> 
-  <input type="text" id="captcha" placeholder=":-)">
-  <img id="kaptcha-img" src="images/kaptcha.jpeg" onclick="">
+  <input type="text" placeholder=":-)" autocomplete="off" id="captcha">
+  <img src="images/kaptcha.jpeg" id="kaptcha-img" onclick="">
   </span> 
-  <input type="button" value="Login" id="submit">
+  <input type="button" value="Login" id="submit" onclick="toLogin()">
   <p>
    <a href="#">Password forget?</a>
   </p>
@@ -40,10 +41,27 @@
       $('.login input').keydown(function(e) {
         if (e.which === 13) {
           var index = $('input').index(this) + 1;
+          console.log(index);
           $('input').eq(index).focus().select();
         }
       });
     });
+    
+    function toLogin(){
+      console.log("toLogin()");
+      var isAllFilled = true;
+      $('.login input').each(function(e){
+        if ($(this).attr("id") != "submit" && $(this).val() === ""){
+          $(".message").html($(this).attr('id') + " item can not be left blank!");
+          $(".message").css("visibility", "visible"); 
+          this.focus();
+          isAllFilled = false;
+          return false;
+        }
+      });
+      console.log("submitted " + isAllFilled); 
+      // if( isAllFilled === true) goto login;
+    }
   </script>
 </body>
 
