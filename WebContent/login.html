@@ -40,8 +40,8 @@
     $(document).ready(function() {
       $('.login input').keydown(function(e) {
         if (e.which === 13) {
+          $(".message").css("visibility", "hidden"); 
           var index = $('input').index(this) + 1;
-          console.log(index);
           $('input').eq(index).focus().select();
         }
       });
@@ -52,7 +52,7 @@
       var isAllFilled = true;
       $('.login input').each(function(e){
         if ($(this).attr("id") != "submit" && $(this).val() === ""){
-          $(".message").html($(this).attr('id') + " item can not be left blank!");
+          $(".message").html(ucFirst($(this).attr('id') + " item can not be left blank!"));
           $(".message").css("visibility", "visible"); 
           this.focus();
           isAllFilled = false;
@@ -60,7 +60,13 @@
         }
       });
       console.log("submitted " + isAllFilled); 
-      // if( isAllFilled === true) goto login;
+      if( isAllFilled === true){
+        //TODO: goto login;
+      }
+    }
+    
+    function ucFirst(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
   </script>
 </body>
