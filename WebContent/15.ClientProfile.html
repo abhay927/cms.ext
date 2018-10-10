@@ -9,6 +9,9 @@
 
 <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
 <script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
+<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
+
 <style>
 .detail_section {
     position: absolute;
@@ -144,14 +147,12 @@
     <tr>
     <th width="70px">ProjectNo</th>
     <th width="200px">ProjectName</th>
-    <th width="80px">ClientName</th>
     <th width="80px">VendorName</th>
     <th width="200px">ProjectType</th>
     <th width="200px">ClaimType</th>
     <th width="120px">SubmissionTime</th>
     <th width="120px">Frequency</th>
     <th width="120px">Status</th>
-    <th width="120px">ConfirmVendors</th>
     </tr>
     </thead>
     <tbody>
@@ -159,14 +160,12 @@
     <tr>
     <td><a href="#">{{:ProjectNo}}</a></td>
     <td>{{:ProjectName}}</td>
-    <td>{{:ClientName}}</td>
     <td>{{:VendorName}}</td>
     <td>{{:ProjectType}}</td>
     <td>{{:ClaimType}}</td>
     <td>{{:SubmissionTime}}</td>
     <td>{{:Frequency}}</td>
     <td>{{:Status}}</td>
-    <td>{{:ConfirmVendors}}</td>
     </tr>
 {{/for}} 
     </tbody>
