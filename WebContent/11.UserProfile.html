@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Production List</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+<style>
+.detail_section {
+    position: absolute;
+    width: 100%;
+    top: 61px;
+    bottom: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.accordion {
+    font-size: 14px;
+    width: 100%;
+}
+.accordion table{
+    width: 100%;
+}
+.accordion table th, .accordion table td{
+  width: 200px;
+  padding: 3px;
+  text-align: center;
+  /*border: 1px solid black;*/
+}
+.accordion table tr th:first-child, .accordion table tr td:first-child{
+  width: 120px;
+  text-align: right;
+  text-decoration: underline;
+}
+.accordion table tr th:last-child, .accordion table tr td:last-child{
+  width: calc(100% - 320px);
+  text-align: right;
+}
+</style>
+
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <script>
+    $("#common").load("00.common.html");
+  </script>
+  <div class="right_section">
+  <!-- Here is name of the list -->
+  <div class="toolbar">
+    <div class="tab">
+      <button class="tablinks" onclick="">My Profile</button>
+    </div>
+  </div>
+  <div class="nemubar">
+    <!-- Here is position of nemu bar -->
+    <ul>
+      <li><a href="#">Edit</a></li>
+    </ul>
+  </div>
+    <div class="detail_section">
+    <div class="accordion active">
+      <h3>Base Information</h3>
+      <div>
+        <table>
+        <tr>
+        <td>Login Name:</td><td id="userid">LancerZ</td><td></td>
+        </tr>
+        <tr>
+        <td>First Name:</td><td id="firstname">Lancer</td><td></td>
+        </tr>
+        <tr>
+        <td>Last Name:</td><td id="lastname">Zhang</td><td></td>
+        </tr>
+        <tr>
+        <td>Middle Name:</td><td id="midname"></td><td></td>
+        </tr>
+        <tr>
+        <td>Organization:</td><td id="unit">JMS</td><td></td>
+        </tr>
+        <tr>
+        <td>JMS/Client/Vender:</td><td id="unittype">JMS</td><td></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion active">
+      <h3>Security</h3>
+      <div>
+        <table>
+        <tr>
+        <td><a href="#">Change Password</a></td>
+        <td colspan="2" style="text-align: left;">Before update your password, to verify your mail address first.</td>
+        </tr>
+
+        <tr>
+        <td>Last Login:</td><td id="lastlogin">2018-10-08 21:34:03</td><td></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion active">
+      <h3>Contact Address</h3>
+      <div style="display: none", aria-hide="true">
+        <table>
+        <tr>
+        <td>Email:</td><td id="Email">lancer@jmsassoc.com</td><td><a href="#">Verified</a></td>
+        </tr>
+        <tr>
+        <td>Phone:</td><td id="Phone">248-888-9999</td><td></td>
+        </tr>
+        <tr>
+        <td>Address:</td><td id="Address"></td><td></td>
+        </tr>
+        <tr>
+        <td>City:</td><td id="City"></td><td></td>
+        </tr>
+        <tr>
+        <td>State:</td><td id="State"></td><td></td>
+        </tr>
+        <tr>
+        <td>ZipCode:</td><td id="ZipCode"></td><td></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion">
+      <h3>Misc</h3>
+      <div>
+        <table>
+        <tr>
+        <td>Create Date:</td><td id="createdate">2015-06-08T21:34:03Z</td><td></td>
+        </tr>
+        <tr>
+        <td>Removed:</td><td id="isdel">0</td><td></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+  </div>
+  <script>
+  var user =    {
+      "SN" : "c3730f85-80f3-4621-a043-6164bf0ebe0c",
+      "userid" : "LancerZ",
+      "firstname" : "Lancer",
+      "unit" : "JMS",
+      "status" : "Enabled",
+      "unittype" : "JMS",
+      "lastname" : "Zhang",
+      "midname" : "",
+      "isdel" : "0",
+      "createdate" : "2015-06-08T21:34:03Z",
+      "TelNO" : "",
+      "EMail" : "",
+      "Address" : "",
+      "ZipCode" : "",
+      "State" : "",
+      "City" : ""
+  };
+  $( function() {
+    $( ".accordion" ).accordion({
+      collapsible: true, 
+      active: false 
+      });
+    $( ".active" ).accordion({
+      collapsible: true, 
+      active: 0 
+      });
+  } );
+
+  </script>
+</body>
+</html>
