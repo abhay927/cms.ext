@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Production List</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+<style>
+.detail_section {
+    position: absolute;
+    width: 100%;
+    top: 61px;
+    bottom: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.accordion {
+    font-size: 14px;
+    width: 100%;
+}
+.accordion table{
+    width: 100%;
+}
+.accordion table th, .accordion table td{
+  width: 200px;
+  padding: 3px;
+  text-align: center;
+  /*border: 1px solid black;*/
+}
+.accordion table tr th:first-child, .accordion table tr td:first-child{
+  width: 120px;
+  text-align: right;
+  text-decoration: underline;
+}
+.accordion table tr th:last-child, .accordion table tr td:last-child{
+  width: calc(100% - 320px);
+  text-align: right;
+}
+</style>
+
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <script>
+    $("#common").load("00.common.html");
+  </script>
+  <div class="right_section">
+  <!-- Here is name of the list -->
+  <div class="toolbar">
+    <div class="tab">
+      <button class="tablinks" onclick="">User Profile</button>
+    </div>
+  </div>
+  <div class="nemubar">
+    <!-- Here is position of nemu bar -->
+    <ul>
+      <li><a href="#">Edit</a></li>
+      <li><a href="#">Delete</a></li>
+    </ul>
+  </div>
+    <div class="detail_section">
+    <div class="accordion active">
+      <h3>Base Information</h3>
+      <div>
+        <table>
+        <tr>
+        <td>Client Alias:</td><td id="userid">CBA</td><td></td>
+        </tr>
+        <tr>
+        <td>Full Name:</td><td id="firstname">CBA</td><td></td>
+        </tr>
+        <tr>
+        <td>Phone:</td><td id="lastname">248652315</td><td></td>
+        </tr>
+        <tr>
+        <td>Fax:</td><td id="midname">2485623154</td><td></td>
+        </tr>
+        <tr>
+        <td>Address:</td><td id="unit">JMS</td><td></td>
+        </tr>
+        <tr>
+        <td>Web Site:</td><td id="unittype">www.cba.com</td><td></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion">
+      <h3>Users In System</h3>
+      <div>
+        <table>
+        <tr>
+        <th>Login Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Enabled</th>
+        <th>Last Access</th>
+        </tr>
+        <tr>
+        <td id="userid">CBA_admin</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        </tr>
+        <tr>
+        <td id="userid">CBA_user_1</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        </tr>
+        <tr>
+        <td id="userid">CBA_user_2</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion">
+      <h3>Project Summary</h3>
+      <div id="projects_div">
+        <table>
+        <tr>
+        <th>Login Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Enabled</th>
+        <th>Last Login</th>
+        </tr>
+        <tr>
+        <td id="userid">CBA_admin</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        </tr>
+        <tr>
+        <td id="userid">CBA_user_1</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        </tr>
+        <tr>
+        <td id="userid">CBA_user_2</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script id="projectsTmpl" type="text/x-jsrender">
+    <table class="list_table tablesorter" id="tbl" width="350px">
+    <thead>
+    <tr>
+    <th width="70px">ProjectNo</th>
+    <th width="200px">ProjectName</th>
+    <th width="80px">ClientName</th>
+    <th width="80px">VendorName</th>
+    <th width="200px">ProjectType</th>
+    <th width="200px">ClaimType</th>
+    <th width="120px">SubmissionTime</th>
+    <th width="120px">Frequency</th>
+    <th width="120px">Status</th>
+    <th width="120px">ConfirmVendors</th>
+    </tr>
+    </thead>
+    <tbody>
+{{for p}} 
+    <tr>
+    <td><a href="#">{{:ProjectNo}}</a></td>
+    <td>{{:ProjectName}}</td>
+    <td>{{:ClientName}}</td>
+    <td>{{:VendorName}}</td>
+    <td>{{:ProjectType}}</td>
+    <td>{{:ClaimType}}</td>
+    <td>{{:SubmissionTime}}</td>
+    <td>{{:Frequency}}</td>
+    <td>{{:Status}}</td>
+    <td>{{:ConfirmVendors}}</td>
+    </tr>
+{{/for}} 
+    </tbody>
+    </table> 
+</script>
+  <script>
+  var projects = [{
+            "ProjectNo" : "JMSCBA003-01-V4-T0",
+            "ProjectName" : "CBA EBPA-VT TEAM 4 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-05-V4",
+            "ProjectName" : "CBA EBPA-VT TEAM 4 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-07-V4",
+            "ProjectName" : "CBA BLUE TEAM 4 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-03-V1",
+            "ProjectName" : "CBA BLUE TEAM 1 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-03-V3",
+            "ProjectName" : "CBA BLUE TEAM 3 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-03-V4",
+            "ProjectName" : "CBA BLUE TEAM 4 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA004-01-V3",
+            "ProjectName" : "CBA EBPA-NH BROOKS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA004-02-V3",
+            "ProjectName" : "CBA EBPA-NH MAINE GENERAL RESTAT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-01-V3",
+            "ProjectName" : "CBA ONLINE CLAIM SERVICE - STANDARD INDEXING ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-03-V3",
+            "ProjectName" : "CBA REFUND CORRESPONDENCE CLAIM SERVICE -INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-04-V3",
+            "ProjectName" : "CBA REGULAR NON STANDARD CLAIM SERVICE - INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-05-V3",
+            "ProjectName" : "CBA CLAIM SERVICE - RE-INDEXING 88 REPRICING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-06-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-07-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - ELIGIBILITY",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-08-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - FLEX AUDITING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Pre-production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-10-V3",
+            "ProjectName" : "CBA EBPA CLAIM SERVICE - STANDARD INDEXING ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-11-V3",
+            "ProjectName" : "CBA EBPA CLAIM SERVICE - RE-INDEXING 88 REPRICING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-15-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - ELIGIBILITY",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-14-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-16-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - FLEX AUDITING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-18-V3",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE -  AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-19-V3",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE - ELIGIBILITY",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-20-V3",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE - FLEX AUDITING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-23-V3",
+            "ProjectName" : "CBA BLUE CLAIM SERVICE - STANDARD INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-24-V3",
+            "ProjectName" : "CBA BLUE CBR  CLAIM SERVICE - STANDARD INDEXING ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA007-01-V4-T1",
+            "ProjectName" : "CBA PIONEER  CLAIM EXAMINE SERVICE - REPRICED 1500",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "",
+            "ClaimType" : "HCFA",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA007-01-V4-T2",
+            "ProjectName" : "CBA PIONEER CLAIM EXAMINE SERVICE - REPRICED UB",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "",
+            "ClaimType" : "UB",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA010-01-V3",
+            "ProjectName" : "CBA ITS CLAIMS EXAMINE SERVICE - RELEASED ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-01-V1-T0",
+            "ProjectName" : "CBA EBPA-VT TEAM 1 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA011-01-V3",
+            "ProjectName" : "CBA ONLINE CLAIMS  SERVICE - HRA&FLEX INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA011-02-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIMS EXAMINE SERVICE - FLEX RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA011-04-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIMS EXAMINE SERVICE - FLEX RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA011-06-V3",
+            "ProjectName" : "CBA BLUE CLAIMS EXAMINE SERVICE - FLEX RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA014-01-V3",
+            "ProjectName" : "CBA CLAIM SERVICE - PLAN TEST HOURS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-01-V3",
+            "ProjectName" : "CBA EBPA-NH AS400 CLAIM EXAMINE SERVICE - ACH",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-03-V3",
+            "ProjectName" : "CBA EBPA-NH BPS &AS400 CLAIM EXAMINE SERVICE - ADD",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-04-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE-AS400 DIRECT BILL (AR)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-02-V1-T0",
+            "ProjectName" : "CBA EBPA-NH TEAM 1 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-01-V1",
+            "ProjectName" : "CBA EBPA-VT TEAM 1 CLAIMS EXAMINE SERVICE - RELEASED ",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Pre-production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-01-V3",
+            "ProjectName" : "CBA EBPA-VT TEAM 3 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-01-V4",
+            "ProjectName" : "CBA EBPA-VT TEAM 4 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-02-V1",
+            "ProjectName" : "CBA EBPA-NH TEAM 1 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-02-V3",
+            "ProjectName" : "CBA EBPA-NH TEAM 3 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-03-V1-T0",
+            "ProjectName" : "CBA BLUE TEAM 1 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-04-V3",
+            "ProjectName" : "CBA BLUE CBR TEAM 3 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Termination",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-05-V3",
+            "ProjectName" : "CBA EBPA-VT TEAM 3 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-05-V1",
+            "ProjectName" : "CBA EBPA-VT TEAM 1 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-06-V1",
+            "ProjectName" : "CBA EBPA-NH TEAM 1 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-06-V3",
+            "ProjectName" : "CBA EBPA-NH TEAM 3 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-07-V1",
+            "ProjectName" : "CBA BLUE TEAM 1 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-07-V3",
+            "ProjectName" : "CBA BLUE TEAM 3 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-02-V3",
+            "ProjectName" : "CBA PROVIDER CORRESPONDENCE CLAIM SERVICE - INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-09-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - PROVIDER MAINTENANCE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-12-V3",
+            "ProjectName" : "CBA EBPA REFUND CORRESPONDANCE CLAIM SERVICE -INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-13-V3",
+            "ProjectName" : "CBA EBPA REGULAR NON STANDARD CLAIM SERVICE -INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-17-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - PROVIDER MAINTENANCE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-21-V3",
+            "ProjectName" : "CBA BLUE REFUND CORRESPONDENCE CLAIM SERVICE -INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-22-V3",
+            "ProjectName" : "CBA BLUE REGULAR NON STANDARD CLAIM SERVICE -INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-25-V3",
+            "ProjectName" : "CBA BLUE CBR REGULAR NON STANDARD CLAIM SERVICE -INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA006-01-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - BATCH INDEX AUDITING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA006-02-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - BATCH INDEX AUDITING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA006-03-V3",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE - BATCH INDEX AUDITING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA007-01-V4-T4",
+            "ProjectName" : "CBA PIONEER JMS CLAIM EXAMINE SERVICE - REPRICED 1500",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "",
+            "ClaimType" : "HCFA",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA008-01-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - OVERPAYMENT\/REFUND",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA008-02-V3",
+            "ProjectName" : "CBA EBPA-NH BPS & AS400 CLAIM EXAMINE SERVICE - FLEX ENROLLMENT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA008-03-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - OVERPAYMENT\/REFUND",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA008-04-V3",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE - OVERPAYMENT\/REFUND",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA011-03-V3",
+            "ProjectName" : "CBA EBPA ONLINE CLAIMS  SERVICE -HRA& FLEX INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA011-05-V3",
+            "ProjectName" : "CBA BLUE ONLINE CLAIMS  SERVICE - HRA&FLEX INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA012-01-V3",
+            "ProjectName" : "CBA EBPA-VT BPS CLAIMS EXAMINE SERVICE - FLEX RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA012-02-V3",
+            "ProjectName" : "CBA EBPA-NH BPS CLAIMS EXAMINE SERVICE - FLEX RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA013-01-V3",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE - PROVIDER MAINTENANCE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA015-01-V3",
+            "ProjectName" : "CBA EBPA-NH AS400 CLAIM EXAMINE SERVICE - FLEX RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA016-01-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - RETURNED MAIL ADDRESS UPDATES (RM)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA017-01-V3",
+            "ProjectName" : "CBA EBPA-NH AS400 CLAIM EXAMINE SERVICE - COBRA QUALIFIYING EVENT (AC)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA018-01-V3",
+            "ProjectName" : "CBA EBPA-NH AS400 CLAIM EXAMINE SERVICE - COBRA ELECTIONS (AE)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-01-V3",
+            "ProjectName" : "CBA EBPA-NH AS400 CLAIM EXAMINE SERVICE - RUTLAND REGIONAL ELECTIONS (RR)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA020-01-V4",
+            "ProjectName" : "CBA BLUE BCBSVT CLAIM EXAMINE SERVICE - FEE SCHEDULE LOAD AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-02-V3",
+            "ProjectName" : "CBA EBPA-NH BPS &AS400 CLAIM EXAMINE SERVICE - DIRECT DEPOSIT (DD)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-06-V1",
+            "ProjectName" : "CBA EBPA-VT TEAM1 CLAIM EXAMINE SERVICE - AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-14-V1",
+            "ProjectName" : "CBA EBPA-NH TEAM1 CLAIM EXAMINE SERVICE - AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-02-V4-T0",
+            "ProjectName" : "CBA EBPA-NH TEAM 4 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-03-V4-T0",
+            "ProjectName" : "CBA BLUE TEAM 4 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-01-V3-T0",
+            "ProjectName" : "CBA EBPA-VT TEAM 3 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-02-V3-T0",
+            "ProjectName" : "CBA EBPA-NH TEAM 3 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-03-V3-T0",
+            "ProjectName" : "CBA BLUE TEAM 3 CLAIMS EXAMINE SERVICE – PRE-TREATMENT RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA015-01-V3-T0",
+            "ProjectName" : "CBA EBPA-NH AS400 CLAIM EXAMINE SERVICE - FLEX PREVIOUS PENDED RELEASE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-06-V4",
+            "ProjectName" : "CBA EBPA-NH TEAM 4 CLAIMS CORRESPONDENCE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "PEK",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-18-V1",
+            "ProjectName" : "CBA BLUE TEAM1 CLAIM EXAMINE SERVICE - AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "TELA",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA022-01-V3",
+            "ProjectName" : "CBA EBPA-CLAIM EXAMINE SERVICE  -HRA\/FLEX ROLLOVER",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : "Judi Bean"
+        },
+        {
+            "ProjectNo" : "JMSCBA008-02-V3-T3",
+            "ProjectName" : "CBA EBPA-NH  AS400 &BPS FLEX ENROLLMENT PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA012-01-V3-T3",
+            "ProjectName" : "CBA EBPA-VT  BPS CLAIM EXAMINE SERVICE -   FLEX  PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA012-02-V3-T3",
+            "ProjectName" : "CBA  EBPA-NH  BPS CLAIM EXAMINE SERVICE -   FLEX PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA015-01-V3-T3",
+            "ProjectName" : "CBA  EBPA-NH  AS400 CLAIM EXAMINE SERVICE -   FLEX PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA016-01-V3-T3",
+            "ProjectName" : " CBA  EBPA-NH AS400 & BPSCLAIM EXAMINE SERVICE -  RETURNED MAIL ADDRESS UPDATES (RM) PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA017-01-V3-T3",
+            "ProjectName" : "CBA EBPA-NH   AS400&BPS CLAIM EXAMINE SERVICE -  COBRA QUALIFIYING EVENT (AC) PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA018-01-V3-T3",
+            "ProjectName" : "CBA  EBPA-NH  AS400&BPS CLAIM EXAMINE SERVICE -  COBRA ELECTIONS (AE) PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-01-V3-T3",
+            "ProjectName" : "CBA  EBPA-NH  AS400 & BPS CLAIM EXAMINE SERVICE - RUTLAND REGIONAL ELECTIONS (RR) PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-01-V3-T3",
+            "ProjectName" : "CBA  EBPA-NH AS400 & BPSCLAIM EXAMINE SERVICE -    (ACH) PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-02-V3-T3",
+            "ProjectName" : "CBA  EBPA-NH AS400 & BPS CLAIM EXAMINE SERVICE -   DIRECT DEPOSIT (DD) PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-03-V3-T3",
+            "ProjectName" : "CBA EBPA-NH AS400 & BPS CLAIM EXAMINE SERVICE -    DIRECT DEPOSIT (ADD) PREVIOUSLY PENDING \/ NOW RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA022-02-V3",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE  -  FLEX ROLLOVER AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA023-01-V5",
+            "ProjectName" : "CBA DENTAL FEE SCHEDULE DATA ENTRY",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "48 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA023-02-V5",
+            "ProjectName" : "CBA DENTAL FEE SCHEDULE TEST",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "48 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-03-V5",
+            "ProjectName" : "CBA BLUETEAM 5 CLAIMS EXAMINE SERVICE- RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "JMS(NS) Beijing",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Dental",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA024-01-V3",
+            "ProjectName" : "CBA BBA TEAM 3 CLAIMS EXAMINE SERVICE - RELEASED",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA024-02-V3",
+            "ProjectName" : "CBA BBA CLAIM SERVICE - STANDARD INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Online",
+            "ClaimType" : "HCFA",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA024-03-V3",
+            "ProjectName" : "CBA BBA REGULAR NON STANDARD CLAIM SERVICE -INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Online",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA024-04-V3-T1",
+            "ProjectName" : "CBA BBA CLAIM EXAMINE SERVICE - ELIGIBILITY-25",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA024-04-V3-T2",
+            "ProjectName" : "CBA BBA CLAIM EXAMINE SERVICE - ELIGIBILITY-45",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-07-V3-T1",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - ELIGIBILITY-25",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA025-V3",
+            "ProjectName" : "CBA CLAIM SERVICE - WEBCOBRA ELIGIBILITY MAINTAIN",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA018-02-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - WEB COBRA ELECTIONS(WE)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA017-02-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - WEB COBRA  QUALIFIYING EVENT(WC)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA031-01-V3-T1",
+            "ProjectName" : "CBA EBPA CLAIM SERVICE - COB CONVERSION HCFA 1500",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Offline",
+            "ClaimType" : "HCFA",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA031-01-V3-T2",
+            "ProjectName" : "CBA EBPA CLAIM SERVICE - COB CONVERSION UB",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Offline",
+            "ClaimType" : "UB",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-07-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE-WEB COBRA CORRESPONDENCE(WCORR)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "48 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-08-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - WEB COBRA  NEW HIRE NOTICE(WNH)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "48 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-04-V3-T3",
+            "ProjectName" : "CBA PROVNETPROVSTOADD PROVIDER MAINTAIN",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-06-V3-T3",
+            "ProjectName" : "CBA WEB COBRA ELIGIBILITY(WELIG)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-12-V3-T3",
+            "ProjectName" : "CBA BLUE ALL USERS MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-05-V3-T3",
+            "ProjectName" : "CBA KSN REPORT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-26-V3-T1",
+            "ProjectName" : "CBA BBA CLAIM EXAMINE SERVICE - AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-27-V3-T1",
+            "ProjectName" : "CBA BBA REFUND CORRESPONDENCE INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ONLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-07-V3-T2",
+            "ProjectName" : "CBA EBPA-VT CLAIM EXAMINE SERVICE - ELIGIBILITY-45",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-15-V3-T1",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - ELIGIBILITY-25",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-15-V3-T2",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - ELIGIBILITY-45",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-19-V3-T1",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE - ELIGIBILITY-25",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA005-19-V3-T2",
+            "ProjectName" : "CBA BLUE CLAIM EXAMINE SERVICE - ELIGIBILITY-45",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-040-V3",
+            "ProjectName" : "1X PROJECT - DATA ENTRY OF PROVIDER TAX ID, NAME, & ADDRESS ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-041-V3",
+            "ProjectName" : "BLUE 2020 ELIGIBILITY & EMPLOYER GROUP CORRESPONDENCE INDEXING IN JAVELINA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA003-05-V5",
+            "ProjectName" : "CBA EBPA-VT TEAM 5 CLAIMS EXAMINE SERVICE - RELEASED  ",
+            "ClientName" : "CBA",
+            "VendorName" : "JMS(NS) Beijing",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA024-05-V3",
+            "ProjectName" : "CBA BBA CLAIM EXAMINE SERVICE - CORRESPONDENCE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA030-01-V3",
+            "ProjectName" : "CBA CLAIM SERVICE - RESTAT REVERSALS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "48 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-05-V3",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE-WEB COBRA DIRECT BILL\/RETIREE QUALIFYING EVENT (QE) FORMS (WR)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA021-06-V3  ",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE-WEB COBRA  ACH FORMS (WACH)  ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA016-02-V3  ",
+            "ProjectName" : "CBA EBPA-NH CLAIM EXAMINE SERVICE - WEB COBRA RETURNED MAIL ADDRESS UPDATES (WRM)  ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA032-01-V3  ",
+            "ProjectName" : "CBA CLAIM SERVICE - W9 PROVIDER CORRESPONDENCE INDEXING  ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA032-02-V3  ",
+            "ProjectName" : "CBA CLAIM SERVICE - W9 PROVIDER CORRESPONDENCE FILING  ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "24 hours returned",
+            "Frequency" : "longterm",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-033-V3-001",
+            "ProjectName" : "BLUE ELIGIBILITY CORRESPONDENCE INDEXING IN JAVELINA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A06-033-V3-001",
+            "ProjectName" : "BLUE ELIGIBILITY CHANGES IN JAVELINA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A06-051-V3-002",
+            "ProjectName" : "JAV - TUFTS VOLUNTARY DENTAL ELIGIBILITY\/ENROLLMENT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-041-V3-001",
+            "ProjectName" : "JAV - TUFTS VOLUNTARY DENTAL ELIGIBILITY\/ENROLLMENT CORRESPONDENCE INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-033-V3-002",
+            "ProjectName" : "INDEXING A W-9 IMAGE TO A 1099 RECORD IN JV",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-053-V3",
+            "ProjectName" : "DENTAL DATA ENTRY IN JV - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P02-054-V3",
+            "ProjectName" : "CLAIM AUDITING OF VT & NH IN JAV - MEDICAL - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-01-V3-T3 ",
+            "ProjectName" : "CBA EBPA-NH - WEB COBRA NEW HIRE NOTICE (WNH)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-09-V3-T3",
+            "ProjectName" : "CBA WEB COBRA ATTACH CORRESPONDENCE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-03-V3-T3",
+            "ProjectName" : "CBA EBPA-VT ALL USERS MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-10-V3-T3",
+            "ProjectName" : "CBA EBPA-NH ALL USERS MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-11-V3-T3",
+            "ProjectName" : "CBA BBA ALL USERS MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-13-V3-T3",
+            "ProjectName" : "CBA BBA DF VARIANCE REPORT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-14-V3-T3",
+            "ProjectName" : "CBA BLUE DF VARIANCE REPORT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-15-V3-T3",
+            "ProjectName" : "CBA BLUE - BLUE PLAN PRE-EX REQUESTS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-16-V3-T3",
+            "ProjectName" : "CBA BBA - BLUE PLAN PRE-EX REQUESTS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-17-V3-T3",
+            "ProjectName" : "CBA BBA - PROVIDER MAINTENANCE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA034-01-V3-T3",
+            "ProjectName" : "CBA - DISCRIMINATION TESTING - 1X PROJECT (SEASONAL)",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA008-05-V3-T3",
+            "ProjectName" : "CBA BBA CLAIM EXAMINE SERVICE - OVERPAYMENT\/REFUND",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-18-V3-T3",
+            "ProjectName" : "CBA ADD\/CHANGE PROVIDER IN PROVNET SYSTEM",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA031-02-V3-T3",
+            "ProjectName" : "CBA DENTAL CLAIM CONVERSION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "OFFLINE",
+            "ClaimType" : "Dental",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA035-01-V3-T3",
+            "ProjectName" : "CBA - 1X PROJECT - MT. ASCUTNEY ADJUSTMENTS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA036-01-V3-T3",
+            "ProjectName" : "CBA - 1099 RECORD MAINTENANCE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Online",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA037-01-V3-T3",
+            "ProjectName" : "COMPENT FEE TESTING- ANNUAL PROJECT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA038-01-V3-T3",
+            "ProjectName" : "CBA - EBPA - NON-STANDARD CONVERSION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Offline",
+            "ClaimType" : "Nonstandard",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA035-02-V3-T3",
+            "ProjectName" : "CBA - BBA BLUESM PROVIDER ADD",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA035-04-V3-T3",
+            "ProjectName" : "CBA EBPA-NH BPS CLAIM AUDIT - FLEX AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA035-05-V3-T3",
+            "ProjectName" : "CBA EBPA-NH AS400 CLAIM AUDIT - FLEX AUDIT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA038-02-V3-T3",
+            "ProjectName" : "CBA - EBPA - HCFA STANDARD CONVERSION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Offline",
+            "ClaimType" : "HCFA",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA038-03-V3-T3",
+            "ProjectName" : "CBA - EBPA - UB STANDARD CONVERSION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Offline",
+            "ClaimType" : "UB",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA011-07-V3-T3",
+            "ProjectName" : "CBA BBA ONLINE CLAIMS SERVICE - HRA & FLEX INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Online",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA037-02-V3-T3",
+            "ProjectName" : "CBA - BBA SOURCE FILE AUDIT AND MAINTENANCE-REGULAR HOURS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA037-03-V3-T3",
+            "ProjectName" : "CBA - BBA SOURCE FILE AUDIT AND MAINTENANCE-WEEKEND HOURS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA038-04-V3-T3",
+            "ProjectName" : "PDF TO EDI TEST FILE CONVERSION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "OFFLINE",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA035-03-V3-T3",
+            "ProjectName" : "CBA -BBA PMREPRICE MAILBOX",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA041-01-V1-T1",
+            "ProjectName" : "CBA MAX VAULT FLEX IMAGE INDEX",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA041-02-V1-T1",
+            "ProjectName" : "CBA MAX VAULT COBRA IMAGE INDEX",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-19-V3-T3",
+            "ProjectName" : "CBA EBPA-VT RECUR MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-20-V3-T3",
+            "ProjectName" : "CBA EBPA-NH RECUR MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-21-V3-T3",
+            "ProjectName" : "CBA BLUE RECUR MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA033-22-V3-T3",
+            "ProjectName" : "CBA BBA RECUR MAILBOX CLAIM REVIEW\/RESOLUTION",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA043-01-V3-T3",
+            "ProjectName" : "CBA PDF FILE FOR STOPLOSS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA043-02-V3-T3",
+            "ProjectName" : "PARTIAL VOID- REFUND RECOVERY ADJUSTMENT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA035-06-V3-T3",
+            "ProjectName" : "CBA-BLUE PMREPRICE MAILBOX MAINTAIN",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA045-001-V3-T3",
+            "ProjectName" : "MAX VAULT LOOK-UP AND MISC CLAIM INDEXING",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Termination",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA047-001-01-V3",
+            "ProjectName" : "CBA INPATIENT STOP LOSS - PER RECORD",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA034-02-V3-T3",
+            "ProjectName" : "CBA HX VOIDS FOR LAHEY 1X PROJECT",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA049-001-01-V3",
+            "ProjectName" : "CBA BLUE 2 SF AND DF DATA ENTRY - BLUE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA049-002-01-V3",
+            "ProjectName" : "CBA BLUE 2 SF AND DF DATA ENTRY - BBA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A06-051-V3-001",
+            "ProjectName" : "JAV - VISION PLAN MAINTENANCE -ELIGIBILITY\/ENROLLMENT\/ADDS\/CHANGES\/TERMS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A06-051-V3",
+            "ProjectName" : "CBA VITECH ENROLLMENT ADDS\/CHANGES\/TERMS",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "ADJ",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Termination",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-033-V3",
+            "ProjectName" : "EBPA VT & NH ELIGIBILITY CORRESPONDENCE INDEXING IN JAVELINA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "Online",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P12-005-V3-001 ",
+            "ProjectName" : "BLUE CLAIM EXAMINING - RELEASED IN JAVELINA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P12-005-V3",
+            "ProjectName" : "EBPA VT & NH CLAIM EXAMINING - RELEASED IN JAVELINA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "Dental",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A06-033-V3",
+            "ProjectName" : "EBPA VT & NH ELIGIBILITY CHANGES IN JAVELINA",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-053-V3-001",
+            "ProjectName" : "HCFA DATA ENTRY IN JV - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-053-V3-002",
+            "ProjectName" : "UB DATA ENTRY IN JV - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-053-V3-003",
+            "ProjectName" : "RX DATA ENTRY IN JV - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-053-V3-004",
+            "ProjectName" : "NON-STANDARD DATA ENTRY IN JV - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-A01-053-V3-005",
+            "ProjectName" : "CORRESPONDENCE DATA ENTRY IN JV - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P02-054-V3-005",
+            "ProjectName" : "CLAIM AUDITING OF BBA IN JAV - DENTAL - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P02-054-V3-001",
+            "ProjectName" : "CLAIM AUDITING OF VT & NH IN JAV - DENTAL - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P02-054-V3-002",
+            "ProjectName" : "CLAIM AUDITING OF BLUE IN JAV - MEDICAL - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P02-054-V3-003",
+            "ProjectName" : "CLAIM AUDITING OF BLUE IN JAV - DENTAL - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P02-054-V3-004",
+            "ProjectName" : "CLAIM AUDITING OF BBA IN JAV - MEDICAL - PER RECORD RATE",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        },
+        {
+            "ProjectNo" : "JMSCBA019-P03-014-V3",
+            "ProjectName" : "CLAIM SERVICE IN JAVELINA - PLAN TEST HOURS ",
+            "ClientName" : "CBA",
+            "VendorName" : "HUIC",
+            "ProjectType" : "",
+            "ClaimType" : "",
+            "SubmissionTime" : "",
+            "Frequency" : "",
+            "Status" : "Production",
+            "ConfirmVendors" : ""
+        }];
+  $( function() {
+    $( ".accordion" ).accordion({
+      collapsible: true, 
+      active: false 
+      });
+    $( ".active" ).accordion({
+      collapsible: true, 
+      active: 0 
+      });
+  } );
+  
+  var projectsTlt = $.templates("#projectsTmpl"); 
+  projectsTlt.link("#projects_div", {p: projects });
+
+  $(document).ready(function() {
+    $(".list_table").tablesorter();
+  });
+  </script>
+</body>
+</html>

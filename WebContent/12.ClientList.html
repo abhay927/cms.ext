@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Production List</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
+<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
+
+<style>
+.nemubar ul li:last-child {
+    float: right;
+}
+.nemubar table {
+    margin: 10px;
+}
+.nemubar table th {
+    width: 20px;
+    text-align: center;
+}
+
+.nemubar table th:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <script>
+    $("#common").load("00.common.html");
+  </script>
+  <div class="right_section">
+  <!-- Here is name of the list -->
+  <div class="toolbar">
+    <div class="tab">
+      <button class="tablinks" onclick="">User Profile</button>
+    </div>
+  </div>
+  <div class="nemubar">
+    <!-- Here is position of nemu bar -->
+    <ul>
+      <li><a href="#">New Client</a></li>
+      <li>
+      <table>
+      <thead>
+      <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+      <th>F</th>
+      <th>G</th>
+      <th>H</th>
+      <th>I</th>
+      <th>J</th>
+      <th>K</th>
+      <th>L</th>
+      <th>M</th>
+      <th>N</th>
+      <th>O</th>
+      <th>P</th>
+      <th>Q</th>
+      <th>R</th>
+      <th>S</th>
+      <th>T</th>
+      <th>U</th>
+      <th>V</th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+      </tr>
+      </thead>
+      </table>
+      </li>
+    </ul>
+  </div>
+  <div id="list_section">
+  <div id="client_div"></div>
+  </div>
+  </div>
+  <script id="clientTmpl" type="text/x-jsrender">
+    <table class="list_table tablesorter" id="tbl" width="350px">
+    <thead>
+    <tr>
+    <th width="70px">Client</th>
+    <th width="200px">Full Name</th>
+    <th width="80px">Phone</th>
+    <th width="80px">Fax</th>
+    <th width="200px">Address</th>
+    <th width="200px">Website</th>
+    <th width="120px">Create Date</th>
+    </tr>
+    </thead>
+    <tbody>
+{{for p}} 
+    <tr>
+    <td><a href="#">{{:Client}}</a></td>
+    <td>{{:FullName}}</td>
+    <td>{{:PhoneNumber}}</td>
+    <td>{{:Fax}}</td>
+    <td>{{:Address}}</td>
+    <td>{{:Website}}</td>
+    <td>{{:CreateDate}}</td>
+    </tr>
+{{/for}} 
+    </tbody>
+    </table> 
+</script>
+  <script>
+  var clients = [{
+            "Client" : "065HCP",
+            "FullName" : "HEALTH CARE PARTNERS",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2014-02-17"
+        },
+        {
+            "Client" : "066STT",
+            "FullName" : "SANDLER AND TRAVIS TRADE",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2014-03-13"
+        },
+        {
+            "Client" : "067MBM",
+            "FullName" : "MOUNTAIN BENEFIT MGMT",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2014-03-27"
+        },
+        {
+            "Client" : "068PSW",
+            "FullName" : "PHYSICIANS OF SW",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2014-04-17"
+        },
+        {
+            "Client" : "071MAX",
+            "FullName" : "Maxor",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2014-07-02"
+        },
+        {
+            "Client" : "ABE100",
+            "FullName" : "Assured Benefits",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-07-27"
+        },
+        {
+            "Client" : "ABS",
+            "FullName" : "ABS-Automated Benfit services",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "ACI",
+            "FullName" : "American Community Mutual  Insurance Company",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "ACS",
+            "FullName" : "ACS Benefit Services, Inc. ",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2011-11-03"
+        },
+        {
+            "Client" : "ACT",
+            "FullName" : "ACTIVA",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "ADT006",
+            "FullName" : "Alaska Data Tech (Scott Kohlhaas)",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-10-11"
+        },
+        {
+            "Client" : "AIR",
+            "FullName" : "Alternative Insurance Resources, Inc.",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "P.O. Box 660787 Birmingham, AL 35266",
+            "Website" : "",
+            "CreateDate" : "2011-08-26"
+        },
+        {
+            "Client" : "ALL",
+            "FullName" : "Allegiance Benefit Plan Management",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2013-01-30"
+        },
+        {
+            "Client" : "ALT005",
+            "FullName" : "Altrua HealthShare",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-09-15"
+        },
+        {
+            "Client" : "AMP",
+            "FullName" : "AMPS-Advanced Medical Pricing Solution",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "ANG",
+            "FullName" : "A&G HealthCare Service",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "APL085",
+            "FullName" : "Ameraplan",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-03-03"
+        },
+        {
+            "Client" : "ARC128",
+            "FullName" : "Archbold Medical Center",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-05-24"
+        },
+        {
+            "Client" : "ASC",
+            "FullName" : "ASI_Corp",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "ASI",
+            "FullName" : "ASI - ACCLAMATION",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "BBB999",
+            "FullName" : "Boley Inc",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-03-31"
+        },
+        {
+            "Client" : "BBI119",
+            "FullName" : "Brown & Brown of New York Inc.",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2016-08-30"
+        },
+        {
+            "Client" : "BCC",
+            "FullName" : "Benefit Coordinators Corporation",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "BCI",
+            "FullName" : "BCI\/Health Now Administrators",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2011-08-23"
+        },
+        {
+            "Client" : "BEN",
+            "FullName" : "BENESYS",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "BHS104",
+            "FullName" : "Berends Hendricks Stuit",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2016-03-10"
+        },
+        {
+            "Client" : "BMI",
+            "FullName" : "BENEFIT MANAGEMENT Inc",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "BOL092",
+            "FullName" : "Bollinger, Inc.",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-06-04"
+        },
+        {
+            "Client" : "BPV106",
+            "FullName" : "Benefit Plan Admin",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-12-22"
+        },
+        {
+            "Client" : "BRH",
+            "FullName" : "BROWARD HEALTH",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2013-11-26"
+        },
+        {
+            "Client" : "BUT",
+            "FullName" : "Butler Insurance Service",
+            "PhoneNumber" : "(866) 927-2200",
+            "Fax" : "(563) 327-2250",
+            "Address" : "215 North Main Street, Suite 800  Davenport, Iowa 52801",
+            "Website" : "http:\/\/www.butlerins.com",
+            "CreateDate" : "2010-04-19"
+        },
+        {
+            "Client" : "BVT",
+            "FullName" : "BCBS-VT",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "CAP122",
+            "FullName" : "Caprock Health Group",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-04-24"
+        },
+        {
+            "Client" : "CAS - OLD",
+            "FullName" : "CAS BENEFIT PLANS",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2011-11-28"
+        },
+        {
+            "Client" : "CAS109",
+            "FullName" : "Coastal Administrative Services",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2016-02-16"
+        },
+        {
+            "Client" : "CAT",
+            "FullName" : "Catalyst",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-10-11"
+        },
+        {
+            "Client" : "CBA",
+            "FullName" : "CBA",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : null,
+            "Website" : null,
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "CDB",
+            "FullName" : "Custom Design Benefits",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "5589 Cheviot Road, Cincinnati, OH 45247",
+            "Website" : "",
+            "CreateDate" : "2012-03-26"
+        },
+        {
+            "Client" : "CFA",
+            "FullName" : "CareFirst",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-05-18"
+        },
+        {
+            "Client" : "CFR118",
+            "FullName" : "Conifer Health Solutions",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2016-08-19"
+        },
+        {
+            "Client" : "CHM",
+            "FullName" : "CENTRAL HEALTH MSO INC",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "CHP",
+            "FullName" : "Care1st Health Plan",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "601 Potrero Grande Drive, 2nd Floor Monterey Park, CA 91755",
+            "Website" : "",
+            "CreateDate" : "2009-08-30"
+        },
+        {
+            "Client" : "CLF",
+            "FullName" : "CL FRATES",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "CON086",
+            "FullName" : "Consociate",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-06-27"
+        },
+        {
+            "Client" : "CTP114",
+            "FullName" : "Coastal TPA, Inc.",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2016-12-19"
+        },
+        {
+            "Client" : "CYP",
+            "FullName" : "CYPRESS",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "DAR130",
+            "FullName" : "Dart Container of Michigan, LLC",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-09-22"
+        },
+        {
+            "Client" : "DCC",
+            "FullName" : "DDD-COMMUNITYCARE",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "DCM",
+            "FullName" : "DDD-CHOICEMED",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "DES",
+            "FullName" : "Dependent Elibility Services",
+            "PhoneNumber" : "248-346-1468 ",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2011-03-24"
+        },
+        {
+            "Client" : "DMA",
+            "FullName" : "DENTEMAX",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "EBC",
+            "FullName" : "Employee Benefit Concepts",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2013-07-31"
+        },
+        {
+            "Client" : "EBM125",
+            "FullName" : "Employee Benefit Management Services Inc",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-06-27"
+        },
+        {
+            "Client" : "EBS - OLD",
+            "FullName" : "EBS-RMSCO",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-06-01"
+        },
+        {
+            "Client" : "EBS110",
+            "FullName" : "Employee Benefit Systems",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2016-02-22"
+        },
+        {
+            "Client" : "EHP",
+            "FullName" : "ELECTRONIC HEALTH",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "EHT",
+            "FullName" : "eHEALTH TECHNOLOGIES",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-11-21"
+        },
+        {
+            "Client" : "ELS",
+            "FullName" : "England Logistics SCE",
+            "PhoneNumber" : "(734) 893-6046",
+            "Fax" : "(734) 413-0123",
+            "Address" : "26000 Northline Commerce Dr. Suite 700,Taylor, MI 48180",
+            "Website" : "www.englandlogistics.com\/sce",
+            "CreateDate" : "2010-03-24"
+        },
+        {
+            "Client" : "ENT",
+            "FullName" : "ENTRUST",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "FES061",
+            "FullName" : "Financial Education Services",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-04-15"
+        },
+        {
+            "Client" : "FNH129",
+            "FullName" : "FirstNation Health",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-10-03"
+        },
+        {
+            "Client" : "GBA ",
+            "FullName" : "GBA ",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : null,
+            "Website" : null,
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "GEM",
+            "FullName" : "Global Excel",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-10-04"
+        },
+        {
+            "Client" : "GEM",
+            "FullName" : "Global Excel",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-10-04"
+        },
+        {
+            "Client" : "GLC",
+            "FullName" : "GLOBAL CARE",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2011-09-16"
+        },
+        {
+            "Client" : "HCC",
+            "FullName" : "HCC MED",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2013-01-18"
+        },
+        {
+            "Client" : "HCS140",
+            "FullName" : "Health Cost Solutions",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2018-06-19"
+        },
+        {
+            "Client" : "HDN",
+            "FullName" : "HDN",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : null,
+            "Website" : null,
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "HDP121",
+            "FullName" : "Health Design Plus",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2016-12-20"
+        },
+        {
+            "Client" : "HEI",
+            "FullName" : "Harrah’s Operating Company, Inc.",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "One Caesars Palace Dr. ,Las Vegas, NV 89109",
+            "Website" : "",
+            "CreateDate" : "2010-09-12"
+        },
+        {
+            "Client" : "HFB",
+            "FullName" : "HEALTH FIRST BENEFITS",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2013-09-13"
+        },
+        {
+            "Client" : "IBA - OLD",
+            "FullName" : "International Benefit Administrators, Inc.",
+            "PhoneNumber" : "516-739-1060",
+            "Fax" : "",
+            "Address" : "100 GARDEN CITY PLAZA, SUITE 102.  GARDEN CITY, NY 11530 ",
+            "Website" : "",
+            "CreateDate" : "2012-01-06"
+        },
+        {
+            "Client" : "IBA127",
+            "FullName" : "International Benefits Administrators, LLC",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-04-19"
+        },
+        {
+            "Client" : "IDA",
+            "FullName" : "IDA",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : null,
+            "Website" : null,
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "IMG138",
+            "FullName" : "International Medical Group, Inc.",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2018-06-07"
+        },
+        {
+            "Client" : "JFP091",
+            "FullName" : "JFP Benefit Management Inc",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-06-03"
+        },
+        {
+            "Client" : "KAA",
+            "FullName" : " Keenan & Associates",
+            "PhoneNumber" : "800-451-4518",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2011-02-02"
+        },
+        {
+            "Client" : "LAV",
+            "FullName" : "LAVIDA",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "LBS028",
+            "FullName" : "Lifetime Benefit Solutions",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-04-22"
+        },
+        {
+            "Client" : "MAE123",
+            "FullName" : "Maestro Health",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2018-08-29"
+        },
+        {
+            "Client" : "MBA",
+            "FullName" : "MBA BENEFIT ADMINISTRATORS",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2013-11-21"
+        },
+        {
+            "Client" : "MHS",
+            "FullName" : "Memorial Healthcare System",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2010-02-04"
+        },
+        {
+            "Client" : "MID",
+            "FullName" : "MIDROGUE",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "MSI",
+            "FullName" : "MIDWEST SECURITY",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "NHB",
+            "FullName" : "NHBC",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2010-05-25"
+        },
+        {
+            "Client" : "NOL",
+            "FullName" : "NOLAN",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "NOR134",
+            "FullName" : "NorthBay Healthcare",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2018-03-15"
+        },
+        {
+            "Client" : "NPM - OLD",
+            "FullName" : "National Petition Missouri",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2010-03-02"
+        },
+        {
+            "Client" : "NPM048",
+            "FullName" : "National Petition Management",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-12-29"
+        },
+        {
+            "Client" : "NTO",
+            "FullName" : "Inetico",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-06-01"
+        },
+        {
+            "Client" : "OAK",
+            "FullName" : "Oakwell",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-09-10"
+        },
+        {
+            "Client" : "OKC141",
+            "FullName" : "Oklahomans for Consumer Freedom, Inc.",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2018-06-12"
+        },
+        {
+            "Client" : "OMN",
+            "FullName" : "Omni Adminstrators",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2012-07-10"
+        },
+        {
+            "Client" : "ONC124",
+            "FullName" : "On Call International",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-03-29"
+        },
+        {
+            "Client" : "PRS",
+            "FullName" : "PRAIRIE STATE",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "PSD099",
+            "FullName" : "Silver Bullet, LLC",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-06-04"
+        },
+        {
+            "Client" : "PTB",
+            "FullName" : "PITNEY BOWES AAS & PMH",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "RHP090",
+            "FullName" : "Reliant",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-06-18"
+        },
+        {
+            "Client" : "RVR107",
+            "FullName" : "Raven Resources",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-12-02"
+        },
+        {
+            "Client" : "SIS",
+            "FullName" : "SISCO",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "SPE",
+            "FullName" : "Spectrum",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-12-07"
+        },
+        {
+            "Client" : "STA",
+            "FullName" : "Shasta Administrators",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "2751 Southwest Airport Way  Redmond, OR  97756",
+            "Website" : "",
+            "CreateDate" : "2012-02-17"
+        },
+        {
+            "Client" : "TBR",
+            "FullName" : "Taylor Benefits Resource",
+            "PhoneNumber" : "229-225-9943?",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2011-03-27"
+        },
+        {
+            "Client" : "TCG",
+            "FullName" : "TCG",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : null,
+            "Website" : null,
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "TPG135",
+            "FullName" : "The Preferred Group",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2018-03-09"
+        },
+        {
+            "Client" : "TPM",
+            "FullName" : "Teachers Protective Mutual LIfe Ins",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2013-01-18"
+        },
+        {
+            "Client" : "UAG137",
+            "FullName" : "UnitedAg",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2018-06-07"
+        },
+        {
+            "Client" : "UMR",
+            "FullName" : "United Medical Resource",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "VAN998",
+            "FullName" : "van Mansfeld, LLC",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2015-03-30"
+        },
+        {
+            "Client" : "VRT",
+            "FullName" : "VR-TECH",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "WEL017",
+            "FullName" : "WellRithms",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2017-02-28"
+        },
+        {
+            "Client" : "WLT",
+            "FullName" : "WLT",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        },
+        {
+            "Client" : "WMM",
+            "FullName" : "WESTERN MEDICAL",
+            "PhoneNumber" : "248652315",
+            "Fax" : "2485623154",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-04-21"
+        },
+        {
+            "Client" : "WPA",
+            "FullName" : "WELFARE & PENSION",
+            "PhoneNumber" : "",
+            "Fax" : "",
+            "Address" : "",
+            "Website" : "",
+            "CreateDate" : "2009-07-01"
+        }];
+  var clientTlt = $.templates("#clientTmpl"); 
+  clientTlt.link("#client_div", {p: clients });
+
+  $(document).ready(function() {
+    $(".list_table").tablesorter();
+  });
+  </script>
+</body>
+</html>
