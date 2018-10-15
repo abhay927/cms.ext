@@ -1,0 +1,58 @@
+[
+    {
+        "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+        "createTime": "2009-09-10 05:30:36.973",
+        "name": "downloadAll.jsp",
+        "creater": "admin",
+        "description": "",
+        "URI": "downloadAll.jsp"
+    },
+    {
+        "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+        "createTime": "2009-07-16 11:12:13.317",
+        "name": "ClientReportList.jsp",
+        "creater": "lyu",
+        "description": "",
+        "URI": "ClientReportList.jsp"
+    },
+    {
+        "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+        "createTime": "2009-07-16 11:00:56.47",
+        "name": "ClientReportList1L.jsp",
+        "creater": "lyu",
+        "description": "",
+        "URI": "ClientReportList1L.jsp"
+    },
+    {
+        "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+        "createTime": "2009-09-10 05:30:54.113",
+        "name": "ClientReportList_Excel.jsp",
+        "creater": "admin",
+        "description": "",
+        "URI": "ClientReportList_Excel.jsp"
+    },
+    {
+        "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+        "createTime": "2009-07-16 11:12:50.0",
+        "name": "ClientReportBill_update.jsp",
+        "creater": "lyu",
+        "description": "",
+        "URI": "ClientReportBill_update.jsp"
+    },
+    {
+        "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+        "createTime": "2009-09-10 05:30:21.427",
+        "name": "ClientReportList1L_Excel.jsp",
+        "creater": "admin",
+        "description": "",
+        "URI": "ClientReportList1L_Excel.jsp"
+    },
+    {
+        "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+        "createTime": "2009-07-16 11:13:49.437",
+        "name": "ClientReportBillList_ajax.jsp",
+        "creater": "lyu",
+        "description": "",
+        "URI": "ClientReportBillList_ajax.jsp"
+    }
+]
