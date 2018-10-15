@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function List</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
+<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
+<style>
+.list_table thead th.header {
+  background-image: url(../images/sort_bg.gif), url(../images/list_tab_th_h28.jpg);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center right, left center;
+  height: 28px;
+  text-align: center;
+  font-size: 12px;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #7a8180;
+  border-collapse: collapse;
+  white-space: wrap;
+  cursor: pointer;
+}
+
+#list_section {
+  overflow: hidden;
+}
+#functions_div {
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 400px;
+  width: 100%;
+  height: 400px;
+}
+
+#pages_div {
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 420px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <script>
+    $("#common").load("00.common.html");
+  </script>
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Project Status</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <ul>
+      <!-- 
+        <li><a class="selecttab" href="02.ProjectDetail.html?NewProject=true">New Project</a></li>
+      -->
+        <li><a class="selecttab" href="99.ProjectUpdate.html?NewProject=true">New Project</a></li>
+        <li><a href="#Filter">Filter</a></li>
+      </ul>
+    </div>
+    <div id="list_section">
+      <!-- Here is the list -->
+      <div id="functions_div"></div>
+      <div id="pages_div"></div>
+      </div>
+    </div>
+  </div>
+<script id="functionsTmpl" type="text/x-jsrender">  
+      <table class="list_table" id="tbl">
+        <thead>
+          <tr>
+            <td width="200px">Menu Name</td>
+            <td>Description</td>
+            <td>Entry URI</td>
+            <td>Image URI</td>
+            <td>Order</td>
+          </tr>
+        </thead>
+        <tbody>
+{{for p}} 
+          <tr>
+            <td style="text-align: left;">{{:menuName}}</td>
+            <td style="text-align: left;">{{:description}}</td>
+            <td style="text-align: left;">{{:entryURI}}</td>
+            <td style="text-align: left;">{{:imageURI}}</td>
+            <td>{{:sort}}</td>
+          </tr>
+{{/for}} 
+        </tbody> 
+    </table>
+</script>
+<script id="pagesTmpl" type="text/x-jsrender">  
+      <table class="list_table" id="tbl">
+        <thead>
+          <tr>
+            <td width="100px"><a href="#">+</a></td>
+            <td width="200px">Page/URI</td>
+            <td>Description</td>
+            <td width="100px">Creater</td>
+            <td width="200px">Created Time</td>
+          </tr>
+        </thead>
+        <tbody>
+{{for p}} 
+          <tr>
+            <td>-E</td>
+            <td style="text-align: left;"><a href="#">{{:URI}}</a></td>
+            <td style="text-align: left;">{{:description}}</td>
+            <td>{{:creater}}</td>
+            <td><time class="time" datetime="{{:createTime}}"></time></td>
+          </tr>
+{{/for}} 
+        </tbody> 
+    </table>
+</script>
+<script>
+function loadFunctions(){
+  var myTemplate = $.templates("#functionsTmpl");  
+  $.getJSON( "json/functions.json", function( data ) {
+    myTemplate.link("#functions_div", {p: data });
+    //console.log(data[0]);
+  });
+}
+function loadPages(){
+  var myTemplate = $.templates("#pagesTmpl");  
+  $.getJSON( "json/pages.json", function( data ) {
+    myTemplate.link("#pages_div", {p: data });
+    //console.log(data[0]);
+    $("time").each(function(index, self){
+      var d = new Date($(self).attr("datetime"));
+      $(self).html($.datepicker.formatDate("mm/dd/yy", d));
+    });
+  });
+}
+$(document).ready(function() {
+  loadFunctions();
+  loadPages();
+
+});
+</script>
+</body>
+</html>

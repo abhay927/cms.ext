@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User List</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
+<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <script>
+    $("#common").load("00.common.html");
+  </script>
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Project Status</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <ul>
+      <!-- 
+        <li><a class="selecttab" href="02.ProjectDetail.html?NewProject=true">New Project</a></li>
+      -->
+        <li><a class="selecttab" href="99.ProjectUpdate.html?NewProject=true">New Project</a></li>
+        <li><a href="#Filter">Filter</a></li>
+      </ul>
+    </div>
+    <div id="list_section">
+      <!-- Here is the list -->
+      <div id="roles_div"></div>
+    </div>
+  </div>
+  <script id="rolesTmpl" type="text/x-jsrender">  
+      <table class="list_table tablesorter" id="tbl">
+        <thead>
+          <tr>
+            <th >Role Name</th>
+            <th >Description</th>
+            <th >Assign To User</th>
+            <th >Assign To Organization</th>
+            <th >Creater</th>
+            <th >Company</th>
+            <th >Create Date</th>
+            <th >Deleted</th>
+          </tr>
+        </thead>
+        <tbody>
+{{for p}} 
+          <tr>
+            <td>{{:name}}</td>
+            <td>{{:info}}</td>
+            <td>
+{{for assignToUsers}}
+            {{:#data}}, 
+{{/for}} 
+            </td>
+            <td>
+{{for assignToUnits}}
+            {{:#data}}, 
+{{/for}} 
+            </td>
+            <td>{{:createBy.loginName}}</td>
+            <td>{{:createBy.unit}}</td>
+            <td>{{:createTime}}</td>
+            <td>{{:isDel}}</td>
+          </tr>
+{{/for}} 
+        </tbody> 
+    </table>
+</script>
+<script>
+function loadRoles(){
+  var myTemplate = $.templates("#rolesTmpl");  
+  $.getJSON( "http://localhost:18080/glee/s/role/all", function( data ) {
+    myTemplate.link("#roles_div", {p: data });
+    $(".list_table").tablesorter();
+  });
+}
+$(document).ready(function() {
+    loadRoles();
+  });
+</script>
+</body>
+</html>

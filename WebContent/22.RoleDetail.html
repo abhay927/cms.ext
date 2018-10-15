@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Role Detail</title>
+<link rel="stylesheet" type="text/css" href="css/jmscms.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jsviews.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
+<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
+</head>
+<body>
+  <div id="common">
+  include common.html here
+  </div>
+  <script>
+    $("#common").load("00.common.html");
+  </script>
+  <div class="right_section">
+    <!-- Here is name of the list -->
+    <div class="toolbar">
+      <div class="tab">
+        <button class="tablinks" onclick="">Project Status</button>
+      </div>
+    </div>
+    <div class="nemubar">
+      <!-- Here is position of nemu bar -->
+      <ul>
+      <!-- 
+        <li><a class="selecttab" href="02.ProjectDetail.html?NewProject=true">New Project</a></li>
+      -->
+        <li><a class="selecttab" href="99.ProjectUpdate.html?NewProject=true">New Project</a></li>
+        <li><a href="#Filter">Filter</a></li>
+      </ul>
+    </div>
+    <div class="detail_section">
+    <div class="accordion active">
+      <h3>Base Information</h3>
+      <div>
+        <table>
+        <tr>
+        <td>Name: </td><td id="name"></td><td></td>
+        </tr>
+        <tr>
+        <td>Description: </td><td id="info"></td><td></td>
+        </tr>
+        <tr>
+        <td>Creater: </td><td id="creater"></td><td></td>
+        </tr>
+        <tr>
+        <td>Creater Company: </td><td id="unit"></td><td></td>
+        </tr>
+        <tr>
+        <td>Create Time: </td><td id="create_time"></td><td></td>
+        </tr>
+        <tr>
+        <td>Assigned To Users; </td><td id="assign_to_user"></td><td></td>
+        </tr>
+        <tr>
+        <td>Assigned To Organizations: </td><td id="assign_to_unit"></td><td></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion active">
+      <h3>Functions</h3>
+      <div>
+      <div id="functions_div" style="height: 300px;width: 100%;"></div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+<script id="functionsTmpl" type="text/x-jsrender">
+<table>
+  <thead>
+    <tr>
+      <th>Menu Name</th>
+      <th>Descript</th>
+      <th>Entry URI</th>
+      <th>Read Only</th>
+    </tr>
+  </thead>
+  <tbody>
+{{for p}} 
+        <tr>
+{{for #data}}
+        <td>{{:#data}}</td>
+{{/for}}
+        </tr>
+{{/for}} 
+  </tbody>
+</table>
+</script>
+<script>
+var role = {
+    "uuid": "769bcdf6-87ed-4388-b982-f81513ae4742",
+    "name": "JMS_all_ function",
+    "info": "JMS all function",
+    "createBy": {
+        "uuid": "",
+        "loginName": "admin",
+        "password": "",
+        "firstName": "zhen",
+        "lastName": "hao",
+        "midName": "snow",
+        "email": "lancer@jmsassoc.com",
+        "phone": "+86-13801182717",
+        "unit": "JMS",
+        "status": null,
+        "unittype": "JMS",
+        "isdel": null,
+        "address": null,
+        "zipCode": null,
+        "state": null,
+        "city": null,
+        "lastLogin": null,
+        "fullName": "zhensnowhao"
+    },
+    "assignToUnits": [
+        "JMS"
+    ],
+    "assignToUsers": [
+        "admin",
+        "LancerZ"
+    ],
+    "functions": [
+        [
+            "Daily&nbsp;Reports",
+            "Daily&nbsp;Reports",
+            "productionlist.jsp",
+            ""
+        ],
+        [
+            "Daily&nbsp;Reports",
+            "Daily&nbsp;Reports(view)",
+            "productionlist.jsp?role=view",
+            "readonly"
+        ],
+        [
+            "Billing&nbsp;Reports",
+            "Billing&nbsp;Reports",
+            "ClientBillingReports1L.jsp",
+            ""
+        ],
+        [
+            "Billing&nbsp;Reports",
+            "Billing&nbsp;Reports(view)",
+            "ClientBillingReports1L.jsp?role=view",
+            "readonly"
+        ],
+        [
+            "Clients&nbsp;Invoices",
+            "Clients&nbsp;Invoices",
+            "ClientReportList1L.jsp",
+            ""
+        ],
+        [
+            "Clients&nbsp;Invoices",
+            "Clients&nbsp;Invoices(view)",
+            "ClientReportList1L.jsp?role=view",
+            "readonly"
+        ],
+        [
+            "Vendors&nbsp;Invoices",
+            "Vendors&nbsp;Invoices",
+            "VendorReportList1L.jsp",
+            ""
+        ],
+        [
+            "Vendors&nbsp;Invoices",
+            "Vendors&nbsp;Invoices(view)",
+            "VendorReportList1L.jsp?role=view",
+            "readonly"
+        ],
+        [
+            "History&nbsp;Invoices",
+            "History&nbsp;Invoices",
+            "ClientHistoryInvoices1L.jsp",
+            ""
+        ],
+        [
+            "Contracts",
+            "Contracts",
+            "ContractsListUnit.jsp",
+            ""
+        ],
+        [
+            "Contracts",
+            "Contracts(view)",
+            "ContractsListUnit.jsp?role=view",
+            "readonly"
+        ],
+        [
+            "Clients",
+            "Clients",
+            "ClientList.jsp",
+            ""
+        ],
+        [
+            "Clients",
+            "Clients(view)",
+            "ClientList.jsp?role=view",
+            "readonly"
+        ],
+        [
+            "Vendors",
+            "Vendors",
+            "vendorslist.jsp",
+            ""
+        ],
+        [
+            "Vendors",
+            "Vendors(view)",
+            "vendorslist.jsp?role=view",
+            "readonly"
+        ],
+        [
+            "Development&nbsp;Reports",
+            "Development&nbsp;Reports",
+            "DevelopmentCount.jsp",
+            ""
+        ],
+        [
+            "Role",
+            "Role",
+            "roleList.jsp",
+            ""
+        ],
+        [
+            "UnitRole",
+            "UnitRole",
+            "unitroleList.jsp",
+            ""
+        ],
+        [
+            "User",
+            "User",
+            "UsersList.jsp",
+            ""
+        ],
+        [
+            "FunctionUrl",
+            "FunctionUrl",
+            "functionUrl.jsp",
+            ""
+        ]
+    ],
+    "createTime": "2009-05-15",
+    "del": false
+};
+
+function renderRole(r){
+  $("#name").html(r.name);
+  $("#info").html(r.info);
+  $("#creater").html(r.createBy.loginName);
+  $("#unit").html(r.createBy.unit);
+  $("#create_time").html(r.createTime);
+  $("#assign_to_user").html(r.assignToUsers.join(", "));
+  $("#assign_to_unit").html(r.assignToUnits.join(", "));
+  var myTemplate = $.templates("#functionsTmpl");  
+  myTemplate.link("#functions_div", {p: r.functions })
+}
+
+$( function() {
+  $( ".accordion" ).accordion({
+    collapsible: true, 
+    active: false 
+    });
+  $( ".active" ).accordion({
+    collapsible: true, 
+    active: 0 
+    });
+});
+
+$(document).ready(function() {
+  renderRole(role);
+});
+</script>
+</body>
+</html>
