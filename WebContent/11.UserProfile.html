@@ -12,6 +12,11 @@
 
 <script type="text/javascript" src="js/jms_cms_2018.js"></script>
 </head>
+<style>
+#checked {
+ visibility: hidden;
+}
+</style>
 <body>
   <div id="common">
   include common.html here
@@ -40,27 +45,31 @@
       <div>
         <table>
         <tr>
-        <td>Login Name:</td><td><input type="text" size="100" class="editable" id="loginid" form="form1" value="" readonly/></td><td></td>
+        <td>Login Name:</td><td><input type="text" size="100" class="editable required" id="loginid" form="form1" value="" readonly/></td>
+        <td><img src="images/ok_16px.png" id="checked"></td><td></td>
         </tr>
         <tr>
-        <td>First Name:</td><td><input type="text" size="100" class="editable" id="firstname" form="form1" value="" readonly/></td><td></td>
+        <td>First Name:</td><td><input type="text" size="100" class="editable required" id="firstname" form="form1" value="" readonly/></td><td></td><td></td>
         </tr>
         <tr>
-        <td>Last Name:</td><td><input type="text" size="100" class="editable" id="lastname" form="form1" value="" readonly/></td><td></td>
+        <td>Last Name:</td><td><input type="text" size="100" class="editable required" id="lastname" form="form1" value="" readonly/></td><td></td><td></td>
         </tr>
         <tr>
-        <td>Middle Name:</td><td><input type="text" size="100" class="editable" id="midname" value="" readonly/></td><td></td>
+        <td>Middle Name:</td><td><input type="text" size="100" class="editable" id="midname" value="" readonly/></td><td></td><td></td>
         </tr>
         <tr>
-        <td>Organization:</td><td><input type="text" size="100" class="editable" id="unit" value="" readonly/></td><td></td>
+        <td>Organization:</td><td><input type="text" size="100" class="editable required" id="unit" value="" readonly/></td><td></td><td></td>
         </tr>
         <tr>
           <td>JMS/Client/Vender:</td>
-          <td><select id="orgtype">
+          <td>
+          <select id="orgtype">
+            <option value="Required" disabled selected>Required</option>
             <option value="JMS">JMS</option>
             <option value="CLIENT">CLIENT</option>
             <option value="VENDOR">VENDOR</option>
-          </select></td><td></td>
+          </select></td><td>
+          </td>
         </tr>
         </table>
       </div>
@@ -88,7 +97,7 @@
       <div style="display: none", aria-hide="true">
         <table>
         <tr>
-        <td>Email:</td><td><input type="text" size="100" class="editable" id="email" value="" readonly/></td><td><a href="#" id="verifyEmail">Verified</a></td>
+        <td>Email:</td><td><input type="text" size="100" class="editable required" id="email" value="" readonly/></td><td><a href="#" id="verifyEmail">Verified</a></td>
         </tr>
         <tr>
         <td>Phone:</td><td><input type="text" size="100" class="editable" id="phone" value="" readonly/></td><td></td>
@@ -171,7 +180,7 @@
     $("input[id=state]").prop("defaultValue", user.State);
     $("input[id=zipcode]").prop("defaultValue", user.ZipCode);
     // handle select tag
-    if (!user.unittype) user.unittype = "JMS";
+    if (!user.unittype) user.unittype = "required";
     $("#orgtype").prop("defaultValue", user.unittype);
     $("#orgtype option[value=" + user.unittype + "]").prop("selected", true);
     $( "#orgtype" ).selectmenu();
@@ -182,15 +191,29 @@
     console.log(isCreate);
     ui = $("#editMenu");
     var label = $(ui).html();
+    
     if(label === "Edit"){
       $("input.editable")
             .not("#loginid")
             .addClass("enable")
             .prop("readonly", false);
+      //$("select#orgtype").prop('disabled', true);
       if(isCreate){ 
         $("#loginid")
             .addClass("enable")
-            .prop("readonly", false);
+            .prop("readonly", false)
+            .focusout(function() {
+              var newLoginId = $( this ).val();
+              if(newLoginId != ''){
+                $.getJSON('json/true.json', {"userid":newLoginId}, function(data){
+                  if(data){
+                    $("#checked").css("visibility", "visible");
+                  } else {
+                    alert('userid [' + newLoginId + '] is not available');
+                  }
+                });
+              }
+            })
         $("#verifyEmail").html("To Verify");
       }
       $(ui).html("Save");
@@ -198,10 +221,10 @@
     if (label === "Save"){
       var changedValues = {};
       $('input').each(function(){
-        var id = $(this).prop("id");
+        var eid = $(this).prop("id");
         var value = $(this).val();
         if ($(this).prop("defaultValue") != value){
-          changedValues[id] = value;
+          changedValues[eid] = value;
         }
       });
       var value = $("#orgtype option:selected").val();
@@ -234,6 +257,7 @@
       active: 0 
       });
     
+    $( "input.required" ).attr("placeholder", "Required");
     var p = getParameterByName('create');
     if (null != p){
       for(var k in aUser){
