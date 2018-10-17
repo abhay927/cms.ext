@@ -9,6 +9,8 @@
 
 <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css" />
 <script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+
+<script type="text/javascript" src="js/jms_cms_2018.js"></script>
 </head>
 <body>
   <div id="common">
@@ -27,7 +29,7 @@
   <div class="nemubar">
     <!-- Here is position of nemu bar -->
     <ul>
-      <li><a href="#" onclick="toEdit(this);">Edit</a></li>
+      <li><a href="#" id="editMenu" onclick="toEdit();">Edit</a></li>
       <li><a href="#">Delete</a></li>
     </ul>
   </div>
@@ -86,7 +88,7 @@
       <div style="display: none", aria-hide="true">
         <table>
         <tr>
-        <td>Email:</td><td><input type="text" size="100" class="editable" id="email" value="" readonly/></td><td><a href="#">Verified</a></td>
+        <td>Email:</td><td><input type="text" size="100" class="editable" id="email" value="" readonly/></td><td><a href="#" id="verifyEmail">Verified</a></td>
         </tr>
         <tr>
         <td>Phone:</td><td><input type="text" size="100" class="editable" id="phone" value="" readonly/></td><td></td>
@@ -169,18 +171,29 @@
     $("input[id=state]").prop("defaultValue", user.State);
     $("input[id=zipcode]").prop("defaultValue", user.ZipCode);
     // handle select tag
+    if (!user.unittype) user.unittype = "JMS";
     $("#orgtype").prop("defaultValue", user.unittype);
     $("#orgtype option[value=" + user.unittype + "]").prop("selected", true);
     $( "#orgtype" ).selectmenu();
   }
   
-  function toEdit(ui){
-    console.log(ui);
+  function toEdit(isCreate){
+    if (!isCreate)  isCreate = false;
+    console.log(isCreate);
+    ui = $("#editMenu");
     var label = $(ui).html();
     if(label === "Edit"){
-    $("input.editable").addClass("enable");
-    $("input.editable").prop("readonly", false);
-    $(ui).html("Save");
+      $("input.editable")
+            .not("#loginid")
+            .addClass("enable")
+            .prop("readonly", false);
+      if(isCreate){ 
+        $("#loginid")
+            .addClass("enable")
+            .prop("readonly", false);
+        $("#verifyEmail").html("To Verify");
+      }
+      $(ui).html("Save");
     } 
     if (label === "Save"){
       var changedValues = {};
@@ -207,6 +220,10 @@
     }
   }
   
+  $(document).ajaxError(function(event,xhr,options,exc){
+    alert("An error occurred! " + [options.type, options.url, xhr.status].join(", "));
+  });
+  
   $( function() {
     $( ".accordion" ).accordion({
       collapsible: true, 
@@ -216,12 +233,18 @@
     $( ".active" ).accordion({
       active: 0 
       });
+    
+    var p = getParameterByName('create');
+    if (null != p){
+      for(var k in aUser){
+        aUser[k] = "";
+      }
+      toEdit( true );
+    }
     render(aUser);
   });
   
-  $(document).ajaxError(function(event,xhr,options,exc){
-    alert("An error occurred! " + [options.type, options.url, xhr.status].join(", "));
-  });
+
 
   </script>
 </body>
