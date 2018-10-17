@@ -27,32 +27,33 @@
   <div class="nemubar">
     <!-- Here is position of nemu bar -->
     <ul>
-      <li><a href="#">Edit</a></li>
+      <li><a href="#" onclick="toEdit(this);">Edit</a></li>
       <li><a href="#">Delete</a></li>
     </ul>
   </div>
     <div class="detail_section">
+    <form id="form1"></form>
     <div class="accordion active">
       <h3>Base Information</h3>
       <div>
         <table>
         <tr>
-        <td>Login Name:</td><td id="userid">LancerZ</td><td></td>
+        <td>Login Name:</td><td><input type="text" size="100" class="editable" id="loginid" form="form1" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>First Name:</td><td id="firstname">Lancer</td><td></td>
+        <td>First Name:</td><td><input type="text" size="100" class="editable" id="firstname" form="form1" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>Last Name:</td><td id="lastname">Zhang</td><td></td>
+        <td>Last Name:</td><td><input type="text" size="100" class="editable" id="lastname" form="form1" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>Middle Name:</td><td id="midname"></td><td></td>
+        <td>Middle Name:</td><td><input type="text" size="100" class="editable" id="midname" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>Organization:</td><td id="unit">JMS</td><td></td>
+        <td>Organization:</td><td><input type="text" size="100" class="editable" id="unit" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>JMS/Client/Vender:</td><td id="unittype">JMS</td><td></td>
+        <td>JMS/Client/Vender:</td><td><input type="text" size="100" class="editable" id="unittype" value="" readonly/></td><td></td>
         </tr>
         </table>
       </div>
@@ -78,22 +79,22 @@
       <div style="display: none", aria-hide="true">
         <table>
         <tr>
-        <td>Email:</td><td id="Email">lancer@jmsassoc.com</td><td><a href="#">Verified</a></td>
+        <td>Email:</td><td><input type="text" size="100" class="editable" id="email" value="" readonly/></td><td><a href="#">Verified</a></td>
         </tr>
         <tr>
-        <td>Phone:</td><td id="Phone">248-888-9999</td><td></td>
+        <td>Phone:</td><td><input type="text" size="100" class="editable" id="phone" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>Address:</td><td id="Address"></td><td></td>
+        <td>Address:</td><td><input type="text" size="100" class="editable" id="address" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>City:</td><td id="City"></td><td></td>
+        <td>City:</td><td><input type="text" size="100" class="editable" id="city" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>State:</td><td id="State"></td><td></td>
+        <td>State:</td><td><input type="text" size="100" class="editable" id="state" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>ZipCode:</td><td id="ZipCode"></td><td></td>
+        <td>ZipCode:</td><td><input type="text" size="100" class="editable" id="zipcode" value="" readonly/></td><td></td>
         </tr>
         </table>
       </div>
@@ -119,7 +120,7 @@
         <td>Create Date:</td><td id="createdate">2015-06-08T21:34:03Z</td><td></td>
         </tr>
         <tr>
-        <td>Removed:</td><td id="isdel">0</td><td></td>
+        <td>Deleted:</td><td id="isdel">0</td><td></td>
         </tr>
         </table>
       </div>
@@ -129,7 +130,7 @@
   </div>
   </div>
   <script>
-  var user =    {
+  var aUser =    {
       "SN" : "c3730f85-80f3-4621-a043-6164bf0ebe0c",
       "userid" : "LancerZ",
       "firstname" : "Lancer",
@@ -140,13 +141,66 @@
       "midname" : "",
       "isdel" : "0",
       "createdate" : "2015-06-08T21:34:03Z",
-      "TelNO" : "",
-      "EMail" : "",
+      "TelNO" : "248-888-9999",
+      "EMail" : "lancer@jmsassoc.com",
       "Address" : "",
       "ZipCode" : "",
       "State" : "",
       "City" : ""
   };
+  
+  function render(user){
+    $("input[id=loginid]").prop("defaultValue", user.userid);
+    $("input[id=firstname]").prop("defaultValue", user.firstname);
+    $("input[id=lastname]").prop("defaultValue", user.lastname);
+    $("input[id=midname]").prop("defaultValue", user.midname);
+    $("input[id=unit]").prop("defaultValue", user.unit);
+    $("input[id=email]").prop("defaultValue", user.EMail);
+    $("input[id=phone]").prop("defaultValue", user.TelNO);
+    $("input[id=address]").prop("defaultValue", user.Address);
+    $("input[id=city]").prop("defaultValue", user.City);
+    $("input[id=state]").prop("defaultValue", user.State);
+    $("input[id=zipcode]").prop("defaultValue", user.ZipCode);
+  }
+  
+  function toEdit(ui){
+    console.log(ui);
+    var label = $(ui).html();
+    if(label === "Edit"){
+    $("input.editable").addClass("enable");
+    $("input.editable").prop("readonly", false);
+    $(ui).html("Save");
+    } 
+    if (label === "Save"){
+      var changedValue = {};
+
+      
+      $('input').each(function(){
+        var id = $(this).prop("id");
+        var value = $(this).val();
+        //console.log(id);
+        //console.log($(this).prop("defaultValue"));
+        //console.log(value);
+        if ($(this).prop("defaultValue") != value){
+          changedValue[id] = value;
+        }
+      });
+      console.log(changedValue);
+      $.post("json/aUser1.json",
+          changedValue,
+          function(data){
+            console.log(data);
+            render(data);
+           // $("input").each(function(){
+            //  $(this).val($(this).prop("defaultValue"));
+            //});
+            $("input.editable").removeClass("enable");
+            $("input.editable").prop("readonly", true);
+            $(ui).html("Edit");
+      });
+    }
+  }
+  
   $( function() {
     $( ".accordion" ).accordion({
       collapsible: true, 
@@ -156,8 +210,19 @@
       collapsible: true, 
       active: 0 
       });
-  } );
-
+    render(aUser);
+  });
+  
+  $(document).ajaxError(function(event,xhr,options,exc){
+    console.log(event);
+    console.log(xhr);
+    console.log(options);
+    console.log(exc);
+    console.log(xhr.status);
+    console.log(options.url);
+    console.log(options.type);
+    alert("An error occurred! " + [options.type, options.url, xhr.status].join(", "));
+});
   </script>
 </body>
 </html>
