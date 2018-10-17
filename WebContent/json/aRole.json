@@ -1,0 +1,176 @@
+{
+    "uuid": "769bcdf6-87ed-4388-b982-f81513ae4742",
+    "name": "JMS_all_ function",
+    "info": "JMS all function",
+    "createBy": {
+        "uuid": "",
+        "loginName": "admin",
+        "password": "",
+        "firstName": "zhen",
+        "lastName": "hao",
+        "midName": "snow",
+        "email": "",
+        "phone": "",
+        "unit": "JMS",
+        "status": null,
+        "unittype": "JMS",
+        "isdel": null,
+        "address": null,
+        "zipCode": null,
+        "state": null,
+        "city": null,
+        "lastLogin": null,
+        "fullName": "zhensnowhao"
+    },
+    "assignToUnits": [
+        "JMS"
+    ],
+    "assignToUsers": [
+        "admin",
+        "LancerZ"
+    ],
+    "functions": [
+        {
+            "funOther": "Daily&nbsp;Reports",
+            "readonly": false,
+            "funcSN": "51701A77-0B37-4B23-A07E-6A7B82D40D78",
+            "fun": "Daily&nbsp;Reports",
+            "url": "productionlist.jsp"
+        },
+        {
+            "funOther": "Daily&nbsp;Reports(view)",
+            "readonly": true,
+            "funcSN": "7D59BEA4-3FF0-4B04-AD8A-4F4E46D1F2B6",
+            "fun": "Daily&nbsp;Reports",
+            "url": "productionlist.jsp?role=view"
+        },
+        {
+            "funOther": "Billing&nbsp;Reports",
+            "readonly": false,
+            "funcSN": "706F0AFE-561F-4DA0-B972-8D39C26CD4D4",
+            "fun": "Billing&nbsp;Reports",
+            "url": "ClientBillingReports1L.jsp"
+        },
+        {
+            "funOther": "Billing&nbsp;Reports(view)",
+            "readonly": true,
+            "funcSN": "6BF34B83-80D7-4C32-95E2-F809DBB32FF4",
+            "fun": "Billing&nbsp;Reports",
+            "url": "ClientBillingReports1L.jsp?role=view"
+        },
+        {
+            "funOther": "Clients&nbsp;Invoices",
+            "readonly": false,
+            "funcSN": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+            "fun": "Clients&nbsp;Invoices",
+            "url": "ClientReportList1L.jsp"
+        },
+        {
+            "funOther": "Clients&nbsp;Invoices(view)",
+            "readonly": true,
+            "funcSN": "8D4F50E3-657D-4C42-BD04-B4AE746400A0",
+            "fun": "Clients&nbsp;Invoices",
+            "url": "ClientReportList1L.jsp?role=view"
+        },
+        {
+            "funOther": "Vendors&nbsp;Invoices",
+            "readonly": false,
+            "funcSN": "1F40948F-8CED-4011-BA80-C9DEFD3AA014",
+            "fun": "Vendors&nbsp;Invoices",
+            "url": "VendorReportList1L.jsp"
+        },
+        {
+            "funOther": "Vendors&nbsp;Invoices(view)",
+            "readonly": true,
+            "funcSN": "2CDD4A86-3437-4E7D-BC87-299943D3AE61",
+            "fun": "Vendors&nbsp;Invoices",
+            "url": "VendorReportList1L.jsp?role=view"
+        },
+        {
+            "funOther": "History&nbsp;Invoices",
+            "readonly": false,
+            "funcSN": "B51410C0-8507-430E-ABD5-24EF1122029B",
+            "fun": "History&nbsp;Invoices",
+            "url": "ClientHistoryInvoices1L.jsp"
+        },
+        {
+            "funOther": "Contracts",
+            "readonly": false,
+            "funcSN": "5F590226-3340-4719-958F-E8D7021EA535",
+            "fun": "Contracts",
+            "url": "ContractsListUnit.jsp"
+        },
+        {
+            "funOther": "Contracts(view)",
+            "readonly": true,
+            "funcSN": "E0E1C205-D952-4505-A936-C8479B07E820",
+            "fun": "Contracts",
+            "url": "ContractsListUnit.jsp?role=view"
+        },
+        {
+            "funOther": "Clients",
+            "readonly": false,
+            "funcSN": "4F50CCC0-414E-4D86-BB6D-419AE040DC1B",
+            "fun": "Clients",
+            "url": "ClientList.jsp"
+        },
+        {
+            "funOther": "Clients(view)",
+            "readonly": true,
+            "funcSN": "5D31CE3A-E78C-47B1-BDDB-97F18727EC90",
+            "fun": "Clients",
+            "url": "ClientList.jsp?role=view"
+        },
+        {
+            "funOther": "Vendors",
+            "readonly": false,
+            "funcSN": "EF145B84-8C46-4730-B2B5-474F9C0C8468",
+            "fun": "Vendors",
+            "url": "vendorslist.jsp"
+        },
+        {
+            "funOther": "Vendors(view)",
+            "readonly": true,
+            "funcSN": "5866181F-06E8-4A73-A1A5-AD669D202934",
+            "fun": "Vendors",
+            "url": "vendorslist.jsp?role=view"
+        },
+        {
+            "funOther": "Development&nbsp;Reports",
+            "readonly": false,
+            "funcSN": "F5781126-6860-4239-9495-FE98F76DB452",
+            "fun": "Development&nbsp;Reports",
+            "url": "DevelopmentCount.jsp"
+        },
+        {
+            "funOther": "Role",
+            "readonly": false,
+            "funcSN": "CDBE97B3-200D-406F-B6DC-385F697A3598",
+            "fun": "Role",
+            "url": "roleList.jsp"
+        },
+        {
+            "funOther": "UnitRole",
+            "readonly": true,
+            "funcSN": "6B4F7BE0-576D-4DCB-9A13-E33EAE04FFFA",
+            "fun": "UnitRole",
+            "url": "unitroleList.jsp"
+        },
+        {
+            "funOther": "User",
+            "readonly": true,
+            "funcSN": "929F3C67-900F-4A0D-9CD8-07FC4E07E103",
+            "fun": "User",
+            "url": "UsersList.jsp"
+        },
+        {
+            "funOther": "FunctionUrl",
+            "readonly": true,
+            "funcSN": "0E3AF46D-D147-4225-9449-B4B7273208D8",
+            "fun": "FunctionUrl",
+            "url": "functionUrl.jsp"
+        }
+    ],
+    "createTime": "2009-05-15",
+    "del": false
+}

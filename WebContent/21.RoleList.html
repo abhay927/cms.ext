@@ -25,7 +25,7 @@
     <!-- Here is name of the list -->
     <div class="toolbar">
       <div class="tab">
-        <button class="tablinks" onclick="">Project Status</button>
+        <button class="tablinks" onclick="">Role List</button>
       </div>
     </div>
     <div class="nemubar">
@@ -34,8 +34,7 @@
       <!-- 
         <li><a class="selecttab" href="02.ProjectDetail.html?NewProject=true">New Project</a></li>
       -->
-        <li><a class="selecttab" href="99.ProjectUpdate.html?NewProject=true">New Project</a></li>
-        <li><a href="#Filter">Filter</a></li>
+        <li><a class="selecttab" href="#">New Role</a></li>
       </ul>
     </div>
     <div id="list_section">
@@ -60,7 +59,7 @@
         <tbody>
 {{for p}} 
           <tr>
-            <td>{{:name}}</td>
+            <td><a href="22.RoleDetail.html?roleid={{:uuid}}">{{:name}}</a></td>
             <td>{{:info}}</td>
             <td>
 {{for assignToUsers}}
@@ -82,9 +81,12 @@
     </table>
 </script>
 <script>
+//var jsonURL = "http://localhost:18080/glee/s/role/all";
+var jsonURL = "json/Roles.json";
+
 function loadRoles(){
   var myTemplate = $.templates("#rolesTmpl");  
-  $.getJSON( "http://localhost:18080/glee/s/role/all", function( data ) {
+  $.getJSON( jsonURL , function( data ) {
     myTemplate.link("#roles_div", {p: data });
     $(".list_table").tablesorter();
   });

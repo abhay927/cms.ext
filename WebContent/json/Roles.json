@@ -1,0 +1,3571 @@
+[
+    {
+        "uuid": "a67daf53-a4a9-49a7-b80a-ecb2b9fbc1d9",
+        "name": "JMS_Operation_Only",
+        "info": "JMS Operation Only",
+        "createBy": {
+            "uuid": "",
+            "loginName": "JMSoperate",
+            "password": "",
+            "firstName": "",
+            "lastName": "jmsoperate",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMSOperation",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "jmsoperate"
+        },
+        "assignToUnits": [
+            "JMSOperation"
+        ],
+        "assignToUsers": [
+            "AlexisR"
+        ],
+        "functions": null,
+        "createTime": "2014-02-11",
+        "del": false
+    },
+    {
+        "uuid": "134a907a-5c49-4a94-8f29-28091238177a",
+        "name": "confirm_role",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "PEK_admin2",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "PEK",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "PEK_admin2"
+        },
+        "assignToUnits": [
+            "PEK"
+        ],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2011-06-24",
+        "del": false
+    },
+    {
+        "uuid": "9bea2cb3-8f81-49dc-ab7e-b58bf569e16f",
+        "name": "Daily Reports",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "JPI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS Pacific Inc",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "JPI_admin"
+        },
+        "assignToUnits": [
+            "JMS Pacific Inc"
+        ],
+        "assignToUsers": [
+            "WilsonHua",
+            "williampho",
+            "MarilynG"
+        ],
+        "functions": null,
+        "createTime": "2011-05-27",
+        "del": false
+    },
+    {
+        "uuid": "d82ac7b8-4c06-4de8-b6eb-37b0dfcff86b",
+        "name": "Daily Reports(view)",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "Datum_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "Datum",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "Datum_admin"
+        },
+        "assignToUnits": [
+            "Datum"
+        ],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2010-11-12",
+        "del": false
+    },
+    {
+        "uuid": "1f25f85a-0637-4713-917e-08ef62b4efc9",
+        "name": "Daily Reports",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "Datum_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "Datum",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "Datum_admin"
+        },
+        "assignToUnits": [
+            "Datum"
+        ],
+        "assignToUsers": [
+            "Kaitlyn",
+            "Zhaodan"
+        ],
+        "functions": null,
+        "createTime": "2010-11-12",
+        "del": false
+    },
+    {
+        "uuid": "9f9db8e6-3831-4a02-8309-03918b04b2a8",
+        "name": "JMS Daily Reports",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "haoz",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "haoz"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "StefanieL",
+            "DawnS",
+            "PamC",
+            "olivia_lin",
+            "nikkiyo",
+            "AmiD",
+            "Winner_jms",
+            "Olivia_Confirm",
+            "Frank",
+            "Lindsay_Confirm",
+            "Paula_Confirm",
+            "simon_liao",
+            "helle_he",
+            "KimF",
+            "GailA"
+        ],
+        "functions": null,
+        "createTime": "2010-09-20",
+        "del": false
+    },
+    {
+        "uuid": "64001a52-1701-4a0d-8b59-a2d629b95001",
+        "name": "modify_rule ",
+        "info": "modify_rule ",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CHP_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CHP",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CHP_admin"
+        },
+        "assignToUnits": [
+            "CHP"
+        ],
+        "assignToUsers": [
+            "Wilson_Hua",
+            "CHP_test"
+        ],
+        "functions": null,
+        "createTime": "2009-09-24",
+        "del": false
+    },
+    {
+        "uuid": "c57c73ae-2526-497d-8f03-f69560d1f223",
+        "name": "selina",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "NS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS(NS) Beijing",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "NS_admin"
+        },
+        "assignToUnits": [
+            "JMS(NS) Beijing"
+        ],
+        "assignToUsers": [
+            "ns_operation"
+        ],
+        "functions": null,
+        "createTime": "2009-09-02",
+        "del": false
+    },
+    {
+        "uuid": "81474074-6e8a-4758-8924-07d0ead58664",
+        "name": "enter_data",
+        "info": "enter_data",
+        "createBy": {
+            "uuid": "",
+            "loginName": "NS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS(NS) Beijing",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "NS_admin"
+        },
+        "assignToUnits": [
+            "JMS(NS) Beijing"
+        ],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2009-09-02",
+        "del": false
+    },
+    {
+        "uuid": "a1de1700-d634-4a8a-88d3-8b448c5f388c",
+        "name": "view",
+        "info": "only_view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "NS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS(NS) Beijing",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "NS_admin"
+        },
+        "assignToUnits": [
+            "JMS(NS) Beijing"
+        ],
+        "assignToUsers": [
+            "ns_Williams"
+        ],
+        "functions": null,
+        "createTime": "2009-09-02",
+        "del": false
+    },
+    {
+        "uuid": "2e222581-0ff4-47cc-ade0-47f416c28877",
+        "name": "HUIC_Manager",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "HUIC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "HUIC",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "HUIC_admin"
+        },
+        "assignToUnits": [
+            "HUIC"
+        ],
+        "assignToUsers": [
+            "huic_lf",
+            "KaikouPEK",
+            "ZXQ",
+            "MZB",
+            "HLP",
+            "off_HLP"
+        ],
+        "functions": null,
+        "createTime": "2009-08-05",
+        "del": false
+    },
+    {
+        "uuid": "04a562c0-f45c-4295-a53b-2587ae08bf95",
+        "name": "ADJ_DailyReport",
+        "info": "",
+        "createBy": {
+            "uuid": "",
+            "loginName": "HUIC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "HUIC",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "HUIC_admin"
+        },
+        "assignToUnits": [
+            "HUIC"
+        ],
+        "assignToUsers": [
+            "on_HM",
+            "ADJ_MO",
+            "OFF_Zhou",
+            "KaikouPEK",
+            "off_JMF",
+            "off_LJH",
+            "off_LJG",
+            "off_KFR",
+            "off_FC",
+            "off_HJ",
+            "off_WJY",
+            "off_YY",
+            "off_CRJ",
+            "off_HCZ",
+            "on_TMZ",
+            "ADJ_LHL",
+            "on_FSF",
+            "huic_lf",
+            "lucy",
+            "off_HLP"
+        ],
+        "functions": null,
+        "createTime": "2009-08-03",
+        "del": false
+    },
+    {
+        "uuid": "7f3ad450-231b-4fe4-9689-a3ec54bb76eb",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "Vender_admin_user",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMSOperation",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "Vender_admin_user"
+        },
+        "assignToUnits": [
+            "JMSOperation"
+        ],
+        "assignToUsers": [
+            "test_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "70f0d79b-c6d2-4eb1-818a-6556725e996a",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "Vender_admin_user",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMSOperation",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "Vender_admin_user"
+        },
+        "assignToUnits": [
+            "JMSOperation"
+        ],
+        "assignToUsers": [
+            "test_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "660651ae-8e6e-4764-bdcb-c5e88e770447",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "WPA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "WPA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "WPA_admin"
+        },
+        "assignToUnits": [
+            "WPA"
+        ],
+        "assignToUsers": [
+            "WPA_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "01282241-1ffc-4571-99ce-1c7c0de43e29",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "WPA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "WPA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "WPA_admin"
+        },
+        "assignToUnits": [
+            "WPA"
+        ],
+        "assignToUsers": [
+            "WPA_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "ad8a07c5-0e40-4bec-8c07-85ede11314a8",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "WMM_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "WMM",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "WMM_admin"
+        },
+        "assignToUnits": [
+            "WMM"
+        ],
+        "assignToUsers": [
+            "WMM_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "d5cf927c-c461-4384-922d-b6c8c3d60093",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "WMM_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "WMM",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "WMM_admin"
+        },
+        "assignToUnits": [
+            "WMM"
+        ],
+        "assignToUsers": [
+            "WMM_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "a6c5eb7f-9aa6-4e31-9f1f-af698bda9b51",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "WLT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "WLT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "WLT_admin"
+        },
+        "assignToUnits": [
+            "WLT"
+        ],
+        "assignToUsers": [
+            "WLT_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "365094cb-4fcf-4415-b421-c44bd87b5673",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "WLT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "WLT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "WLT_admin"
+        },
+        "assignToUnits": [
+            "WLT"
+        ],
+        "assignToUsers": [
+            "WLT_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "88d2a985-3a6f-41e3-9722-304db0c4a3fd",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "VRT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "VRT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "VRT_admin"
+        },
+        "assignToUnits": [
+            "VRT"
+        ],
+        "assignToUsers": [
+            "VRT_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "e5514e5d-1700-4dda-aff5-018492759ade",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "VRT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "VRT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "VRT_admin"
+        },
+        "assignToUnits": [
+            "VRT"
+        ],
+        "assignToUsers": [
+            "VRT_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "e917e20d-363f-42fd-b065-9de348b5ca96",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "UMR_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "UMR",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "UMR_admin"
+        },
+        "assignToUnits": [
+            "UMR"
+        ],
+        "assignToUsers": [
+            "UMR_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "73b32704-b3b7-4381-837f-21524bbde8f8",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "UMR_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "UMR",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "UMR_admin"
+        },
+        "assignToUnits": [
+            "UMR"
+        ],
+        "assignToUsers": [
+            "UMR_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "421e4bcc-f043-4fd9-ac81-cc2398985030",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "TCG_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "TCG",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "TCG_admin"
+        },
+        "assignToUnits": [
+            "TCG"
+        ],
+        "assignToUsers": [
+            "TCG_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "4ab9aacc-8080-4f04-9eb8-ec631d761cdc",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "TCG_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "TCG",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "TCG_admin"
+        },
+        "assignToUnits": [
+            "TCG"
+        ],
+        "assignToUsers": [
+            "TCG_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "f6ed7efd-6c31-49b0-9e92-62dbc5c73901",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "SIS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "SIS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "SIS_admin"
+        },
+        "assignToUnits": [
+            "SIS"
+        ],
+        "assignToUsers": [
+            "SIS_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "e9a6f0f0-9860-4878-8c09-1721cea6c9f0",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "SIS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "SIS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "SIS_admin"
+        },
+        "assignToUnits": [
+            "SIS"
+        ],
+        "assignToUsers": [
+            "SIS_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "070776c9-d498-4c78-b167-5e4804a2c6dc",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "PTB_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "PTB",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "PTB_admin"
+        },
+        "assignToUnits": [
+            "PTB"
+        ],
+        "assignToUsers": [
+            "PTB_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "724bfb7f-e3e6-4525-afac-7f221d3816d6",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "PTB_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "PTB",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "PTB_admin"
+        },
+        "assignToUnits": [
+            "PTB"
+        ],
+        "assignToUsers": [
+            "PTB_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "6a94e9a7-c89a-4628-8a25-7d19e56444b2",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "PRS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "PRS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "PRS_admin"
+        },
+        "assignToUnits": [
+            "PRS"
+        ],
+        "assignToUsers": [
+            "PRS_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "c3a9385a-a08a-4efd-a368-ea183bda4dcb",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "PRS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "PRS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "PRS_admin"
+        },
+        "assignToUnits": [
+            "PRS"
+        ],
+        "assignToUsers": [
+            "PRS_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "2c0f1281-f0cc-4d4d-a50c-4e1cdd9677a4",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "NOL_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "NOL",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "NOL_admin"
+        },
+        "assignToUnits": [
+            "NOL"
+        ],
+        "assignToUsers": [
+            "NOL_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "26c66263-003d-46e2-9024-3df7c67e6bce",
+        "name": "example_view_rule",
+        "info": "All module view\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "NOL_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "NOL",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "NOL_admin"
+        },
+        "assignToUnits": [
+            "NOL"
+        ],
+        "assignToUsers": [
+            "NOL_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "acea7cd0-2f9c-478c-86db-3edb149cc9b9",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "MSI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "MSI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "MSI_admin"
+        },
+        "assignToUnits": [
+            "MSI"
+        ],
+        "assignToUsers": [
+            "MSI_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "08e18f76-bcca-4782-a4d8-fccb210da00f",
+        "name": "example_view_rule",
+        "info": "All module view\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "MSI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "MSI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "MSI_admin"
+        },
+        "assignToUnits": [
+            "MSI"
+        ],
+        "assignToUsers": [
+            "MSI_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "6fa3c73e-5f86-48f3-9989-8c54c25ff285",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "MID_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "MID",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "MID_admin"
+        },
+        "assignToUnits": [
+            "MID"
+        ],
+        "assignToUsers": [
+            "MID_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "290584cc-77ed-4052-8962-d93810b1ff99",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "MID_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "MID",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "MID_admin"
+        },
+        "assignToUnits": [
+            "MID"
+        ],
+        "assignToUsers": [
+            "MID_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "adf93f88-d2b4-4d9d-99d5-330407cec86d",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "IDA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "IDA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "IDA_admin"
+        },
+        "assignToUnits": [
+            "IDA"
+        ],
+        "assignToUsers": [
+            "IDA_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "e4f24d9d-d83e-4da1-9e76-9b52182fdce3",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "IDA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "IDA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "IDA_admin"
+        },
+        "assignToUnits": [
+            "IDA"
+        ],
+        "assignToUsers": [
+            "IDA_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "60a7ad09-c00b-4b5c-97bc-46d798dd1f21",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "HDN_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "HDN",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "HDN_admin"
+        },
+        "assignToUnits": [
+            "HDN"
+        ],
+        "assignToUsers": [
+            "HDN_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "eb5f939d-bbdb-429c-9e5e-6ed0738d495d",
+        "name": "example_view_rule",
+        "info": "All module view\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "HDN_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "HDN",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "HDN_admin"
+        },
+        "assignToUnits": [
+            "HDN"
+        ],
+        "assignToUsers": [
+            "HDN_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "60cdb7a3-413f-4cd3-9a07-e69555ac3e4f",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "GBA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "GBA ",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "GBA_admin"
+        },
+        "assignToUnits": [
+            "GBA"
+        ],
+        "assignToUsers": [
+            "GBA_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "29615531-a82c-47a0-975a-18cfeaf8b3d5",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "GBA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "GBA ",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "GBA_admin"
+        },
+        "assignToUnits": [
+            "GBA"
+        ],
+        "assignToUsers": [
+            "GBA_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "30172f68-d561-4115-a4d7-fae12b774219",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ENT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ENT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ENT_admin"
+        },
+        "assignToUnits": [
+            "ENT"
+        ],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "65688768-67e8-46ca-a1db-0d32d3702310",
+        "name": "example_view_rule",
+        "info": "All module view\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ENT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ENT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ENT_admin"
+        },
+        "assignToUnits": [
+            "ENT"
+        ],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "1f2426fa-b7d0-4bfd-aaa7-e77e2f390165",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "DMA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "DMA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "DMA_admin"
+        },
+        "assignToUnits": [
+            "DMA"
+        ],
+        "assignToUsers": [
+            "DMA_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "0fa78aaf-1c69-47fc-b40d-2abbe374be0f",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "DMA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "DMA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "DMA_admin"
+        },
+        "assignToUnits": [
+            "DMA"
+        ],
+        "assignToUsers": [
+            "DNA_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "2e81e714-af7c-4fe4-8403-01e9730d211f",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "DCM_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "DCM",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "DCM_admin"
+        },
+        "assignToUnits": [
+            "DCM"
+        ],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "4a08d6d5-b9a2-4b63-a904-b706daf8c780",
+        "name": "example_view_rule",
+        "info": "All module view\r\n\r\n\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "DCM_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "DCM",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "DCM_admin"
+        },
+        "assignToUnits": [
+            "DCM"
+        ],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "d4a8f98f-64fc-4eac-9837-f8bb4738708b",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "DCC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "DCC",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "DCC_admin"
+        },
+        "assignToUnits": [
+            "DCC"
+        ],
+        "assignToUsers": [
+            "DCC_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "c2768cfc-0cbe-4e0f-8902-b3f9dc023aa9",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "DCC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "DCC",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "DCC_admin"
+        },
+        "assignToUnits": [
+            "DCC"
+        ],
+        "assignToUsers": [
+            "DCC_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "52853eda-af60-4aeb-b4bb-a0cba9939a84",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CYP_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CYP",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CYP_admin"
+        },
+        "assignToUnits": [
+            "CYP"
+        ],
+        "assignToUsers": [
+            "CYP_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "92a62f6c-8d74-40b5-9cb9-9de6a1cf4506",
+        "name": "example_view_rule",
+        "info": "All module view\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CYP_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CYP",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CYP_admin"
+        },
+        "assignToUnits": [
+            "CYP"
+        ],
+        "assignToUsers": [
+            "CYP_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "8a632911-8405-4458-90cc-4fdcdbbc90d1",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CLF_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CLF",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CLF_admin"
+        },
+        "assignToUnits": [
+            "CLF"
+        ],
+        "assignToUsers": [
+            "CLF_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "40fd87c7-30c2-4e31-a638-290ee49ac6d6",
+        "name": "example_view_rule",
+        "info": "All module view\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CLF_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CLF",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CLF_admin"
+        },
+        "assignToUnits": [
+            "CLF"
+        ],
+        "assignToUsers": [
+            "CLF_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "696105b2-5473-4a6a-acd4-2698865ef562",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CHM_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CHM",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CHM_admin"
+        },
+        "assignToUnits": [
+            "CHM"
+        ],
+        "assignToUsers": [
+            "CHM_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "9e284e4a-e285-47eb-94dc-fe31da332908",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CHM_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CHM",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CHM_admin"
+        },
+        "assignToUnits": [
+            "CHM"
+        ],
+        "assignToUsers": [
+            "CHM_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "61781188-9ec0-4c66-93d3-080c1a409236",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CFA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CFA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CFA_admin"
+        },
+        "assignToUnits": [
+            "CFA"
+        ],
+        "assignToUsers": [
+            "CFA_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "f9a870a4-3f19-48bc-9bb2-9823d8d4fb53",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CFA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CFA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CFA_admin"
+        },
+        "assignToUnits": [
+            "CFA"
+        ],
+        "assignToUsers": [
+            "CFA_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "0f98201b-20eb-44d8-b205-71c1746e1e0c",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CBA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CBA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CBA_admin"
+        },
+        "assignToUnits": [
+            "CBA"
+        ],
+        "assignToUsers": [
+            "CBA_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "b7bd0717-5585-4572-819a-d20bc5b78420",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "CBA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "CBA",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "CBA_admin"
+        },
+        "assignToUnits": [
+            "CBA"
+        ],
+        "assignToUsers": [
+            "CBA_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "ab44f8b8-69e8-408f-930e-87fa45dfa96b",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BMI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BMI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BMI_admin"
+        },
+        "assignToUnits": [
+            "BMI"
+        ],
+        "assignToUsers": [
+            "BMI_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "8a41eabe-d55a-4cba-ba4b-a48943584bcc",
+        "name": "example_view_rule",
+        "info": "All module view\r\n\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BMI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BMI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BMI_admin"
+        },
+        "assignToUnits": [
+            "BMI"
+        ],
+        "assignToUsers": [
+            "BMI_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "56ecc6f5-15b9-4dd2-84be-95abe3ff0e69",
+        "name": "example_modify_rule",
+        "info": "\r\nDaily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BEN_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BEN",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BEN_admin"
+        },
+        "assignToUnits": [
+            "BEN"
+        ],
+        "assignToUsers": [
+            "BEN_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "8fba3b07-ed76-4637-ab0d-3873035fd91a",
+        "name": "example_view_rule",
+        "info": "\r\nAll module view\r\n\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BEN_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BEN",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BEN_admin"
+        },
+        "assignToUnits": [
+            "BEN"
+        ],
+        "assignToUsers": [
+            "BEN_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "94526f80-95f0-4506-a337-6bc501218ea6",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BCS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BCS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BCS_admin"
+        },
+        "assignToUnits": [
+            "BVT"
+        ],
+        "assignToUsers": [
+            "BCS_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "75d5240d-0f1b-4f51-bf5c-e7adb039b14e",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BCS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BCS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BCS_admin"
+        },
+        "assignToUnits": [
+            "BVT"
+        ],
+        "assignToUsers": [
+            "BCS_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "017a75a5-8746-447a-8419-61c2c4b5b8b9",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BCC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BCC",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BCC_admin"
+        },
+        "assignToUnits": [
+            "BCC"
+        ],
+        "assignToUsers": [
+            "BCC_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "62354a6a-2cb9-458c-80e9-7d2b6233d4d6",
+        "name": "example_view_rule",
+        "info": "All module view\r\n",
+        "createBy": {
+            "uuid": "",
+            "loginName": "BCC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "BCC",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "BCC_admin"
+        },
+        "assignToUnits": [
+            "BCC"
+        ],
+        "assignToUsers": [
+            "BCC_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "9a238346-43df-4c51-9eb6-cc17b752c982",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ASI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ASI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ASI_admin"
+        },
+        "assignToUnits": [
+            "ASI"
+        ],
+        "assignToUsers": [
+            "ASI_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "f45dc267-183c-4324-a67d-315e7f5f6b92",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ASI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ASI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ASI_admin"
+        },
+        "assignToUnits": [
+            "ASI"
+        ],
+        "assignToUsers": [
+            "ASI_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "1dc30074-d93d-404d-b53d-1d71761023e7",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ASC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ASC",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ASC_admin"
+        },
+        "assignToUnits": [
+            "ASC"
+        ],
+        "assignToUsers": [
+            "ASC_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "c6b8a938-1ea8-4180-b2a3-827d9e776a7d",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ASC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ASC",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ASC_admin"
+        },
+        "assignToUnits": [
+            "ASC"
+        ],
+        "assignToUsers": [
+            "ASC_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "8305ea00-8022-4d35-8b3a-1cde6fc0cfd7",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "AMP_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "AMP",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "AMP_admin"
+        },
+        "assignToUnits": [
+            "AMP"
+        ],
+        "assignToUsers": [
+            "AMP_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "f56baa8d-5d7b-470b-b4fd-4c817ed42aaf",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "AMP_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "AMP",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "AMP_admin"
+        },
+        "assignToUnits": [
+            "AMP"
+        ],
+        "assignToUsers": [
+            "AMP_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "c1c1a51f-613a-4892-9807-c9ac5b4d1758",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ACT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ACT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ACT_admin"
+        },
+        "assignToUnits": [
+            "ACT"
+        ],
+        "assignToUsers": [
+            "ACT_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "ee000bd5-d2bd-447d-862e-b2ca8120cd5a",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ACT_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ACT",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ACT_admin"
+        },
+        "assignToUnits": [
+            "ACT"
+        ],
+        "assignToUsers": [
+            "ACT_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "8f3b1785-4b7f-48c5-b6d9-dbf6cdd4bd99",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ACI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ACI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ACI_admin"
+        },
+        "assignToUnits": [
+            "ACI"
+        ],
+        "assignToUsers": [
+            "ACI_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "a2ed9ac0-a184-427c-8ffa-dd13dd1a5511",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ACI_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ACI",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ACI_admin"
+        },
+        "assignToUnits": [
+            "ACI"
+        ],
+        "assignToUsers": [
+            "ACI_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "f3fe9c83-d12b-407c-ac22-9e456829c267",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "LAV_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "LAV",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "LAV_admin"
+        },
+        "assignToUnits": [
+            "LAV"
+        ],
+        "assignToUsers": [
+            "LAV_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "adcbde55-1bf4-4356-8a66-f36654a8d344",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "LAV_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "LAV",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "LAV_admin"
+        },
+        "assignToUnits": [
+            "LAV"
+        ],
+        "assignToUsers": [
+            "LAV_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "c689e531-f891-4de8-976e-4560c806b3b6",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ABS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ABS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ABS_admin"
+        },
+        "assignToUnits": [
+            "ABS"
+        ],
+        "assignToUsers": [
+            "ABS_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "66b10b40-ef0e-4c82-99e6-e92202a034c4",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "ABS_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "ABS",
+            "status": null,
+            "unittype": "Client",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "ABS_admin"
+        },
+        "assignToUnits": [
+            "ABS"
+        ],
+        "assignToUsers": [
+            "ABS_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-08-01",
+        "del": false
+    },
+    {
+        "uuid": "54584743-9372-44e1-844c-239c59d0488d",
+        "name": "Client all function",
+        "info": "Client all function",
+        "createBy": {
+            "uuid": "",
+            "loginName": "haoz",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "snow",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhensnowhao"
+        },
+        "assignToUnits": [
+            "ABS",
+            "ACI",
+            "AMP",
+            "ANG",
+            "ASC",
+            "ASI",
+            "BCC",
+            "BEN",
+            "BMI",
+            "BUT",
+            "BVT",
+            "CBA",
+            "CFA",
+            "CHM",
+            "CHP",
+            "CLF",
+            "CYP",
+            "DCC",
+            "DCM",
+            "DES",
+            "DMA",
+            "EHP",
+            "ELS",
+            "ENT",
+            "GBA",
+            "HDN",
+            "HEI",
+            "IDA",
+            "KAA",
+            "LAV",
+            "MHS",
+            "MID",
+            "MSI",
+            "NHB",
+            "NOL",
+            "NPM - OLD",
+            "PRS",
+            "PTB",
+            "ACT",
+            "SIS",
+            "SPE",
+            "TBR",
+            "TCG",
+            "UMR",
+            "VRT",
+            "WLT",
+            "WMM",
+            "WPA"
+        ],
+        "assignToUsers": [
+            "BVT_Admin",
+            "ABS_admin",
+            "ACI_admin",
+            "ACT_admin",
+            "AMP_admin",
+            "ANG_admin",
+            "ASC_admin",
+            "ASI_admin",
+            "BCC_admin",
+            "BEN_admin",
+            "BMI_admin",
+            "CBA_admin",
+            "CFA_admin",
+            "CHM_admin",
+            "CLF_admin",
+            "CYP_admin",
+            "DCC_admin",
+            "DCM_admin",
+            "DMA_admin",
+            "EHP_admin",
+            "ENT_admin",
+            "GBA_admin",
+            "HDN_admin",
+            "IDA_admin",
+            "LAV_admin",
+            "MID_admin",
+            "MSI_admin",
+            "NOL_admin",
+            "PRS_admin",
+            "PTB_admin",
+            "SIS_admin",
+            "TCG_admin",
+            "UMR_admin",
+            "VRT_admin",
+            "WLT_admin",
+            "WMM_admin",
+            "WPA_admin",
+            "CHP_admin"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "f439aecc-d23c-4879-8d67-3646008bc554",
+        "name": "manage reports",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "PEK_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "PEK",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "PEK_admin"
+        },
+        "assignToUnits": [
+            "PEK"
+        ],
+        "assignToUsers": [
+            "mxqiu"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "5bd86dc7-988f-4010-af33-ca27ca14e5da",
+        "name": "Daily Report",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "PEK_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "PEK",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "PEK_admin"
+        },
+        "assignToUnits": [
+            "PEK"
+        ],
+        "assignToUsers": [
+            "PEK_WLT",
+            "PEK_CBA",
+            "PEK_SISCO",
+            "PEK_GAVIN",
+            "lynn",
+            "PEK_BVT"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "88079633-08cd-4762-8945-a094ceb1ea25",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "HUIC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "HUIC",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "HUIC_admin"
+        },
+        "assignToUnits": [
+            "HUIC"
+        ],
+        "assignToUsers": [
+            "huic_user_1",
+            "KaikouPEK"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "3a91290d-5787-4715-a964-38c37d67b282",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "HUIC_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "HUIC",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "HUIC_admin"
+        },
+        "assignToUnits": [
+            "HUIC"
+        ],
+        "assignToUsers": [
+            "huic_user_2",
+            "KaikouPEK"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "7b9e30eb-de73-46f1-b37c-1426c6c4e16f",
+        "name": "example_modify_rule",
+        "info": "Daily Report/Billing Report  modify\r\nps:\"Daily Report\" comprise of modify&view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "TELA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "TELA",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "TELA_admin"
+        },
+        "assignToUnits": [
+            "TELA"
+        ],
+        "assignToUsers": [
+            "tela_user_1"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "aece1f14-1dfb-4b4f-b0b8-a3191559fa7c",
+        "name": "example_view_rule",
+        "info": "All module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "TELA_admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "TELA",
+            "status": null,
+            "unittype": "Vendor",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "TELA_admin"
+        },
+        "assignToUnits": [
+            "TELA"
+        ],
+        "assignToUsers": [
+            "tela_user_2"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "f789d40e-3e59-4a74-a989-9ba89236aee6",
+        "name": "Vendor all function",
+        "info": "Vendor all function",
+        "createBy": {
+            "uuid": "",
+            "loginName": "haoz",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "snow",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhensnowhao"
+        },
+        "assignToUnits": [
+            "Datum",
+            "DMI",
+            "HUIC",
+            "JMS Pacific Inc",
+            "JMS Pacific, Inc",
+            "JMS(NS) Beijing",
+            "JMSOperation",
+            "PEK",
+            "TELA"
+        ],
+        "assignToUsers": [
+            "KaokouClient",
+            "LindsayD",
+            "huic_lf",
+            "HUIC_admin",
+            "PEK_admin",
+            "helen",
+            "JMSoperate",
+            "KaikouPEK",
+            "TELA_admin",
+            "tela_new",
+            "Datum_admin",
+            "JMSPacific",
+            "JPI_admin",
+            "PatH",
+            "PaulaY",
+            "NancyW",
+            "BeckieB",
+            "Kaitlyn",
+            "Sophie",
+            "NikkiY",
+            "NS_admin",
+            "OliviaM",
+            "huic_winner"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "87365fab-b153-4823-846e-debe3eea19ce",
+        "name": "CMS Daily report Manager rule",
+        "info": "Daily Report modify",
+        "createBy": {
+            "uuid": "",
+            "loginName": "haoz",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "snow",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhensnowhao"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "Winner_jms",
+            "Frank",
+            "selinax"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "cc72a6ec-e420-4383-9b37-3103efd9dfbb",
+        "name": "Operating manager rule",
+        "info": "Daily Report view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "admin"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "patd",
+            "sandid",
+            "Winner_jms",
+            "Frank"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "f7d478d4-b157-47eb-bc84-167b196347bb",
+        "name": "Account rule",
+        "info": "Account Assistant\r\nAll module view\r\nDaily report/Billing report/Invoice modify",
+        "createBy": {
+            "uuid": "",
+            "loginName": "admin",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "simon",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhensimonhao"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "DawnS",
+            "LancerZ",
+            "nikkiyo",
+            "Andrea",
+            "Melissam",
+            "AmiD",
+            "Winner_jms",
+            "Frank",
+            "CaleyC"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "33b771b1-aa11-4cf0-a0cd-b56e9c5956df",
+        "name": "CFO rule",
+        "info": "All module view and Contract/client/Vendor modify",
+        "createBy": {
+            "uuid": "",
+            "loginName": "admin",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "snow",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhensnowhao"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "Johnj",
+            "nikkiyo",
+            "Winner_jms",
+            "Frank"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "657bb149-bc3a-4aa7-b20f-567e0db5cb7b",
+        "name": "All_module_view rule",
+        "info": "JMS all module view",
+        "createBy": {
+            "uuid": "",
+            "loginName": "admin",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "snow",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhensnowhao"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "chuck",
+            "Danf",
+            "judib",
+            "Deanna",
+            "Winner_jms",
+            "Frank",
+            "LancerZ"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "1d93a464-0be8-4435-8563-6fe3fbd789e2",
+        "name": "CMS_admin_rule",
+        "info": "Assigne CMS account/rights",
+        "createBy": {
+            "uuid": "",
+            "loginName": "admin",
+            "password": "",
+            "firstName": "",
+            "lastName": "",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "admin"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "JMSPacific",
+            "haoz"
+        ],
+        "functions": null,
+        "createTime": "2009-07-31",
+        "del": false
+    },
+    {
+        "uuid": "769bcdf6-87ed-4388-b982-f81513ae4742",
+        "name": "JMS_all_ function",
+        "info": "JMS all function",
+        "createBy": {
+            "uuid": "",
+            "loginName": "admin",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "snow",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhensnowhao"
+        },
+        "assignToUnits": [
+            "JMS"
+        ],
+        "assignToUsers": [
+            "admin",
+            "LancerZ"
+        ],
+        "functions": null,
+        "createTime": "2009-05-15",
+        "del": false
+    },
+    {
+        "uuid": "51189412-bd0d-47b5-ac19-80801790778d",
+        "name": "adminstrator",
+        "info": "\u7cfb\u7edf\u7ba1\u7406\u5458",
+        "createBy": {
+            "uuid": "",
+            "loginName": "haoz",
+            "password": "",
+            "firstName": "zhen",
+            "lastName": "hao",
+            "midName": "",
+            "email": "",
+            "phone": "",
+            "unit": "JMS",
+            "status": null,
+            "unittype": "JMS",
+            "isdel": null,
+            "address": null,
+            "zipCode": null,
+            "state": null,
+            "city": null,
+            "lastLogin": null,
+            "fullName": "zhenhao"
+        },
+        "assignToUnits": [],
+        "assignToUsers": [],
+        "functions": null,
+        "createTime": "2009-05-14",
+        "del": false
+    }
+]

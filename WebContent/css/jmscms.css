@@ -395,3 +395,34 @@ input.enable {
 td.leftalign {
   text-align: left;
 }
+.detail_section {
+    position: absolute;
+    width: 100%;
+    top: 61px;
+    bottom: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.accordion {
+    font-size: 14px;
+    width: 100%;
+}
+.accordion table{
+    width: 100%;
+}
+.accordion table th, .accordion table td{
+  width: 200px;
+  padding: 3px;
+  text-align: left;
+  padding-right:5px;
+  /*border: 1px solid black;*/
+}
+.accordion table tr th:first-child, .accordion table tr td:first-child{
+  width: 120px;
+  text-align: right;
+  text-decoration: underline;
+}
+.accordion table tr th:last-child, .accordion table tr td:last-child{
+  width: calc(100% - 320px);
+  text-align: right;
+}

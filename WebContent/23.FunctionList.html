@@ -14,22 +14,7 @@
 <link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
 <script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
 <style>
-.list_table thead th.header {
-  background-image: url(../images/sort_bg.gif), url(../images/list_tab_th_h28.jpg);
-  background-repeat: no-repeat, repeat-x;
-  background-position: center right, left center;
-  height: 28px;
-  text-align: center;
-  font-size: 12px;
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #7a8180;
-  border-collapse: collapse;
-  white-space: wrap;
-  cursor: pointer;
-}
-
-#list_section {
+.detail_section {
   overflow: hidden;
 }
 #functions_div {
@@ -39,20 +24,21 @@
   top: 0px;
   left: 0px;
   right: 0px;
-  bottom: 400px;
-  width: 100%;
-  height: 400px;
-}
-
-#pages_div {
-  overflow: scroll;
-  overflow-x: hidden;
-  position: absolute;
-  top: 420px;
-  left: 0px;
   bottom: 0px;
-  right: 0px;
   width: 100%;
+  height: 100%;
+}
+table.function_detail {
+float: left;
+  border: 1px solid black;
+  width: 30%;
+  height: 100%;
+}
+table.page_list {
+float: left;
+  border: 1px solid black;
+  width: 65%;
+  height: 100%;
 }
 </style>
 </head>
@@ -80,52 +66,40 @@
         <li><a href="#Filter">Filter</a></li>
       </ul>
     </div>
-    <div id="list_section">
-      <!-- Here is the list -->
-      <div id="functions_div"></div>
-      <div id="pages_div"></div>
+    <div class="detail_section">
+      <div id="functions_div">
       </div>
     </div>
   </div>
-<script id="functionsTmpl" type="text/x-jsrender">  
-      <table class="list_table" id="tbl">
-        <thead>
-          <tr>
-            <td width="200px">Menu Name</td>
-            <td>Description</td>
-            <td>Entry URI</td>
-            <td>Image URI</td>
-            <td>Order</td>
-          </tr>
-        </thead>
+  <div id=pages_div></div>
+<script id="functionsTmpl" type="text/x-jsrender">
+{{for f}}
+<div class="accordion">
+<h3>{{:description}} Module:</h3>
+      <div>
+      <table class="function_detail">
         <tbody>
-{{for p}} 
           <tr>
             <td style="text-align: left;">{{:menuName}}</td>
+          </tr>
+          <tr>
             <td style="text-align: left;">{{:description}}</td>
+          </tr>
+          <tr>
             <td style="text-align: left;">{{:entryURI}}</td>
+          </tr>
+          <tr>
             <td style="text-align: left;">{{:imageURI}}</td>
+          </tr>
+          <tr>
             <td>{{:sort}}</td>
           </tr>
-{{/for}} 
         </tbody> 
     </table>
-</script>
-<script id="pagesTmpl" type="text/x-jsrender">  
-      <table class="list_table" id="tbl">
-        <thead>
-          <tr>
-            <td width="100px"><a href="#">+</a></td>
-            <td width="200px">Page/URI</td>
-            <td>Description</td>
-            <td width="100px">Creater</td>
-            <td width="200px">Created Time</td>
-          </tr>
-        </thead>
+    <table class="page_list">
         <tbody>
-{{for p}} 
+{{for pages}} 
           <tr>
-            <td>-E</td>
             <td style="text-align: left;"><a href="#">{{:URI}}</a></td>
             <td style="text-align: left;">{{:description}}</td>
             <td>{{:creater}}</td>
@@ -134,30 +108,96 @@
 {{/for}} 
         </tbody> 
     </table>
+    </div>
+</div>
+{{/for}} 
 </script>
 <script>
+var pages = [
+  {
+      "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+      "createTime": "2009-09-10 05:30:36.973",
+      "name": "downloadAll.jsp",
+      "creater": "admin",
+      "description": "",
+      "URI": "downloadAll.jsp"
+  },
+  {
+      "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+      "createTime": "2009-07-16 11:12:13.317",
+      "name": "ClientReportList.jsp",
+      "creater": "lyu",
+      "description": "",
+      "URI": "ClientReportList.jsp"
+  },
+  {
+      "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+      "createTime": "2009-07-16 11:00:56.47",
+      "name": "ClientReportList1L.jsp",
+      "creater": "lyu",
+      "description": "",
+      "URI": "ClientReportList1L.jsp"
+  },
+  {
+      "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+      "createTime": "2009-09-10 05:30:54.113",
+      "name": "ClientReportList_Excel.jsp",
+      "creater": "admin",
+      "description": "",
+      "URI": "ClientReportList_Excel.jsp"
+  },
+  {
+      "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+      "createTime": "2009-07-16 11:12:50.0",
+      "name": "ClientReportBill_update.jsp",
+      "creater": "lyu",
+      "description": "",
+      "URI": "ClientReportBill_update.jsp"
+  },
+  {
+      "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+      "createTime": "2009-09-10 05:30:21.427",
+      "name": "ClientReportList1L_Excel.jsp",
+      "creater": "admin",
+      "description": "",
+      "URI": "ClientReportList1L_Excel.jsp"
+  },
+  {
+      "functionId": "1F10B36E-B0C8-4BF2-B84E-4F3D2A47832E",
+      "createTime": "2009-07-16 11:13:49.437",
+      "name": "ClientReportBillList_ajax.jsp",
+      "creater": "lyu",
+      "description": "",
+      "URI": "ClientReportBillList_ajax.jsp"
+  }
+];
+
 function loadFunctions(){
   var myTemplate = $.templates("#functionsTmpl");  
   $.getJSON( "json/functions.json", function( data ) {
-    myTemplate.link("#functions_div", {p: data });
-    //console.log(data[0]);
-  });
-}
-function loadPages(){
-  var myTemplate = $.templates("#pagesTmpl");  
-  $.getJSON( "json/pages.json", function( data ) {
-    myTemplate.link("#pages_div", {p: data });
-    //console.log(data[0]);
+    $.each(data, function(index, item){
+      item.pages = pages;
+    });
+    myTemplate.link("#functions_div", {f: data});
+    console.log(data[0]);
+    $( function() {
+      $( ".accordion" ).accordion({
+        collapsible: true, 
+        active: false, 
+        beforeActivate: function( event, ui ) {
+          $(".accordion").not(this).accordion( "option", "active", false);
+        }
+       });
+    });
     $("time").each(function(index, self){
       var d = new Date($(self).attr("datetime"));
       $(self).html($.datepicker.formatDate("mm/dd/yy", d));
     });
   });
+
 }
 $(document).ready(function() {
   loadFunctions();
-  loadPages();
-
 });
 </script>
 </body>

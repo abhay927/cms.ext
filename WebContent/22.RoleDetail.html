@@ -13,6 +13,8 @@
 
 <link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
 <script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
+
+<script type="text/javascript" src="js/jms_cms_2018.js"></script>
 </head>
 <body>
   <div id="common">
@@ -25,7 +27,7 @@
     <!-- Here is name of the list -->
     <div class="toolbar">
       <div class="tab">
-        <button class="tablinks" onclick="">Project Status</button>
+        <button class="tablinks" onclick="">Role Detail</button>
       </div>
     </div>
     <div class="nemubar">
@@ -34,8 +36,7 @@
       <!-- 
         <li><a class="selecttab" href="02.ProjectDetail.html?NewProject=true">New Project</a></li>
       -->
-        <li><a class="selecttab" href="99.ProjectUpdate.html?NewProject=true">New Project</a></li>
-        <li><a href="#Filter">Filter</a></li>
+        <li><a class="selecttab" href="#">Edit</a></li>
       </ul>
     </div>
     <div class="detail_section">
@@ -70,7 +71,7 @@
     <div class="accordion active">
       <h3>Functions</h3>
       <div>
-      <div id="functions_div" style="height: 300px;width: 100%;"></div>
+      <div id="functions_div"></div>
 
       </div>
     </div>
@@ -81,8 +82,9 @@
   <thead>
     <tr>
       <th>Menu Name</th>
-      <th>Descript</th>
+      <th>Description</th>
       <th>Entry URI</th>
+      <th>Permitted</th>
       <th>Read Only</th>
     </tr>
   </thead>
@@ -90,7 +92,11 @@
 {{for p}} 
         <tr>
 {{for #data}}
-        <td>{{:#data}}</td>
+        <td>{{:menuName}}</td>
+        <td>{{:description}}</td>
+        <td>{{:entryURI}}</td>
+        <td><input type="checkbox" name="permitted" value="{{:uuid}}" disabled /></td>
+        <td><input type="checkbox" name="readonly" value="{{:uuid}}" disabled /></td>
 {{/for}}
         </tr>
 {{/for}} 
@@ -98,189 +104,41 @@
 </table>
 </script>
 <script>
-var role = {
-    "uuid": "769bcdf6-87ed-4388-b982-f81513ae4742",
-    "name": "JMS_all_ function",
-    "info": "JMS all function",
-    "createBy": {
-        "uuid": "",
-        "loginName": "admin",
-        "password": "",
-        "firstName": "zhen",
-        "lastName": "hao",
-        "midName": "snow",
-        "email": "lancer@jmsassoc.com",
-        "phone": "+86-13801182717",
-        "unit": "JMS",
-        "status": null,
-        "unittype": "JMS",
-        "isdel": null,
-        "address": null,
-        "zipCode": null,
-        "state": null,
-        "city": null,
-        "lastLogin": null,
-        "fullName": "zhensnowhao"
-    },
-    "assignToUnits": [
-        "JMS"
-    ],
-    "assignToUsers": [
-        "admin",
-        "LancerZ"
-    ],
-    "functions": [
-        [
-            "Daily&nbsp;Reports",
-            "Daily&nbsp;Reports",
-            "productionlist.jsp",
-            ""
-        ],
-        [
-            "Daily&nbsp;Reports",
-            "Daily&nbsp;Reports(view)",
-            "productionlist.jsp?role=view",
-            "readonly"
-        ],
-        [
-            "Billing&nbsp;Reports",
-            "Billing&nbsp;Reports",
-            "ClientBillingReports1L.jsp",
-            ""
-        ],
-        [
-            "Billing&nbsp;Reports",
-            "Billing&nbsp;Reports(view)",
-            "ClientBillingReports1L.jsp?role=view",
-            "readonly"
-        ],
-        [
-            "Clients&nbsp;Invoices",
-            "Clients&nbsp;Invoices",
-            "ClientReportList1L.jsp",
-            ""
-        ],
-        [
-            "Clients&nbsp;Invoices",
-            "Clients&nbsp;Invoices(view)",
-            "ClientReportList1L.jsp?role=view",
-            "readonly"
-        ],
-        [
-            "Vendors&nbsp;Invoices",
-            "Vendors&nbsp;Invoices",
-            "VendorReportList1L.jsp",
-            ""
-        ],
-        [
-            "Vendors&nbsp;Invoices",
-            "Vendors&nbsp;Invoices(view)",
-            "VendorReportList1L.jsp?role=view",
-            "readonly"
-        ],
-        [
-            "History&nbsp;Invoices",
-            "History&nbsp;Invoices",
-            "ClientHistoryInvoices1L.jsp",
-            ""
-        ],
-        [
-            "Contracts",
-            "Contracts",
-            "ContractsListUnit.jsp",
-            ""
-        ],
-        [
-            "Contracts",
-            "Contracts(view)",
-            "ContractsListUnit.jsp?role=view",
-            "readonly"
-        ],
-        [
-            "Clients",
-            "Clients",
-            "ClientList.jsp",
-            ""
-        ],
-        [
-            "Clients",
-            "Clients(view)",
-            "ClientList.jsp?role=view",
-            "readonly"
-        ],
-        [
-            "Vendors",
-            "Vendors",
-            "vendorslist.jsp",
-            ""
-        ],
-        [
-            "Vendors",
-            "Vendors(view)",
-            "vendorslist.jsp?role=view",
-            "readonly"
-        ],
-        [
-            "Development&nbsp;Reports",
-            "Development&nbsp;Reports",
-            "DevelopmentCount.jsp",
-            ""
-        ],
-        [
-            "Role",
-            "Role",
-            "roleList.jsp",
-            ""
-        ],
-        [
-            "UnitRole",
-            "UnitRole",
-            "unitroleList.jsp",
-            ""
-        ],
-        [
-            "User",
-            "User",
-            "UsersList.jsp",
-            ""
-        ],
-        [
-            "FunctionUrl",
-            "FunctionUrl",
-            "functionUrl.jsp",
-            ""
-        ]
-    ],
-    "createTime": "2009-05-15",
-    "del": false
-};
+var aRoleURL = "json/aRole.json";
+var functionsURL = "json/functions.json";
 
-function renderRole(r){
-  $("#name").html(r.name);
-  $("#info").html(r.info);
-  $("#creater").html(r.createBy.loginName);
-  $("#unit").html(r.createBy.unit);
-  $("#create_time").html(r.createTime);
-  $("#assign_to_user").html(r.assignToUsers.join(", "));
-  $("#assign_to_unit").html(r.assignToUnits.join(", "));
-  var myTemplate = $.templates("#functionsTmpl");  
-  myTemplate.link("#functions_div", {p: r.functions })
+function render(aRole){
+  $("#name").html(aRole.name);
+  $("#info").html(aRole.info);
+  $("#creater").html(aRole.createBy.loginName);
+  $("#unit").html(aRole.createBy.unit);
+  $("#create_time").html(aRole.createTime);
+  $("#assign_to_user").html(aRole.assignToUsers.join(", "));
+  $("#assign_to_unit").html(aRole.assignToUnits.join(", "));
+  $.each(aRole.functions, function(index, value){
+    console.log(value);
+    $('#functions_div input[name=permitted][value=' + value.funcSN + ']').prop("checked", true);
+    $('#functions_div input[name=readonly][value=' + value.funcSN + ']').prop("checked", value.readonly);
+  })
 }
 
-$( function() {
+$(function() {
   $( ".accordion" ).accordion({
-    collapsible: true, 
-    active: false 
-    });
-  $( ".active" ).accordion({
-    collapsible: true, 
-    active: 0 
+    collapsible: false, 
+    active: 0,
+    heightStyle: "content"
     });
 });
 
-$(document).ready(function() {
-  renderRole(role);
-});
+$.ajaxs(
+    [aRoleURL, functionsURL], 
+    function(datas){
+      var myTemplate = $.templates("#functionsTmpl");  
+      myTemplate.link("#functions_div", {p: datas[1] });
+      render(datas[0]);
+    }, 
+    true);
+
 </script>
 </body>
 </html>

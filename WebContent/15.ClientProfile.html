@@ -12,39 +12,6 @@
 <link rel="stylesheet" type="text/css" href="css/tablesorter.css" />
 <script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.js"></script>
 
-<style>
-.detail_section {
-    position: absolute;
-    width: 100%;
-    top: 61px;
-    bottom: 10px;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-.accordion {
-    font-size: 14px;
-    width: 100%;
-}
-.accordion table{
-    width: 100%;
-}
-.accordion table th, .accordion table td{
-  width: 200px;
-  padding: 3px;
-  text-align: center;
-  /*border: 1px solid black;*/
-}
-.accordion table tr th:first-child, .accordion table tr td:first-child{
-  width: 120px;
-  text-align: right;
-  text-decoration: underline;
-}
-.accordion table tr th:last-child, .accordion table tr td:last-child{
-  width: calc(100% - 320px);
-  text-align: right;
-}
-</style>
-
 </head>
 <body>
   <div id="common">
@@ -93,7 +60,7 @@
         </table>
       </div>
     </div>
-    <div class="accordion">
+    <div class="accordion active">
       <h3>Users In System</h3>
       <div>
         <table>
@@ -101,17 +68,18 @@
         <th>Login Name</th>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Roles</th>
         <th>Enabled</th>
         <th>Last Access</th>
         </tr>
         <tr>
-        <td id="userid">CBA_admin</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        <td id="userid">CBA_admin</td><td></td><td></td><td>Comfirm</td><td>Yes</td><td>2009-08-01 03:01:32</td>
         </tr>
         <tr>
-        <td id="userid">CBA_user_1</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        <td id="userid">CBA_user_1</td><td></td><td></td><td>Comfirm</td><td>Yes</td><td>2009-08-01 03:01:32</td>
         </tr>
         <tr>
-        <td id="userid">CBA_user_2</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
+        <td id="userid">CBA_user_2</td><td></td><td></td><td>Comfirm</td><td>Yes</td><td>2009-08-01 03:01:32</td>
         </tr>
         </table>
       </div>
@@ -119,40 +87,22 @@
     <div class="accordion">
       <h3>Project Summary</h3>
       <div id="projects_div">
-        <table>
-        <tr>
-        <th>Login Name</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Enabled</th>
-        <th>Last Login</th>
-        </tr>
-        <tr>
-        <td id="userid">CBA_admin</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
-        </tr>
-        <tr>
-        <td id="userid">CBA_user_1</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
-        </tr>
-        <tr>
-        <td id="userid">CBA_user_2</td><td></td><td></td><td>Yes</td><td>2009-08-01 03:01:32</td>
-        </tr>
-        </table>
       </div>
     </div>
   </div>
   </div>
   <script id="projectsTmpl" type="text/x-jsrender">
-    <table class="list_table tablesorter" id="tbl" width="350px">
+    <table>
     <thead>
     <tr>
-    <th width="70px">ProjectNo</th>
-    <th width="200px">ProjectName</th>
-    <th width="80px">VendorName</th>
-    <th width="200px">ProjectType</th>
-    <th width="200px">ClaimType</th>
-    <th width="120px">SubmissionTime</th>
-    <th width="120px">Frequency</th>
-    <th width="120px">Status</th>
+    <th>ProjectNo</th>
+    <th>ProjectName</th>
+    <th>Vendor</th>
+    <th>Type</th>
+    <th>Claim</th>
+    <th>SubmissionTime</th>
+    <th>Frequency</th>
+    <th>Status</th>
     </tr>
     </thead>
     <tbody>
