@@ -45,17 +45,17 @@
       <div>
         <table>
         <tr>
-        <td>Login Name:</td><td><input type="text" size="100" class="editable required" id="loginid" form="form1" value="" readonly/></td>
+        <td>Login Name:</td><td><input type="text" size="100" class="editable required" id="loginName" value="" readonly/></td>
         <td><img src="images/ok_16px.png" id="checked"></td><td></td>
         </tr>
         <tr>
-        <td>First Name:</td><td><input type="text" size="100" class="editable required" id="firstname" form="form1" value="" readonly/></td><td></td><td></td>
+        <td>First Name:</td><td><input type="text" size="100" class="editable required" id="firstName" value="" readonly/></td><td></td><td></td>
         </tr>
         <tr>
-        <td>Last Name:</td><td><input type="text" size="100" class="editable required" id="lastname" form="form1" value="" readonly/></td><td></td><td></td>
+        <td>Last Name:</td><td><input type="text" size="100" class="editable required" id="lastName" value="" readonly/></td><td></td><td></td>
         </tr>
         <tr>
-        <td>Middle Name:</td><td><input type="text" size="100" class="editable" id="midname" value="" readonly/></td><td></td><td></td>
+        <td>Middle Name:</td><td><input type="text" size="100" class="editable" id="midName" value="" readonly/></td><td></td><td></td>
         </tr>
         <tr>
         <td>Organization:</td><td><input type="text" size="100" class="editable required" id="unit" value="" readonly/></td><td></td><td></td>
@@ -63,11 +63,10 @@
         <tr>
           <td>JMS/Client/Vender:</td>
           <td>
-          <select id="orgtype">
-            <option value="Required" disabled selected>Required</option>
+          <select id="unittype">
             <option value="JMS">JMS</option>
-            <option value="CLIENT">CLIENT</option>
-            <option value="VENDOR">VENDOR</option>
+            <option value="Client">Client</option>
+            <option value="Vendor">Vendor</option>
           </select></td><td>
           </td>
         </tr>
@@ -112,7 +111,7 @@
         <td>State:</td><td><input type="text" size="100" class="editable" id="state" value="" readonly/></td><td></td>
         </tr>
         <tr>
-        <td>ZipCode:</td><td><input type="text" size="100" class="editable" id="zipcode" value="" readonly/></td><td></td>
+        <td>ZipCode:</td><td><input type="text" size="100" class="editable" id="zipCode" value="" readonly/></td><td></td>
         </tr>
         </table>
       </div>
@@ -148,102 +147,135 @@
   </div>
   </div>
   <script>
-  var aUser =    {
-      "SN" : "c3730f85-80f3-4621-a043-6164bf0ebe0c",
-      "userid" : "LancerZ",
-      "firstname" : "Lancer",
-      "unit" : "JMS",
-      "status" : "Enabled",
-      "unittype" : "VENDOR",
-      "lastname" : "Zhang",
-      "midname" : "",
-      "isdel" : "0",
-      "createdate" : "2015-06-08T21:34:03Z",
-      "TelNO" : "248-888-9999",
-      "EMail" : "lancer@jmsassoc.com",
-      "Address" : "",
-      "ZipCode" : "",
-      "State" : "",
-      "City" : ""
-  };
+  var uid = getParameterByName('uid');
+  console.log("uid="+uid);
+  var allRequireFilled = false;
   
   function render(user){
-    $("input[id=loginid]").prop("defaultValue", user.userid);
-    $("input[id=firstname]").prop("defaultValue", user.firstname);
-    $("input[id=lastname]").prop("defaultValue", user.lastname);
+    $("input[id=loginName]").prop("defaultValue", user.loginName);
+    $("input[id=firstName]").prop("defaultValue", user.firstName);
+    $("input[id=lastName]").prop("defaultValue", user.lastName);
     $("input[id=midname]").prop("defaultValue", user.midname);
     $("input[id=unit]").prop("defaultValue", user.unit);
-    $("input[id=email]").prop("defaultValue", user.EMail);
-    $("input[id=phone]").prop("defaultValue", user.TelNO);
-    $("input[id=address]").prop("defaultValue", user.Address);
-    $("input[id=city]").prop("defaultValue", user.City);
-    $("input[id=state]").prop("defaultValue", user.State);
-    $("input[id=zipcode]").prop("defaultValue", user.ZipCode);
+    $("input[id=email]").prop("defaultValue", user.email);
+    $("input[id=phone]").prop("defaultValue", user.phone);
+    $("input[id=address]").prop("defaultValue", user.address);
+    $("input[id=city]").prop("defaultValue", user.city);
+    $("input[id=state]").prop("defaultValue", user.state);
+    $("input[id=zipCode]").prop("defaultValue", user.zipCode);
+    $('input').each(function(){
+      $(this).val($(this).prop("defaultValue"));
+    });
+    $( "input.required" ).attr("placeholder", "Required");
+    $( "input" ).change(function() {
+      $( "#form1" ).prop("changed", true);
+    });
     // handle select tag
-    if (!user.unittype) user.unittype = "required";
-    $("#orgtype").prop("defaultValue", user.unittype);
-    $("#orgtype option[value=" + user.unittype + "]").prop("selected", true);
-    $( "#orgtype" ).selectmenu();
+    //if (!user.unittype) user.unittype = "required";
+    $("select#unittype").prop("defaultValue", user.unittype);
+    $("select#unittype option[value=" + user.unittype + "]").prop("selected", true);
+    $("select#unittype" ).selectmenu({
+        disabled: true,
+        change: function( event, ui ) {
+          $( "#form1" ).prop("changed", true);
+        }
+    });
   }
   
-  function toEdit(isCreate){
-    if (!isCreate)  isCreate = false;
-    console.log(isCreate);
+  function toBlankUI(){
+    $("#loginName")
+    .addClass("enable")
+    .prop("readonly", false)
+    .focusout(function() {
+      var newLoginId = $( this ).val();
+      if(newLoginId != ''){
+        //var loginNameIsAavailableURL = "s/users/" + newLoginId;
+        var loginNameIsAavailableURL = "json/blankUser.json?" + newLoginId;
+        
+        $.getJSON(loginNameIsAavailableURL, function(data){
+          if(data.uuid === ''){
+            $("#checked").css("visibility", "visible");
+          } else {
+            alert('loginName [' + newLoginId + '] is not available');
+          }
+        });
+      }
+    })
+    $("#verifyEmail").html("To Verify");
+  }
+  
+  function toChangePassword(){
+    // TODO
+  }
+  
+  function toVerifyEmail(){
+    // TODO
+  }
+  
+  function toDelete(){
+    //TODO
+  }
+
+  function toEdit(){
     ui = $("#editMenu");
     var label = $(ui).html();
-    
+    var isChanged = $('#form1').prop('changed');
     if(label === "Edit"){
       $("input.editable")
-            .not("#loginid")
+            .not("#loginName")
             .addClass("enable")
             .prop("readonly", false);
-      //$("select#orgtype").prop('disabled', true);
-      if(isCreate){ 
-        $("#loginid")
-            .addClass("enable")
-            .prop("readonly", false)
-            .focusout(function() {
-              var newLoginId = $( this ).val();
-              if(newLoginId != ''){
-                $.getJSON('json/true.json', {"userid":newLoginId}, function(data){
-                  if(data){
-                    $("#checked").css("visibility", "visible");
-                  } else {
-                    alert('userid [' + newLoginId + '] is not available');
-                  }
-                });
-              }
-            })
-        $("#verifyEmail").html("To Verify");
-      }
+      $( "select#unittype" ).selectmenu({
+        disabled: false
+      });
       $(ui).html("Save");
     } 
-    if (label === "Save"){
-      var changedValues = {};
-      $('input').each(function(){
-        var eid = $(this).prop("id");
-        var value = $(this).val();
-        if ($(this).prop("defaultValue") != value){
-          changedValues[eid] = value;
+
+    if ( label === "Save"){
+      allRequireFilled = true;
+      $("input.editable.required").each(function(index, element){
+        if ($(this).val() === ""){
+          allRequireFilled = false;
+          $(this).focus();
         }
       });
-      var value = $("#orgtype option:selected").val();
-      if ( value != $("#orgtype").prop("defaultValue")) {
-          changedValues['unittype'] = value;
-      }
-      $.post("json/aUser.json",
-          changedValues,
-          function(data){
-            console.log(data);
-            render(data);
-            $("input.editable").removeClass("enable");
-            $("input.editable").prop("readonly", true);
-            $(ui).html("Edit");
-      });
+      if (isChanged && allRequireFilled){
+        
+        var changedValues = {};
+        changedValues['uuid'] = uid;
+        
+        $('input').each(function(){
+          var eid = $(this).prop("id");
+          var value = $(this).val();
+          changedValues[eid] = value;
+        });
+        var value = $("#unittype option:selected").val();
+        changedValues['unittype'] = value;
+        //var pURL = "s/users/" + uid;
+        var pURL = "json/aUser.json";
+        $.ajax({
+            type: "POST",
+            contentType: 'application/json',
+            url: pURL,
+            dataType: 'json',
+            data: JSON.stringify(changedValues),
+            success: function(data){
+              render(data);
+              $("input.editable").removeClass("enable");
+              $("input.editable").prop("readonly", true);
+              $("select#orgtype").selectmenu( "disable" );
+              $(ui).html("Edit");
+              $('#form1').prop('changed', false);
+            }
+        });
+      } 
     }
   }
   
   $(document).ajaxError(function(event,xhr,options,exc){
+    console.log(event);
+    console.log(xhr);
+    console.log(options);
     alert("An error occurred! " + [options.type, options.url, xhr.status].join(", "));
   });
   
@@ -257,19 +289,17 @@
       active: 0 
       });
     
-    $( "input.required" ).attr("placeholder", "Required");
-    var p = getParameterByName('create');
-    if (null != p){
-      for(var k in aUser){
-        aUser[k] = "";
+    //var geturl = "s/users/" + uid;
+    var geturl = uid==='create' ? "json/blankUser.json": "json/aUser.json";
+    
+    $.getJSON(geturl, function(data){
+      render(data);
+      if (uid === 'create'){
+          toBlankUI();
+          toEdit();
       }
-      toEdit( true );
-    }
-    render(aUser);
+    });
   });
-  
-
-
   </script>
 </body>
 </html>
