@@ -1,26 +1,46 @@
 [
     {
-        "uuid": "6ad1eb85-981d-4efd-905d-05ae6f99d943",
-        "loginName": "ABS_admin",
-        "firstName": "",
+        "uuid": "E6A98F7A-22C0-47F4-9D8E-D4209B7DD890",
+        "loginName": "4TestUserForUUID",
+        "password": "",
+        "firstName": "4TestUserForUUID",
         "lastName": "",
         "midName": "",
         "email": "",
         "phone": "",
-        "unit": "ABS",
+        "unit": "JMS",
         "status": "Enabled",
-        "unittype": "Client",
+        "unittype": "JMS",
         "isdel": "0",
         "address": "",
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ABS_admin"
+        "lastLogin": "1970-01-01"
+    },
+    {
+        "uuid": "6ad1eb85-981d-4efd-905d-05ae6f99d943",
+        "loginName": "ABS_admin",
+        "password": "",
+        "firstName": "fghfgdhfdgh",
+        "lastName": "",
+        "midName": "",
+        "email": "dgfh",
+        "phone": "",
+        "unit": "ABS",
+        "status": "",
+        "unittype": "Client",
+        "isdel": "",
+        "address": "",
+        "zipCode": "",
+        "state": "",
+        "city": "",
+        "lastLogin": "2018-10-18"
     },
     {
         "uuid": "6e19f2b3-d7af-4e6a-9161-adc5bea95be8",
         "loginName": "ABS_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -34,12 +54,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ABS_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c4bc3b8f-f475-49ff-92bb-ce89767ea175",
         "loginName": "ABS_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -53,12 +73,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ABS_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "7ea1cbcd-7207-4872-8b42-9fcda5ed6c53",
         "loginName": "ACI_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -72,12 +92,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ACI_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "49226b19-0112-4c54-a965-b6742c4a0062",
         "loginName": "ACI_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -91,12 +111,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ACI_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "72bcc044-975d-4d8c-a0ec-7d716f0b4917",
         "loginName": "ACI_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -110,12 +130,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ACI_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9789f728-bffb-4f87-9874-211051219440",
         "loginName": "ACT_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -129,12 +149,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ACT_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "4c203895-b806-465d-8c7a-0506eb8ad74e",
         "loginName": "ACT_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -148,12 +168,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ACT_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "13dbce3d-5f00-49ba-b19b-527be096f842",
         "loginName": "ACT_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -167,12 +187,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ACT_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c4abb0ad-073d-4ee5-87a9-eeeb2c07281f",
         "loginName": "ADJ_LHL",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -186,12 +206,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ADJ_LHL"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9f44801b-e7c3-437b-a076-a4895cb77b1f",
         "loginName": "ADJ_MO",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -205,12 +225,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ADJ_MO"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "0163bc0e-602f-4b85-9c13-7ed158fe157c",
         "loginName": "admin",
+        "password": "",
         "firstName": "zhen",
         "lastName": "simon",
         "midName": "",
@@ -224,12 +244,12 @@
         "zipCode": "",
         "state": "china",
         "city": "beijing",
-        "lastLogin": "1970-01-01",
-        "fullName": "zhensimon"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "09ca7f3a-411e-43bd-b67b-92dbabd3f5f9",
         "loginName": "administrator",
+        "password": "",
         "firstName": "administrator",
         "lastName": "",
         "midName": "",
@@ -243,12 +263,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "administrator"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "49bf1514-8553-4dbe-b83d-95c3dde5c9ce",
         "loginName": "AlexisR12",
+        "password": "",
         "firstName": "Rance",
         "lastName": "",
         "midName": "",
@@ -262,12 +282,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Rance"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5905fb40-20be-4556-b6b1-150ac7deb89c",
         "loginName": "AmiD",
+        "password": "",
         "firstName": "Ami D",
         "lastName": "",
         "midName": "",
@@ -281,12 +301,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Ami D"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "fd0b836c-b95f-46f0-a5d9-2d231797a867",
         "loginName": "AMP_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -300,12 +320,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "AMP_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "b44d11c3-bf18-4bd0-b6dd-4a78821379bf",
         "loginName": "AMP_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -319,12 +339,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "AMP_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9abd16cb-08fb-498c-bea8-405818183288",
         "loginName": "AMP_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -338,12 +358,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "AMP_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5905fb40-20be-4556-b6b0-150ac7deb89c",
         "loginName": "Andrea",
+        "password": "",
         "firstName": "Andrea",
         "lastName": "Elizabeth",
         "midName": "",
@@ -357,12 +377,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "AndreaElizabeth"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "edc5fce6-ba4a-41d1-baec-370e30b2acec",
         "loginName": "ANG_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -376,12 +396,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ANG_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "df94b50e-db51-4ae5-9167-d147b7837ef9",
         "loginName": "ASC_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -395,12 +415,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ASC_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a1b4e93f-22ee-4234-9b56-41820f741971",
         "loginName": "ASC_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -414,12 +434,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ASC_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "11c6a0dc-c30a-4731-85a5-802c79c123d6",
         "loginName": "ASC_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -433,12 +453,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ASC_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "3a14140d-882f-4035-9274-f1539b04f6da",
         "loginName": "ASI_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -452,12 +472,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ASI_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "48129c87-7048-4735-8e26-cfba30972944",
         "loginName": "ASI_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -471,12 +491,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ASI_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "15fb280b-355d-48f1-b842-d34fd08ff862",
         "loginName": "ASI_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -490,12 +510,31 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ASI_user_2"
+        "lastLogin": "1970-01-01"
+    },
+    {
+        "uuid": "20514D7D-0F85-4DA1-92F2-4612641555B4",
+        "loginName": "aTestUserForUUID",
+        "password": "",
+        "firstName": "aTestUserForUUID",
+        "lastName": "aTestUserForUUID",
+        "midName": "",
+        "email": "",
+        "phone": "",
+        "unit": "JMS",
+        "status": "Enabled",
+        "unittype": "JMS",
+        "isdel": "0",
+        "address": "",
+        "zipCode": "",
+        "state": "",
+        "city": "",
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "27c2145c-da35-48bd-bd62-7b7afa2103be",
         "loginName": "BCC_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -509,12 +548,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BCC_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "8ecb4f84-50ec-4d65-9b86-65a5b941a5b3",
         "loginName": "BCC_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -528,12 +567,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BCC_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5d4a6fe0-047f-4c79-9713-466900c4b91a",
         "loginName": "BCC_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -547,12 +586,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BCC_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "83742a54-7fec-45ff-a1f6-56a48fbde14e",
         "loginName": "BCS_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -566,12 +605,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BCS_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1e5a095a-71d6-45f1-b781-d90fe144f545",
         "loginName": "BCS_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -585,12 +624,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BCS_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "79bd1524-7553-4dbe-b83d-95c3dde5c9ce",
         "loginName": "BeckieB",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -604,12 +643,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BeckieB"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "3ea15828-eaf1-4fb3-8570-82b51cc55352",
         "loginName": "BEN_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -623,12 +662,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BEN_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "b5dac6a7-9a2e-4c7d-b26a-309bb499d964",
         "loginName": "BEN_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -642,12 +681,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BEN_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c75682cf-97f8-462a-8e07-4d28de0854e9",
         "loginName": "BEN_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -661,12 +700,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BEN_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "942406b6-7850-45e9-9b5b-41a8e7a553c3",
         "loginName": "BMI_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -680,12 +719,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BMI_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "3d2eade6-ac1d-4c02-9674-914be693bc64",
         "loginName": "BMI_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -699,12 +738,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BMI_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "eaca6894-bdb3-4a8f-b8f0-d6914e84b771",
         "loginName": "BMI_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -718,12 +757,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BMI_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "4808e0f6-1d93-4e74-a162-29b7a0f3e7e4",
         "loginName": "BVT_Admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -737,12 +776,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "BVT_Admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1CD7F019-9F0B-4AD0-9337-39F14AC5CB78",
         "loginName": "CaleyC",
+        "password": "",
         "firstName": "Caley",
         "lastName": "",
         "midName": "",
@@ -756,12 +795,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Caley"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "4167e699-5706-4ad6-a8ea-89a8ab573d60",
         "loginName": "CBA_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -775,12 +814,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CBA_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "3cd92210-9dcb-4ab9-be54-07279187f5c4",
         "loginName": "CBA_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -794,12 +833,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CBA_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9a814be8-fcb4-4f23-af4b-862d7f250ab1",
         "loginName": "CBA_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -813,12 +852,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CBA_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "57fc768e-cbbf-4e7c-9855-cbf970064b41",
         "loginName": "CFA_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -832,12 +871,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CFA_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "ba0bd9cf-6fd2-43a3-b7a1-13eb6a577e8b",
         "loginName": "CFA_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -851,12 +890,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CFA_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "ba6cb856-3e71-4248-843e-956a0134cbdf",
         "loginName": "CFA_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -870,12 +909,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CFA_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "fbbaa102-1ef0-451f-8ac3-a3341d69cf9e",
         "loginName": "CHM_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -889,12 +928,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CHM_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "417d9811-6a8b-4dbd-914b-cef4f7a4291e",
         "loginName": "CHM_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -908,12 +947,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CHM_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "4b4b3a10-7c4d-4033-ac51-d7c3c61c8437",
         "loginName": "CHM_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -927,12 +966,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CHM_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "757a4938-5312-4108-bd71-a7f692be1f63",
         "loginName": "CHP_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -946,12 +985,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CHP_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "d70189c3-2190-4b2e-98b6-dc45c9ad7297",
         "loginName": "CHP_test",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -965,12 +1004,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CHP_test"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "649efada-0102-43f6-a19b-4bfd56beb646",
         "loginName": "chuck",
+        "password": "",
         "firstName": "Chuck",
         "lastName": "Nunzzio",
         "midName": "",
@@ -984,12 +1023,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ChuckNunzzio"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a0df3b3a-7074-487b-b05f-87620f796173",
         "loginName": "CLF_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1003,12 +1042,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CLF_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "eec04437-87d8-4874-afd0-98348f6fda1c",
         "loginName": "CLF_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1022,12 +1061,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CLF_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "fe26223b-0754-4d3c-8f55-492b60d10a95",
         "loginName": "CLF_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1041,12 +1080,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CLF_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "317a673a-b5fb-4a37-8a65-690fbafeb7f5",
         "loginName": "CYP_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1060,12 +1099,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CYP_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "32aafd78-cdf5-4e70-a2dc-5e3715dff48a",
         "loginName": "CYP_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1079,12 +1118,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CYP_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "6facc5cc-bb59-4b4e-acbe-cc1b8fb0027f",
         "loginName": "CYP_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1098,12 +1137,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "CYP_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "71c4a3b5-b48f-4aa0-9850-360c4705476e",
         "loginName": "Danf",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1117,12 +1156,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Danf"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "ecc041c4-6d71-49f7-a4de-07fc95b9b369",
         "loginName": "Datum_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1136,12 +1175,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Datum_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a5468541-50e2-49e4-ae68-c43f753485c1",
         "loginName": "DawnS",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1155,12 +1194,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DawnS"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9b5be35d-4df7-4cb5-83c5-ed69804a34a1",
         "loginName": "DCC_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1174,12 +1213,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DCC_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1f0d6635-434a-4837-bfb8-a2a4d90ee908",
         "loginName": "DCC_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1193,12 +1232,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DCC_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "414360dc-5af9-447f-9947-a7e4f0c34571",
         "loginName": "DCC_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1212,12 +1251,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DCC_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "44f86c38-533a-466d-8a11-0307e70922ca",
         "loginName": "DCM_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1231,12 +1270,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DCM_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "2ae6004d-00dd-43e8-8c92-9d9fdaa31fa9",
         "loginName": "Deanna",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1250,12 +1289,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Deanna"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "02d3f782-dcb5-4cda-b8f8-a55c1af5ee23",
         "loginName": "DMA_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1269,12 +1308,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DMA_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1fc4bf2d-64cd-423a-a442-9efa1685f256",
         "loginName": "DMA_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1288,12 +1327,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DMA_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1af3850a-a5f0-4a72-aa79-1aa7fd8bc4c4",
         "loginName": "DNA_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1307,12 +1346,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "DNA_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "220a756a-ec61-4ba3-b00e-2d257228fa02",
         "loginName": "EHP_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1326,12 +1365,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "EHP_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5ab2988b-783b-44b8-a142-bd9586f113f8",
         "loginName": "ENT_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1345,12 +1384,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ENT_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9879ed02-a1d9-4f12-8954-cd054bd55012",
         "loginName": "Frank",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1364,12 +1403,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Frank"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "AE60CBB5-3409-4C92-B339-BB8430926140",
         "loginName": "GailA",
+        "password": "",
         "firstName": "Gail ",
         "lastName": "",
         "midName": "",
@@ -1383,12 +1422,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Gail "
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "948a8413-e02b-44e7-821c-2eedd09f9929",
         "loginName": "GBA_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1402,12 +1441,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "GBA_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9250527e-c678-4a6a-ac38-13bbef218289",
         "loginName": "GBA_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1421,12 +1460,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "GBA_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "2dd3a7ee-931e-46d5-88b5-821d29a242bd",
         "loginName": "GBA_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1440,12 +1479,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "GBA_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "41de8e50-c5fa-45f2-9f15-9c9fa5803846",
         "loginName": "haoz",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1459,12 +1498,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "2018-10-17",
-        "fullName": "haoz"
+        "lastLogin": "2018-10-19"
     },
     {
         "uuid": "0d54cb98-779b-4a50-8043-37a578fdfc2c",
         "loginName": "HDN_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1478,12 +1517,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "HDN_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "eea097f4-4d48-4a1c-893f-ccd7e56befb7",
         "loginName": "HDN_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1497,12 +1536,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "HDN_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "83cf8f4d-0359-4bee-b8bf-38e2e3242192",
         "loginName": "HDN_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1516,12 +1555,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "HDN_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a5e3640f-e0f8-4536-bade-5c2ae2d97544",
         "loginName": "helen",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1535,12 +1574,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "helen"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "f7543d19-15a1-4762-b61e-6630036b5caf",
         "loginName": "helle_he",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1554,12 +1593,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "helle_he"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c125c625-5a1f-46fe-b3e2-6417224c867a",
         "loginName": "HLP",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1573,12 +1612,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "HLP"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "acf9ce4e-d52e-47d6-b9f9-1dfdd2ff979a",
         "loginName": "HUIC_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1592,12 +1631,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "HUIC_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "4b5afda6-0efe-433c-b14e-c980f00ba881",
         "loginName": "huic_lf",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1611,12 +1650,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "huic_lf"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "ca44115c-2ac9-4664-ae86-891be0195e1f",
         "loginName": "huic_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1630,12 +1669,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "huic_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "e775da72-84db-4889-8f74-f5165127029e",
         "loginName": "huic_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1649,12 +1688,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "huic_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5a1dedab-ea22-4db1-9186-11dc137b9658",
         "loginName": "huic_winner",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1668,12 +1707,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "huic_winner"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "eacfa32a-879f-4d7b-9ae3-eb1d2811e11c",
         "loginName": "IDA_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1687,12 +1726,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "IDA_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "fb732821-947d-4127-9f63-c3daacebf6f8",
         "loginName": "IDA_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1706,12 +1745,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "IDA_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5957bab4-e2fe-43f2-98a8-6edba855a825",
         "loginName": "IDA_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1725,12 +1764,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "IDA_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "79bd1524-7553-4dae-b83d-91c3dde5c9ce",
         "loginName": "JMSoperate",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1744,12 +1783,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "JMSoperate"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "e2e6ea21-f10f-494b-aeaf-0bac508acb5d",
         "loginName": "JMSPacific",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1763,12 +1802,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "JMSPacific"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5ff9dec7-22f8-435b-a635-0ec12a8692aa",
         "loginName": "Johnj",
+        "password": "",
         "firstName": "John",
         "lastName": "",
         "midName": "",
@@ -1782,12 +1821,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "John"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "eec35493-2135-4fec-95b9-1630e738f188",
         "loginName": "JPI_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1801,12 +1840,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "JPI_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "850e760c-1ee1-407c-a975-38352c372dc6",
         "loginName": "judib",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1820,12 +1859,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "judib"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9dfb9f02-fde5-45e9-94e9-941183af18d1",
         "loginName": "KaikouPEK",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1839,12 +1878,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "KaikouPEK"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "2841b7e5-ca43-485f-b34a-4223dfca0e2c",
         "loginName": "Kaitlyn",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1858,12 +1897,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Kaitlyn"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "09d13f39-574b-492d-a416-10f15c1df0fe",
         "loginName": "KaokouClient",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1877,12 +1916,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "KaokouClient"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9B6434DB-D484-451D-BE08-3A72D21E1A06",
         "loginName": "KimF ",
+        "password": "",
         "firstName": "Kim ",
         "lastName": "",
         "midName": "",
@@ -1896,12 +1935,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Kim "
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c3730f85-80f3-4621-a043-6164bf0ebe0c",
         "loginName": "LancerZ",
+        "password": "",
         "firstName": "Lancer",
         "lastName": "",
         "midName": "",
@@ -1915,12 +1954,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "2018-10-17",
-        "fullName": "Lancer"
+        "lastLogin": "2018-10-18"
     },
     {
         "uuid": "0cb735b9-cd6d-4d1e-8ea4-65be683c5549",
         "loginName": "LAV_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1934,12 +1973,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "LAV_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "dd140d84-a420-4455-92cc-b12984c5dcab",
         "loginName": "LAV_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1953,12 +1992,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "LAV_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "382192ab-da03-4711-8f3a-4a43f3fa90e3",
         "loginName": "LAV_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1972,12 +2011,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "LAV_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "D00617A5-02D7-4805-AAC3-1F4136F02013",
         "loginName": "Lindsay_Confirm",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -1991,12 +2030,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Lindsay_Confirm"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "e1dfd419-a593-48fc-a19f-4cb5956da1ee",
         "loginName": "LindsayD",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2010,12 +2049,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "LindsayD"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1b864b66-df77-4fe8-b623-4496d03e4aef",
         "loginName": "lucy",
+        "password": "",
         "firstName": "\u745c",
         "lastName": "",
         "midName": "",
@@ -2029,12 +2068,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "\u745c"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "62382f69-e8e1-4c5e-ab19-573f621a17c4",
         "loginName": "lynn",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2048,12 +2087,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "lynn"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9cbc7808-1d03-42ad-b1ab-28f7beb27ef3",
         "loginName": "MarilynG",
+        "password": "",
         "firstName": "Gomez",
         "lastName": "",
         "midName": "",
@@ -2067,12 +2106,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Gomez"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "184525ce-5fac-43c5-91d5-028ab8f5440a",
         "loginName": "Melissam",
+        "password": "",
         "firstName": "Andrea",
         "lastName": "Elizabeth",
         "midName": "",
@@ -2086,12 +2125,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "AndreaElizabeth"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "7b4f9612-1d30-44be-aec8-9ddc96e6ddc4",
         "loginName": "MID_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2105,12 +2144,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "MID_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "cfb66b54-f2e4-4e2b-b745-55eb74f0ff55",
         "loginName": "MID_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2124,12 +2163,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "MID_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "e64add01-cc94-4c34-ab89-51735bf6a2e8",
         "loginName": "MID_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2143,12 +2182,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "MID_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1fc5f5dc-e6d3-4d0f-86a5-d0fb0ddff345",
         "loginName": "MSI_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2162,12 +2201,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "MSI_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c0469056-d159-4155-bd1f-0e27196fa438",
         "loginName": "MSI_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2181,12 +2220,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "MSI_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "3681ebf0-7078-4b07-a4b5-b6baf017f359",
         "loginName": "MSI_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2200,12 +2239,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "MSI_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "9fd6a61d-1273-43bc-ab10-557f4b444ea2",
         "loginName": "mxqiu",
+        "password": "",
         "firstName": "m",
         "lastName": "x",
         "midName": "",
@@ -2219,12 +2258,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "mx"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "10fc5696-b169-4d6b-8cf8-98c598dd7c68",
         "loginName": "MZB",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2238,12 +2277,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "MZB"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "79bd1524-7553-4dbe-b83d-94c3dde5c9ce",
         "loginName": "NancyW",
+        "password": "",
         "firstName": "Nancy",
         "lastName": "Ann",
         "midName": "",
@@ -2257,12 +2296,12 @@
         "zipCode": null,
         "state": null,
         "city": null,
-        "lastLogin": "1970-01-01",
-        "fullName": "NancyAnn"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "79bd1524-7553-4dbe-b83d-93c3dde5c9ce",
         "loginName": "NikkiY",
+        "password": "",
         "firstName": "Nikki",
         "lastName": "",
         "midName": "",
@@ -2276,12 +2315,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Nikki"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "bea6a297-fb51-4416-a721-22fa3ae04811",
         "loginName": "nikkiyo",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2295,12 +2334,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "nikkiyo"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "14400388-8695-40ad-a5c2-958a4fc09121",
         "loginName": "NOL_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2314,12 +2353,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "NOL_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "dca2162b-fb40-4be6-a80a-48372c9a6be9",
         "loginName": "NOL_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2333,12 +2372,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "NOL_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "d2710646-f609-4de8-9547-b76201ba30ea",
         "loginName": "NOL_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2352,12 +2391,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "NOL_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a71dbe9d-9405-441c-95bc-6789e0fb6432",
         "loginName": "NS_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2371,12 +2410,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "NS_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a977e6fd-4e9a-43fd-9d24-70ce6f4922ed",
         "loginName": "ns_operation",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2390,12 +2429,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ns_operation"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5d067f70-5f1b-4777-a846-277c3123acf0",
         "loginName": "ns_Williams",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2409,12 +2448,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ns_Williams"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "ce5f5f88-94c5-4927-9e2b-8329e849249b",
         "loginName": "off_CRJ",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2428,12 +2467,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_CRJ"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "d4b64dcf-70b8-42b6-8558-c61a80cf1fcd",
         "loginName": "off_FC",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2447,12 +2486,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_FC"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "740c9bf4-8054-48d6-8472-638b71340175",
         "loginName": "off_HCZ",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2466,12 +2505,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_HCZ"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "f01f3e97-586f-4fc3-b145-859306106f6f",
         "loginName": "off_HJ",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2485,12 +2524,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_HJ"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c04122f5-4259-43c3-8952-9c10394c7121",
         "loginName": "off_HLP",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2504,12 +2543,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_HLP"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "26931866-6214-48da-ab36-f875bb5fe8d5",
         "loginName": "off_JMF",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2523,12 +2562,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_JMF"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "8e84c8a2-8ef8-4454-8d57-fad3d3d53b6a",
         "loginName": "off_KFR",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2542,12 +2581,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_KFR"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "2841b7e5-ca43-4a5f-b34a-4223dfca0e2c",
         "loginName": "off_LJG",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2561,12 +2600,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_LJG"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "44008619-a4f2-4daf-8766-f0464705acb3",
         "loginName": "off_LJH",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2580,12 +2619,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_LJH"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "7d9bb4cf-33d5-4144-921d-6157c4bea2cf",
         "loginName": "off_WJY",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2599,12 +2638,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_WJY"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "921eb59f-6479-4145-ae48-0a7d8d77a503",
         "loginName": "off_YY",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2618,12 +2657,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "off_YY"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "4e776509-d688-4b42-b160-2f3faf1c55e4",
         "loginName": "OFF_Zhou",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2637,12 +2676,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "OFF_Zhou"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1D52D9A1-6B59-4561-89D6-D8251473B79A",
         "loginName": "Olivia_Confirm",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2656,12 +2695,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Olivia_Confirm"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "eecb67b8-33cf-444e-acc9-a475ebfa7d60",
         "loginName": "olivia_lin",
+        "password": "",
         "firstName": "yan",
         "lastName": "",
         "midName": "",
@@ -2675,12 +2714,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "yan"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "131b35b8-6d54-43bd-b6e0-e442bda450d3",
         "loginName": "OliviaM",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2694,12 +2733,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "OliviaM"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "77911ccc-2da9-4694-97e3-c05b74e3a073",
         "loginName": "on_FSF",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2713,12 +2752,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "on_FSF"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "3e5618bb-923f-481a-a11b-61df18be909d",
         "loginName": "on_HM",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2732,12 +2771,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "on_HM"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a539e9d4-fae7-4f7d-b861-629e3bf4110a",
         "loginName": "on_TMZ",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2751,12 +2790,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "on_TMZ"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "06677740-83F5-4546-A907-7CAF41BEDA87",
         "loginName": "PamC",
+        "password": "",
         "firstName": "Pam",
         "lastName": "",
         "midName": "",
@@ -2770,12 +2809,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Pam"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "30fc012d-dc5c-449f-9684-a886167032e6",
         "loginName": "patd",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2789,12 +2828,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "patd"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "79bd1524-7553-4dbe-b83d-91c3dde5c9ce",
         "loginName": "PatH",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2808,12 +2847,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PatH"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "222E4D8B-3C60-463D-B9F0-418E9C75ECC9",
         "loginName": "Paula_Confirm",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2827,12 +2866,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Paula_Confirm"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "79bd1524-7553-4dbe-b83d-92c3dde5c9ce",
         "loginName": "PaulaY",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2846,12 +2885,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PaulaY"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "7c9cb5a2-a866-4345-94c0-142efcfe2a23",
         "loginName": "PEK_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2865,12 +2904,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PEK_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "f5abd83f-d893-47d3-89cc-10939fe2731c",
         "loginName": "PEK_BVT",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2884,12 +2923,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PEK_BVT"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a823adca-192f-4abb-a7cd-247f88e8a10b",
         "loginName": "PEK_CBA",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2903,12 +2942,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PEK_CBA"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "598b0b05-e4cd-48e6-82dc-ec4b6f10a54a",
         "loginName": "PEK_GAVIN",
+        "password": "",
         "firstName": "Gavin",
         "lastName": "",
         "midName": "",
@@ -2922,12 +2961,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Gavin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1734bb8d-4a48-4a53-80ba-a04fec44b6a1",
         "loginName": "PEK_SISCO",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2941,12 +2980,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PEK_SISCO"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "b31140ee-cd16-4afe-a2db-b7e3ccb505e5",
         "loginName": "PEK_WLT",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2960,12 +2999,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PEK_WLT"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5806738d-c697-404d-8f47-708df31efc73",
         "loginName": "PRS_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2979,12 +3018,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PRS_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "aef35e62-27c5-4f1a-9540-884a3d5282b6",
         "loginName": "PRS_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -2998,12 +3037,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PRS_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "90896f7a-4f75-44b2-8719-6827f2678b5b",
         "loginName": "PRS_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3017,12 +3056,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PRS_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "df6982b7-287e-4891-90ee-3a90e915c7e7",
         "loginName": "PTB_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3036,12 +3075,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PTB_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "49646800-edba-4d77-a0df-c63a061a1440",
         "loginName": "PTB_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3055,12 +3094,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PTB_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "60edad6f-d858-4ca2-9a65-42a8880d35cf",
         "loginName": "PTB_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3074,12 +3113,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "PTB_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "baf00b76-b45e-4490-a4a9-788c7670f38e",
         "loginName": "sandid",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3093,12 +3132,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "sandid"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "2d888c58-452e-47a6-98cd-174f4d4ac00c",
         "loginName": "selinax",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3112,12 +3151,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "selinax"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "28f4e629-4652-4009-9652-404f2aa6d0ae",
         "loginName": "simon_liao",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3131,12 +3170,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "simon_liao"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "8d90cc56-2438-422c-9ad7-4151e2fde7a6",
         "loginName": "SIS_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3150,12 +3189,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "SIS_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "21d961b4-e8d6-424e-90ae-fdbc403decc2",
         "loginName": "SIS_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3169,12 +3208,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "SIS_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "92dcb748-1c4c-464b-bbd5-01db5689f283",
         "loginName": "SIS_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3188,12 +3227,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "SIS_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "5775b19a-718f-452b-b411-801626235007",
         "loginName": "Sophie",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3207,12 +3246,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Sophie"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "B7FAA88C-117B-4FE2-9849-F988BE3BA045",
         "loginName": "StefanieL",
+        "password": "",
         "firstName": "Stefanie",
         "lastName": "",
         "midName": "",
@@ -3226,12 +3265,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Stefanie"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "93186a0c-40c8-4aaf-8e10-e737394ab253",
         "loginName": "TCG_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3245,12 +3284,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "TCG_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "49f2ccb2-66b8-4a8e-b9a1-5856eb9c0714",
         "loginName": "TCG_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3264,12 +3303,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "TCG_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "421e7c94-4893-4046-a276-54af22c682b3",
         "loginName": "TCG_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3283,12 +3322,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "TCG_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "085e7b00-a0aa-4e39-aa6e-8628965ef208",
         "loginName": "TELA_admin",
+        "password": "",
         "firstName": "Vaishali",
         "lastName": "Mukund",
         "midName": "",
@@ -3302,12 +3341,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "VaishaliMukund"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "690d0ede-6e35-4d57-a9b2-804eb31f3d4e",
         "loginName": "tela_new",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3321,12 +3360,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "tela_new"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "1173d7b9-5de2-43a1-9e97-cb19599eab24",
         "loginName": "tela_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3340,12 +3379,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "tela_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "178da964-8a40-4703-8aeb-3381eda5f6b4",
         "loginName": "tela_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3359,12 +3398,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "tela_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "949d45c4-ea32-4ba7-9c0e-203f07d69d8e",
         "loginName": "test_user_1",
+        "password": "",
         "firstName": "test",
         "lastName": "test",
         "midName": "",
@@ -3378,12 +3417,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "testtest"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "0a07b204-99db-4b76-90dd-e95bf739738a",
         "loginName": "test_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3397,12 +3436,31 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "test_user_2"
+        "lastLogin": "1970-01-01"
+    },
+    {
+        "uuid": "5AFDEF3A-E628-45DF-86BD-79C55E04F288",
+        "loginName": "tTestUserForUUID",
+        "password": "",
+        "firstName": "tTestUserForUUID",
+        "lastName": "",
+        "midName": "",
+        "email": "",
+        "phone": "",
+        "unit": "JMS",
+        "status": "Enabled",
+        "unittype": "JMS",
+        "isdel": "0",
+        "address": "",
+        "zipCode": "",
+        "state": "",
+        "city": "",
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "42107a61-dc36-46c2-9f78-86be77d0ad97",
         "loginName": "UMR_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3416,12 +3474,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "UMR_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "39b270b3-003a-40c2-bac4-5cde4fb711fd",
         "loginName": "UMR_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3435,12 +3493,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "UMR_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "d4532842-f89c-4e8c-a830-95e6e484d8c9",
         "loginName": "UMR_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3454,12 +3512,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "UMR_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a8b5fdda-1d2e-4bac-b1e2-56654329de37",
         "loginName": "VRT_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3473,12 +3531,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "VRT_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "50060a61-2615-40bc-ba14-d29efa4fa274",
         "loginName": "VRT_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3492,12 +3550,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "VRT_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "dee7b372-9635-418c-97ff-622fa5db7f49",
         "loginName": "VRT_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3511,12 +3569,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "VRT_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "c48e76fd-a6c9-4ed6-8c69-df7c11adb76e",
         "loginName": "williampho",
+        "password": "",
         "firstName": "William",
         "lastName": "",
         "midName": "",
@@ -3530,12 +3588,12 @@
         "zipCode": "91763",
         "state": "CA",
         "city": "Montclair",
-        "lastLogin": "1970-01-01",
-        "fullName": "William"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "4b21255f-4c16-453a-a372-414dae2524ed",
         "loginName": "Wilson_Hua",
+        "password": "",
         "firstName": "wilson",
         "lastName": "",
         "midName": "",
@@ -3549,12 +3607,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "wilson"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "d97c3af7-3432-45e1-a459-406a931cd733",
         "loginName": "WilsonHua",
+        "password": "",
         "firstName": "Wilson",
         "lastName": "",
         "midName": "",
@@ -3568,12 +3626,12 @@
         "zipCode": "91763",
         "state": "CA",
         "city": "Montclair",
-        "lastLogin": "1970-01-01",
-        "fullName": "Wilson"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "a23b6ad8-6f8c-4412-b6fc-3a20dea7dd20",
         "loginName": "Winner_jms",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3587,12 +3645,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Winner_jms"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "b5be1eb6-3f2b-4d5a-87e4-a1d2174e9c7c",
         "loginName": "WLT_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3606,12 +3664,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WLT_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "cc87ff7d-fb12-4fcf-995b-a93746236f0f",
         "loginName": "WLT_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3625,12 +3683,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WLT_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "402af334-8f2b-4c46-8f2f-897e696c9bd0",
         "loginName": "WLT_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3644,12 +3702,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WLT_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "e9a9b6ad-6d64-4e66-a77c-ad13f4f9a089",
         "loginName": "WMM_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3663,12 +3721,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WMM_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "f1a32f5c-7231-4ba9-b455-56ef74e5bb6c",
         "loginName": "WMM_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3682,12 +3740,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WMM_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "53b4a079-d52a-428f-bb24-b63e77416e2a",
         "loginName": "WMM_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3701,12 +3759,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WMM_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "51873ced-6667-4add-84ac-f96522b507d1",
         "loginName": "WPA_admin",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3720,12 +3778,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WPA_admin"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "de3d1126-9811-4369-8e46-bb6e6290a254",
         "loginName": "WPA_user_1",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3739,12 +3797,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WPA_user_1"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "363fd6b7-517a-475e-9873-6b7cea905a04",
         "loginName": "WPA_user_2",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3758,12 +3816,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "WPA_user_2"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "31f10a98-0a6d-484c-95a9-f6d181f36c89",
         "loginName": "Zhaodan",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3777,12 +3835,12 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "Zhaodan"
+        "lastLogin": "1970-01-01"
     },
     {
         "uuid": "3e41598e-8840-4002-87cb-0b3522adec31",
         "loginName": "ZXQ",
+        "password": "",
         "firstName": "",
         "lastName": "",
         "midName": "",
@@ -3796,7 +3854,6 @@
         "zipCode": "",
         "state": "",
         "city": "",
-        "lastLogin": "1970-01-01",
-        "fullName": "ZXQ"
+        "lastLogin": "1970-01-01"
     }
 ]
